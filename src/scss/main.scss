@@ -1,0 +1,113 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~compass-sass-mixins/lib/compass/css3";
+@import "hljs-darcula";
+
+.md-side-drawer-inner {
+    .md-list-nav {
+        .md-nav-item {
+            &.md-parent {
+                > .md-nav-item-inner {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.markdown-body {
+    padding: 24px 16px 24px 16px;
+    margin: 0 auto 30px;
+    max-width: 100%;
+
+    h1, h2, h3, h4 {
+        > a {
+            &.header-anchor {
+                opacity: .7;
+                text-decoration: none;
+                visibility: hidden;
+            }
+        }
+        &:hover {
+            > .header-anchor {
+                visibility: visible;
+            }
+        }
+    }
+
+    .h2, h2, .h3, h3, .h4, h4, .h5, h5 {
+        margin-bottom: 1.3rem;
+    }
+
+    .h2, h2 {
+        padding-top: 1.5rem;
+    }
+
+    .h3, h3 {
+        font-size: 1.65rem;
+        padding-top: 1rem;
+    }
+
+    .h4, h4 {
+        font-size: 1.375rem;
+        padding-top: 1rem;
+    }
+
+    .lead {
+        font-size: 1.4rem;
+
+        > p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .alert {
+        > .flex-fill {
+            > p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: $spacer;
+        color: $table-color;
+        border: $table-border-width solid $table-border-color;
+        font-size: 90%;
+
+        th,
+        td {
+            padding: $table-cell-padding;
+            vertical-align: top;
+            border: $table-border-width solid $table-border-color;
+        }
+
+        thead th {
+            vertical-align: bottom;
+            border-bottom: (2 * $table-border-width) solid $table-border-color;
+        }
+
+        tbody tr:nth-of-type(#{$table-striped-order}) {
+            background-color: rgba(lighten($gray-300, 3%), .4);
+        }
+
+        tbody + tbody {
+            border-top: (2 * $table-border-width) solid $table-border-color;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: 1080px;
+    }
+
+    @media (min-width: 1450px) {
+        max-width: 1200px;
+    }
+}

@@ -1,0 +1,17 @@
+### Covers Operating resource files
+.DS_Store
+._.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### Covers JetBrains IDEs, Android Studio and Visual Studio Code
+/.idea/
+/.vscode
+
+### Covers project specific files
+/node_modules/
+/dist
+npm-debug.log
+yarn-error.log
+yarn.lock

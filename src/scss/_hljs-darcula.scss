@@ -1,0 +1,73 @@
+@import "~compass-sass-mixins/lib/compass/css3";
+
+.markdown-body {
+    .hljs {
+        @include border-radius(6px);
+        display: block;
+        overflow-x: auto;
+        padding: 1.25rem 1.5rem;
+        background: #1e1e1e;
+        color: #e2e2e2;
+    }
+
+    .hljs-strong,
+    .hljs-emphasis {
+        color: #a8a8a2;
+    }
+
+    .hljs-bullet,
+    .hljs-quote,
+    .hljs-link,
+    .hljs-number,
+    .hljs-regexp,
+    .hljs-literal {
+        color: #66afe8;
+    }
+
+    .hljs-code,
+    .hljs-selector-class {
+        color: #a6e22e;
+    }
+
+    .hljs-emphasis, .hljs-comment {
+        font-style: italic;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-section,
+    .hljs-attribute,
+    .hljs-name,
+    .hljs-variable {
+        color: #ffba20;
+    }
+
+    .hljs-params {
+        color: #b9b9b9;
+    }
+
+    .hljs-string {
+        color: #94bf7b;
+    }
+
+    .hljs-subst,
+    .hljs-type,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-symbol,
+    .hljs-selector-id,
+    .hljs-selector-attr,
+    .hljs-selector-pseudo,
+    .hljs-template-tag,
+    .hljs-template-variable,
+    .hljs-addition {
+        color: #e0816c;
+    }
+
+    .hljs-comment,
+    .hljs-deletion,
+    .hljs-meta {
+        color: #7f7f7f;
+    }
+
+}

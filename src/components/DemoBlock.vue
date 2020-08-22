@@ -1,0 +1,147 @@
+<template>
+  <div class="demo-block">
+    <div class="demo-block-tools">
+      <bs-button v-tooltip="{content: 'Run this demo on jsfiddle.net', placement: 'top'}"
+                 mode="icon"
+                 icon="cloud"
+                 flat
+                 @click="goJsfiddle" />
+      <bs-button v-tooltip="{content: 'Show the source', placement: 'top'}"
+                 mode="icon"
+                 icon="code"
+                 flat
+                 @click="toggle" />
+    </div>
+    <bs-expand-transition>
+      <div class="meta border-bottom bg-grey lighten-3" v-show="visible">
+        <slot name="highlight"></slot>
+      </div>
+    </bs-expand-transition>
+    <div class="demo-block-content bg-grey lighten-4">
+      <slot name="source"></slot>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+    name: "DemoBlock",
+    props: {
+        jsfiddle: {
+            type: Object,
+            default: () => ({})
+        }
+    },
+    data: () => ({
+        visible: false
+    }),
+    methods: {
+        toggle() {
+            this.visible = !this.visible;
+        },
+        goJsfiddle() {
+            const {script, html, style} = this.jsfiddle;
+
+            const resourcesTpl = '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">\n' +
+                '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css">\n' +
+                '<scr' + 'ipt src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js"></scr' + 'ipt>';
+
+            let cssTpl  = `${(style || '').trim()}\n`;
+            let jsTpl   = (script || '').replace(/export default/, 'var Main =').trim();
+            let htmlscr = html.replace('<html>', '').replace('</html>', '')
+                .replace('<head>', '').replace('</head>', '')
+                .replace('<body>', '').replace('</body>', '');
+            let htmlTpl = `${resourcesTpl}\n<div id="app">\n${htmlscr.trim()}\n</div>`;
+
+            jsTpl = jsTpl
+                ? jsTpl + '\nvar Ctor = Vue.extend(Main);\nnew Ctor().$mount(\'#app\');'
+                : 'new Vue().$mount(\'#app\');';
+
+            const data = {
+                js: jsTpl,
+                css: cssTpl,
+                html: htmlTpl,
+                panel_js: 3,
+                panel_css: 1
+            };
+
+            const form     = document.getElementById('fiddle-form') || document.createElement('form');
+            form.innerHTML = '';
+            const node     = document.createElement('textarea');
+
+            form.method = 'post';
+            form.action = 'https://jsfiddle.net/api/post/library/pure/';
+            form.target = '_blank';
+
+            const keys = Object.keys(data);
+            keys.forEach((key) => {
+                node.name  = key;
+                node.value = data[key].toString();
+                form.appendChild(node.cloneNode());
+            });
+
+            form.setAttribute('id', 'fiddle-form');
+            form.style.display = 'none';
+            document.body.appendChild(form);
+
+            form.submit();
+        }
+    }
+}
+</script>
+
+<style lang="scss">
+.demo-block {
+    position: relative;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 30px;
+
+    .meta {
+        padding: 42px 16px 8px 16px;
+    }
+}
+
+.demo-block-content {
+    display: flex;
+    padding: 42px 16px 8px 16px;
+    justify-content: center;
+
+    .demo-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        html {
+            width: 100%;
+
+            > body {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.demo-block-tools {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+@media (min-width: 992px) {
+    .demo-block {
+        margin-left: 0;
+        margin-right: 0;
+
+        .meta {
+            padding: 40px 24px 10px;
+        }
+    }
+
+    .demo-block-content {
+        padding: 48px 24px 12px;
+    }
+}
+</style>
