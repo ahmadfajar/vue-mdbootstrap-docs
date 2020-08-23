@@ -1,23 +1,25 @@
 <template>
   <div class="demo-block">
-    <div class="demo-block-tools">
+    <div class="demo-block-tools bg-grey-400">
       <bs-button v-tooltip="{content: 'Run this demo on jsfiddle.net', placement: 'top'}"
+                 color="mdb-color"
                  mode="icon"
                  icon="cloud"
                  flat
                  @click="goJsfiddle" />
       <bs-button v-tooltip="{content: 'Show the source', placement: 'top'}"
+                 color="mdb-color"
                  mode="icon"
                  icon="code"
                  flat
                  @click="toggle" />
     </div>
     <bs-expand-transition>
-      <div class="meta border-bottom bg-grey lighten-3" v-show="visible">
+      <div class="meta bg-grey-200 border-bottom border-grey-400" v-show="visible">
         <slot name="highlight"></slot>
       </div>
     </bs-expand-transition>
-    <div class="demo-block-content bg-grey lighten-4">
+    <div class="demo-block-content bg-grey-200">
       <slot name="source"></slot>
     </div>
   </div>
@@ -98,13 +100,18 @@ export default {
     margin-bottom: 30px;
 
     .meta {
-        padding: 42px 16px 8px 16px;
+        padding: 0;
+
+        .hljs {
+            border-radius: 0;
+            margin-bottom: 0;
+        }
     }
 }
 
 .demo-block-content {
     display: flex;
-    padding: 42px 16px 8px 16px;
+    padding: 16px;
     justify-content: center;
 
     .demo-wrapper {
@@ -124,10 +131,9 @@ export default {
 }
 
 .demo-block-tools {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 10;
+    position: relative;
+    padding: 8px 16px;
+    text-align: right;
 }
 
 @media (min-width: 992px) {
@@ -135,13 +141,9 @@ export default {
         margin-left: 0;
         margin-right: 0;
 
-        .meta {
-            padding: 40px 24px 10px;
+        .demo-block-content {
+            padding: 24px;
         }
-    }
-
-    .demo-block-content {
-        padding: 48px 24px 12px;
     }
 }
 </style>

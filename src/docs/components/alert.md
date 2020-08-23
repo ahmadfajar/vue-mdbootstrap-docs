@@ -1,12 +1,13 @@
 :::lead
-`<bs-alert>` provide contextual feedback message for typical user actions with the handful of available and 
+Component **BsAlert** provide contextual feedback message for typical user actions with the handful of available and 
 flexible alert messages. With the right use of colors, they add some emotional weight to our information, 
 ranging from a simple warning to critical system failure or from an operation success to neutral information.
 :::
 
 
+## Overview
 
-### Basic Examples
+#### Basic Examples
 
 :::demo
 ```html
@@ -36,7 +37,7 @@ ranging from a simple warning to critical system failure or from an operation su
 :::
 
 
-### Outline Alert
+#### Outline Alert
 
 :::demo
 ```html
@@ -66,9 +67,9 @@ ranging from a simple warning to critical system failure or from an operation su
 :::
 
 
-### Additional content inside alerts
+## Additional content inside alerts
 
-`<bs-alerts>` can also contain additional HTML elements like headings and paragraphs, which will be styled with 
+`<bs-alert>` can also contain additional HTML elements like headings and paragraphs, which will be styled with 
 the appropriate color matching the variant.
 
 :::demo
@@ -128,7 +129,7 @@ Use the `.alert-link` utility class on `<a>` element to quickly provide matching
 :::
 
 
-### Dismissible alerts
+## Dismissible alerts
 
 Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add a close `X` button. 
 
@@ -165,7 +166,7 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add
 :::
 
 
-#### Controlling dissmisable alert
+## Controlling dissmisable alert
 
 Use the `v-model` directive to create two-way data bindings on the `value` property as in `v-model="showAlert"`. 
 This is useful to control the dismissible, because when user closes the alert, your variable will be updated. 
@@ -193,12 +194,12 @@ Do not use the `value` property when using `v-model`.
                    :value="percentProgress"></bs-progress>
     </bs-alert>
     <div class="row">
-      <div class="col-12 col-md-6 mb-3">
+      <div class="col-12 col-md-6 mb-3 mb-md-0">
         <bs-button color="primary" @click="toggleAlert">
           {{ showDismissibleAlert ? 'Hide' : 'Show' }} dismissable Alert
         </bs-button>
       </div>    
-      <div class="col-12 col-md-6 mb-3">
+      <div class="col-12 col-md-6 mb-3 mb-md-0">
         <bs-button color="primary" @click="showAlert">
           Show Alert with timer
         </bs-button>
@@ -250,16 +251,33 @@ export default {
 ```
 :::
 
-### Properties
 
-| Property    | Type      | Default     | Description |
-|-------------|-----------|-------------|-------------|
-| color       | String    | `'primary'` | Applies one of the **Vue MdBootstrap color** variants to the component |
-| dismissable | Boolean   | `false`     | When set, display the close button to dismiss/hide the component |
-| outlined    | Boolean   | `false`     | Applies outline style to the component |
-| icon        | String    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |
-| transition  | String    | `'fade'`    | Setting the transition animation to display/hide the component |
-| value <bs-badge variant="primary">v-model</bs-badge>  | Boolean   | `true`      | Display or hide the component |
+## Component Reference
 
+#### Properties
+
+<div class="cmp-property">
+
+| Property    | Type        | Default     | Description |
+|-------------|-------------|-------------|-------------|
+| color       | `String`    | `'primary'` | Applies one of the **Vue MdBootstrap color** variants to the component |
+| dismissable | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
+| outlined    | `Boolean`   | `false`     | Applies outline style to the component |
+| icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |
+| transition  | `String`    | `'fade'`    | The transition animation to display/hide the component |
+| value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | Display or hide the component |
+
+</div>
+
+
+#### Events
+
+<div class="cmp-property">
+
+| Name   | Argument Type | Description |
+|--------|---------------|-------------|
+| input  | `Boolean`     | Used to update component state of `v-model` value property |
+
+</div>
 
 <script src="./alert-js.js"></script>

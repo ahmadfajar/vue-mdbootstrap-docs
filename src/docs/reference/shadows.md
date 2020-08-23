@@ -39,7 +39,7 @@ You only need to add one of the shadow classes to the chosen element.
 ::: demo
 ```html
 <div class="row text-center text-white">
-    <div class="col-md-6 col-xl-4">
+    <div class="col-md-6 col-xl-4 mb-1">
         <div class="md-hoverable-shadow p-4 bg-primary-color">hover me!</div>
     </div>
 </div>
