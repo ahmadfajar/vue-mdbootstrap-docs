@@ -1,6 +1,6 @@
 <template>
   <div class="demo-block">
-    <div class="demo-block-tools bg-grey-400">
+    <div class="demo-block-tools">
       <bs-button v-tooltip="{content: 'Run this demo on jsfiddle.net', placement: 'top'}"
                  color="mdb-color"
                  mode="icon"
@@ -111,7 +111,7 @@ export default {
 
 .demo-block-content {
     display: flex;
-    padding: 16px;
+    padding: 48px 16px 16px;
     justify-content: center;
 
     .demo-wrapper {
@@ -125,15 +125,21 @@ export default {
 
             > body {
                 background: transparent;
+
+                h2, h3, h4 {
+                    padding-top: 0;
+                }
             }
         }
     }
 }
 
 .demo-block-tools {
-    position: relative;
-    padding: 8px 16px;
-    text-align: right;
+    padding: 6px 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
 
 @media (min-width: 992px) {
@@ -142,7 +148,7 @@ export default {
         margin-right: 0;
 
         .demo-block-content {
-            padding: 24px;
+            padding: 48px 24px 20px;
         }
     }
 }

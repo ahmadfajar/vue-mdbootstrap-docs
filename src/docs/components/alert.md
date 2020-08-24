@@ -1,7 +1,8 @@
 :::lead
-Component **BsAlert** provide contextual feedback message for typical user actions with the handful of available and 
-flexible alert messages. With the right use of colors, they add some emotional weight to our information, 
-ranging from a simple warning to critical system failure or from an operation success to neutral information.
+**BsAlert** is a component which provide contextual feedback message for typical user actions with the
+handful of available and flexible alert messages. With the right use of colors, they add some emotional 
+weight to our information, ranging from a simple warning to critical system failure or from an operation 
+success to neutral information.
 :::
 
 

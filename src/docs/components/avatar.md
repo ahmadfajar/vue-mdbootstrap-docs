@@ -6,14 +6,14 @@
 
 ## Overview
 
-BsAvatar is a lightweight component, which render inline by default, so that are vertically 
+**BsAvatar** is a lightweight component, which render inline by default, so that are vertically 
 centered beside any adjoining plain text. It also can be used as children of other components.
 
 #### Basic Examples
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
+<div class="my-demo-wrapper d-flex justify-content-center">
     <bs-avatar class="m-2" img-src="img/kitty-1.jpg" circle></bs-avatar>
     <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" circle></bs-avatar>
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends" circle></bs-avatar>
@@ -29,7 +29,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 :::
 
 
-#### Within ListView
+#### Use Inside ListTile
 
 :::demo
 ```html
@@ -104,12 +104,12 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
+<div class="my-demo-wrapper d-flex justify-content-center">
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2"
                size="40" icon="user" circle></bs-avatar>
-    <bs-avatar class="bg-deep-orange darken-3 text-white m-2"
+    <bs-avatar class="bg-purple darken-3 text-white m-2"
                style="font-size: 170%" size="3rem" icon="user" circle></bs-avatar>
-    <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user"
+    <bs-avatar class="bg-indigo darken-3 text-white m-2" icon="user"
                :size="{height: 40, width: 56}" circle></bs-avatar>
 </div>
 <style scoped>
@@ -133,7 +133,7 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 | circle        | `Boolean`   | `false`  | Applies component shape |
 | rounded       | `Boolean`   | `false`  | Applies component shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | img-src       | `String`    |          | The image location or image url |
-| icon          | `String`    |          | The icon to display inside component. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| icon          | `String`    |          | The icon to display inside component. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | icon-rotation | `Number`    |          | If using FontAwesome icon, it will set the icon rotation. Valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | icon-spin     | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | icon-pulse    | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |

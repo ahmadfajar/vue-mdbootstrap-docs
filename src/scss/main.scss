@@ -81,12 +81,12 @@
         td {
             padding: $table-cell-padding;
             vertical-align: top;
-            border: $table-border-width solid $table-border-color;
+            border: $table-border-width solid #ccd3da;
         }
 
         thead th {
             vertical-align: bottom;
-            border-bottom: (2 * $table-border-width) solid $table-border-color;
+            border-bottom: (2 * $table-border-width) solid #ccd3da;
         }
 
         tbody tr:nth-of-type(#{$table-striped-order}) {

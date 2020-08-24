@@ -21,6 +21,14 @@ const navs = [{
         title: "Avatar",
         view: viewResolver("components/avatar"),
         route: "/components/avatar"
+    }, {
+        title: "Badge",
+        view: viewResolver("components/badge"),
+        route: "/components/badge"
+    }, {
+        title: "Icon",
+        view: viewResolver("components/icon"),
+        route: "/components/icon"
     }]
 }, {
     title: "Reference",
