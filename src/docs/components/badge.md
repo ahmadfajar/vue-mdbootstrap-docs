@@ -94,9 +94,9 @@ of `color` property. All color variants can be used as badge background and text
 :::
 
 
-## Badge Types
+## Badge Style
 
-#### Pill Badge
+#### Pill Style
 
 Set `<bs-badge>` property `type=pill` to make badges more rounded with a larger border-radius and
 additional horizontal padding.
@@ -121,7 +121,7 @@ additional horizontal padding.
 ```
 :::
 
-#### Label Badge
+#### Label Style
 
 Set `<bs-badge>` property `type=label` to make badges little larger than normal with a slight larger 
 border-radius and additional horizontal padding. 

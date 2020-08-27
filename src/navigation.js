@@ -26,6 +26,10 @@ const navs = [{
         view: viewResolver("components/badge"),
         route: "/components/badge"
     }, {
+        title: "Button",
+        view: viewResolver("components/button"),
+        route: "/components/button"
+    }, {
         title: "Icon",
         view: viewResolver("components/icon"),
         route: "/components/icon"

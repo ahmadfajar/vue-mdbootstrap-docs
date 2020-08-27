@@ -28,6 +28,23 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```
 :::
 
+#### Shape Examples
+
+:::demo
+```html
+<div class="my-demo-wrapper d-flex justify-content-center">
+    <bs-avatar class="m-2 bg-teal" img-src="img/kitty-1.jpg" circle></bs-avatar>
+    <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" rounded></bs-avatar>
+    <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends"></bs-avatar>
+</div>
+<style scoped>
+.my-demo-wrapper {
+  margin: 24px;
+}
+</style>
+```
+:::
+
 
 #### Use Inside ListTile
 
@@ -130,13 +147,13 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 | Property      | Type        | Default  | Description |
 |---------------|-------------|----------|-------------|
 | center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically |
-| circle        | `Boolean`   | `false`  | Applies component shape |
-| rounded       | `Boolean`   | `false`  | Applies component shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
-| img-src       | `String`    |          | The image location or image url |
+| circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | icon          | `String`    |          | The icon to display inside component. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
+| icon-pulse    | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | icon-rotation | `Number`    |          | If using FontAwesome icon, it will set the icon rotation. Valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | icon-spin     | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-pulse    | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| img-src       | `String`    |          | The image location or image url |
+| rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String`/`Object` | `48` | Change the component size |
 | text          | `String`    |          | The text to display inside the component. Use short text (1 to 3 characters) to properly display it. The text will be transformed to uppercase. |
 

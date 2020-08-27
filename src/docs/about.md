@@ -8,7 +8,7 @@ the <a href="https://material.io/design" target="_blank">Google Material Design<
 ## Requirements
 
 - [Vue.js](https://vuejs.org/) `v2.6` is required, `v2.6.11` is recommended
-- [Bootstrap](https://getbootstrap.com/) `v4.4.1` is required, `v4.5.2` is recommended
+- [Bootstrap](https://getbootstrap.com/) `v4.4` is required, `v4.5.2` is recommended
 - [vue-router](https://www.npmjs.com/package/vue-router) `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
 - [vuex](https://www.npmjs.com/package/vuex) `v3.x` is optional, and is required for building 

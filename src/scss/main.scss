@@ -64,8 +64,13 @@
 
     .alert {
         > .flex-fill {
-            > p {
+            > p, ol, ul {
                 margin-bottom: 0;
+
+                code {
+                    color: var(--purple);
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -99,11 +104,21 @@
     }
 
     .cmp-property {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+
         > table {
             td {
                 &:first-child {
                     color: darken($primary, 10%);
                     white-space: nowrap;
+                }
+            }
+
+            th, td {
+                &:last-child {
+                    min-width: 200px;
                 }
             }
         }
