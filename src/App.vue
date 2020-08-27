@@ -15,6 +15,7 @@
         <bs-appbar-title :title="pageTitle" class="text-white" />
         <bs-spacer />
         <bs-appbar-items>
+          <span class="mr-3 text-white align-self-center">v1.0.4</span>
           <bs-button mode="icon"
                      color="light-grey"
                      href="https://github.com/ahmadfajar/vue-mdbootstrap"
@@ -30,6 +31,16 @@
                       :mini="sideDrawerState === 'mini'"
                       :open="sideDrawerState === 'open'"
                       @open="toggleDrawer">
+        <img src="img/vue-mdb.png"
+             class="mx-auto d-block logo"
+             :style="{width: sideDrawerState === 'mini' ? '46px' : '120px'}"
+             alt="" />
+        <transition name="fade" v-if="sideDrawerState === 'open'">
+          <div class="h4 text-center text-blue-grey pb-2">
+            Vue MdBootstrap
+          </div>
+        </transition>
+        <bs-divider />
         <bs-list-view>
           <bs-list-nav>
             <bs-list-nav-item v-for="(nav, idx) in navs"

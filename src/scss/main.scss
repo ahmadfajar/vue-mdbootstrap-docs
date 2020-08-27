@@ -5,6 +5,10 @@
 @import "hljs-darcula";
 
 .md-side-drawer-inner {
+    > .logo {
+        transition: all .3s ease-in-out;
+    }
+
     .md-list-nav {
         .md-nav-item {
             &.md-parent {
