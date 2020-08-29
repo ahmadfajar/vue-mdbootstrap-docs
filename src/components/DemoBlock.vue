@@ -1,18 +1,20 @@
 <template>
   <div class="demo-block">
     <div class="demo-block-tools">
-      <bs-button v-tooltip="{content: 'Run this demo on jsfiddle.net', placement: 'top'}"
-                 color="mdb-color"
-                 mode="icon"
-                 icon="cloud"
-                 flat
-                 @click="goJsfiddle" />
-      <bs-button v-tooltip="{content: 'Show the source', placement: 'top'}"
-                 color="mdb-color"
-                 mode="icon"
-                 icon="code"
-                 flat
-                 @click="toggle" />
+      <bs-tooltip content="Run this demo on jsfiddle.net" placement="top">
+        <bs-button color="mdb-color"
+                   mode="icon"
+                   icon="cloud"
+                   flat
+                   @click="goJsfiddle" />
+      </bs-tooltip>
+      <bs-tooltip :content="tooltipText" placement="top">
+        <bs-button color="mdb-color"
+                   mode="icon"
+                   icon="code"
+                   flat
+                   @click="toggle" />
+      </bs-tooltip>
     </div>
     <bs-expand-transition>
       <div class="meta bg-grey-200 border-bottom border-grey-400" v-show="visible">
@@ -37,6 +39,11 @@ export default {
     data: () => ({
         visible: false
     }),
+    computed: {
+        tooltipText() {
+            return this.visible ? 'Hide the source' : 'Show the source';
+        }
+    },
     methods: {
         toggle() {
             this.visible = !this.visible;

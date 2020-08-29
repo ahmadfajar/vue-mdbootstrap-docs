@@ -364,22 +364,22 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 :::demo
 ```html
 <div class="my-demo-wrapper">
-    <div class="row align-items-center">
-      <div class="mb-3 col-12 col-sm text-center">
-        <div class="btn-group" role="group" aria-label="Default Button Group">
-          <bs-button color="blue-grey">Left</bs-button>
-          <bs-button color="blue-grey">Middle</bs-button>
-          <bs-button color="blue-grey">Right</bs-button>
-        </div>
-      </div>
-      <div class="mb-3 col-12 col-sm text-center">
-        <div class="btn-group" role="group" aria-label="Outlined Button Group">
-          <bs-button color="primary" outlined>Left</bs-button>
-          <bs-button color="primary" outlined>Middle</bs-button>
-          <bs-button color="primary" outlined>Right</bs-button>
-        </div>
+  <div class="row align-items-center">
+    <div class="mb-3 col-12 col-sm text-center">
+      <div class="btn-group" role="group" aria-label="Default Button Group">
+        <bs-button color="blue-grey">Left</bs-button>
+        <bs-button color="blue-grey">Middle</bs-button>
+        <bs-button color="blue-grey">Right</bs-button>
       </div>
     </div>
+    <div class="mb-3 col-12 col-sm text-center">
+      <div class="btn-group" role="group" aria-label="Outlined Button Group">
+        <bs-button color="primary" outlined>Left</bs-button>
+        <bs-button color="primary" outlined>Middle</bs-button>
+        <bs-button color="primary" outlined>Right</bs-button>
+      </div>
+    </div>
+  </div>
 </div>
 <style lang="scss">
 .my-demo-wrapper {
@@ -397,40 +397,40 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 :::demo
 ```html
 <div class="my-demo-wrapper">
-    <div class="row">
-      <div class="mb-3 col-12 col-xl">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-          <div class="btn-group mr-2" role="group" aria-label="First group">
-            <bs-button color="blue-grey">1</bs-button>
-            <bs-button color="blue-grey">2</bs-button>
-            <bs-button color="blue-grey">3</bs-button>
-          </div>
-          <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <bs-button color="blue-grey">4</bs-button>
-            <bs-button color="blue-grey">5</bs-button>
-          </div>
-          <div class="btn-group mr-2" role="group" aria-label="Third group">
-            <bs-button color="blue-grey">6</bs-button>
-          </div>
+  <div class="row">
+    <div class="mb-3 col-12 col-xl">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <bs-button color="blue-grey">1</bs-button>
+          <bs-button color="blue-grey">2</bs-button>
+          <bs-button color="blue-grey">3</bs-button>
         </div>
-      </div>
-      <div class="mb-3 col-12 col-xl">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-          <div class="btn-group mr-2" role="group" aria-label="First group">
-            <bs-button color="blue-grey" outlined>1</bs-button>
-            <bs-button color="blue-grey" outlined>2</bs-button>
-            <bs-button color="blue-grey" outlined>3</bs-button>
-          </div>
-          <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <bs-button color="blue-grey" outlined>4</bs-button>
-            <bs-button color="blue-grey" outlined>5</bs-button>
-          </div>
-          <div class="btn-group mr-2" role="group" aria-label="Third group">
-            <bs-button color="blue-grey" outlined>6</bs-button>
-          </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <bs-button color="blue-grey">4</bs-button>
+          <bs-button color="blue-grey">5</bs-button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Third group">
+          <bs-button color="blue-grey">6</bs-button>
         </div>
       </div>
     </div>
+    <div class="mb-3 col-12 col-xl">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <bs-button color="blue-grey" outlined>1</bs-button>
+          <bs-button color="blue-grey" outlined>2</bs-button>
+          <bs-button color="blue-grey" outlined>3</bs-button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <bs-button color="blue-grey" outlined>4</bs-button>
+          <bs-button color="blue-grey" outlined>5</bs-button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Third group">
+          <bs-button color="blue-grey" outlined>6</bs-button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <style lang="scss">
 .my-demo-wrapper {
@@ -483,7 +483,18 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| click  | `EventObject` | Emitted when non-disabled button clicked. |
+| click  | `EventObject` | Fires when a non-disabled button is clicked. |
+
+</div>
+
+
+#### Slots
+
+<div class="cmp-property">
+
+| Name    | Description  |
+|---------|--------------|
+| default | Main content |
 
 </div>
 

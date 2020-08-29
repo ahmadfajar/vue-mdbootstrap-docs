@@ -50,63 +50,67 @@ centered beside any adjoining plain text. It also can be used as children of oth
 
 :::demo
 ```html
-<div class="my-demo-wrapper border rounded-lg">
-  <bs-list-view class="rounded-lg">
-    <bs-list-tile>
-      <bs-list-tile-leading size="42">
-        <bs-avatar img-src="img/kitty-2.jpg" size="40" circle></bs-avatar>
-      </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title>Avatar using external image</bs-list-tile-title>
-      </bs-list-tile-content>
-      <bs-list-tile-action>
-        <bs-badge>22</bs-badge>
-      </bs-list-tile-action>
-    </bs-list-tile>
-    <bs-divider></bs-divider>
-    <bs-list-tile>
-      <bs-list-tile-leading size="42">
-        <bs-avatar class="bg-teal text-white" size="40"
-                   icon="bs-folder-shared" circle></bs-avatar>
-      </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title>Avatar using icon listed on Icon examples</bs-list-tile-title>
-      </bs-list-tile-content>
-      <bs-list-tile-action>
-        <bs-badge>8</bs-badge>
-      </bs-list-tile-action>
-    </bs-list-tile>
-    <bs-divider></bs-divider>
-    <bs-list-tile>
-      <bs-list-tile-leading size="42">
-        <bs-avatar class="bg-deep-orange darken-3 text-white" size="40"
-                   icon="user-friends" circle></bs-avatar>
-      </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title>Avatar using icon listed on FontAwesome website</bs-list-tile-title>
-      </bs-list-tile-content>
-      <bs-list-tile-action>
-        <bs-badge>15</bs-badge>
-      </bs-list-tile-action>
-    </bs-list-tile>
-    <bs-divider></bs-divider>
-    <bs-list-tile>
-      <bs-list-tile-leading size="42">
-        <bs-avatar class="bg-grey-600 text-white" size="40"
-                   text="BS" circle></bs-avatar>
-      </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title>This avatar created using Text</bs-list-tile-title>
-      </bs-list-tile-content>
-      <bs-list-tile-action>
-        <bs-badge>5</bs-badge>
-      </bs-list-tile-action>
-    </bs-list-tile>
-  </bs-list-view>
+<div class="my-demo-wrapper">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+      <bs-list-view class="border rounded-lg">
+        <bs-list-tile>
+          <bs-list-tile-leading size="42">
+            <bs-avatar img-src="img/kitty-2.jpg" size="40" circle></bs-avatar>
+          </bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Avatar using external image</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge>22</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+        <bs-divider></bs-divider>
+        <bs-list-tile>
+          <bs-list-tile-leading size="42">
+            <bs-avatar class="bg-teal text-white" size="40"
+                       icon="bs-folder-shared" circle></bs-avatar>
+          </bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Avatar using icon listed on Icon examples</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge>8</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+        <bs-divider></bs-divider>
+        <bs-list-tile>
+          <bs-list-tile-leading size="42">
+            <bs-avatar class="bg-deep-orange darken-3 text-white" size="40"
+                       icon="user-friends" circle></bs-avatar>
+          </bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Avatar using icon listed on FontAwesome website</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge>15</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+        <bs-divider></bs-divider>
+        <bs-list-tile>
+          <bs-list-tile-leading size="42">
+            <bs-avatar class="bg-grey-600 text-white" size="40"
+                       text="BS" circle></bs-avatar>
+          </bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>This avatar created using Text</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge>5</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+      </bs-list-view>
+    </div>
+  </div>
 </div>
 <style scoped>
 .my-demo-wrapper {
-  margin: 24px;
+  margin-top: 24px;
 }
 </style>
 ```
@@ -148,11 +152,11 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 |---------------|-------------|----------|-------------|
 | center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
-| icon          | `String`    |          | The icon to display inside component. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
-| icon-pulse    | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-rotation | `Number`    |          | If using FontAwesome icon, it will set the icon rotation. Valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-spin     | `Boolean`   | `false`  | If using FontAwesome icon, it will set the icon is spinned or not. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| img-src       | `String`    |          | The image location or image url |
+| icon          | `String`    |          | The icon to display as avatar. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
+| icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-rotation | `Number`    |          | Rotate the icon, valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| img-src       | `String`    |          | Set the image location or image url to display as avatar |
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String`/`Object` | `48` | Change the component size |
 | text          | `String`    |          | The text to display inside the component. Use short text (1 to 3 characters) to properly display it. The text will be transformed to uppercase. |

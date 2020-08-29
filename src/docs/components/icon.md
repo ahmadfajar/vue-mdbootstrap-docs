@@ -156,7 +156,7 @@ export default {
 
 | Property | Type     | Default  | Description |
 |----------|----------|----------|-------------|
-| icon     | `String` |    | The icon's name or alias. |
+| icon <bs-badge color="unique text-white">required</bs-badge> | `String` |  | The icon's name or alias. |
 | height   | `Number` | 20 | The icon's height in pixel. |
 | width    | `Number` | 20 | The icon's width in pixel. |
 | size     | `Number` |    | Shorcut to create equal height and width. |

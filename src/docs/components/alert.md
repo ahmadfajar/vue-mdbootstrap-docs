@@ -76,18 +76,17 @@ the appropriate color matching the variant.
 :::demo
 ```html
 <div class="alert-demo-wrapper">
-    <bs-alert color="purple"
-              icon="exclamation-triangle">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> from other predefined colors.
-      </p>
-      <hr />
-      <p class="mb-0">
-        Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
-      </p>
-    </bs-alert>
+  <bs-alert color="purple" icon="exclamation-triangle">
+    <h5>Well done!</h5>
+    <p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> from other predefined colors.
+    </p>
+    <hr />
+    <p class="mb-0">
+      Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+    </p>
+  </bs-alert>
 </div>
 <style scoped>
 .alert-demo-wrapper {
@@ -181,18 +180,15 @@ Do not use the `value` property when using `v-model`.
 ```html
 <div class="alert-demo-wrapper">
     <bs-alert v-model="showDismissibleAlert"
-              color="teal"
-              dismissable>
+              color="teal" dismissable>
       This is a dismissable alert.
     </bs-alert>
     <bs-alert :value="dismissCountDown > 0"
               @input="dismissCountDown=0"
               dismissable>
       <div class="pb-2">This alert will dismiss after {{ dismissCountDown }} seconds...</div>
-      <bs-progress color="warning"
-                   mode="determinate"
-                   type="bar"
-                   :value="percentProgress"></bs-progress>
+      <bs-progress color="warning" mode="determinate"
+                   type="bar" :value="percentProgress"></bs-progress>
     </bs-alert>
     <div class="row">
       <div class="col-12 col-md-6 mb-3 mb-md-0">
@@ -263,10 +259,10 @@ export default {
 |-------------|-------------|-------------|-------------|
 | color       | `String`    | `'primary'` | Applies one of the **Vue MdBootstrap color** variants to the component |
 | dismissable | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
-| outlined    | `Boolean`   | `false`     | Applies outline style to the component |
+| outlined    | `Boolean`   | `false`     | Create outline alert style |
 | icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |
-| transition  | `String`    | `'fade'`    | The transition animation to display/hide the component |
-| value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | Display or hide the component |
+| transition  | `String`    | `'fade'`    | The component animation transition to display/hide |
+| value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | The value monitored by `v-model` to display or hide the alert component |
 
 </div>
 
@@ -278,6 +274,16 @@ export default {
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
 | input  | `Boolean`     | Used to update component state of `v-model` value property |
+
+</div>
+
+#### Slots
+
+<div class="cmp-property">
+
+| Name    | Description  |
+|---------|--------------|
+| default | Main content |
 
 </div>
 

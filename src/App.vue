@@ -19,6 +19,7 @@
           <bs-button mode="icon"
                      color="light-grey"
                      href="https://github.com/ahmadfajar/vue-mdbootstrap"
+                     target="_blank"
                      flat>
             <bs-avatar img-src="img/GitHub-Light.png" size="22" circle />
           </bs-button>
@@ -33,7 +34,7 @@
                       @open="toggleDrawer">
         <img src="img/vue-mdb.png"
              class="mx-auto d-block logo"
-             :style="{width: sideDrawerState === 'mini' ? '46px' : '120px'}"
+             :style="{width: sideDrawerState === 'mini' ? '46px' : '96px'}"
              alt="" />
         <transition name="fade" v-if="sideDrawerState === 'open'">
           <div class="h4 text-center text-blue-grey pb-2">

@@ -30,9 +30,21 @@ const navs = [{
         view: viewResolver("components/button"),
         route: "/components/button"
     }, {
+        title: "Divider",
+        view: viewResolver("components/divider"),
+        route: "/components/divider"
+    }, {
         title: "Icon",
         view: viewResolver("components/icon"),
         route: "/components/icon"
+    }, {
+        title: "Icon Toggle",
+        view: viewResolver("components/icon-toggle"),
+        route: "/components/icon-toggle"
+    }, {
+        title: "Subheader",
+        view: viewResolver("components/subheader"),
+        route: "/components/subheader"
     }]
 }, {
     title: "Reference",
