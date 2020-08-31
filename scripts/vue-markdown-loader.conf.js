@@ -100,7 +100,7 @@ module.exports = {
                 const m = tokens[idx].info.trim().match(/^warning\s*(.*)$/);
 
                 if (tokens[idx].nesting === 1) {
-                    return '<bs-alert color="danger" icon="exclamation-triangle">' + md.utils.escapeHtml(m[1]);
+                    return '<bs-alert color="warning" icon="exclamation-triangle">' + md.utils.escapeHtml(m[1]);
                 } else {
                     return '</bs-alert>\n';
                 }

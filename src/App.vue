@@ -15,7 +15,7 @@
         <bs-appbar-title :title="pageTitle" class="text-white" />
         <bs-spacer />
         <bs-appbar-items>
-          <span class="mr-3 text-white align-self-center">v1.0.4</span>
+          <span class="mr-3 text-white align-self-center">v1.0.5</span>
           <bs-button mode="icon"
                      color="light-grey"
                      href="https://github.com/ahmadfajar/vue-mdbootstrap"
@@ -60,9 +60,9 @@
         </bs-list-view>
       </bs-side-drawer>
 
-      <bs-content tag="main" class="bg-grey-100" app>
+      <bs-container tag="main" class="bg-grey-100" app>
         <router-view />
-      </bs-content>
+      </bs-container>
     </bs-app-container>
   </div>
 </template>

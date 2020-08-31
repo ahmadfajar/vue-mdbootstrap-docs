@@ -452,7 +452,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 | active   | `Boolean` | `false`  | Change the button state. |
 | block    | `Boolean` | `false`  | Create block level button or match button's width to the parent width. See [Bootstrap](https://getbootstrap.com/docs/4.5/components/buttons/#sizes) for more information. |
 | color    | `String`  | `'default'` | Change component color appearance. Any of **Vue MdBootstrap** color variant can be used. See [Reference - Color Variants](#/reference/colors) for more information. |
-| disabled | `Boolean` | `false`  | Change the `<button>` element state. |
+| disabled | `Boolean` | `false`  | The `<button>` element state. |
 | dropdown-toggle | `Boolean` | `false` | Render as `dropdown-menu` button when used inside `<bs-menu>` component. |
 | flat     | `Boolean` | `false`  | Create flat button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |

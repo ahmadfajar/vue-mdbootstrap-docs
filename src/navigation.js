@@ -2,6 +2,7 @@ const viewResolver = (name) => require('./docs/' + name).default;
 
 const navs = [{
     title: "Getting Started",
+    icon: "home",
     children: [{
         title: "About",
         view: viewResolver("about"),
@@ -13,6 +14,7 @@ const navs = [{
     }]
 }, {
     title: "Components",
+    icon: "cog",
     children: [{
         title: "Alert",
         view: viewResolver("components/alert"),
@@ -30,6 +32,14 @@ const navs = [{
         view: viewResolver("components/button"),
         route: "/components/button"
     }, {
+        title: "Button Toggle",
+        view: viewResolver("components/button-toggle"),
+        route: "/components/button-toggle"
+    }, {
+        title: "Card",
+        view: viewResolver("components/card"),
+        route: "/components/card"
+    }, {
         title: "Divider",
         view: viewResolver("components/divider"),
         route: "/components/divider"
@@ -42,12 +52,17 @@ const navs = [{
         view: viewResolver("components/icon-toggle"),
         route: "/components/icon-toggle"
     }, {
+        title: "Image Holder",
+        view: viewResolver("components/image-holder"),
+        route: "/components/image-holder"
+    }, {
         title: "Subheader",
         view: viewResolver("components/subheader"),
         route: "/components/subheader"
     }]
 }, {
     title: "Reference",
+    icon: "leaf",
     children: [{
         title: "Color Variants",
         view: viewResolver("reference/colors"),
