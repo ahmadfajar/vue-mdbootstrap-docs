@@ -56,6 +56,68 @@ const navs = [{
         view: viewResolver("components/image-holder"),
         route: "/components/image-holder"
     }, {
+        title: "Input Controls",
+        children: [{
+            title: "Checkbox",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Checkbox Group",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Combobox",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Radio",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Radio Group",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Switch",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Text Area",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Text Field",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "DateTime Field",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Number Field",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }, {
+            title: "Search Field",
+            // view: viewResolver("components/image-holder"),
+            // route: "/components/image-holder"
+        }]
+    }, {
+        title: "Lists",
+        children: [{
+            title: "List Tile",
+        }, {
+            title: "List Navigation",
+        }]
+    }, {
+        title: "Menu",
+        view: viewResolver("components/menu"),
+        route: "/components/menu"
+    }, {
+        title: "Progress Control",
+        view: viewResolver("components/progress"),
+        route: "/components/progress-control"
+    }, {
         title: "Subheader",
         view: viewResolver("components/subheader"),
         route: "/components/subheader"

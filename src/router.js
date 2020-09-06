@@ -10,7 +10,6 @@ function registerRoute(navs) {
             registerRoute(nav.children);
         } else if (nav.route) {
             routes.push({
-                // name: nav.view.substring(1).replaceAll('/', '-'),
                 path: nav.route,
                 component: nav.view,
                 meta: {

@@ -9,11 +9,13 @@
         transition: all .3s ease-in-out;
     }
 
-    .md-list-nav {
-        .md-nav-item {
-            &.md-parent {
-                > .md-nav-item-inner {
-                    font-weight: 600;
+    > .md-list {
+        > .md-list-nav {
+            > .md-nav-item {
+                &.md-parent {
+                    > .md-nav-item-inner {
+                        font-weight: 600;
+                    }
                 }
             }
         }

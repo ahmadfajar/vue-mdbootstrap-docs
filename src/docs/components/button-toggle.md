@@ -169,7 +169,7 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| change | `String`/`Number`/`Boolean`/`Array` | Fires when a button or item is selected. |
+| change | `String`/`Number`/`Boolean`/`Array` | Triggers when a button or item is selected. |
 
 </div>
 

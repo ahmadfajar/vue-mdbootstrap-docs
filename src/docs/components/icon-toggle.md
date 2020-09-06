@@ -67,7 +67,7 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| click  | `EventObject` | Fires when icon is clicked. |
+| click  | `EventObject` | Triggers when icon is clicked. |
 
 </div>
 

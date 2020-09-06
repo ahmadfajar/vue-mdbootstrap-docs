@@ -36,26 +36,20 @@ lists or page layouts.
       <bs-card shadow>
         <bs-list-view>
           <bs-list-tile>
-            <bs-list-tile-leading size="20">
-              <font-awesome-icon icon="cog" size="lg"></font-awesome-icon>
-            </bs-list-tile-leading>
+            <bs-list-tile-leading icon="cog"></bs-list-tile-leading>
             <bs-list-tile-content>
               <bs-list-tile-title>Setting</bs-list-tile-title>
             </bs-list-tile-content>
           </bs-list-tile>
           <bs-list-tile>
-            <bs-list-tile-leading size="20">
-              <font-awesome-icon icon="question-circle" size="lg"></font-awesome-icon>
-            </bs-list-tile-leading>
+            <bs-list-tile-leading icon="question-circle"></bs-list-tile-leading>
             <bs-list-tile-content>
               <bs-list-tile-title>Help</bs-list-tile-title>
             </bs-list-tile-content>
           </bs-list-tile>
           <bs-divider></bs-divider>
           <bs-list-tile>
-            <bs-list-tile-leading size="20">
-              <font-awesome-icon icon="power-off" size="lg"></font-awesome-icon>
-            </bs-list-tile-leading>
+            <bs-list-tile-leading icon="power-off"></bs-list-tile-leading>
             <bs-list-tile-content>
               <bs-list-tile-title>Exit</bs-list-tile-title>
             </bs-list-tile-content>

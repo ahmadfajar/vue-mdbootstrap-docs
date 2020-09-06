@@ -449,12 +449,12 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| active   | `Boolean` | `false`  | Change the button state. |
+| active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false`  | The button component state. |
 | block    | `Boolean` | `false`  | Create block level button or match button's width to the parent width. See [Bootstrap](https://getbootstrap.com/docs/4.5/components/buttons/#sizes) for more information. |
 | color    | `String`  | `'default'` | Change component color appearance. Any of **Vue MdBootstrap** color variant can be used. See [Reference - Color Variants](#/reference/colors) for more information. |
 | disabled | `Boolean` | `false`  | The `<button>` element state. |
-| dropdown-toggle | `Boolean` | `false` | Render as `dropdown-menu` button when used inside `<bs-menu>` component. |
-| flat     | `Boolean` | `false`  | Create flat button style. |
+| dropdown-toggle | `Boolean` | `false` | Render as `dropdown` button when used inside `<bs-menu>` component. |
+| flat     | `Boolean` | `false`  | Create button with flat style or not. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |
 | icon     | `String`/`Array` |   | The icon to display inside component. Use any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | icon-fixed    | `Boolean` | `false`  | Render Fontawesome Icon with fixed width. |
@@ -465,11 +465,11 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 | icon-size     | `String`  |   | Render the icon with predefined size, valid values are: `xs`, `sm`, `lg`, `1x`, `2x`, `3x`, `4x`, `5x`, `6x`, `7x`, `8x`, `9x`, `10x`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | mode     | `String`  | `'default'` | Create spesific button style, valid values are: `default`, `icon`, `floating` |
-| outlined | `Boolean` | `false` | Create outlined button style. |
-| pill     | `Boolean` | `false` | Create pill button style. |
-| raised   | `Boolean` | `false` | Create raised button style. |
-| rounded  | `Boolean` | `false` | Create rounded button style. |
-| ripple   | `Boolean` | `true` | Apply ripple effect or not. |
+| outlined | `Boolean` | `false` | Create button with outlined style or not. |
+| pill     | `Boolean` | `false` | Create button with rounded-pill style or not. |
+| raised   | `Boolean` | `false` | Create button with raised style or not. |
+| ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. |
+| rounded  | `Boolean` | `false` | Create button with rounded style or not. |
 | size     | `String`  |   | Create button with predefined size, valid values are: `xs`, `sm`, `lg`. |
 | transparent | `Boolean`  | `false` | Create button with transparent style or not. |
 | type     | `String`  | `'button'`  | The value to set to the button's `type` attribute. Valid values are: `button`, `submit`, `reset` |
@@ -484,6 +484,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
 | click  | `EventObject` | Fires when a non-disabled button is clicked. |
+| input  | `Boolean` | Used to update component state of `active` property. |
 
 </div>
 

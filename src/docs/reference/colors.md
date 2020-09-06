@@ -15,7 +15,7 @@ Background color can be applied to any html element by using the classname `bg-{
 ::: demo
 ```html
 <div class="row text-center">
-    <div class="col-md-6 col-xl-4">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
         <div class="bg-primary p-4">Inner text.</div>
     </div>
 </div>
@@ -30,7 +30,7 @@ Border color can be applied to any html element by using the classname `border-{
 ::: demo
 ```html
 <div class="row text-center">
-    <div class="col-md-6 col-xl-4">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
         <div class="border border-primary p-4">Inner text.</div>
     </div>
 </div>

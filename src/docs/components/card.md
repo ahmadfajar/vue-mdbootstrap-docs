@@ -34,7 +34,7 @@ root tag to any other HTML element by specifying via the `tag` property.
           <bs-card-content>
             <small class="text-muted">Last updated 3 mins ago</small>
           </bs-card-content>
-          <bs-button color="primary">Action 1</bs-button>
+          <bs-button color="primary" class="mr-2">Action 1</bs-button>
           <bs-button color="primary" flat>Action 2</bs-button>
         </bs-card-body>
       </bs-card>

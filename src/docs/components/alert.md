@@ -273,9 +273,10 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| input  | `Boolean`     | Used to update component state of `v-model` value property |
+| input  | `Boolean`     | Used to update component state of `value` property |
 
 </div>
+
 
 #### Slots
 

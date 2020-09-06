@@ -15,7 +15,7 @@
         <bs-appbar-title :title="pageTitle" class="text-white" />
         <bs-spacer />
         <bs-appbar-items>
-          <span class="mr-3 text-white align-self-center">v1.0.5</span>
+          <span class="mr-3 text-white align-self-center">v1.1.0</span>
           <bs-button mode="icon"
                      color="light-grey"
                      href="https://github.com/ahmadfajar/vue-mdbootstrap"
@@ -47,13 +47,21 @@
             <bs-list-nav-item v-for="(nav, idx) in navs"
                               :key="'nav-' + idx"
                               :label="nav.title"
-                              :path="nav.route"
-                              :has-child="!!nav.children">
+                              :path="nav.route">
               <bs-list-nav v-if="nav.children" child>
-                <bs-list-nav-item v-for="(navchild, cix) in nav.children"
-                                  :key="'nav-' + idx + '-child-' + cix"
+                <bs-list-nav-item v-for="(navchild, ix) in nav.children"
+                                  :key="'child-' + idx + '-' + ix"
                                   :label="navchild.title"
-                                  :path="navchild.route" />
+                                  :path="navchild.route"
+                                  depth="1">
+                  <bs-list-nav v-if="navchild.children" child>
+                    <bs-list-nav-item v-for="(child, nx) in navchild.children"
+                                      :key="'child-' + idx + '-' + ix + '-' + nx"
+                                      :label="child.title"
+                                      :path="child.route"
+                                      depth="2" />
+                  </bs-list-nav>
+                </bs-list-nav-item>
               </bs-list-nav>
             </bs-list-nav-item>
           </bs-list-nav>
