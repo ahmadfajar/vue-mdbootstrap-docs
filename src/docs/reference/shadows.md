@@ -1,4 +1,4 @@
-::: lead
+:::lead
 **Vue MdBootstrap** shadow is an effect used in web elements which provides important visual cues about objects 
 depth and directional movement. They are the only visual cue indicating the amount of separation between surfaces. 
 An object’s elevation determines the appearance of its shadow. Creating shadows with Vue MdBootstrap is very easy. 
@@ -6,9 +6,9 @@ You only need to add one of the shadow classes to the chosen element.
 :::
 
 
-### Basic Examples
+## Examples
 
-::: demo
+:::pureHtml
 ```html
 <div class="row text-center text-white">
     <div class="col-md-6 col-xl-4 mb-5">
@@ -34,14 +34,12 @@ You only need to add one of the shadow classes to the chosen element.
 :::
 
 
-#### Shadow on hover
+## Shadow on hover
 
-::: demo
+:::pureHtml
 ```html
-<div class="row text-center text-white">
-    <div class="col-md-6 col-xl-4 mb-1">
-        <div class="md-hoverable-shadow p-4 bg-primary-color">hover me!</div>
-    </div>
+<div class="mx-auto text-center text-white mb-2" style="width: 250px">
+  <div class="md-hover-shadow p-4 bg-primary-color">hover me!</div>
 </div>
 ```
 :::

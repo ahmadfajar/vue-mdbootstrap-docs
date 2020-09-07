@@ -10,13 +10,16 @@ to just about any content.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <h2>Example heading <bs-badge>New</bs-badge></h2>
-  <h3>Example heading <bs-badge>New</bs-badge></h3>
-  <h4>Example heading <bs-badge>New</bs-badge></h4>
-  <h5>Example heading <bs-badge>New</bs-badge></h5>
-  <h6>Example heading <bs-badge>New</bs-badge></h6>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <h2>Example heading <bs-badge>New</bs-badge></h2>
+    <h3>Example heading <bs-badge>New</bs-badge></h3>
+    <h4>Example heading <bs-badge>New</bs-badge></h4>
+    <h5>Example heading <bs-badge>New</bs-badge></h5>
+    <h6>Example heading <bs-badge>New</bs-badge></h6>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -29,12 +32,15 @@ to just about any content.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-button color="primary">
-    Notifications 
-    <bs-badge variant="light" class="ml-2">9</bs-badge>
-  </bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-button color="primary">
+      Notifications 
+      <bs-badge variant="light" class="ml-2">9</bs-badge>
+    </bs-button>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -52,16 +58,19 @@ the `color` property will be used.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-badge class="mr-1" variant="primary">Primary</bs-badge>
-  <bs-badge class="mr-1" variant="secondary">Secondary</bs-badge>
-  <bs-badge class="mr-1" variant="success">Success</bs-badge>
-  <bs-badge class="mr-1" variant="danger">Danger</bs-badge>
-  <bs-badge class="mr-1" variant="warning">Warning</bs-badge>
-  <bs-badge class="mr-1" variant="info">Info</bs-badge>
-  <bs-badge class="mr-1" variant="light">Light</bs-badge>
-  <bs-badge variant="dark">Dark</bs-badge>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-badge variant="primary">Primary</bs-badge>
+    <bs-badge variant="secondary">Secondary</bs-badge>
+    <bs-badge variant="success">Success</bs-badge>
+    <bs-badge variant="danger">Danger</bs-badge>
+    <bs-badge variant="warning">Warning</bs-badge>
+    <bs-badge variant="info">Info</bs-badge>
+    <bs-badge variant="light">Light</bs-badge>
+    <bs-badge variant="dark">Dark</bs-badge>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -75,16 +84,19 @@ of `color` property. All color variants can be used as badge background and text
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-badge class="mr-1" color="primary-color-dark text-white">primary-color-dark</bs-badge>
-  <bs-badge class="mr-1" color="default-color-dark text-white">default-color-dark</bs-badge>
-  <bs-badge class="mr-1" color="elegant-color text-white">elegant-color</bs-badge>
-  <bs-badge class="mr-1" color="stylish-color text-white">stylish-color</bs-badge>
-  <bs-badge class="mr-1" color="unique-color text-white">unique-color</bs-badge>
-  <bs-badge class="mr-1" color="red text-white">red</bs-badge>
-  <bs-badge class="mr-1" color="pink text-white">pink</bs-badge>
-  <bs-badge color="purple text-white">purple</bs-badge>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-badge color="primary-color-dark text-white">primary-color-dark</bs-badge>
+    <bs-badge color="default-color-dark text-white">default-color-dark</bs-badge>
+    <bs-badge color="elegant-color text-white">elegant-color</bs-badge>
+    <bs-badge color="stylish-color text-white">stylish-color</bs-badge>
+    <bs-badge color="unique-color text-white">unique-color</bs-badge>
+    <bs-badge color="red text-white">red</bs-badge>
+    <bs-badge color="pink text-white">pink</bs-badge>
+    <bs-badge color="purple text-white">purple</bs-badge>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -96,23 +108,26 @@ of `color` property. All color variants can be used as badge background and text
 
 ## Badge Style
 
-#### Pill Style
+### Pill Style
 
 Set `<bs-badge>` property `type=pill` to make badges more rounded with a larger border-radius and
 additional horizontal padding.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-badge class="mr-1" type="pill" variant="primary">Primary</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="secondary">Secondary</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="success">Success</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="danger">Danger</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="warning">Warning</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="info">Info</bs-badge>
-  <bs-badge class="mr-1" type="pill" variant="light">Light</bs-badge>
-  <bs-badge type="pill" variant="dark">Dark</bs-badge>
-div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-badge type="pill" variant="primary">Primary</bs-badge>
+    <bs-badge type="pill" variant="secondary">Secondary</bs-badge>
+    <bs-badge type="pill" variant="success">Success</bs-badge>
+    <bs-badge type="pill" variant="danger">Danger</bs-badge>
+    <bs-badge type="pill" variant="warning">Warning</bs-badge>
+    <bs-badge type="pill" variant="info">Info</bs-badge>
+    <bs-badge type="pill" variant="light">Light</bs-badge>
+    <bs-badge type="pill" variant="dark">Dark</bs-badge>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -121,23 +136,26 @@ div>
 ```
 :::
 
-#### Label Style
+### Label Style
 
 Set `<bs-badge>` property `type=label` to make badges little larger than normal with a slight larger 
 border-radius and additional horizontal padding. 
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-badge class="mr-1" type="label" variant="primary">Primary</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="secondary">Secondary</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="success">Success</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="danger">Danger</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="warning">Warning</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="info">Info</bs-badge>
-  <bs-badge class="mr-1" type="label" variant="light">Light</bs-badge>
-  <bs-badge type="label" variant="dark">Dark</bs-badge>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-badge type="label" variant="primary">Primary</bs-badge>
+    <bs-badge type="label" variant="secondary">Secondary</bs-badge>
+    <bs-badge type="label" variant="success">Success</bs-badge>
+    <bs-badge type="label" variant="danger">Danger</bs-badge>
+    <bs-badge type="label" variant="warning">Warning</bs-badge>
+    <bs-badge type="label" variant="info">Info</bs-badge>
+    <bs-badge type="label" variant="light">Light</bs-badge>
+    <bs-badge type="label" variant="dark">Dark</bs-badge>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -153,16 +171,19 @@ Quickly provide actionable badges with hover and focus states by specifying the 
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-badge class="mr-1" tag="a" variant="primary" href="#/components/badge">Primary</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="secondary" href="#/components/badge">Secondary</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="success" href="#/components/badge">Success</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="danger" href="#/components/badge">Danger</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="warning" href="#/components/badge">Warning</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="info" href="#/components/badge">Info</bs-badge>
-  <bs-badge class="mr-1" tag="a" variant="light" href="#/components/badge">Light</bs-badge>
-  <bs-badge tag="a" variant="dark" href="#/components/badge">Dark</bs-badge>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-badge tag="a" variant="primary" href="#/components/badge">Primary</bs-badge>
+    <bs-badge tag="a" variant="secondary" href="#/components/badge">Secondary</bs-badge>
+    <bs-badge tag="a" variant="success" href="#/components/badge">Success</bs-badge>
+    <bs-badge tag="a" variant="danger" href="#/components/badge">Danger</bs-badge>
+    <bs-badge tag="a" variant="warning" href="#/components/badge">Warning</bs-badge>
+    <bs-badge tag="a" variant="info" href="#/components/badge">Info</bs-badge>
+    <bs-badge tag="a" variant="light" href="#/components/badge">Light</bs-badge>
+    <bs-badge tag="a" variant="dark" href="#/components/badge">Dark</bs-badge>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -174,7 +195,7 @@ Quickly provide actionable badges with hover and focus states by specifying the 
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
@@ -188,7 +209,7 @@ Quickly provide actionable badges with hover and focus states by specifying the 
 </div>
 
 
-#### Slots
+### Slots
 
 <div class="cmp-property">
 
@@ -198,3 +219,8 @@ Quickly provide actionable badges with hover and focus states by specifying the 
 
 </div>
 
+<style scoped>
+.my-demo-wrapper > .badge {
+  margin-right: .5rem;
+}
+</style>

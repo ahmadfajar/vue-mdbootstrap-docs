@@ -11,31 +11,36 @@ The contents for the popup container need to be placed in the `content` slot.
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-menu>
-    <bs-button color="primary" dropdown-toggle>Dropdown</bs-button>
-    <template v-slot:content>
-      <bs-list-view slot="content">
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>First Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>Second Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>Third Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-divider></bs-divider>
-        <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
-          <bs-list-tile-title>Another Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile disabled>
-          <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-        </bs-list-tile>
-      </bs-list-view>
-    </template>
-  </bs-menu>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-menu>
+      <bs-button color="primary" dropdown-toggle>
+        Dropdown
+      </bs-button>
+      <template v-slot:content>
+        <bs-list-view slot="content">
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>First Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>Second Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>Third Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-divider></bs-divider>
+          <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
+            <bs-list-tile-title>Another Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile disabled>
+            <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+          </bs-list-tile>
+        </bs-list-view>
+      </template>
+    </bs-menu>
+  </div>
+</template>
+
 <script>
 export default {
     data() {
@@ -50,6 +55,7 @@ export default {
     }
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -65,31 +71,36 @@ Menus can be accessed using hover instead of clicking with the `open-on-hover` p
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-menu open-on-hover>
-    <bs-button color="primary" dropdown-toggle>Dropdown</bs-button>
-    <template v-slot:content>
-      <bs-list-view slot="content">
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>First Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>Second Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile url="#/components/menu">
-          <bs-list-tile-title>Third Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-divider></bs-divider>
-        <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
-          <bs-list-tile-title>Another Action</bs-list-tile-title>
-        </bs-list-tile>
-        <bs-list-tile disabled>
-          <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-        </bs-list-tile>
-      </bs-list-view>
-    </template>
-  </bs-menu>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-menu open-on-hover>
+      <bs-button color="primary" dropdown-toggle>
+        Dropdown
+      </bs-button>
+      <template v-slot:content>
+        <bs-list-view slot="content">
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>First Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>Second Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile url="#/components/menu">
+            <bs-list-tile-title>Third Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-divider></bs-divider>
+          <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
+            <bs-list-tile-title>Another Action</bs-list-tile-title>
+          </bs-list-tile>
+          <bs-list-tile disabled>
+            <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+          </bs-list-tile>
+        </bs-list-view>
+      </template>
+    </bs-menu>
+  </div>
+</template>
+
 <script>
 export default {
     data() {
@@ -104,6 +115,7 @@ export default {
     }
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -121,160 +133,163 @@ by explicitly define the `placement` property.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-md-4 mb-3">
-      <bs-menu>
-        <bs-button color="primary" dropdown-toggle>Bottom-Left</bs-button>
-        <template v-slot:content>
-          <bs-list-view>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>First Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Second Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Third Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-divider></bs-divider>
-            <bs-list-tile v-model="active" @click="onClick" navigable>
-              <bs-list-tile-title>Another Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile disabled>
-              <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-            </bs-list-tile>
-          </bs-list-view>
-        </template>
-      </bs-menu>
-    </div>
-    <div class="col-md-4 mb-3">
-      <bs-menu placement="bottom">
-        <bs-button color="primary" dropdown-toggle>Bottom</bs-button>
-        <template v-slot:content>
-          <bs-list-view>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>First Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Second Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Third Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-divider></bs-divider>
-            <bs-list-tile v-model="active" @click="onClick" navigable>
-              <bs-list-tile-title>Another Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile disabled>
-              <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-            </bs-list-tile>
-          </bs-list-view>
-        </template>
-      </bs-menu>
-    </div>
-    <div class="col-md-4 mb-3">
-      <bs-menu placement="bottom-right">
-        <bs-button color="primary" dropdown-toggle>Bottom-Right</bs-button>
-        <template v-slot:content>
-          <bs-list-view>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>First Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Second Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile navigable>
-              <bs-list-tile-title>Third Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-divider></bs-divider>
-            <bs-list-tile v-model="active" @click="onClick" navigable>
-              <bs-list-tile-title>Another Action</bs-list-tile-title>
-            </bs-list-tile>
-            <bs-list-tile disabled>
-              <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-            </bs-list-tile>
-          </bs-list-view>
-        </template>
-      </bs-menu>
-    </div>
-    <div class="col-md-4 mb-3">
-       <bs-menu placement="top-left">
-         <bs-button color="primary" dropdown-toggle>Top-Left</bs-button>
-           <template v-slot:content>
-             <bs-list-view>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>First Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Second Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Third Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-divider></bs-divider>
-               <bs-list-tile v-model="active" @click="onClick" navigable>
-                 <bs-list-tile-title>Another Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile disabled>
-                 <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-               </bs-list-tile>
-             </bs-list-view>
-           </template>
-       </bs-menu>
-    </div>
-    <div class="col-md-4 mb-3">
-       <bs-menu placement="top">
-         <bs-button color="primary" dropdown-toggle>Top</bs-button>
-           <template v-slot:content>
-             <bs-list-view>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>First Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Second Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Third Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-divider></bs-divider>
-               <bs-list-tile v-model="active" @click="onClick" navigable>
-                 <bs-list-tile-title>Another Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile disabled>
-                 <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-               </bs-list-tile>
-             </bs-list-view>
-           </template>
-       </bs-menu>
-    </div>
-    <div class="col-md-4 mb-3">
-       <bs-menu placement="top-right">
-         <bs-button color="primary" dropdown-toggle>Top-Right</bs-button>
-           <template v-slot:content>
-             <bs-list-view>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>First Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Second Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile navigable>
-                 <bs-list-tile-title>Third Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-divider></bs-divider>
-               <bs-list-tile v-model="active" @click="onClick" navigable>
-                 <bs-list-tile-title>Another Action</bs-list-tile-title>
-               </bs-list-tile>
-               <bs-list-tile disabled>
-                 <bs-list-tile-title>Disabled Action</bs-list-tile-title>
-               </bs-list-tile>
-             </bs-list-view>
-           </template>
-       </bs-menu>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <bs-menu>
+          <bs-button color="primary" dropdown-toggle>Bottom-Left</bs-button>
+          <template v-slot:content>
+            <bs-list-view>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>First Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Second Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Third Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-divider></bs-divider>
+              <bs-list-tile v-model="active" @click="onClick" navigable>
+                <bs-list-tile-title>Another Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile disabled>
+                <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+              </bs-list-tile>
+            </bs-list-view>
+          </template>
+        </bs-menu>
+      </div>
+      <div class="col-md-4 mb-3">
+        <bs-menu placement="bottom">
+          <bs-button color="primary" dropdown-toggle>Bottom</bs-button>
+          <template v-slot:content>
+            <bs-list-view>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>First Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Second Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Third Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-divider></bs-divider>
+              <bs-list-tile v-model="active" @click="onClick" navigable>
+                <bs-list-tile-title>Another Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile disabled>
+                <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+              </bs-list-tile>
+            </bs-list-view>
+          </template>
+        </bs-menu>
+      </div>
+      <div class="col-md-4 mb-3">
+        <bs-menu placement="bottom-right">
+          <bs-button color="primary" dropdown-toggle>Bottom-Right</bs-button>
+          <template v-slot:content>
+            <bs-list-view>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>First Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Second Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile navigable>
+                <bs-list-tile-title>Third Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-divider></bs-divider>
+              <bs-list-tile v-model="active" @click="onClick" navigable>
+                <bs-list-tile-title>Another Action</bs-list-tile-title>
+              </bs-list-tile>
+              <bs-list-tile disabled>
+                <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+              </bs-list-tile>
+            </bs-list-view>
+          </template>
+        </bs-menu>
+      </div>
+      <div class="col-md-4 mb-3">
+         <bs-menu placement="top-left">
+           <bs-button color="primary" dropdown-toggle>Top-Left</bs-button>
+             <template v-slot:content>
+               <bs-list-view>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>First Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Second Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Third Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-divider></bs-divider>
+                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                   <bs-list-tile-title>Another Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile disabled>
+                   <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+                 </bs-list-tile>
+               </bs-list-view>
+             </template>
+         </bs-menu>
+      </div>
+      <div class="col-md-4 mb-3">
+         <bs-menu placement="top">
+           <bs-button color="primary" dropdown-toggle>Top</bs-button>
+             <template v-slot:content>
+               <bs-list-view>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>First Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Second Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Third Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-divider></bs-divider>
+                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                   <bs-list-tile-title>Another Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile disabled>
+                   <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+                 </bs-list-tile>
+               </bs-list-view>
+             </template>
+         </bs-menu>
+      </div>
+      <div class="col-md-4 mb-3">
+         <bs-menu placement="top-right">
+           <bs-button color="primary" dropdown-toggle>Top-Right</bs-button>
+             <template v-slot:content>
+               <bs-list-view>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>First Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Second Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile navigable>
+                   <bs-list-tile-title>Third Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-divider></bs-divider>
+                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                   <bs-list-tile-title>Another Action</bs-list-tile-title>
+                 </bs-list-tile>
+                 <bs-list-tile disabled>
+                   <bs-list-tile-title>Disabled Action</bs-list-tile-title>
+                 </bs-list-tile>
+               </bs-list-view>
+             </template>
+         </bs-menu>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <script>
 export default {
     data() {
@@ -289,6 +304,7 @@ export default {
     }
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -305,80 +321,83 @@ This can be useful when there are multiple interactive items within the `<bs-men
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
-      <bs-menu v-model="popup1" placement="top-left" :content-click-close="false">
-        <bs-button color="blue">Button Dropdown</bs-button>
-        <template v-slot:content>
-          <bs-list-view>
-            <bs-list-tile tag="div">
-              <bs-list-tile-leading img-src="/img/2.jpg" rounded></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>John Doe</bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more, etc.. </bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="card-body pt-2">
-            <div class="d-block">
-              <bs-switch v-model="enableMessage" color="purple">Enable Messages</bs-switch>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row text-md-center">
+      <div class="col-md-6 col-xl-4 offset-xl-2 mb-3 mb-md-0">
+        <bs-menu v-model="popup1" placement="top-left" :content-click-close="false">
+          <bs-button color="blue">Button Dropdown</bs-button>
+          <template v-slot:content>
+            <bs-list-view>
+              <bs-list-tile tag="div">
+                <bs-list-tile-leading img-src="/img/2.jpg" rounded></bs-list-tile-leading>
+                <bs-list-tile-content>
+                  <bs-list-tile-title>John Doe</bs-list-tile-title>
+                  <bs-list-tile-subtitle>Going further more, etc.. </bs-list-tile-subtitle>
+                </bs-list-tile-content>
+              </bs-list-tile>
+            </bs-list-view>
+            <bs-divider></bs-divider>
+            <div class="card-body pt-2">
+              <div class="d-block">
+                <bs-switch v-model="enableMessage" color="purple">Enable Messages</bs-switch>
+              </div>
+              <div class="d-block mt-2">
+                <bs-switch v-model="enableHints" color="purple">Enable Hints</bs-switch>
+              </div>
+              <div class="mt-4 text-right">
+                <bs-button class="mr-2 font-weight-bold" 
+                           color="secondary" 
+                           flat
+                           @click="popup1 = false">Cancel</bs-button>
+                <bs-button class="font-weight-bold" 
+                           color="primary" 
+                           flat 
+                           @click="popup1 = false">Save</bs-button>
+              </div>
             </div>
-            <div class="d-block mt-2">
-              <bs-switch v-model="enableHints" color="purple">Enable Hints</bs-switch>
+          </template>
+        </bs-menu>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <bs-menu v-model="popup2" placement="right-bottom" :content-click-close="false">
+          <bs-avatar size="72" class="md-shadow-1" img-src="/img/kitty-2.jpg" rounded></bs-avatar>
+          <template v-slot:content>
+            <bs-list-view>
+              <bs-list-tile tag="div">
+                <bs-list-tile-leading img-src="/img/kitty-2.jpg" rounded></bs-list-tile-leading>
+                <bs-list-tile-content>
+                  <bs-list-tile-title>Kitty Doe</bs-list-tile-title>
+                  <bs-list-tile-subtitle>Going further from an Avatar</bs-list-tile-subtitle>
+                </bs-list-tile-content>
+              </bs-list-tile>
+            </bs-list-view>
+            <bs-divider></bs-divider>
+            <div class="card-body pt-2">
+              <div class="d-block">
+                <bs-switch v-model="enableMessage" color="purple">Enable Messages</bs-switch>
+              </div>
+              <div class="d-block mt-2">
+                <bs-switch v-model="enableHints" color="purple">Enable Hints</bs-switch>
+              </div>
+              <div class="mt-4 text-right">
+                <bs-button class="mr-2 font-weight-bold" 
+                           color="secondary" 
+                           flat
+                           @click="popup2 = false">Cancel</bs-button>
+                <bs-button class="font-weight-bold" 
+                           color="primary" 
+                           flat 
+                           @click="popup2 = false">Save</bs-button>
+              </div>
             </div>
-            <div class="mt-4 text-right">
-              <bs-button class="mr-2 font-weight-bold" 
-                         color="secondary" 
-                         flat
-                         @click="popup2 = false">Cancel</bs-button>
-              <bs-button class="font-weight-bold" 
-                         color="primary" 
-                         flat 
-                         @click="popup2 = false">Save</bs-button>
-            </div>
-          </div>
-        </template>
-      </bs-menu>
-    </div>
-    <div class="col-md-6 col-xl-3">
-      <bs-menu v-model="popup2" placement="right-bottom" :content-click-close="false">
-        <bs-avatar size="72" class="md-shadow-1" img-src="/img/kitty-2.jpg" rounded></bs-avatar>
-        <template v-slot:content>
-          <bs-list-view>
-            <bs-list-tile tag="div">
-              <bs-list-tile-leading img-src="/img/kitty-2.jpg" rounded></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>Kitty Doe</bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further from an Avatar</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="card-body pt-2">
-            <div class="d-block">
-              <bs-switch v-model="enableMessage" color="purple">Enable Messages</bs-switch>
-            </div>
-            <div class="d-block mt-2">
-              <bs-switch v-model="enableHints" color="purple">Enable Hints</bs-switch>
-            </div>
-            <div class="mt-4 text-right">
-              <bs-button class="mr-2 font-weight-bold" 
-                         color="secondary" 
-                         flat
-                         @click="popup2 = false">Cancel</bs-button>
-              <bs-button class="font-weight-bold" 
-                         color="primary" 
-                         flat 
-                         @click="popup2 = false">Save</bs-button>
-            </div>
-          </div>
-        </template>
-      </bs-menu>
+          </template>
+        </bs-menu>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <script>
 export default {
     data() {
@@ -391,6 +410,7 @@ export default {
     }
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -402,7 +422,7 @@ export default {
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
@@ -420,7 +440,7 @@ export default {
 </div>
 
 
-#### Events
+### Events
 
 <div class="cmp-property">
 
@@ -432,7 +452,7 @@ export default {
 </div>
 
 
-#### Slots
+### Slots
 
 <div class="cmp-property">
 

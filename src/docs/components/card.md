@@ -18,29 +18,42 @@ root tag to any other HTML element by specifying via the `tag` property.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-      <bs-card>
-        <bs-card-media title="Image Title" subtitle="Image SubTitle">
-          <img src="https://picsum.photos/600/300/?image=29" alt="image">        
-        </bs-card-media>
-        <bs-card-body>
-          <bs-card-content type="title">Content Title</bs-card-content>
-          <bs-card-content type="subtitle">Content SubTitle</bs-card-content>
-          <bs-card-content class="mt-3">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-          <bs-card-content>
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </bs-card-content>
-          <bs-button color="primary" class="mr-2">Action 1</bs-button>
-          <bs-button color="primary" flat>Action 2</bs-button>
-        </bs-card-body>
-      </bs-card>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <bs-card>
+          <bs-card-media title="Image Title" subtitle="Image SubTitle">
+            <img src="https://picsum.photos/600/300/?image=29" alt="image">        
+          </bs-card-media>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Content Title
+            </bs-card-content>
+            <bs-card-content type="subtitle">
+              Content SubTitle
+            </bs-card-content>
+            <bs-card-content class="mt-3">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+            <bs-card-content>
+              <small class="text-muted">
+                Last updated 3 mins ago
+              </small>
+            </bs-card-content>
+            <bs-button color="primary" class="mr-2">
+              Action 1
+            </bs-button>
+            <bs-button color="primary" flat>
+              Action 2
+            </bs-button>
+          </bs-card-body>
+        </bs-card>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
@@ -54,24 +67,29 @@ root tag to any other HTML element by specifying via the `tag` property.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-lg-6 offset-lg-3">
-      <bs-card shadow>
-        <bs-card-header>Card Header</bs-card-header>
-        <bs-card-body>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-          <bs-card-content>
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-footer>Card Footer</bs-card-footer>
-      </bs-card>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <bs-card shadow>
+          <bs-card-header>Card Header</bs-card-header>
+          <bs-card-body>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+            <bs-card-content>
+              <small class="text-muted">
+                Last updated 3 mins ago
+              </small>
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-footer>Card Footer</bs-card-footer>
+        </bs-card>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -85,59 +103,70 @@ root tag to any other HTML element by specifying via the `tag` property.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-3 mb-md-4">
-      <bs-card img-top-src="https://picsum.photos/600/300/?image=29" img-top-alt="Image Top" shadow>
-        <bs-card-body>
-          <bs-card-content type="title">Content Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-      </bs-card>
-    </div>
-    <div class="col mb-3 mb-md-4">
-      <bs-card class="bg-unique text-white" shadow>
-        <bs-card-media title="Image Title" subtitle="Image SubTitle">
-          <img src="https://picsum.photos/600/300/?image=25" alt="image">        
-        </bs-card-media>
-        <bs-card-body>
-          <bs-card-content type="title">Content Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-      </bs-card>
-    </div>
-    <div class="col mb-3 mb-md-0">
-      <bs-card img-bottom-src="https://picsum.photos/600/300/?image=425" img-bottom-alt="Image Bottom" shadow>
-        <bs-card-body>
-          <bs-card-content type="title">Content Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-      </bs-card>
-    </div>
-    <div class="col">
-      <bs-card class="bg-stylish-color text-white" shadow>
-        <bs-card-body>
-          <bs-card-content type="title">Content Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-media title="Image Title" subtitle="Image SubTitle">
-          <img src="https://picsum.photos/600/300/?image=225" alt="image">        
-        </bs-card-media>
-      </bs-card>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-3 mb-md-4">
+        <bs-card img-top-src="https://picsum.photos/600/300/?image=29" img-top-alt="Image Top" shadow>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Content Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+        </bs-card>
+      </div>
+      <div class="col mb-3 mb-md-4">
+        <bs-card class="bg-unique text-white" shadow>
+          <bs-card-media title="Image Title" subtitle="Image SubTitle">
+            <img src="https://picsum.photos/600/300/?image=25" alt="image">        
+          </bs-card-media>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Content Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+        </bs-card>
+      </div>
+      <div class="col mb-3 mb-md-0">
+        <bs-card img-bottom-src="https://picsum.photos/600/300/?image=425" img-bottom-alt="Image Bottom" shadow>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Content Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+        </bs-card>
+      </div>
+      <div class="col">
+        <bs-card class="bg-stylish-color text-white" shadow>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Content Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-media title="Image Title" subtitle="Image SubTitle">
+            <img src="https://picsum.photos/600/300/?image=225" alt="image">        
+          </bs-card-media>
+        </bs-card>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
-  padding: 24px;
+  padding: 24px 24px 50px;
 }
 </style>
 ```
@@ -151,61 +180,72 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-3 mb-md-4">
-      <bs-card class="bg-primary text-white" shadow>
-        <bs-card-header>Card with bg-primary</bs-card-header>
-        <bs-card-body>
-          <bs-card-content type="title">Card Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-footer>Card Footer</bs-card-footer>
-      </bs-card>
-    </div>
-    <div class="col mb-3 mb-md-4">
-      <bs-card class="bg-secondary text-white" shadow>
-        <bs-card-header>Card with bg-secondary</bs-card-header>
-        <bs-card-body>
-          <bs-card-content type="title">Card Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-footer>Card Footer</bs-card-footer>
-      </bs-card>
-    </div>
-    <div class="col mb-3 mb-md-0">
-      <bs-card class="bg-indigo text-white" flat shadow>
-        <bs-card-header>Card with bg-indigo</bs-card-header>
-        <bs-card-body>
-          <bs-card-content type="title">Card Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-footer>Card Footer</bs-card-footer>
-      </bs-card>
-    </div>
-    <div class="col">
-      <bs-card class="bg-unique text-white" flat shadow>
-        <bs-card-header>Card with bg-unique</bs-card-header>
-        <bs-card-body>
-          <bs-card-content type="title">Card Title</bs-card-content>
-          <bs-card-content>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </bs-card-content>
-        </bs-card-body>
-        <bs-card-footer>Card Footer</bs-card-footer>
-      </bs-card>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-3 mb-md-4">
+        <bs-card class="bg-primary text-white" shadow>
+          <bs-card-header>Card with bg-primary</bs-card-header>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Card Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-footer>Card Footer</bs-card-footer>
+        </bs-card>
+      </div>
+      <div class="col mb-3 mb-md-4">
+        <bs-card class="bg-secondary text-white" shadow>
+          <bs-card-header>Card with bg-secondary</bs-card-header>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Card Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-footer>Card Footer</bs-card-footer>
+        </bs-card>
+      </div>
+      <div class="col mb-3 mb-md-0">
+        <bs-card class="bg-indigo text-white" flat shadow>
+          <bs-card-header>Card with bg-indigo</bs-card-header>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Card Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-footer>Card Footer</bs-card-footer>
+        </bs-card>
+      </div>
+      <div class="col">
+        <bs-card class="bg-unique text-white" flat shadow>
+          <bs-card-header>Card with bg-unique</bs-card-header>
+          <bs-card-body>
+            <bs-card-content type="title">
+              Card Title
+            </bs-card-content>
+            <bs-card-content>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </bs-card-content>
+          </bs-card-body>
+          <bs-card-footer>Card Footer</bs-card-footer>
+        </bs-card>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
-  padding: 24px;
+  padding: 24px 24px 50px;
 }
 </style>
 ```
@@ -216,7 +256,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 ### Properties
 
-#### `<bs-card>`
+#### BsCard - `<bs-card>`
 
 <div class="cmp-property">
 
@@ -233,7 +273,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 </div>
 
 
-#### `<bs-card-header>`
+#### BsCardHeader - `<bs-card-header>`
 
 <div class="cmp-property">
 
@@ -244,7 +284,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 </div>
 
 
-#### `<bs-card-footer>`
+#### BsCardFooter - `<bs-card-footer>`
 
 <div class="cmp-property">
 
@@ -254,7 +294,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 </div>
 
-#### `<bs-card-media>`
+#### BsCardMedia - `<bs-card-media>`
 
 <div class="cmp-property">
 
@@ -266,7 +306,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 </div>
 
-#### `<bs-card-body>`
+#### BsCardBody - `<bs-card-body>`
 
 <div class="cmp-property">
 
@@ -276,7 +316,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 </div>
 
-#### `<bs-card-content>`
+#### BsCardContent - `<bs-card-content>`
 
 <div class="cmp-property">
 

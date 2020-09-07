@@ -49,18 +49,15 @@ export default {
             this.visible = !this.visible;
         },
         goJsfiddle() {
-            const {script, html, style} = this.jsfiddle;
+            const {html, script, style} = this.jsfiddle;
 
             const resourcesTpl = '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">\n' +
                 '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css">\n' +
                 '<scr' + 'ipt src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js"></scr' + 'ipt>';
 
-            let cssTpl  = `${(style || '').trim()}\n`;
-            let jsTpl   = (script || '').replace(/export default/, 'var Main =').trim();
-            let htmlscr = html.replace('<html>', '').replace('</html>', '')
-                .replace('<head>', '').replace('</head>', '')
-                .replace('<body>', '').replace('</body>', '');
-            let htmlTpl = `${resourcesTpl}\n<div id="app">\n${htmlscr.trim()}\n</div>`;
+            const cssTpl  = `${(style || '').trim()}\n`;
+            const htmlTpl = `${resourcesTpl}\n<div id="app">${html}</div>`;
+            let jsTpl     = (script || '').replace(/export default/, 'var Main =').trim();
 
             jsTpl = jsTpl
                 ? jsTpl + '\nvar Ctor = Vue.extend(Main);\nnew Ctor().$mount(\'#app\');'
@@ -137,6 +134,10 @@ export default {
                     padding-top: 0;
                 }
             }
+        }
+
+        .my-demo-wrapper {
+            width: 100%;
         }
     }
 }

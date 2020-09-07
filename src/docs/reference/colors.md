@@ -6,48 +6,54 @@ these variants refers to their variant-name, rather than by the underlying CSS c
 :::
 
 
-## Applying color variants to html element
+## Applying Color Variants
 
-#### Background color variants
+### Background color variants
 
 Background color can be applied to any html element by using the classname `bg-{variant}`.
 
-::: demo
+::: pureHtml
 ```html
-<div class="row text-center">
-    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
-        <div class="bg-primary p-4">Inner text.</div>
+<div class="w-100">
+    <div class="row text-center">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="bg-primary p-4">Inner text.</div>
+        </div>
     </div>
 </div>
 ```
 :::
 
 
-#### Border color variants
+### Border color variants
 
 Border color can be applied to any html element by using the classname `border-{variant}`.
 
-::: demo
+::: pureHtml
 ```html
-<div class="row text-center">
-    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
-        <div class="border border-primary p-4">Inner text.</div>
+<div class="w-100">
+    <div class="row text-center">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="border border-primary p-4">Inner text.</div>
+        </div>
     </div>
 </div>
 ```
 :::
 
 
-#### Text color variants
+### Text color variants
 
 Text color can be applied to any html element by using the classname `text-{variant}`.
 
-::: demo
+::: pureHtml
 ```html
-<p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="text-success">Impedit architecto, totam hic sunt eum odio, deleniti.</p>
-<p class="text-danger">Similique ex, expedita minus assumenda a magni beatae dolorum itaque.</p>
-<p>Impedit architecto, <a class="text-purple">totam hic sunt eum odio, deleniti</a>.</p>
+<div class="w-100">
+    <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="text-success">Impedit architecto, totam hic sunt eum odio, deleniti.</p>
+    <p class="text-danger">Similique ex, expedita minus assumenda a magni beatae dolorum itaque.</p>
+    <p>Impedit architecto, <a class="text-purple">totam hic sunt eum odio, deleniti</a>.</p>
+</div>
 ```
 :::
 
@@ -57,7 +63,7 @@ Text color can be applied to any html element by using the classname `text-{vari
 <ColorPalete palette="bootstrap"></ColorPalete>
 
 ::: info
-These color variants can be applied on some Vue MdBootstrap components.
+These color variants can be applied on some Vue MdBootstrap components via its property.
 :::
 
 
@@ -66,7 +72,7 @@ These color variants can be applied on some Vue MdBootstrap components.
 <ColorPalete palette="material"></ColorPalete>
 
 ::: info
-These color variants can be applied on some Vue MdBootstrap components.
+These color variants can be applied on some Vue MdBootstrap components via its property.
 :::
 
 
@@ -93,28 +99,30 @@ see: **background color variants** above.
 
 These color variants can also be used to produce **RGBA background colors**.
 
-::: demo
+::: pureHtml
 ```html
-<div class="row text-center">
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-blue-slight">bg-rgba-blue-slight</div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-blue-light">bg-rgba-blue-light</div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-blue-strong">bg-rgba-blue-strong</div>
-    </div>
-</div> 
-<div class="row text-center">
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-red-slight">bg-rgba-red-slight</div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-red-light">bg-rgba-red-light</div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-        <div class="p-3 bg-rgba-red-strong">bg-rgba-red-strong</div>
+<div class="w-100">
+    <div class="row text-center mb-3 mb-md-0">
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-blue-slight">bg-rgba-blue-slight</div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-blue-light">bg-rgba-blue-light</div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-blue-strong">bg-rgba-blue-strong</div>
+        </div>
+    </div> 
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-red-slight">bg-rgba-red-slight</div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-red-light">bg-rgba-red-light</div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-rgba-red-strong">bg-rgba-red-strong</div>
+        </div>
     </div>
 </div>
 ```

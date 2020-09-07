@@ -20,10 +20,20 @@ hljs.registerLanguage('plaintext', require('highlight.js/lib/languages/plaintext
 
 function convert(str) {
     str = str.replace(/(&#x)(\w{4});/gi, function ($0) {
-        return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, "$2"), 16));
+        return String.fromCharCode(parseInt(encodeURIComponent($0)
+            .replace(/(%26%23x)(\w{4})(%3B)/g, "$2"), 16));
     });
 
     return str;
+}
+
+function replaceTag(html, tag) {
+    return html.replace('<' + tag + '>', '').replace('</' + tag + '>', '');
+}
+
+function stripTag(html, tag) {
+    const reg = RegExp("<" + tag + ">.*</" + tag + ">");
+    return html.replace(reg, "");
 }
 
 module.exports = {
@@ -37,7 +47,8 @@ module.exports = {
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
             try {
-                return '<pre class="hljs lang-' + lang + '"><code>' + hljs.highlight(lang, str, true).value + "</code></pre>";
+                return '<pre class="hljs lang-' + lang + '"><code>' +
+                    hljs.highlight(lang, str, true).value + "</code></pre>";
             } catch (__) {
             }
         }
@@ -64,23 +75,63 @@ module.exports = {
                 const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
 
                 if (tokens[idx].nesting === 1) {
-                    const description     = m && m.length > 1 ? m[1] : "";
-                    const content         = tokens[idx + 1].content;
-                    const html            = convert(striptags.strip(content, ["script", "style"])).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
-                    const script          = striptags.fetch(content, "script");
-                    const style           = striptags.fetch(content, "style");
-                    const descriptionHTML = description ? md.render(description) : "";
-                    let jsfiddle          = {html: html, script: script, style: style};
+                    const description = m && m.length > 1 ? m[1] : "";
+                    const content     = tokens[idx + 1].content;
 
-                    jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
+                    const stripped = striptags.strip(replaceTag(content, "template"), ["script", "style"]);
+                    const html     = convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
+
+                    const template = striptags.fetch(content, "template");
+                    const script   = striptags.fetch(content, "script");
+                    const style    = striptags.fetch(content, "style");
+
+                    const descriptionHTML = description
+                        ? md.render(replaceTag(description, "template"))
+                        : "";
+
+                    let jsfiddle = {html: template, script: script, style: style};
+                    jsfiddle     = md.utils.escapeHtml(JSON.stringify(jsfiddle));
 
                     return `<demo-block :jsfiddle="${jsfiddle}">
-                    <div class="demo-wrapper" slot="source">${html}</div>
+                    <div class="demo-wrapper" slot="source">${template}</div>
                     ${descriptionHTML}
                     <div class="highlight" slot="highlight">`;
                 }
 
                 return "</div></demo-block>\n";
+            },
+        }],
+        [require("markdown-it-container"), "pureHtml", {
+            validate: function (params) {
+                return params.trim().match(/^pureHtml\s*(.*)$/);
+            },
+
+            render: function (tokens, idx) {
+                const m = tokens[idx].info.trim().match(/^pureHtml\s*(.*)$/);
+
+                if (tokens[idx].nesting === 1) {
+                    const description = m && m.length > 1 ? m[1] : "";
+                    const content     = tokens[idx + 1].content;
+
+                    let stripped = stripTag(content, "script");
+                    stripped     = stripTag(stripped, "style");
+
+                    const html   = convert(stripped);
+                    const script = striptags.fetch(content, "script");
+                    const style  = striptags.fetch(content, "style");
+
+                    const descriptionHTML = description ? md.render(description) : "";
+
+                    let jsfiddle = {html: html, script: script, style: style};
+                    jsfiddle     = md.utils.escapeHtml(JSON.stringify(jsfiddle));
+
+                    return `<demo-html :jsfiddle="${jsfiddle}">
+                    <div class="demo-wrapper" slot="source">${html}</div>
+                    ${descriptionHTML}
+                    <div class="highlight" slot="highlight">`;
+                }
+
+                return "</div></demo-html>\n";
             },
         }],
         [require("markdown-it-container"), "lead"],

@@ -12,16 +12,19 @@ available internal icons that you can use.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row text-center">
-    <div v-for="name in iconLibs" 
-         class="col-4 col-sm-3 col-xl-2 mb-4" 
-         :key="name">
-      <bs-icon :icon="name" size="32"></bs-icon>
-      <div class="text-truncate">{{ name }}</div>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row text-center">
+      <div v-for="name in iconLibs" 
+           class="col-4 col-sm-3 col-xl-2 mb-4" 
+           :key="name">
+        <bs-icon :icon="name" size="32"></bs-icon>
+        <div class="text-truncate">{{ name }}</div>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <script>
 const iconLibs = [
     "Add",
@@ -68,6 +71,7 @@ export default {
     },
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -83,21 +87,24 @@ export default {
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row justify-content-center">
-    <div class="col-4 col-sm-3 col-xl-2 d-flex justify-content-center">
-      <bs-icon icon="folder" size="28" class="text-amber"></bs-icon>
-    </div>
-    <div class="col-4 col-sm-3 col-xl-2 d-flex justify-content-center">
-      <bs-icon icon="folder-shared" size="48" class="text-blue"></bs-icon>
-    </div>
-    <div class="col-4 col-sm-3 col-xl-2">
-      <div class="bg-dark-blue d-flex justify-content-center mx-auto" style="width: 56px; height: 56px">
-        <bs-icon icon="folder-shared" size="36" class="text-white"></bs-icon>      
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-3 col-xl-2 d-flex justify-content-center">
+        <bs-icon icon="folder" size="28" class="text-amber"></bs-icon>
+      </div>
+      <div class="col-4 col-sm-3 col-xl-2 d-flex justify-content-center">
+        <bs-icon icon="folder-shared" size="48" class="text-blue"></bs-icon>
+      </div>
+      <div class="col-4 col-sm-3 col-xl-2">
+        <div class="bg-dark-blue d-flex justify-content-center mx-auto" style="width: 56px; height: 56px">
+          <bs-icon icon="folder-shared" size="36" class="text-white"></bs-icon>      
+        </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -113,32 +120,35 @@ export default {
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row justify-content-center">
-    <div class="col-4 col-sm-3 col-xl-2">
-      <bs-button color="blue">
-        <span class="d-flex flex-row">
-          <bs-icon icon="arrow-back" size="24"></bs-icon>
-          <span>Back</span>        
-        </span>
-      </bs-button>
-    </div>
-    <div class="col-4 col-sm-3 col-xl-2">
-      <bs-button color="blue">
-        <span class="d-flex flex-row">
-          <span>Next</span>        
-          <bs-icon icon="arrow-forward" size="24"></bs-icon>
-        </span>
-      </bs-button>
-    </div>
-    <div class="col-4 col-sm-3 col-xl-2">
-      <bs-button color="danger">
-        <bs-icon icon="delete" size="24"></bs-icon>
-        Delete        
-      </bs-button>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-3 col-xl-2">
+        <bs-button color="blue">
+          <span class="d-flex flex-row">
+            <bs-icon icon="arrow-back" size="24"></bs-icon>
+            <span>Back</span>        
+          </span>
+        </bs-button>
+      </div>
+      <div class="col-4 col-sm-3 col-xl-2">
+        <bs-button color="blue">
+          <span class="d-flex flex-row">
+            <span>Next</span>        
+            <bs-icon icon="arrow-forward" size="24"></bs-icon>
+          </span>
+        </bs-button>
+      </div>
+      <div class="col-4 col-sm-3 col-xl-2">
+        <bs-button color="danger">
+          <bs-icon icon="delete" size="24"></bs-icon>
+          Delete        
+        </bs-button>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -150,7 +160,7 @@ export default {
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 

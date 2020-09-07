@@ -9,17 +9,20 @@
 **BsAvatar** is a lightweight component, which render inline by default, so that are vertically 
 centered beside any adjoining plain text. It also can be used as children of other components.
 
-#### Basic Examples
+### Basic Example
 
 :::demo
 ```html
-<div class="my-demo-wrapper d-flex justify-content-center">
+<template>
+  <div class="my-demo-wrapper d-flex justify-content-center">
     <bs-avatar class="m-2" img-src="img/kitty-1.jpg" circle></bs-avatar>
     <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" circle></bs-avatar>
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends" circle></bs-avatar>
     <bs-avatar class="bg-grey-600 darken-3 text-white m-2"
                style="font-size: 150%" text="BS" circle></bs-avatar>
-</div>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -28,15 +31,18 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```
 :::
 
-#### Shape Examples
+### Shape Example
 
 :::demo
 ```html
-<div class="my-demo-wrapper d-flex justify-content-center">
+<template>
+  <div class="my-demo-wrapper d-flex justify-content-center">
     <bs-avatar class="m-2 bg-teal" img-src="img/kitty-1.jpg" circle></bs-avatar>
     <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" rounded></bs-avatar>
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends"></bs-avatar>
-</div>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -46,13 +52,13 @@ centered beside any adjoining plain text. It also can be used as children of oth
 :::
 
 
-#### Use Inside ListTile
+### Use Inside ListTile
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+<template>
+  <div class="my-demo-wrapper">
+    <div class="mx-auto" style="max-width: 500px">
       <bs-list-view class="border rounded-lg">
         <bs-list-tile>
           <bs-list-tile-leading size="42">
@@ -81,8 +87,8 @@ centered beside any adjoining plain text. It also can be used as children of oth
         <bs-divider></bs-divider>
         <bs-list-tile>
           <bs-list-tile-leading size="42">
-            <bs-avatar class="bg-deep-orange darken-3 text-white" size="40"
-                       icon="user-friends" circle></bs-avatar>
+            <bs-avatar class="bg-deep-orange darken-3 text-white" 
+                       size="40" icon="user-friends" circle></bs-avatar>
           </bs-list-tile-leading>
           <bs-list-tile-content>
             <bs-list-tile-title>Avatar using icon listed on FontAwesome website</bs-list-tile-title>
@@ -107,7 +113,8 @@ centered beside any adjoining plain text. It also can be used as children of oth
       </bs-list-view>
     </div>
   </div>
-</div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin-top: 24px;
@@ -125,14 +132,17 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 
 :::demo
 ```html
-<div class="my-demo-wrapper d-flex justify-content-center">
+<template>
+  <div class="my-demo-wrapper d-flex justify-content-center">
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2"
                size="40" icon="user" circle></bs-avatar>
     <bs-avatar class="bg-purple darken-3 text-white m-2"
                style="font-size: 170%" size="3rem" icon="user" circle></bs-avatar>
     <bs-avatar class="bg-indigo darken-3 text-white m-2" icon="user"
                :size="{height: 40, width: 56}" circle></bs-avatar>
-</div>
+  </div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -144,7 +154,7 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 

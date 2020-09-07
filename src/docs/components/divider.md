@@ -7,58 +7,61 @@ lists or page layouts.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <bs-card shadow>
-        <bs-list-view>
-          <bs-list-tile>
-            <bs-list-tile-content>
-              <bs-list-tile-title>List Item 1</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-          <bs-divider left-indent="16"></bs-divider>
-          <bs-list-tile>
-            <bs-list-tile-content>
-              <bs-list-tile-title>List Item 2</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-          <bs-divider left-indent="16"></bs-divider>
-          <bs-list-tile>
-            <bs-list-tile-content>
-              <bs-list-tile-title>List Item 3</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-        </bs-list-view>
-      </bs-card>
-    </div>
-    <div class="col-md-6">
-      <bs-card shadow>
-        <bs-list-view>
-          <bs-list-tile>
-            <bs-list-tile-leading icon="cog"></bs-list-tile-leading>
-            <bs-list-tile-content>
-              <bs-list-tile-title>Setting</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-          <bs-list-tile>
-            <bs-list-tile-leading icon="question-circle"></bs-list-tile-leading>
-            <bs-list-tile-content>
-              <bs-list-tile-title>Help</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-          <bs-divider></bs-divider>
-          <bs-list-tile>
-            <bs-list-tile-leading icon="power-off"></bs-list-tile-leading>
-            <bs-list-tile-content>
-              <bs-list-tile-title>Exit</bs-list-tile-title>
-            </bs-list-tile-content>
-          </bs-list-tile>
-        </bs-list-view>
-      </bs-card>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <bs-card shadow>
+          <bs-list-view>
+            <bs-list-tile>
+              <bs-list-tile-content>
+                <bs-list-tile-title>List Item 1</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+            <bs-divider left-indent="16"></bs-divider>
+            <bs-list-tile>
+              <bs-list-tile-content>
+                <bs-list-tile-title>List Item 2</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+            <bs-divider left-indent="16"></bs-divider>
+            <bs-list-tile>
+              <bs-list-tile-content>
+                <bs-list-tile-title>List Item 3</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+          </bs-list-view>
+        </bs-card>
+      </div>
+      <div class="col-md-6">
+        <bs-card shadow>
+          <bs-list-view>
+            <bs-list-tile>
+              <bs-list-tile-leading icon="cog"></bs-list-tile-leading>
+              <bs-list-tile-content>
+                <bs-list-tile-title>Setting</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+            <bs-list-tile>
+              <bs-list-tile-leading icon="question-circle"></bs-list-tile-leading>
+              <bs-list-tile-content>
+                <bs-list-tile-title>Help</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+            <bs-divider></bs-divider>
+            <bs-list-tile>
+              <bs-list-tile-leading icon="power-off"></bs-list-tile-leading>
+              <bs-list-tile-content>
+                <bs-list-tile-title>Exit</bs-list-tile-title>
+              </bs-list-tile-content>
+            </bs-list-tile>
+          </bs-list-view>
+        </bs-card>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -70,7 +73,7 @@ lists or page layouts.
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 

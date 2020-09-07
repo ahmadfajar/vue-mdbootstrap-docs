@@ -8,27 +8,47 @@ choices with different approach.
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-card-content type="subtitle" class="mb-4">What are you drinking?</bs-card-content>
-  <div class="row mb-3">
-    <label class="col-md-3 col-xl-2 col-form-label">Normal State</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedDrink" :items="drinks"></bs-button-toggle>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-card-content type="subtitle" class="mb-4">
+      What are you drinking?
+    </bs-card-content>
+    <div class="row mb-3">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Normal State
+      </label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedDrink" 
+                          :items="drinks">
+        </bs-button-toggle>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Readonly State
+      </label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedDrink" 
+                          color="indigo" 
+                          :items="drinks" 
+                          readonly>
+        </bs-button-toggle>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Disabled State
+      </label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedDrink" 
+                          :items="drinks" 
+                          disabled>
+        </bs-button-toggle>
+      </div>
     </div>
   </div>
-  <div class="row mb-3">
-    <label class="col-md-3 col-xl-2 col-form-label">Readonly State</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedDrink" :items="drinks" color="indigo" readonly></bs-button-toggle>
-    </div>
-  </div>
-  <div class="row">
-    <label class="col-md-3 col-xl-2 col-form-label">Disabled State</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedDrink" :items="drinks" disabled></bs-button-toggle>
-    </div>
-  </div>
-</div>
+</template>
+
 <script>
 export default {
     data() {
@@ -48,6 +68,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -61,27 +82,48 @@ export default {
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <bs-card-content type="subtitle" class="mb-4">How is the weather today?</bs-card-content>
-  <div class="row mb-3">
-    <label class="col-md-3 col-xl-2 col-form-label">Raised style</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedWeather" :items="weathers" color="primary" raised></bs-button-toggle>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-card-content type="subtitle" class="mb-4">
+      How is the weather today?
+    </bs-card-content>
+    <div class="row mb-3">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Raised style
+      </label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedWeather" 
+                          color="primary" 
+                          :items="weathers" 
+                          raised>
+        </bs-button-toggle>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Outlined style
+      </label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedWeather" 
+                          color="indigo" 
+                          :items="weathers" 
+                          outlined>
+        </bs-button-toggle>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-md-3 col-xl-2 col-form-label">Flat style</label>
+      <div class="col-md">
+        <bs-button-toggle v-model="selectedWeather" 
+                          color="red" 
+                          :items="weathers" 
+                          flat>
+        </bs-button-toggle>
+      </div>
     </div>
   </div>
-  <div class="row mb-3">
-    <label class="col-md-3 col-xl-2 col-form-label">Outlined style</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedWeather" :items="weathers" color="indigo" outlined></bs-button-toggle>
-    </div>
-  </div>
-  <div class="row">
-    <label class="col-md-3 col-xl-2 col-form-label">Flat style</label>
-    <div class="col-md">
-      <bs-button-toggle v-model="selectedWeather" :items="weathers" color="red" flat></bs-button-toggle>
-    </div>
-  </div>
-</div>
+</template>
+
 <script>
 export default {
     data() {
@@ -107,6 +149,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -118,22 +161,22 @@ export default {
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color    | `String`  | `'default'` | Create component with spesific color appearance. Any of **Vue MdBootstrap** color variant can be used. See [Reference - Color Variants](#/reference/colors) for more information. |
+| color    | `String`  | `'default'` | Default buttons color appearance. Any of **Vue MdBootstrap** color variant can be used. See [Reference - Color Variants](#/reference/colors) for more information. |
 | disabled | `Boolean` | `false`  | The default `<input>` element state. |
-| flat     | `Boolean` | `false`  | Create flat buttons style. |
+| flat     | `Boolean` | `false`  | Create button toggle with flat style or not. |
 | icon-position | `String`  | `'left'` | Place icon at `left` (before text) or at `right` (after text). |
 | id       | `String`  |    | The component ID. |
 | items    | `Object[]` |   | Collection of button properties. **[1]** |
 | multiple | `Boolean` | `false` | Allow multiple selection or not. The default is single selection. |
 | name     | `String`  |   | The `<input>` element name. |
-| outlined | `Boolean` | `false` | Create outlined buttons style. |
-| raised   | `Boolean` | `false` | Create raised buttons style. |
+| outlined | `Boolean` | `false` | Create button toggle with outlined style or not. |
+| raised   | `Boolean` | `false` | Create button toggle with raised style or not. |
 | readonly | `Boolean` | `false`  | The default `<input>` element state. |
 | required | `Boolean` | `false`  | When placed inside `<form>`, the item must be selected, before submitted. |
 | size     | `String`  |   | Create buttons with predefined size, valid values are: `xs`, `sm`, `lg`. |
@@ -163,7 +206,7 @@ export default {
 ```
 
 
-#### Events
+### Events
 
 <div class="cmp-property">
 

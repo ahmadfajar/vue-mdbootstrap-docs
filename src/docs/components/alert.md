@@ -8,29 +8,32 @@ success to neutral information.
 
 ## Overview
 
-#### Basic Examples
+### Basic Example
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
-  <bs-alert color="primary">
-    Simple alert with primary color
-  </bs-alert>
-  <bs-alert color="info">
-    Simple info alert with info color
-  </bs-alert>
-  <bs-alert color="success">
-    Simple alert with success color
-  </bs-alert>
-  <bs-alert color="danger">
-    Simple alert with danger color
-  </bs-alert>
-  <bs-alert color="warning">
-    Simple alert with warning color
-  </bs-alert>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert color="primary">
+      Simple alert with primary color
+    </bs-alert>
+    <bs-alert color="info">
+      Simple info alert with info color
+    </bs-alert>
+    <bs-alert color="success">
+      Simple alert with success color
+    </bs-alert>
+    <bs-alert color="danger">
+      Simple alert with danger color
+    </bs-alert>
+    <bs-alert color="warning">
+      Simple alert with warning color
+    </bs-alert>
+  </div>
+</template>
+
 <style scoped>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -38,29 +41,32 @@ success to neutral information.
 :::
 
 
-#### Outline Alert
+### Outline Alert
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
-  <bs-alert color="primary" outlined>
-    Outline alert with primary color
-  </bs-alert>
-  <bs-alert color="info" outlined>
-    Outline info alert with info color
-  </bs-alert>
-  <bs-alert color="success" outlined>
-    Outline alert with success color
-  </bs-alert>
-  <bs-alert color="danger" outlined>
-    Outline alert with danger color
-  </bs-alert>
-  <bs-alert color="warning" outlined>
-    Outline alert with warning color
-  </bs-alert>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert color="primary" outlined>
+      Outline alert with primary color
+    </bs-alert>
+    <bs-alert color="info" outlined>
+      Outline info alert with info color
+    </bs-alert>
+    <bs-alert color="success" outlined>
+      Outline alert with success color
+    </bs-alert>
+    <bs-alert color="danger" outlined>
+      Outline alert with danger color
+    </bs-alert>
+    <bs-alert color="warning" outlined>
+      Outline alert with warning color
+    </bs-alert>
+  </div>
+</template>
+
 <style scoped>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -75,21 +81,24 @@ the appropriate color matching the variant.
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
-  <bs-alert color="purple" icon="exclamation-triangle">
-    <h5>Well done!</h5>
-    <p>
-      Aww yeah, you successfully read this important alert message. This is an example how to
-      construct <b>Alerts</b> from other predefined colors.
-    </p>
-    <hr />
-    <p class="mb-0">
-      Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
-    </p>
-  </bs-alert>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert color="purple" icon="exclamation-triangle">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> from other predefined colors.
+      </p>
+      <hr />
+      <p class="mb-0">
+        Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+      </p>
+    </bs-alert>
+  </div>
+</template>
+
 <style scoped>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -97,31 +106,34 @@ the appropriate color matching the variant.
 :::
 
 
-#### Link color
+### Link color
 
 Use the `.alert-link` utility class on `<a>` element to quickly provide matching colored links within any alert.
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
-  <bs-alert color="primary">
-    Simple primary alert with <a class="alert-link">an example link</a>.
-  </bs-alert>
-  <bs-alert color="info">
-    Simple info alert with <a class="alert-link">an example link</a>.
-  </bs-alert>
-  <bs-alert color="success">
-    Simple success alert with <a class="alert-link">an example link</a>.
-  </bs-alert>
-  <bs-alert color="danger">
-    Simple danger alert with <a class="alert-link">an example link</a>.
-  </bs-alert>
-  <bs-alert color="warning">
-    Simple warning alert with <a class="alert-link">an example link</a>.
-  </bs-alert>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert color="primary">
+      Simple primary alert with <a class="alert-link">an example link</a>.
+    </bs-alert>
+    <bs-alert color="info">
+      Simple info alert with <a class="alert-link">an example link</a>.
+    </bs-alert>
+    <bs-alert color="success">
+      Simple success alert with <a class="alert-link">an example link</a>.
+    </bs-alert>
+    <bs-alert color="danger">
+      Simple danger alert with <a class="alert-link">an example link</a>.
+    </bs-alert>
+    <bs-alert color="warning">
+      Simple warning alert with <a class="alert-link">an example link</a>.
+    </bs-alert>
+  </div>
+</template>
+
 <style scoped>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -135,30 +147,33 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
-  <bs-alert color="primary" dismissable>
-    Simple alert with primary color. Click the close button over there
-    <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
-  </bs-alert>
-  <bs-alert color="info" dismissable>
-    Simple info alert with info color. Click the close button over there
-    <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
-  </bs-alert>
-  <bs-alert color="success" dismissable>
-    Simple alert with success color. Click the close button over there
-    <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
-  </bs-alert>
-  <bs-alert color="danger" outlined dismissable>
-    Outline alert with danger color. Click the close button over there
-    <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
-  </bs-alert>
-  <bs-alert color="warning" outlined dismissable>
-    Outline alert with warning color. Click the close button over there
-    <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
-  </bs-alert>
-</div>
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert color="primary" dismissable>
+      Simple alert with primary color. Click the close button over there
+      <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
+    </bs-alert>
+    <bs-alert color="info" dismissable>
+      Simple info alert with info color. Click the close button over there
+      <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
+    </bs-alert>
+    <bs-alert color="success" dismissable>
+      Simple alert with success color. Click the close button over there
+      <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
+    </bs-alert>
+    <bs-alert color="danger" outlined dismissable>
+      Outline alert with danger color. Click the close button over there
+      <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
+    </bs-alert>
+    <bs-alert color="warning" outlined dismissable>
+      Outline alert with warning color. Click the close button over there
+      <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
+    </bs-alert>
+  </div>
+</template>
+
 <style scoped>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -178,7 +193,8 @@ Do not use the `value` property when using `v-model`.
 
 :::demo
 ```html
-<div class="alert-demo-wrapper">
+<template>
+  <div class="my-demo-wrapper">
     <bs-alert v-model="showDismissibleAlert"
               color="teal" dismissable>
       This is a dismissable alert.
@@ -202,7 +218,9 @@ Do not use the `value` property when using `v-model`.
         </bs-button>
       </div>
     </div>
-</div>
+  </div>
+</template>
+
 <script>
 export default {
     data () {
@@ -239,8 +257,9 @@ export default {
     }
 }
 </script>
+
 <style>
-.alert-demo-wrapper {
+.my-demo-wrapper {
   padding: 24px;
 }
 </style>
@@ -251,7 +270,7 @@ export default {
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
@@ -267,7 +286,7 @@ export default {
 </div>
 
 
-#### Events
+### Events
 
 <div class="cmp-property">
 
@@ -278,7 +297,7 @@ export default {
 </div>
 
 
-#### Slots
+### Slots
 
 <div class="cmp-property">
 

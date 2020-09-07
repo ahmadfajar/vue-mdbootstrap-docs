@@ -9,15 +9,25 @@ inside almost any component or html element. It utilizes
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="input-group">
-    <input :type="inputType" class="form-control" placeholder="Enter password" aria-label="password">
-    <div class="input-group-append">
-      <bs-icon-toggle class="input-group-text" icon="eye" toggle-icon="eye-slash" 
-                      :toggle="passwordToggled" @click="toggleIcon"></bs-icon-toggle>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="input-group">
+      <input :type="inputType" 
+             class="form-control" 
+             placeholder="Enter password" 
+             aria-label="password">
+      <div class="input-group-append">
+        <bs-icon-toggle class="input-group-text" 
+                        icon="eye" 
+                        toggle-icon="eye-slash" 
+                        :toggle="passwordToggled" 
+                        @click="toggleIcon">
+        </bs-icon-toggle>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <script>
 export default {
     data() {
@@ -37,6 +47,7 @@ export default {
     },
 }
 </script>
+
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
@@ -48,7 +59,7 @@ export default {
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
@@ -61,7 +72,7 @@ export default {
 </div>
 
 
-#### Events
+### Events
 
 <div class="cmp-property">
 

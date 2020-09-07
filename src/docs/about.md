@@ -36,7 +36,7 @@ and Bootstrap v4 CSS. If you are unfamiliar with Vue and/or Bootstrap, some good
 - [Vue loader scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) if using scoped
   styles in SFC (Single File Component) `.vue` files
   
-## Important HTML globals
+## Important HTML Globals
 
 Bootstrap v4 CSS employs a handful of important global styles and settings that you'll need
 to be aware of when using it, all of which are almost exclusively geared towards

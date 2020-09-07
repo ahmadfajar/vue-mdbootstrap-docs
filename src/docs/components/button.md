@@ -8,14 +8,17 @@ color variations, sizes, states, and more.
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button>button</bs-button>
-  <bs-button color="primary">primary</bs-button>
-  <bs-button color="secondary">secondary</bs-button>
-  <bs-button color="success">success</bs-button>
-  <bs-button color="danger">danger</bs-button>
-  <bs-button color="warning">warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button>button</bs-button>
+    <bs-button color="primary">primary</bs-button>
+    <bs-button color="secondary">secondary</bs-button>
+    <bs-button color="success">success</bs-button>
+    <bs-button color="danger">danger</bs-button>
+    <bs-button color="warning">warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -38,12 +41,15 @@ with spesific value, such as `button`, `submit`, or `reset`.
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button type="button">button</bs-button>
-  <bs-button color="primary" type="submit">submit</bs-button>
-  <bs-button color="secondary" type="reset">reset</bs-button>
-  <bs-button color="dark-blue" href="#/components/button">button link</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button type="button">button</bs-button>
+    <bs-button type="submit" color="primary">submit</bs-button>
+    <bs-button type="reset" color="secondary">reset</bs-button>
+    <bs-button href="#/components/button" color="dark-blue">button link</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -53,7 +59,6 @@ with spesific value, such as `button`, `submit`, or `reset`.
     margin-right: 8px;
   }
 }
-</style>
 </style>
 ```
 :::
@@ -61,18 +66,21 @@ with spesific value, such as `button`, `submit`, or `reset`.
 
 ## Button Styles
 
-#### Raised style
+### Raised style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button raised>button</bs-button>
-  <bs-button color="primary" raised>primary</bs-button>
-  <bs-button color="secondary" raised>secondary</bs-button>
-  <bs-button color="success" raised>success</bs-button>
-  <bs-button color="danger" raised>danger</bs-button>
-  <bs-button color="warning" raised>warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button raised>button</bs-button>
+    <bs-button color="primary" raised>primary</bs-button>
+    <bs-button color="secondary" raised>secondary</bs-button>
+    <bs-button color="success" raised>success</bs-button>
+    <bs-button color="danger" raised>danger</bs-button>
+    <bs-button color="warning" raised>warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -86,18 +94,21 @@ with spesific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-#### Outlined style
+### Outlined style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button outlined>button</bs-button>
-  <bs-button color="primary" outlined>primary</bs-button>
-  <bs-button color="secondary" outlined>secondary</bs-button>
-  <bs-button color="success" outlined>success</bs-button>
-  <bs-button color="danger" outlined>danger</bs-button>
-  <bs-button color="warning" outlined>warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button outlined>button</bs-button>
+    <bs-button color="primary" outlined>primary</bs-button>
+    <bs-button color="secondary" outlined>secondary</bs-button>
+    <bs-button color="success" outlined>success</bs-button>
+    <bs-button color="danger" outlined>danger</bs-button>
+    <bs-button color="warning" outlined>warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -111,18 +122,21 @@ with spesific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-#### Flat style
+### Flat style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button flat>button</bs-button>
-  <bs-button color="primary" flat>primary</bs-button>
-  <bs-button color="secondary" flat>secondary</bs-button>
-  <bs-button color="success" flat>success</bs-button>
-  <bs-button color="danger" flat>danger</bs-button>
-  <bs-button color="warning" flat>warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button flat>button</bs-button>
+    <bs-button color="primary" flat>primary</bs-button>
+    <bs-button color="secondary" flat>secondary</bs-button>
+    <bs-button color="success" flat>success</bs-button>
+    <bs-button color="danger" flat>danger</bs-button>
+    <bs-button color="warning" flat>warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -136,18 +150,21 @@ with spesific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-#### Rounded style
+### Rounded style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button rounded>button</bs-button>
-  <bs-button color="primary" rounded>primary</bs-button>
-  <bs-button color="secondary" rounded>secondary</bs-button>
-  <bs-button color="success" rounded>success</bs-button>
-  <bs-button color="danger" rounded>danger</bs-button>
-  <bs-button color="warning" rounded>warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button rounded>button</bs-button>
+    <bs-button color="primary" rounded>primary</bs-button>
+    <bs-button color="secondary" rounded>secondary</bs-button>
+    <bs-button color="success" rounded>success</bs-button>
+    <bs-button color="danger" rounded>danger</bs-button>
+    <bs-button color="warning" rounded>warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -161,18 +178,21 @@ with spesific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-#### Pill style
+### Pill style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button pill>button</bs-button>
-  <bs-button color="primary" pill>primary</bs-button>
-  <bs-button color="secondary" pill>secondary</bs-button>
-  <bs-button color="success" pill>success</bs-button>
-  <bs-button color="danger" pill>danger</bs-button>
-  <bs-button color="warning" pill>warning</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button pill>button</bs-button>
+    <bs-button color="primary" pill>primary</bs-button>
+    <bs-button color="secondary" pill>secondary</bs-button>
+    <bs-button color="success" pill>success</bs-button>
+    <bs-button color="danger" pill>danger</bs-button>
+    <bs-button color="warning" pill>warning</bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -186,22 +206,65 @@ with spesific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-#### Combination style
+### Combination style
 
 :::demo
 ```html
-<div class="my-demo-wrapper text-center">
-  <bs-button color="primary" class="text-nowrap" raised rounded>raised rounded</bs-button>
-  <bs-button color="primary" class="text-nowrap" raised outlined rounded>outlined raised rounded</bs-button>
-  <bs-button color="primary" class="text-nowrap" outlined rounded>outlined rounded</bs-button>
-  <bs-button color="primary" class="text-nowrap" flat raised rounded>flat raised rounded</bs-button>
-  <bs-button color="primary" class="text-nowrap" flat rounded>flat rounded</bs-button>
-  <bs-button color="success" class="text-nowrap" raised pill>raised pill</bs-button>
-  <bs-button color="success" class="text-nowrap" raised outlined pill>outlined raised pill</bs-button>
-  <bs-button color="success" class="text-nowrap" outlined pill>outlined pill</bs-button>
-  <bs-button color="success" class="text-nowrap" flat raised pill>flat raised pill</bs-button>
-  <bs-button color="success" class="text-nowrap" flat pill>flat pill</bs-button>
-</div>
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button color="primary" 
+               class="text-nowrap" 
+               raised rounded>
+      raised rounded
+    </bs-button>
+    <bs-button color="primary" 
+               class="text-nowrap" 
+               raised outlined rounded>
+      outlined raised rounded
+    </bs-button>
+    <bs-button color="primary" 
+               class="text-nowrap" 
+               outlined rounded>
+      outlined rounded
+    </bs-button>
+    <bs-button color="primary" 
+               class="text-nowrap" 
+               flat raised rounded>
+      flat raised rounded
+    </bs-button>
+    <bs-button color="primary" 
+               class="text-nowrap" 
+               flat rounded>
+      flat rounded
+    </bs-button>
+    <bs-button color="success" 
+               class="text-nowrap" 
+               raised pill>
+      raised pill
+    </bs-button>
+    <bs-button color="success" 
+               class="text-nowrap" 
+               raised outlined pill>
+      outlined raised pill
+    </bs-button>
+    <bs-button color="success" 
+               class="text-nowrap" 
+               outlined pill>
+      outlined pill
+    </bs-button>
+    <bs-button color="success" 
+               class="text-nowrap" 
+               flat raised pill>
+      flat raised pill
+    </bs-button>
+    <bs-button color="success" 
+               class="text-nowrap" 
+               flat pill>
+      flat pill
+    </bs-button>
+  </div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -220,26 +283,29 @@ with spesific value, such as `button`, `submit`, or `reset`.
 - `pill` and `rounded` property can't be combined, if both `true`, then `pill` will take precedence.
 :::
 
-#### Transparent style
+### Transparent style
 
 :::demo
 ```html
-<div class="my-demo-wrapper px-3">
-  <div class="row text-center">
-    <div class="col-6 col-lg-3 bg-indigo p-3">
-      <bs-button transparent>button</bs-button>    
-    </div>
-    <div class="col-6 col-lg-3 bg-deep-purple p-3">
-      <bs-button transparent>button</bs-button>
-    </div>
-    <div class="col-6 col-lg-3 bg-red p-3">
-      <bs-button transparent>button</bs-button>
-    </div>
-    <div class="col-6 col-lg-3 bg-amber p-3">
-      <bs-button transparent>button</bs-button>
+<template>
+  <div class="my-demo-wrapper px-3">
+    <div class="row text-center">
+      <div class="col-6 col-lg-3 bg-indigo p-3">
+        <bs-button transparent>button</bs-button>    
+      </div>
+      <div class="col-6 col-lg-3 bg-deep-purple p-3">
+        <bs-button transparent>button</bs-button>
+      </div>
+      <div class="col-6 col-lg-3 bg-red p-3">
+        <bs-button transparent>button</bs-button>
+      </div>
+      <div class="col-6 col-lg-3 bg-amber p-3">
+        <bs-button transparent>button</bs-button>
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   .btn {
@@ -263,60 +329,129 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 :::demo
 ```html
-<div class="my-demo-wrapper px-3">
-  <div class="row text-center">
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance" icon-size="sm"></bs-button>    
+<template>
+  <div class="my-demo-wrapper px-3">
+    <div class="row text-center">
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance" 
+                   icon-size="sm">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance" 
+                   icon-size="lg">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance" 
+                   icon-size="lg" 
+                   icon-flip="horizontal">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance" 
+                   icon-size="lg" 
+                   icon-flip="vertical">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="ambulance" 
+                   icon-size="lg" 
+                   icon-flip="both">
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="spinner" 
+                   icon-size="lg" 
+                   icon-spin>
+        </bs-button>
+      </div>
+      <div class="col-4 col-md-3 col-xl mb-3">
+        <bs-button mode="icon" 
+                   icon="spinner" 
+                   icon-size="lg" 
+                   icon-pulse>
+        </bs-button>
+      </div>
     </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance"></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance" icon-size="lg"></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance" icon-size="lg" icon-flip="horizontal"></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance" icon-size="lg" icon-flip="vertical"></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="ambulance" icon-size="lg" icon-flip="both"></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="spinner" icon-size="lg" icon-spin></bs-button>    
-    </div>
-    <div class="col-4 col-md-3 col-xl mb-3">
-      <bs-button mode="icon" icon="spinner" icon-size="lg" icon-pulse></bs-button>    
+    <div class="row text-center">
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="left">
+          Icon Left
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right">
+          Icon Right
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-flip="horizontal">
+          Flip Horizontal
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-flip="vertical">
+          Flip Vertical
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-flip="both">
+          Flip Both
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-rotation="90">
+          Rotate 90&deg;
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-size="lg">
+          Icon size LG
+        </bs-button>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <bs-button color="primary" 
+                   icon="ambulance" 
+                   icon-position="right" 
+                   icon-size="2x">
+          Icon size 2x
+        </bs-button>
+      </div>
     </div>
   </div>
-  <div class="row text-center">
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="left">Icon Left</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right">Icon Right</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right" icon-flip="horizontal">Flip Horizontal</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right"  icon-flip="vertical">Flip Vertical</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right"  icon-flip="both">Flip Both</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right"  icon-rotation="90">Rotate 90&deg;</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right"  icon-size="lg">Icon size LG</bs-button>    
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3 mb-3">
-      <bs-button color="primary" icon="ambulance" icon-position="right"  icon-size="2x">Icon size 2x</bs-button>    
-    </div>
-  </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -332,22 +467,25 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 :::demo
 ```html
-<div class="my-demo-wrapper px-3">
-  <div class="row text-center">
-    <div class="col-6 col-xl mb-3">
-      <bs-button color="blue" size="xs">Extra Small</bs-button>    
-    </div>
-    <div class="col-6 col-xl mb-3">
-      <bs-button color="dark-blue" size="sm">Small</bs-button>    
-    </div>
-    <div class="col-6 col-xl mb-3">
-      <bs-button color="red">Normal</bs-button>    
-    </div>
-    <div class="col-6 col-xl mb-3">
-      <bs-button color="dark" size="lg">Large</bs-button>    
+<template>
+  <div class="my-demo-wrapper px-3">
+    <div class="row text-center">
+      <div class="col-6 col-xl mb-3">
+        <bs-button color="blue" size="xs">Extra Small</bs-button>    
+      </div>
+      <div class="col-6 col-xl mb-3">
+        <bs-button color="dark-blue" size="sm">Small</bs-button>    
+      </div>
+      <div class="col-6 col-xl mb-3">
+        <bs-button color="red">Normal</bs-button>    
+      </div>
+      <div class="col-6 col-xl mb-3">
+        <bs-button color="dark" size="lg">Large</bs-button>    
+      </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -359,28 +497,32 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 ## Button Group
 
-`<bs-button>` can be groupped as series of buttons on a single line called **button group** by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button-group/).
+`<bs-button>` can be groupped as series of buttons on a single line called **button group** 
+by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button-group/).
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row align-items-center">
-    <div class="mb-3 col-12 col-sm text-center">
-      <div class="btn-group" role="group" aria-label="Default Button Group">
-        <bs-button color="blue-grey">Left</bs-button>
-        <bs-button color="blue-grey">Middle</bs-button>
-        <bs-button color="blue-grey">Right</bs-button>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row align-items-center">
+      <div class="mb-3 col-12 col-sm text-center">
+        <div class="btn-group" role="group" aria-label="Default Button Group">
+          <bs-button color="blue-grey">Left</bs-button>
+          <bs-button color="blue-grey">Middle</bs-button>
+          <bs-button color="blue-grey">Right</bs-button>
+        </div>
       </div>
-    </div>
-    <div class="mb-3 col-12 col-sm text-center">
-      <div class="btn-group" role="group" aria-label="Outlined Button Group">
-        <bs-button color="primary" outlined>Left</bs-button>
-        <bs-button color="primary" outlined>Middle</bs-button>
-        <bs-button color="primary" outlined>Right</bs-button>
+      <div class="mb-3 col-12 col-sm text-center">
+        <div class="btn-group" role="group" aria-label="Outlined Button Group">
+          <bs-button color="primary" outlined>Left</bs-button>
+          <bs-button color="primary" outlined>Middle</bs-button>
+          <bs-button color="primary" outlined>Right</bs-button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -396,42 +538,45 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 
 :::demo
 ```html
-<div class="my-demo-wrapper">
-  <div class="row">
-    <div class="mb-3 col-12 col-xl">
-      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <bs-button color="blue-grey">1</bs-button>
-          <bs-button color="blue-grey">2</bs-button>
-          <bs-button color="blue-grey">3</bs-button>
-        </div>
-        <div class="btn-group mr-2" role="group" aria-label="Second group">
-          <bs-button color="blue-grey">4</bs-button>
-          <bs-button color="blue-grey">5</bs-button>
-        </div>
-        <div class="btn-group mr-2" role="group" aria-label="Third group">
-          <bs-button color="blue-grey">6</bs-button>
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="mb-3 col-12 col-xl">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+            <bs-button color="blue-grey">1</bs-button>
+            <bs-button color="blue-grey">2</bs-button>
+            <bs-button color="blue-grey">3</bs-button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <bs-button color="blue-grey">4</bs-button>
+            <bs-button color="blue-grey">5</bs-button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Third group">
+            <bs-button color="blue-grey">6</bs-button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="mb-3 col-12 col-xl">
-      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <bs-button color="blue-grey" outlined>1</bs-button>
-          <bs-button color="blue-grey" outlined>2</bs-button>
-          <bs-button color="blue-grey" outlined>3</bs-button>
-        </div>
-        <div class="btn-group mr-2" role="group" aria-label="Second group">
-          <bs-button color="blue-grey" outlined>4</bs-button>
-          <bs-button color="blue-grey" outlined>5</bs-button>
-        </div>
-        <div class="btn-group mr-2" role="group" aria-label="Third group">
-          <bs-button color="blue-grey" outlined>6</bs-button>
+      <div class="mb-3 col-12 col-xl">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+            <bs-button color="blue-grey" outlined>1</bs-button>
+            <bs-button color="blue-grey" outlined>2</bs-button>
+            <bs-button color="blue-grey" outlined>3</bs-button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <bs-button color="blue-grey" outlined>4</bs-button>
+            <bs-button color="blue-grey" outlined>5</bs-button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Third group">
+            <bs-button color="blue-grey" outlined>6</bs-button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px;
@@ -443,7 +588,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 
 ## Component Reference
 
-#### Properties
+### Properties
 
 <div class="cmp-property">
 
@@ -477,7 +622,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 </div>
 
 
-#### Events
+### Events
 
 <div class="cmp-property">
 
@@ -489,7 +634,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 </div>
 
 
-#### Slots
+### Slots
 
 <div class="cmp-property">
 
