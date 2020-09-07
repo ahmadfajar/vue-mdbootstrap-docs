@@ -307,4 +307,4 @@ export default {
 
 </div>
 
-<script src="./alert-js.js"></script>
+<script src="./script/alert.js"></script>

@@ -464,4 +464,4 @@ export default {
 </div>
 
 
-<script src="./menu-js.js"></script>
+<script src="./script/menu.js"></script>

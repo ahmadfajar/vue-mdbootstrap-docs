@@ -174,4 +174,4 @@ export default {
 </div>
 
 
-<script src="./icon-js.js"></script>
+<script src="./script/icon.js"></script>

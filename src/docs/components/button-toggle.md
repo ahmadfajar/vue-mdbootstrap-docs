@@ -217,4 +217,4 @@ export default {
 </div>
 
 
-<script src="./button-toggle-js.js"></script>
+<script src="./script/button-toggle.js"></script>

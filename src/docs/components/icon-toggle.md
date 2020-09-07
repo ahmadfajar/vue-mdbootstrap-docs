@@ -82,4 +82,4 @@ export default {
 
 </div>
 
-<script src="./icon-toggle-js.js"></script>
+<script src="./script/icon-toggle.js"></script>

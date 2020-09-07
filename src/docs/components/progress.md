@@ -238,4 +238,4 @@ export default {
 </div>
 
 
-<script src="./progress-js.js"></script>
+<script src="./script/progress.js"></script>
