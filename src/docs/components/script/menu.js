@@ -8,9 +8,4 @@ export default {
             enableHints: true,
         }
     },
-    methods: {
-        onClick() {
-            this.active = !this.active;
-        }
-    },
 }

@@ -29,7 +29,7 @@ The contents for the popup container need to be placed in the `content` slot.
             <bs-list-tile-title>Third Action</bs-list-tile-title>
           </bs-list-tile>
           <bs-divider></bs-divider>
-          <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
+          <bs-list-tile url="#/components/menu" v-model="active">
             <bs-list-tile-title>Another Action</bs-list-tile-title>
           </bs-list-tile>
           <bs-list-tile disabled>
@@ -46,11 +46,6 @@ export default {
     data() {
         return {
             active: false,
-        }
-    },
-    methods: {
-        onClick() {
-            this.active = !this.active;
         }
     }
 }
@@ -89,7 +84,7 @@ Menus can be accessed using hover instead of clicking with the `open-on-hover` p
             <bs-list-tile-title>Third Action</bs-list-tile-title>
           </bs-list-tile>
           <bs-divider></bs-divider>
-          <bs-list-tile url="#/components/menu" v-model="active" @click="onClick">
+          <bs-list-tile url="#/components/menu" v-model="active">
             <bs-list-tile-title>Another Action</bs-list-tile-title>
           </bs-list-tile>
           <bs-list-tile disabled>
@@ -106,11 +101,6 @@ export default {
     data() {
         return {
             active: false,
-        }
-    },
-    methods: {
-        onClick() {
-            this.active = !this.active;
         }
     }
 }
@@ -151,7 +141,7 @@ by explicitly define the `placement` property.
                 <bs-list-tile-title>Third Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-divider></bs-divider>
-              <bs-list-tile v-model="active" @click="onClick" navigable>
+              <bs-list-tile v-model="active" navigable>
                 <bs-list-tile-title>Another Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-list-tile disabled>
@@ -176,7 +166,7 @@ by explicitly define the `placement` property.
                 <bs-list-tile-title>Third Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-divider></bs-divider>
-              <bs-list-tile v-model="active" @click="onClick" navigable>
+              <bs-list-tile v-model="active" navigable>
                 <bs-list-tile-title>Another Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-list-tile disabled>
@@ -201,7 +191,7 @@ by explicitly define the `placement` property.
                 <bs-list-tile-title>Third Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-divider></bs-divider>
-              <bs-list-tile v-model="active" @click="onClick" navigable>
+              <bs-list-tile v-model="active" navigable>
                 <bs-list-tile-title>Another Action</bs-list-tile-title>
               </bs-list-tile>
               <bs-list-tile disabled>
@@ -226,7 +216,7 @@ by explicitly define the `placement` property.
                    <bs-list-tile-title>Third Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-divider></bs-divider>
-                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                 <bs-list-tile v-model="active" navigable>
                    <bs-list-tile-title>Another Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-list-tile disabled>
@@ -251,7 +241,7 @@ by explicitly define the `placement` property.
                    <bs-list-tile-title>Third Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-divider></bs-divider>
-                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                 <bs-list-tile v-model="active" navigable>
                    <bs-list-tile-title>Another Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-list-tile disabled>
@@ -276,7 +266,7 @@ by explicitly define the `placement` property.
                    <bs-list-tile-title>Third Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-divider></bs-divider>
-                 <bs-list-tile v-model="active" @click="onClick" navigable>
+                 <bs-list-tile v-model="active" navigable>
                    <bs-list-tile-title>Another Action</bs-list-tile-title>
                  </bs-list-tile>
                  <bs-list-tile disabled>
@@ -295,11 +285,6 @@ export default {
     data() {
         return {
             active: false,
-        }
-    },
-    methods: {
-        onClick() {
-            this.active = !this.active;
         }
     }
 }
@@ -329,7 +314,7 @@ This can be useful when there are multiple interactive items within the `<bs-men
           <bs-button color="blue">Button Dropdown</bs-button>
           <template v-slot:content>
             <bs-list-view>
-              <bs-list-tile tag="div">
+              <bs-list-tile>
                 <bs-list-tile-leading img-src="/img/2.jpg" rounded></bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>John Doe</bs-list-tile-title>
@@ -364,7 +349,7 @@ This can be useful when there are multiple interactive items within the `<bs-men
           <bs-avatar size="72" class="md-shadow-1" img-src="/img/kitty-2.jpg" rounded></bs-avatar>
           <template v-slot:content>
             <bs-list-view>
-              <bs-list-tile tag="div">
+              <bs-list-tile>
                 <bs-list-tile-leading img-src="/img/kitty-2.jpg" rounded></bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>Kitty Doe</bs-list-tile-title>

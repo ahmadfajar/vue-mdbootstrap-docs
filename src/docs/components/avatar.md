@@ -160,7 +160,7 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 
 | Property      | Type        | Default  | Description |
 |---------------|-------------|----------|-------------|
-| center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically |
+| center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically. |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | icon          | `String`    |          | The icon to display as avatar. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
@@ -168,7 +168,7 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 | icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
 | img-src       | `String`    |          | Set the image location or image url to display as avatar |
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
-| size          | `Number`/`String`/`Object` | `48` | Change the component size |
+| size          | `Number`/`String`/`Object` | `48` | The avatar size |
 | text          | `String`    |          | The text to display inside the component. Use short text (1 to 3 characters) to properly display it. The text will be transformed to uppercase. |
 
 </div>

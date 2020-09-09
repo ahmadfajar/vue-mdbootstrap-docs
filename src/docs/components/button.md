@@ -628,7 +628,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| click  | `EventObject` | Fires when a non-disabled button is clicked. |
+| click  | `MouseEvent` | Fires when a non-disabled button is clicked. |
 | input  | `Boolean` | Used to update component state of `active` property. |
 
 </div>

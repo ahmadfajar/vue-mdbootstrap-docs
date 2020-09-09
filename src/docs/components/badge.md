@@ -202,7 +202,7 @@ Quickly provide actionable badges with hover and focus states by specifying the 
 | Property | Type     | Default  | Description |
 |----------|----------|----------|-------------|
 | color    | `String` | `'default-color text-white'` | The badge color appearance. See [Reference - Color Variants](#/reference/colors) for more information. |
-| tag      | `String` | `'span'` | Html tag use to render the badge. |
+| tag      | `String` | `'span'` | The html tag is used to render the badge. |
 | type     | `String` |   | Create badge with `pill` or `label` style. |
 | variant  | `String` |   | Create contextual badge with [Bootstrap theme color](https://getbootstrap.com/docs/4.5/components/badge/#contextual-variations). |
 

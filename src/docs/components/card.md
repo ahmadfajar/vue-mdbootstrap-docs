@@ -24,7 +24,7 @@ root tag to any other HTML element by specifying via the `tag` property.
       <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
         <bs-card>
           <bs-card-media title="Image Title" subtitle="Image SubTitle">
-            <img src="https://picsum.photos/600/300/?image=29" alt="image">        
+            <img src="https://picsum.photos/id/29/600/300.jpg" alt="image">        
           </bs-card-media>
           <bs-card-body>
             <bs-card-content type="title">
@@ -107,7 +107,7 @@ root tag to any other HTML element by specifying via the `tag` property.
   <div class="my-demo-wrapper">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col mb-3 mb-md-4">
-        <bs-card img-top-src="https://picsum.photos/600/300/?image=29" img-top-alt="Image Top" shadow>
+        <bs-card img-top-src="https://picsum.photos/id/29/600/300.jpg" img-top-alt="Image Top" shadow>
           <bs-card-body>
             <bs-card-content type="title">
               Content Title
@@ -121,7 +121,7 @@ root tag to any other HTML element by specifying via the `tag` property.
       <div class="col mb-3 mb-md-4">
         <bs-card class="bg-unique text-white" shadow>
           <bs-card-media title="Image Title" subtitle="Image SubTitle">
-            <img src="https://picsum.photos/600/300/?image=25" alt="image">        
+            <img src="https://picsum.photos/id/25/600/300.jpg" alt="image">        
           </bs-card-media>
           <bs-card-body>
             <bs-card-content type="title">
@@ -134,7 +134,7 @@ root tag to any other HTML element by specifying via the `tag` property.
         </bs-card>
       </div>
       <div class="col mb-3 mb-md-0">
-        <bs-card img-bottom-src="https://picsum.photos/600/300/?image=425" img-bottom-alt="Image Bottom" shadow>
+        <bs-card img-bottom-src="https://picsum.photos/id/425/600/300.jpg" img-bottom-alt="Image Bottom" shadow>
           <bs-card-body>
             <bs-card-content type="title">
               Content Title
@@ -156,7 +156,7 @@ root tag to any other HTML element by specifying via the `tag` property.
             </bs-card-content>
           </bs-card-body>
           <bs-card-media title="Image Title" subtitle="Image SubTitle">
-            <img src="https://picsum.photos/600/300/?image=225" alt="image">        
+            <img src="https://picsum.photos/id/225/600/300.jpg" alt="image">        
           </bs-card-media>
         </bs-card>
       </div>
@@ -254,9 +254,9 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 ## Component Reference
 
-### Properties
+### BsCard - `<bs-card>`
 
-#### BsCard - `<bs-card>`
+#### Properties
 
 <div class="cmp-property">
 
@@ -268,33 +268,46 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 | img-top-alt | `String`  |     | Value for the image `alt` attribute. |
 | img-top-src | `String`  |     | The image URL. |
 | shadow    | `Boolean` | `false` | Create card with shadow on its sides. |
-| tag       | `String`  | `'div'` | Html tag used to render the card. |
+| tag       | `String`  | `'div'` | The html tag is used to render the card. |
 
 </div>
 
 
-#### BsCardHeader - `<bs-card-header>`
+### BsCardHeader - `<bs-card-header>`
+
+The component for card header.
+
+#### Properties
 
 <div class="cmp-property">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| tag      | `String`  | `'div'`  | Html tag used to render the card header. |
+| tag      | `String`  | `'div'`  | The html tag is used to render the card header. |
 
 </div>
 
 
-#### BsCardFooter - `<bs-card-footer>`
+### BsCardFooter - `<bs-card-footer>`
+
+The component for card footer.
+
+#### Properties
 
 <div class="cmp-property">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| tag      | `String`  | `'div'`  | Html tag used to render the card footer. |
+| tag      | `String`  | `'div'`  | The html tag is used to render the card footer. |
 
 </div>
 
-#### BsCardMedia - `<bs-card-media>`
+
+### BsCardMedia - `<bs-card-media>`
+
+The component for displaying image inside a card.
+
+#### Properties
 
 <div class="cmp-property">
 
@@ -306,17 +319,27 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 </div>
 
-#### BsCardBody - `<bs-card-body>`
+
+### BsCardBody - `<bs-card-body>`
+
+The container for card contents.
+
+#### Properties
 
 <div class="cmp-property">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| tag      | `String`  | `'div'`  | Html tag used to render the card body. |
+| tag      | `String`  | `'div'`  | The html tag is used to render the card body. |
 
 </div>
 
-#### BsCardContent - `<bs-card-content>`
+
+### BsCardContent - `<bs-card-content>`
+
+The component for displaying text inside a card. This component helps style consistency of text.
+
+#### Properties
 
 <div class="cmp-property">
 
@@ -334,7 +357,7 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 
 | Name    | Description  |
 |---------|--------------|
-| default | Main content |
+| default | Main content for each component above |
 
 </div>
 

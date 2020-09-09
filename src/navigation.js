@@ -60,54 +60,57 @@ const navs = [{
         children: [{
             title: "Checkbox",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/checkbox"
         }, {
             title: "Checkbox Group",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/checkbox-group"
         }, {
             title: "Combobox",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/combobox"
         }, {
             title: "Radio",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/radio"
         }, {
             title: "Radio Group",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/radio-group"
         }, {
             title: "Switch",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/switch"
         }, {
             title: "Text Area",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/textarea"
         }, {
             title: "Text Field",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/textfield"
         }, {
             title: "DateTime Field",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/datefield"
         }, {
             title: "Number Field",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/numberfield"
         }, {
             title: "Search Field",
             // view: viewResolver("components/image-holder"),
-            // route: "/components/image-holder"
+            route: "/components/input/searchfield"
         }]
     }, {
         title: "Lists",
         children: [{
             title: "List Tile",
+            view: viewResolver("components/list-tile"),
+            route: "/components/lists/tile"
         }, {
             title: "List Navigation",
+            route: "/components/lists/navigation"
         }]
     }, {
         title: "Menu",
