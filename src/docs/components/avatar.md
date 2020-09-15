@@ -9,8 +9,6 @@
 **BsAvatar** is a lightweight component, which render inline by default, so that are vertically 
 centered beside any adjoining plain text. It also can be used as children of other components.
 
-### Basic Example
-
 :::demo
 ```html
 <template>
@@ -31,7 +29,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```
 :::
 
-### Shape Example
+## Shape Style
 
 :::demo
 ```html
@@ -52,7 +50,36 @@ centered beside any adjoining plain text. It also can be used as children of oth
 :::
 
 
-### Use Inside ListTile
+## Sizing
+
+By default, `<bs-avatar>` is sized to `48px`. You can change the size of the `<bs-avatar>` by changing 
+the size property explicitly. Numbers get converted to pixel values. Any other value must include the units 
+(such as `px`, `em`, or `rem`). You can also create an avatar with different height and width by explicitly
+define its size property as `object`, such as `{height: 40, width: 56}`.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper d-flex justify-content-center">
+    <bs-avatar class="bg-deep-orange darken-3 text-white m-2"
+               size="40" icon="user" circle></bs-avatar>
+    <bs-avatar class="bg-purple darken-3 text-white m-2"
+               style="font-size: 170%" size="3rem" icon="user" circle></bs-avatar>
+    <bs-avatar class="bg-indigo darken-3 text-white m-2" icon="user"
+               :size="{height: 40, width: 56}" circle></bs-avatar>
+  </div>
+</template>
+
+<style scoped>
+.my-demo-wrapper {
+  margin: 24px;
+}
+</style>
+```
+:::
+
+
+## Use Inside ListTile
 
 :::demo
 ```html
@@ -91,7 +118,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
                        size="40" icon="user-friends" circle></bs-avatar>
           </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title>Avatar using icon listed on FontAwesome website</bs-list-tile-title>
+            <bs-list-tile-title>Avatar using icon listed on FontAwesome</bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
             <bs-badge>15</bs-badge>
@@ -123,34 +150,6 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```
 :::
 
-## Sizing
-
-By default, `<bs-avatar>` is sized to `48px`. You can change the size of the `<bs-avatar>` by changing 
-the size property explicitly. Numbers get converted to pixel values. Any other value must include the units 
-(such as `px`, `em`, or `rem`). You can also create an avatar with different height and width by explicitly
-define its size property as `object`, such as `{height: 40, width: 56}`.
-
-:::demo
-```html
-<template>
-  <div class="my-demo-wrapper d-flex justify-content-center">
-    <bs-avatar class="bg-deep-orange darken-3 text-white m-2"
-               size="40" icon="user" circle></bs-avatar>
-    <bs-avatar class="bg-purple darken-3 text-white m-2"
-               style="font-size: 170%" size="3rem" icon="user" circle></bs-avatar>
-    <bs-avatar class="bg-indigo darken-3 text-white m-2" icon="user"
-               :size="{height: 40, width: 56}" circle></bs-avatar>
-  </div>
-</template>
-
-<style scoped>
-.my-demo-wrapper {
-  margin: 24px;
-}
-</style>
-```
-:::
-
 
 ## Component Reference
 
@@ -163,9 +162,10 @@ define its size property as `object`, such as `{height: 40, width: 56}`.
 | center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically. |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | icon          | `String`    |          | The icon to display as avatar. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
-| icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-rotation | `Number`    |          | Rotate the icon, valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-flip     | `String`    |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
+| icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. |
+| icon-rotation | `Number`    |          | Rotate the icon, valid values are: `90`, `180`, `270`. |
+| icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. |
 | img-src       | `String`    |          | Set the image location or image url to display as avatar |
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String`/`Object` | `48` | The avatar size |

@@ -276,7 +276,7 @@ export default {
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `'primary'` | Applies one of the **Vue MdBootstrap color** variants to the component |
+| color       | `String`    | `'primary'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component |
 | dismissable | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | outlined    | `Boolean`   | `false`     | Create outline alert style |
 | icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |

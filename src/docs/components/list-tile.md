@@ -59,7 +59,7 @@ by different components.
           </bs-list-tile-action>
         </bs-list-tile>
         <bs-list-tile navigable>
-          <bs-list-tile-leading icon="bs-delete"></bs-list-tile-leading>
+          <bs-list-tile-leading icon="bs-trash"></bs-list-tile-leading>
           <bs-list-tile-content>
             <bs-list-tile-title>Trash</bs-list-tile-title>
           </bs-list-tile-content>
@@ -68,7 +68,7 @@ by different components.
           </bs-list-tile-action>
         </bs-list-tile>
         <bs-list-tile navigable>
-          <bs-list-tile-leading icon="bs-folder-shared"></bs-list-tile-leading>
+          <bs-list-tile-leading icon="shield-virus"></bs-list-tile-leading>
           <bs-list-tile-content>
             <bs-list-tile-title>Spam</bs-list-tile-title>
           </bs-list-tile-content>
@@ -158,6 +158,24 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
   </div>
 </template>
 
+<script>
+export default {
+    data() { 
+        return {
+            chats1: [
+                {active: true, fullname: 'Jason Oner', avatar: 'img/1.jpg'},
+                {active: true, fullname: 'Ranee Carlson', avatar: 'img/2.jpg'},
+                {active: false, fullname: 'Cindy Baker', avatar: 'img/3.jpg'},
+                {active: false, fullname: 'Ali Connors', avatar: 'img/4.jpg'}
+            ],
+            chats2: [
+                {fullname: 'Travis Howard', avatar: 'img/5.jpg'}
+            ],
+        }; 
+    },
+}
+</script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
@@ -218,6 +236,40 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
   </div>
 </template>
 
+<script>
+export default {
+    data() { 
+        return {
+            recipes: [{
+                url: "img/crunchy-croissants.jpg",
+                title: "Crunchy Croissants",
+                desc: "Buttery, flaky pastry named for its crescent shaped."
+            }, {
+                url: "img/grilled-eggplant.jpg",
+                title: "Grilled Eggplant",
+                desc: "Tender with a rich, complex flavor when cooked."
+            }, {
+                url: "img/tangerine-salad.jpg",
+                title: "Tangerine Salad",
+                desc: "Peak tangerine season lasts from autumn to spring."
+            }, {
+                url: "img/pomegranate-juice.jpg",
+                title: "Pomegranate Juice",
+                desc: "A superfood for good skin, hair and health."
+            }, {
+                url: "img/simple-salsa.jpg",
+                title: "Chili Salsa",
+                desc: "Heat up any taco night with minimal preparation."
+            }, {
+                url: "img/flour-scratch.jpg",
+                title: "Flour from scratch",
+                desc: "Grind grains, nuts, or beans in your coffee grinder."
+            }],
+        }; 
+    },
+}
+</script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
@@ -275,6 +327,37 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
     </div>
   </div>
 </template>
+
+<script>
+export default {
+    data() { 
+        return {
+            cardItems: [
+                {
+                    avatar: 'img/1.jpg',
+                    title: 'Brunch this weekend?',
+                    subtitle: "<b>Ali Connors</b> &#8212; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+                },
+                {
+                    avatar: 'img/2.jpg',
+                    title: 'Summer BBQ',
+                    subtitle: "<b>to Alex, Scott, Jennifer</b> &mdash; Wish I could come, but I'm out of town this weekend."
+                },
+                {
+                    avatar: 'img/3.jpg',
+                    title: 'Oui oui',
+                    subtitle: "<b>Sandra Adams</b> &mdash; Do you have Paris recommendations? Have you ever been?"
+                },
+                {
+                    avatar: 'img/4.jpg',
+                    title: 'Birthday gift',
+                    subtitle: "<b>Trevor Hansen</b> &mdash; Have any ideas about what we should get Heidi for her birthday?"
+                }
+            ],
+        }; 
+    },
+}
+</script>
 
 <style lang="scss">
 .my-demo-wrapper {
@@ -334,6 +417,85 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
         </bs-list-tile>
       </bs-list-view>
     </bs-card>
+  </div>
+</template>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px 24px 60px;
+}
+</style>
+```
+:::
+
+
+## Used inside SideDrawer
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-side-drawer width="280" class="mx-auto" color="white" shadow>
+      <div class="p-3 text-center">
+          <img src="img/kitty-1.jpg" alt="image" class="rounded-circle">      
+          <div class="h5 mt-3">Kitty Doe</div>  
+      </div>
+      <bs-divider></bs-divider>
+      <bs-list-view space-around="both">
+        <bs-list-tile navigable active>
+          <bs-list-tile-leading icon="inbox"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Inbox</bs-list-tile-title>
+          </bs-list-tile-content>
+        </bs-list-tile>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="tags"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Important</bs-list-tile-title>
+          </bs-list-tile-content>
+        </bs-list-tile>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="paper-plane"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Sent</bs-list-tile-title>
+          </bs-list-tile-content>
+        </bs-list-tile>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="file-alt"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Drafts</bs-list-tile-title>
+          </bs-list-tile-content>
+        </bs-list-tile>
+        <bs-divider></bs-divider>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="envelope-open-text"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>All Mail</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge type="pill" variant="secondary">102</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="bs-trash"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Trash</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge type="pill" variant="secondary">12</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+        <bs-list-tile navigable>
+          <bs-list-tile-leading icon="shield-virus"></bs-list-tile-leading>
+          <bs-list-tile-content>
+            <bs-list-tile-title>Spam</bs-list-tile-title>
+          </bs-list-tile-content>
+          <bs-list-tile-action>
+            <bs-badge type="pill" variant="secondary">8</bs-badge>
+          </bs-list-tile-action>
+        </bs-list-tile>
+      </bs-list-view>
+    </bs-side-drawer>
   </div>
 </template>
 
@@ -428,6 +590,31 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
   </div>
 </template>
 
+<script>
+export default {
+    data() { 
+        return {
+            enableFiltering: false,
+            enablePassword: false,
+            enableNotification: false,
+            enableSound: false,
+            enableWidget: false,
+        }; 
+    },
+    methods: {
+        updateEnableNotification() {
+            this.enableNotification = !this.enableNotification;
+        },
+        updateEnableSound() {
+            this.enableSound = !this.enableSound;
+        },
+        updateEnableWidget() {
+            this.enableWidget = !this.enableWidget;
+        },
+    },
+}
+</script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
@@ -512,6 +699,37 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
   </div>
 </template>
 
+<script>
+export default {
+    data() { 
+        return {
+            cardItems: [
+                {
+                    avatar: 'img/1.jpg',
+                    title: 'Brunch this weekend?',
+                    subtitle: "<b>Ali Connors</b> &#8212; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+                },
+                {
+                    avatar: 'img/2.jpg',
+                    title: 'Summer BBQ',
+                    subtitle: "<b>to Alex, Scott, Jennifer</b> &mdash; Wish I could come, but I'm out of town this weekend."
+                },
+                {
+                    avatar: 'img/3.jpg',
+                    title: 'Oui oui',
+                    subtitle: "<b>Sandra Adams</b> &mdash; Do you have Paris recommendations? Have you ever been?"
+                },
+                {
+                    avatar: 'img/4.jpg',
+                    title: 'Birthday gift',
+                    subtitle: "<b>Trevor Hansen</b> &mdash; Have any ideas about what we should get Heidi for her birthday?"
+                }
+            ],
+        }; 
+    },
+}
+</script>
+
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
@@ -525,7 +743,7 @@ Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line 
 
 ### BsListView - `<bs-list-view>`
 
-BsListView is a container to hold all the list items.
+**BsListView** is a container to hold all the list items.
 
 #### Properties
  
@@ -533,16 +751,18 @@ BsListView is a container to hold all the list items.
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
-| color         | `String`    | `'white'` | ListView color appearance. Any of [Vue MdBootstrap colors](#/reference/colors) variant can be used. |
+| active-item-bordered | `String` |  | Give border around the active item. Valid values are: `left`, `right`, `left-right`, `top`, `bottom`, `top-bottom`. |
+| color           | `String`  | `'white'` | ListView color appearance. Any of [MdBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
 | overflow-hidden | `Boolean` | `false`   | Apply css `'overflow-hidden'` or not. |
 | single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. |
+| space-around    | `String`  |   | Give some space around each item. Valid values are: `both`, `left`, `right`. |
 
 </div>
 
 
 ### BsListTile - `<bs-list-tile>`
 
-The component to display and organize a list item parts.
+The component to display and organize the item parts.
 
 #### Properties
 
@@ -551,13 +771,13 @@ The component to display and organize a list item parts.
 | Property   | Type      | Default | Description |
 |------------|-----------|---------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Component state and monitored by `v-model`. |
-| activeClass | `String` | `'active'` | Css class name for active state, see [vue-router](https://router.vuejs.org/) for more information. |
+| active-class | `String` | `'active'` | `<router-link>` prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
 | disabled   | `Boolean` | `false` | Component state. |
-| exact      | `Boolean` | `false` | Router match, see [vue-router](https://router.vuejs.org/) for more information. |
-| navigable  | `Boolean` | `false` | Create list tile that has styles like menu item. |
-| path       | `String`  |  | Route path, see [vue-router](https://router.vuejs.org/) for more information. |
+| exact      | `Boolean` | `false` | `<router-link>` prop: The default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
+| navigable  | `Boolean` | `false` | Explicitly define this propperty when you want to use ListTile as navigation or menu item. |
+| path       | `String`  |  | The route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
 | ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. |
-| url        | `String`  |  | Absolute or relative URL, if doesn't use vue-router. |
+| url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use vue-router. |
 
 </div>
 
@@ -575,7 +795,7 @@ The component to display and organize a list item parts.
 
 ### BsListTileAction - `<bs-list-tile-action>`
 
-BsListTileAction is a container for less important parts of item or for actionable component.
+**BsListTileAction** is a container for less important parts of item or for actionable component.
 
 #### Properties
 
@@ -592,7 +812,7 @@ BsListTileAction is a container for less important parts of item or for actionab
 
 ### BsListTileContent - `<bs-list-tile-content>`
 
-BsListTileContent is a container for item's description. Inside it you can put component such 
+**BsListTileContent** is a container for item's description. Inside it, you can put component such 
 as `<bs-list-tile-title>` and `<bs-list-tile-subtitle>`.
 
 #### Properties
@@ -609,7 +829,7 @@ as `<bs-list-tile-title>` and `<bs-list-tile-subtitle>`.
 
 ### BsListTileLeading - `<bs-list-tile-leading>`
 
-BsListTileLeading is a component for important parts of item. Avatar, image, or icon usually placed 
+**BsListTileLeading** is a component for important parts of item. Avatar, image, or icon usually placed 
 inside this component. This component also can help to display avatar, image or icon directly by 
 defining its property. 
 
@@ -622,6 +842,10 @@ defining its property.
 | center   | `Boolean`   | `false`  | Centers the avatar or image horizontally and vertically. |
 | circle   | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | icon     | `String`    |          | The icon to display. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
+| icon-flip     | `String`    |     | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
+| icon-pulse    | `Boolean`   | `false` | Apply **pulse** animation to the icon. |
+| icon-rotation | `Number`    |         | Rotate the icon, valid values are: `90`, `180`, `270`. |
+| icon-spin     | `Boolean`   | `false` | Apply **spin** animation to the icon. |
 | img-src  | `String`    |          | Set the image location or image url to display as avatar |
 | rounded  | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size     | `Number`/`String`/`Object` | `48` | The avatar size. |
@@ -639,6 +863,7 @@ defining its property.
 
 </div>
 
+
 <style scoped>
 .mobi-card {
   max-width: 400px;
@@ -649,6 +874,14 @@ defining its property.
 .mobi-card .md-list-tile .md-list-tile-action.rating {
   font-size: 18px;
   text-align: right;
+}
+.my-demo-wrapper > .md-side-drawer {
+  position: relative;
+  height: auto !important;
+  z-index: auto !important;
+}
+.my-demo-wrapper > .md-side-drawer img {
+  width: 90px;
 }
 </style>
 

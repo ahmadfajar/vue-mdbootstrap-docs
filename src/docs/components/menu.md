@@ -413,7 +413,7 @@ export default {
 
 | Property | Type     | Default   | Description |
 |----------|----------|-----------|-------------|
-| color    | `String` | `'white'` | Popup container background color. |
+| color    | `String` | `'white'` | Popup container background color. See [Reference - Color Variants](#/reference/colors) for more information. |
 | content-click-close | `Boolean` | `true` | Close or hide popup menu when content clicked. |
 | cover       | `Boolean` | `false` | Display popup menu at a position which can cover the activator. |
 | disabled    | `Boolean` | `false` | Disabled popup menu and prevents it from displaying. |

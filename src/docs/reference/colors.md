@@ -58,7 +58,7 @@ Text color can be applied to any html element by using the classname `text-{vari
 :::
 
 
-## Vue MdBootstrap colors
+## MdBootstrap colors
 
 <ColorPalete palette="bootstrap"></ColorPalete>
 

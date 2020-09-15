@@ -2,7 +2,7 @@ const viewResolver = (name) => require('./docs/' + name).default;
 
 const navs = [{
     title: "Getting Started",
-    icon: "home",
+    icon: "bs-apps",
     children: [{
         title: "About",
         view: viewResolver("about"),
@@ -14,7 +14,7 @@ const navs = [{
     }]
 }, {
     title: "Components",
-    icon: "cog",
+    icon: "bs-folder",
     children: [{
         title: "Alert",
         view: viewResolver("components/alert"),
@@ -59,27 +59,19 @@ const navs = [{
         title: "Input Controls",
         children: [{
             title: "Checkbox",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/checkbox"),
             route: "/components/input/checkbox"
-        }, {
-            title: "Checkbox Group",
-            // view: viewResolver("components/image-holder"),
-            route: "/components/input/checkbox-group"
         }, {
             title: "Combobox",
             // view: viewResolver("components/image-holder"),
             route: "/components/input/combobox"
         }, {
             title: "Radio",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/radio"),
             route: "/components/input/radio"
         }, {
-            title: "Radio Group",
-            // view: viewResolver("components/image-holder"),
-            route: "/components/input/radio-group"
-        }, {
             title: "Switch",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/switch"),
             route: "/components/input/switch"
         }, {
             title: "Text Area",
@@ -101,6 +93,10 @@ const navs = [{
             title: "Search Field",
             // view: viewResolver("components/image-holder"),
             route: "/components/input/searchfield"
+        }, {
+            title: "Toggle Field",
+            // view: viewResolver("components/image-holder"),
+            route: "/components/input/togglefield"
         }]
     }, {
         title: "Lists",
@@ -109,7 +105,8 @@ const navs = [{
             view: viewResolver("components/list-tile"),
             route: "/components/lists/tile"
         }, {
-            title: "List Navigation",
+            title: "Navigation",
+            view: viewResolver("components/list-navigation"),
             route: "/components/lists/navigation"
         }]
     }, {
@@ -137,6 +134,14 @@ const navs = [{
         view: viewResolver("reference/shadows"),
         route: "/reference/shadows"
     }]
+// }, {
+//     title: "Test 1",
+//     route: "/test-1",
+//     icon: "bs-outline-info"
+// }, {
+//     title: "Test 2",
+//     route: "/test-2",
+//     icon: "bs-outline-info"
 }];
 
 export default navs;

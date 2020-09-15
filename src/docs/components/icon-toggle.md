@@ -19,9 +19,8 @@ inside almost any component or html element. It utilizes
       <div class="input-group-append">
         <bs-icon-toggle class="input-group-text" 
                         icon="eye" 
-                        toggle-icon="eye-slash" 
-                        :toggle="passwordToggled" 
-                        @click="toggleIcon">
+                        toggle-icon="eye-slash"
+                        v-model="passwordToggled">
         </bs-icon-toggle>
       </div>
     </div>
@@ -38,11 +37,6 @@ export default {
     computed: {
         inputType() {
             return this.passwordToggled ? 'text' : 'password';
-        }
-    },
-    methods: {
-        toggleIcon() {
-            this.passwordToggled = !this.passwordToggled;
         }
     },
 }
@@ -63,11 +57,11 @@ export default {
 
 <div class="cmp-property">
 
-| Property    | Type      | Default  | Description |
-|-------------|-----------|----------|-------------|
-| icon <bs-badge color="unique text-white">required</bs-badge> | `String` |  | The default icon to display. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| toggle      | `Boolean` | `false`  | Toggle icon state. |
-| toggle-icon <bs-badge color="unique text-white">required</bs-badge> | `String` |  | The icon to display when `toggle` property is `true`. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| Property | Type      | Default  | Description |
+|----------|-----------|----------|-------------|
+| icon <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The default icon to display. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| value <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false`  | Value monitored by `v-model` to maintain icon state. |
+| toggle-icon <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The icon to display when `toggle` property is `true`. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
 
 </div>
 
@@ -78,7 +72,7 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| click  | `EventObject` | Triggers when icon is clicked. |
+| toggle | `Boolean` | Triggers when icon-toggle is clicked. |
 
 </div>
 

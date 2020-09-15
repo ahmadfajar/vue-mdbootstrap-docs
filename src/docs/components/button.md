@@ -596,19 +596,19 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 |----------|-----------|----------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false`  | The button component state. |
 | block    | `Boolean` | `false`  | Create block level button or match button's width to the parent width. See [Bootstrap](https://getbootstrap.com/docs/4.5/components/buttons/#sizes) for more information. |
-| color    | `String`  | `'default'` | Change component color appearance. Any of **Vue MdBootstrap** color variant can be used. See [Reference - Color Variants](#/reference/colors) for more information. |
+| color    | `String`  | `'default'` | Change component color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
 | disabled | `Boolean` | `false`  | The `<button>` element state. |
 | dropdown-toggle | `Boolean` | `false` | Render as `dropdown` button when used inside `<bs-menu>` component. |
 | flat     | `Boolean` | `false`  | Create button with flat style or not. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |
 | icon     | `String`/`Array` |   | The icon to display inside component. Use any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | icon-fixed    | `Boolean` | `false`  | Render Fontawesome Icon with fixed width. |
-| icon-flip     | `String`  |   | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-flip     | `String`  |   | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-position | `String`  | `'left'` | Place icon at `left` (before text) or at `right` (after text) |
-| icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
-| icon-rotation | `Number`  |   | Rotate the icon, valid values are: `90`, `180`, `270`. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
+| icon-rotation | `Number`  |   | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-size     | `String`  |   | Render the icon with predefined size, valid values are: `xs`, `sm`, `lg`, `1x`, `2x`, `3x`, `4x`, `5x`, `6x`, `7x`, `8x`, `9x`, `10x`. |
-| icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. See [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) for more information. |
+| icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | mode     | `String`  | `'default'` | Create spesific button style, valid values are: `default`, `icon`, `floating` |
 | outlined | `Boolean` | `false` | Create button with outlined style or not. |
 | pill     | `Boolean` | `false` | Create button with rounded-pill style or not. |

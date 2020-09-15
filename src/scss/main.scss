@@ -4,12 +4,19 @@
 @import "~compass-sass-mixins/lib/compass/css3";
 @import "hljs-darcula";
 
-.md-side-drawer-inner {
-    > .logo {
+.md-side-drawer {
+    .logo {
         transition: all .3s ease-in-out;
     }
 
-    > .md-list {
+    &.md-mini {
+        .logo {
+            margin-bottom: 12px;
+            margin-top: 12px;
+        }
+    }
+
+    .md-list {
         > .md-list-nav {
             > .md-nav-item {
                 &.md-parent {
@@ -54,12 +61,12 @@
         padding-top: 1.5rem;
 
         &:not(.card-title) {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
         }
     }
 
     > .h3, > h3 {
-        font-size: 1.9rem;
+//        font-size: 1.9rem;
         padding-top: 1rem;
     }
 
@@ -144,10 +151,10 @@
     }
 
     @include media-breakpoint-up(xl) {
-        max-width: 1080px;
+        max-width: 1000px;
     }
 
     @media (min-width: 1450px) {
-        max-width: 1200px;
+        max-width: 1150px;
     }
 }

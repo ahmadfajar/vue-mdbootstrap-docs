@@ -91,3 +91,14 @@ lists or page layouts.
 | dark         | `Boolean`   | `false`  | Define explicitly when placed inside element with dark background. |
 
 </div>
+
+
+### Slots
+
+<div class="cmp-property">
+
+| Name    | Description  |
+|---------|--------------|
+| default | Main content |
+
+</div>

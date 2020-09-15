@@ -7,7 +7,7 @@
                  fixed-top
                  shadow>
         <bs-button mode="icon"
-                   color="light-grey"
+                   color="light-grey d-xl-none"
                    flat
                    @click="menuBarClick">
           <bs-icon icon="menu_bars" size="24" />
@@ -26,15 +26,14 @@
         </bs-appbar-items>
       </bs-appbar>
 
-      <bs-side-drawer width="250"
-                      mini-width="70"
+      <bs-side-drawer width="280"
                       color="white border-right"
                       :mini="sideDrawerState === 'mini'"
                       :open="sideDrawerState === 'open'"
                       @open="toggleDrawer">
         <img src="img/vue-mdb.png"
              class="mx-auto d-block logo"
-             :style="{width: sideDrawerState === 'mini' ? '46px' : '96px'}"
+             :style="{width: sideDrawerState === 'mini' ? '40px' : '96px'}"
              alt="" />
         <transition name="fade" v-if="sideDrawerState === 'open'">
           <div class="h4 text-center text-blue-grey pb-2">
@@ -42,24 +41,23 @@
           </div>
         </transition>
         <bs-divider />
-        <bs-list-view>
+        <bs-list-view active-item-bordered="left">
           <bs-list-nav>
             <bs-list-nav-item v-for="(nav, idx) in navs"
                               :key="'nav-' + idx"
+                              :icon="nav.icon"
                               :label="nav.title"
                               :path="nav.route">
               <bs-list-nav v-if="nav.children" child>
                 <bs-list-nav-item v-for="(navchild, ix) in nav.children"
                                   :key="'child-' + idx + '-' + ix"
                                   :label="navchild.title"
-                                  :path="navchild.route"
-                                  depth="1">
+                                  :path="navchild.route">
                   <bs-list-nav v-if="navchild.children" child>
                     <bs-list-nav-item v-for="(child, nx) in navchild.children"
                                       :key="'child-' + idx + '-' + ix + '-' + nx"
                                       :label="child.title"
-                                      :path="child.route"
-                                      depth="2" />
+                                      :path="child.route" />
                   </bs-list-nav>
                 </bs-list-nav-item>
               </bs-list-nav>

@@ -227,7 +227,7 @@ export default {
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
 | buffer   | `Number` | `0`     | Progress bar buffer length. |
-| color    | `String` | `'primary'` | The component color appearance. Any of **Vue MdBootstrap** color variant can be applied. |
+| color    | `String` | `'primary'` | The component color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be applied. |
 | diameter | `Number` | `60`    | Spinner diameter value. |
 | height   | `Number` | `5`     | Progress bar thickness. |
 | mode     | `String` | `'indeterminate'` | ProgressControl mode, valid values are: `determinate`, `indeterminate`, `buffer`. |
