@@ -1,6 +1,7 @@
 :::lead
-**BsAvatar** is a component which are typically used to display a user profile as a picture, icon, or short text. 
-**BsAvatar** provides several properties for customizing its appearance such as size and roundness.
+**BsAvatar** is a component which are typically used to display a user profile as a picture, icon, or 
+short text. **BsAvatar** provides several properties for customizing its appearance such as size and 
+roundness.
 :::
 
 
@@ -53,9 +54,9 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ## Sizing
 
 By default, `<bs-avatar>` is sized to `48px`. You can change the size of the `<bs-avatar>` by changing 
-the size property explicitly. Numbers get converted to pixel values. Any other value must include the units 
-(such as `px`, `em`, or `rem`). You can also create an avatar with different height and width by explicitly
-define its size property as `object`, such as `{height: 40, width: 56}`.
+the size property explicitly. Numbers get converted to pixel values. Any other value must include 
+the units (such as `px`, `em`, or `rem`). You can also create an avatar with different height and 
+width by explicitly define its size property as `object`, such as `{height: 40, width: 56}`.
 
 :::demo
 ```html

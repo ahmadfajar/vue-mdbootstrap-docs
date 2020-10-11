@@ -500,7 +500,7 @@ The component to display the navigation item.
 | icon-flip  | `String`  |         | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse | `Boolean` | `false` | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number` |       | Rotate the icon, valid values are: `90`, `180`, `270`. |
-| icon-size  | `Number`/`String` |  | Render the icon with predefined size. Use `Number` if using internal icon, oherwise use these predefine size: `xs`, `sm`, `lg`, `1x`, `2x`. |
+| icon-size  | `Number`/`String` |  | Render the icon with predefined size. Use `Number` if using internal icon, otherwise use these predefine size: `xs`, `sm`, `lg`, `1x`, `2x`. |
 | icon-spin  | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | indent     | `Number`  |  | Text indentation from left side. |
 | label <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The text label to display. |

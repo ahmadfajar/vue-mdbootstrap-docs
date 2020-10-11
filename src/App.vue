@@ -6,9 +6,9 @@
                  clipped-left
                  fixed-top
                  shadow>
-        <bs-button mode="icon"
-                   color="light-grey d-xl-none"
+        <bs-button color="light-grey d-xl-none"
                    flat
+                   mode="icon"
                    @click="menuBarClick">
           <bs-icon icon="menu_bars" size="24" />
         </bs-button>
@@ -16,25 +16,27 @@
         <bs-spacer />
         <bs-appbar-items>
           <span class="mr-3 text-white align-self-center">v1.1.0</span>
-          <bs-button mode="icon"
-                     color="light-grey"
+          <bs-button color="light-grey"
+                     flat
                      href="https://github.com/ahmadfajar/vue-mdbootstrap"
-                     target="_blank"
-                     flat>
-            <bs-avatar img-src="img/GitHub-Light.png" size="22" circle />
+                     mode="icon"
+                     target="_blank">
+            <bs-avatar circle
+                       img-src="img/GitHub-Light.png"
+                       size="22" />
           </bs-button>
         </bs-appbar-items>
       </bs-appbar>
 
-      <bs-side-drawer width="280"
-                      color="white border-right"
-                      :mini="sideDrawerState === 'mini'"
+      <bs-side-drawer :mini="sideDrawerState === 'mini'"
                       :open="sideDrawerState === 'open'"
+                      color="white border-right"
+                      width="280"
                       @open="toggleDrawer">
-        <img src="img/vue-mdb.png"
+        <img :style="{width: sideDrawerState === 'mini' ? '40px' : '96px'}"
+             alt=""
              class="mx-auto d-block logo"
-             :style="{width: sideDrawerState === 'mini' ? '40px' : '96px'}"
-             alt="" />
+             src="img/vue-mdb.png" />
         <transition name="fade" v-if="sideDrawerState === 'open'">
           <div class="h4 text-center text-blue-grey pb-2">
             Vue MdBootstrap
@@ -66,7 +68,9 @@
         </bs-list-view>
       </bs-side-drawer>
 
-      <bs-container tag="main" class="bg-grey-100" app>
+      <bs-container tag="main"
+                    class="bg-grey-100"
+                    app>
         <router-view />
       </bs-container>
     </bs-app-container>

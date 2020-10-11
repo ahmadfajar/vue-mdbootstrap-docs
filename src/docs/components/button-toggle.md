@@ -51,21 +51,21 @@ choices with different approach.
 
 <script>
 export default {
-    data() {
-        return {
-            drinks: [{
-                value: 'tea',
-                label: 'Tea'
-            }, {
-                value: 'coffee',
-                label: 'Coffee'
-            }, {
-                value: 'beer',
-                label: 'Beer'
-            }],
-            selectedDrink: null,
-        }
+  data() {
+    return {
+      drinks: [{
+        value: 'tea',
+        label: 'Tea'
+      }, {
+        value: 'coffee',
+        label: 'Coffee'
+      }, {
+        value: 'beer',
+        label: 'Beer'
+      }],
+      selectedDrink: null,
     }
+  }
 }
 </script>
 
@@ -126,27 +126,27 @@ export default {
 
 <script>
 export default {
-    data() {
-        return {
-            weathers: [{
-                value: 'sunny',
-                label: 'Sunny',
-                icon: 'cloud-sun',
-                iconSize: 'lg'
-            }, {
-                value: 'rain',
-                label: 'Rain',
-                icon: 'cloud-rain',
-                iconSize: 'lg'
-            }, {
-                value: 'heavy-rain',
-                label: 'Heavy Rain',
-                icon: 'cloud-showers-heavy',
-                iconSize: 'lg'
-            }],
-            selectedWeather: null
-        }
+  data() {
+    return {
+      weathers: [{
+        value: 'sunny',
+        label: 'Sunny',
+        icon: 'cloud-sun',
+        iconSize: 'lg'
+      }, {
+        value: 'rain',
+        label: 'Rain',
+        icon: 'cloud-rain',
+        iconSize: 'lg'
+      }, {
+        value: 'heavy-rain',
+        label: 'Heavy Rain',
+        icon: 'cloud-showers-heavy',
+        iconSize: 'lg'
+      }],
+      selectedWeather: null
     }
+  }
 }
 </script>
 

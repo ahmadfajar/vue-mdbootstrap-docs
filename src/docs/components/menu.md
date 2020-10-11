@@ -43,11 +43,11 @@ The contents for the popup container need to be placed in the `content` slot.
 
 <script>
 export default {
-    data() {
-        return {
-            active: false,
-        }
+  data() {
+    return {
+      active: false,
     }
+  }
 }
 </script>
 
@@ -98,11 +98,11 @@ Menus can be accessed using hover instead of clicking with the `open-on-hover` p
 
 <script>
 export default {
-    data() {
-        return {
-            active: false,
-        }
+  data() {
+    return {
+      active: false,
     }
+  }
 }
 </script>
 
@@ -282,11 +282,11 @@ by explicitly define the `placement` property.
 
 <script>
 export default {
-    data() {
-        return {
-            active: false,
-        }
+  data() {
+    return {
+      active: false,
     }
+  }
 }
 </script>
 
@@ -385,14 +385,14 @@ This can be useful when there are multiple interactive items within the `<bs-men
 
 <script>
 export default {
-    data() {
-        return {
-            popup1: false,
-            popup2: false,
-            enableMessage: false,
-            enableHints: true,
-        }
+  data() {
+    return {
+      popup1: false,
+      popup2: false,
+      enableMessage: false,
+      enableHints: true,
     }
+  }
 }
 </script>
 
@@ -417,7 +417,7 @@ export default {
 | content-click-close | `Boolean` | `true` | Close or hide popup menu when content clicked. |
 | cover       | `Boolean` | `false` | Display popup menu at a position which can cover the activator. |
 | disabled    | `Boolean` | `false` | Disabled popup menu and prevents it from displaying. |
-| open <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Popup menu state: show or hide. |
+| open <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Popup menu state: **show** or **hide**. |
 | open-on-hover | `Boolean` | `false` | Triggers the popup menu to display when `mouseenter` and hide when `mouseleave`. |
 | placement   | `String`  | `'bottom-left'` | Popup menu display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | transition  | `String`  | `'popover'` | Transition animation when show popup menu. This animation is effected by `placement` prop. |

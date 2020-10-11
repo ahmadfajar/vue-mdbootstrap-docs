@@ -64,11 +64,11 @@ const iconLibs = [
 ];
 
 export default {
-    data() {
-        return {
-            iconLibs
-        }
-    },
+  data() {
+    return {
+      iconLibs
+    }
+  },
 }
 </script>
 
@@ -90,19 +90,19 @@ export default {
 <template>
   <div class="my-demo-wrapper">
     <div class="row justify-content-center">
-      <div class="col-4 col-sm-3 col-xl-2">
+      <div class="col-4 col-sm-3 col-xl-2 text-center">
         <h5>Rotation</h5>
         <bs-icon icon="folder-shared" size="36" rotation="90"></bs-icon>
         <bs-icon icon="folder-shared" size="36" rotation="180"></bs-icon>      
         <bs-icon icon="folder-shared" size="36" rotation="270"></bs-icon>      
       </div>
-      <div class="col-4 col-sm-3 col-xl-2">
+      <div class="col-4 col-sm-3 col-xl-2 text-center">
         <h5>Flip</h5>
         <bs-icon icon="folder-shared" size="36" flip="horizontal"></bs-icon>      
         <bs-icon icon="folder-shared" size="36" flip="vertical"></bs-icon>      
         <bs-icon icon="folder-shared" size="36" flip="both"></bs-icon>      
       </div>
-      <div class="col-4 col-sm-3 col-xl-2">
+      <div class="col-4 col-sm-3 col-xl-2 text-center">
         <h5>Animation</h5>
         <bs-icon icon="rotate-right" size="36" spin></bs-icon>      
         <bs-icon icon="rotate-right" size="36" pulse></bs-icon>      
@@ -164,24 +164,24 @@ export default {
     <div class="row justify-content-center">
       <div class="col-4 col-sm-3 col-xl-2">
         <bs-button color="blue">
-          <span class="d-flex flex-row">
+          <div class="d-flex">
             <bs-icon icon="arrow-back" size="24"></bs-icon>
-            Back        
-          </span>
+            <span class="pl-2">Back</span>
+          </div>
         </bs-button>
       </div>
       <div class="col-4 col-sm-3 col-xl-2">
         <bs-button color="blue">
-          <span class="d-flex flex-row">
-            Next        
+          <div class="d-flex">
+            <span class="pr-2">Next</span>
             <bs-icon icon="arrow-forward" size="24"></bs-icon>
-          </span>
+          </div>
         </bs-button>
       </div>
       <div class="col-4 col-sm-3 col-xl-2">
         <bs-button color="danger">
-          <bs-icon icon="delete" size="24" class="d-flex"></bs-icon>
-          Delete        
+          <bs-icon icon="delete" size="24"></bs-icon>
+          Delete
         </bs-button>
       </div>
     </div>
@@ -210,7 +210,7 @@ export default {
 | icon <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The icon's name or alias. |
 | pulse    | `Boolean`| `false` | Apply **pulse** animation to the icon. |
 | rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. |
-| size     | `Number` |  | Shorcut to create equal height and width. |
+| size     | `Number` |  | Shortcut to create equal height and width. |
 | spin     | `Boolean`| `false` | Apply **spin** animation to the icon. |
 | width    | `Number` | `20` | The icon's width in pixel. |
 

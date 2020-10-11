@@ -37,7 +37,7 @@ color variations, sizes, states, and more.
 
 The `<bs-button>` component by default renders a `<button>` element. However, you can also render an 
 `<a>` element by providing `href` attribute value. You can also change the button's `type` attribute
-with spesific value, such as `button`, `submit`, or `reset`.
+with specific value, such as `button`, `submit`, or `reset`.
 
 :::demo
 ```html
@@ -463,7 +463,7 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 ## Sizing
 
-`<bs-button>` can be set in defferent size: xs (extra-small), sm (small), or large, (large).
+`<bs-button>` can be set in different size: xs (extra-small), sm (small), or large, (large).
 
 :::demo
 ```html
@@ -497,7 +497,7 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 ## Button Group
 
-`<bs-button>` can be groupped as series of buttons on a single line called **button group** 
+`<bs-button>` can be grouped as series of buttons on a single line called **button group** 
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button-group/).
 
 :::demo
@@ -609,7 +609,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 | icon-rotation | `Number`  |   | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-size     | `String`  |   | Render the icon with predefined size, valid values are: `xs`, `sm`, `lg`, `1x`, `2x`, `3x`, `4x`, `5x`, `6x`, `7x`, `8x`, `9x`, `10x`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
-| mode     | `String`  | `'default'` | Create spesific button style, valid values are: `default`, `icon`, `floating` |
+| mode     | `String`  | `'default'` | Create specific button style, valid values are: `default`, `icon`, `floating` |
 | outlined | `Boolean` | `false` | Create button with outlined style or not. |
 | pill     | `Boolean` | `false` | Create button with rounded-pill style or not. |
 | raised   | `Boolean` | `false` | Create button with raised style or not. |

@@ -1,14 +1,16 @@
 <template>
   <div class="demo-block">
     <div class="demo-block-tools">
-      <bs-tooltip content="Run this demo on jsfiddle.net" placement="top">
+      <bs-tooltip content="Run this demo on jsfiddle.net"
+                  placement="top">
         <bs-button color="mdb-color"
-                   mode="icon"
-                   icon="cloud"
                    flat
+                   icon="cloud"
+                   mode="icon"
                    @click="goJsfiddle" />
       </bs-tooltip>
-      <bs-tooltip :content="tooltipText" placement="top">
+      <bs-tooltip :content="tooltipText"
+                  placement="top">
         <bs-button color="mdb-color"
                    mode="icon"
                    icon="code"
@@ -17,7 +19,8 @@
       </bs-tooltip>
     </div>
     <bs-expand-transition>
-      <div class="meta bg-grey-200 border-bottom border-grey-400" v-show="visible">
+      <div v-show="visible"
+           class="meta bg-grey-200 border-bottom border-grey-400">
         <slot name="highlight"></slot>
       </div>
     </bs-expand-transition>
@@ -55,9 +58,9 @@ export default {
                 '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css">\n' +
                 '<scr' + 'ipt src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js"></scr' + 'ipt>';
 
-            const cssTpl  = `${(style || '').trim()}\n`;
+            const cssTpl = `${(style || '').trim()}\n`;
             const htmlTpl = `${resourcesTpl}\n<div id="app">${html}</div>`;
-            let jsTpl     = (script || '').replace(/export default/, 'var Main =').trim();
+            let jsTpl = (script || '').replace(/export default/, 'var Main =').trim();
 
             jsTpl = jsTpl
                 ? jsTpl + '\nvar Ctor = Vue.extend(Main);\nnew Ctor().$mount(\'#app\');'
@@ -71,9 +74,9 @@ export default {
                 panel_css: 1
             };
 
-            const form     = document.getElementById('fiddle-form') || document.createElement('form');
+            const form = document.getElementById('fiddle-form') || document.createElement('form');
             form.innerHTML = '';
-            const node     = document.createElement('textarea');
+            const node = document.createElement('textarea');
 
             form.method = 'post';
             form.action = 'https://jsfiddle.net/api/post/library/pure/';
@@ -81,7 +84,7 @@ export default {
 
             const keys = Object.keys(data);
             keys.forEach((key) => {
-                node.name  = key;
+                node.name = key;
                 node.value = data[key].toString();
                 form.appendChild(node.cloneNode());
             });

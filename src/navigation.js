@@ -63,7 +63,7 @@ const navs = [{
             route: "/components/input/checkbox"
         }, {
             title: "Combobox",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/combobox"),
             route: "/components/input/combobox"
         }, {
             title: "Radio",
@@ -75,28 +75,32 @@ const navs = [{
             route: "/components/input/switch"
         }, {
             title: "Text Area",
-            // view: viewResolver("components/image-holder"),
-            route: "/components/input/textarea"
+            view: viewResolver("components/text-area"),
+            route: "/components/input/text-area"
         }, {
             title: "Text Field",
-            // view: viewResolver("components/image-holder"),
-            route: "/components/input/textfield"
+            view: viewResolver("components/text-field"),
+            route: "/components/input/text-field"
         }, {
             title: "DateTime Field",
-            // view: viewResolver("components/image-holder"),
-            route: "/components/input/datefield"
+            view: viewResolver("components/datetime-field"),
+            route: "/components/input/datetime-field"
         }, {
             title: "Number Field",
             // view: viewResolver("components/image-holder"),
-            route: "/components/input/numberfield"
+            route: "/components/input/number-field"
         }, {
             title: "Search Field",
             // view: viewResolver("components/image-holder"),
-            route: "/components/input/searchfield"
+            route: "/components/input/search-field"
         }, {
             title: "Toggle Field",
             // view: viewResolver("components/image-holder"),
-            route: "/components/input/togglefield"
+            route: "/components/input/toggle-field"
+        }, {
+            title: "Field Test",
+            view: viewResolver("components/text-field-test"),
+            route: "/components/input/field-test"
         }]
     }, {
         title: "Lists",

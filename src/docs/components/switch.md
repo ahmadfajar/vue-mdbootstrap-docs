@@ -18,9 +18,9 @@ with the `v-model` to maintain the component state.
 
 <script>
 export default {
-    data: () => ({
-        switch1: false,
-    }),
+  data: () => ({
+    switch1: false,
+  }),
 }
 </script>
 
@@ -52,9 +52,9 @@ Any color variant from [MdBootstrap colors](#/reference/colors) can be applied t
 
 <script>
 export default {
-    data: () => ({
-        switch1: false,
-    }),
+  data: () => ({
+    switch1: false,
+  }),
 }
 </script>
 
@@ -94,9 +94,9 @@ export default {
 
 <script>
 export default {
-    data: () => ({
-        switch2: false,
-    }),
+  data: () => ({
+    switch2: false,
+  }),
 }
 </script>
 
@@ -119,9 +119,9 @@ export default {
 |-------------|-----------|---------|-------------|
 | checked <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean`/`String`/`Number`/`Object` | | The value monitored by `v-model` to maintain checked state. |
 | color       | `String`  | `'default'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component. |
-| disabled    | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
+| disabled    | `Boolean` | `false` | Enable/disable the switch component and the `<input>` element. |
 | false-value | `Boolean` | `false` | Sets value for falsy state. |
-| id          | `String`  |  | Sets the `<input>` element `ID` attribute. By default this property is auto generates. |
+| id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | label-class | `String`/`Array` |  | Additional css class for the text label. |
 | label-position | `String` | `'right'` | The switch text label position, valid values are: `left`, `right`. |
 | name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |

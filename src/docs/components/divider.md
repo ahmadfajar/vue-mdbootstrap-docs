@@ -1,6 +1,6 @@
 :::lead
-**BsDivider** is small and lightweight component which is primarily used to manage and separate content within
-lists or page layouts.
+**BsDivider** is small and lightweight component which is primarily used to manage and separate 
+content within lists or page layouts.
 :::
 
 ## Example

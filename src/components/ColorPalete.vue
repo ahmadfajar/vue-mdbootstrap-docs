@@ -4,11 +4,13 @@
       <div v-for="(item, key) in materialColors"
            :key="key"
            class="mb-4 col-md-6 col-xl-3">
-        <div class="md-shadow-1 color-block text-white" :class="['bg-' + mdbColorInfo(item)[0].color]">
+        <div :class="['bg-' + mdbColorInfo(item)[0].color]"
+             class="md-shadow-1 color-block text-white">
           <div>{{ mdbColorInfo(item)[0].color }}</div>
           <div>{{ mdbColorInfo(item)[0].value | upperCase }}</div>
         </div>
-        <div class="md-shadow-1 color-block text-white" :class="['bg-' + mdbColorInfo(item)[1].color]">
+        <div :class="['bg-' + mdbColorInfo(item)[1].color]"
+             class="md-shadow-1 color-block text-white">
           <div>{{ mdbColorInfo(item)[1].color }}</div>
           <div>{{ mdbColorInfo(item)[1].value | upperCase }}</div>
         </div>
@@ -18,7 +20,7 @@
       <div v-for="(value, key) in themeColors"
            :key="key"
            class="col-md-6 col-xl-4 mb-4">
-        <div class="md-shadow-1 p-3" :class="bootstrapColor(key)">
+        <div :class="bootstrapColor(key)" class="md-shadow-1 p-3">
           <span>{{ key }}</span>
           <span class="float-right">{{ value | upperCase }}</span>
         </div>
@@ -28,9 +30,9 @@
       <div class="col-md-6 col-xl-4">
         <div class="md-shadow-1">
           <div v-for="(value, key) in grayColors"
-               class="p-3"
                :key="key"
-               :class="grayColor(key)">
+               :class="grayColor(key)"
+               class="p-3">
             <span>grey-{{ key }}</span>
             <span class="float-right">{{ value | upperCase }}</span>
           </div>
@@ -38,12 +40,14 @@
       </div>
     </div>
     <div v-else-if="palette === 'fullColor'" class="row">
-      <div v-for="(items, key) in fullColors" class="col-md-6 col-xl-4 mb-4" :key="key">
+      <div v-for="(items, key) in fullColors"
+           :key="key"
+           class="col-md-6 col-xl-4 mb-4">
         <div class="md-shadow">
           <div v-for="(value, prop) in items"
-               class="p-3"
                :key="key + prop"
-               :class="fullColor(key, prop)">
+               :class="fullColor(key, prop)"
+               class="p-3">
             <span>{{ fullColorName(key, prop) }}</span>
             <span class="float-right">{{ value | upperCase }}</span>
           </div>
@@ -54,8 +58,8 @@
 </template>
 
 <script>
-import { materialColors, themeColors, grayColors } from "@/components/colors";
-import { fullColors } from "@/components/palettes";
+import {materialColors, themeColors, grayColors} from "@/components/colors";
+import {fullColors} from "@/components/palettes";
 
 export default {
     name: "ColorPalete",
@@ -112,7 +116,7 @@ export default {
             }
         },
         mdbColorInfo(color) {
-            const keys   = Object.keys(color);
+            const keys = Object.keys(color);
             const values = Object.values(color);
 
             return [

@@ -76,8 +76,8 @@ success to neutral information.
 
 ## Additional content inside alerts
 
-`<bs-alert>` can also contain additional HTML elements like headings and paragraphs, which will be styled with 
-the appropriate color matching the variant.
+`<bs-alert>` can also contain additional HTML elements like headings and paragraphs, which will be 
+styled with the appropriate color matching the variant.
 
 :::demo
 ```html
@@ -108,7 +108,8 @@ the appropriate color matching the variant.
 
 ### Link color
 
-Use the `.alert-link` utility class on `<a>` element to quickly provide matching colored links within any alert.
+Use the `.alert-link` utility class on `<a>` element to quickly provide matching colored links 
+within any alert.
 
 :::demo
 ```html
@@ -149,23 +150,23 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-alert color="primary" dismissable>
+    <bs-alert color="primary" dismissible>
       Simple alert with primary color. Click the close button over there
       <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
     </bs-alert>
-    <bs-alert color="info" dismissable>
+    <bs-alert color="info" dismissible>
       Simple info alert with info color. Click the close button over there
       <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
     </bs-alert>
-    <bs-alert color="success" dismissable>
+    <bs-alert color="success" dismissible>
       Simple alert with success color. Click the close button over there
       <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
     </bs-alert>
-    <bs-alert color="danger" outlined dismissable>
+    <bs-alert color="danger" outlined dismissible>
       Outline alert with danger color. Click the close button over there
       <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
     </bs-alert>
-    <bs-alert color="warning" outlined dismissable>
+    <bs-alert color="warning" outlined dismissible>
       Outline alert with warning color. Click the close button over there
       <font-awesome-icon icon="long-arrow-alt-right"></font-awesome-icon>
     </bs-alert>
@@ -181,27 +182,22 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add
 :::
 
 
-## Controlling dissmisable alert
+## Controlling dismissible alert
 
 Use the `v-model` directive to create two-way data bindings on the `value` property as in `v-model="showAlert"`. 
 This is useful to control the dismissible, because when user closes the alert, your variable will be updated. 
-
-:::warning
-Do not use the `value` property when using `v-model`.
-:::
-
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-alert v-model="showDismissibleAlert"
-              color="teal" dismissable>
-      This is a dismissable alert.
+              color="teal" dismissible>
+      This is a dismissible alert.
     </bs-alert>
     <bs-alert :value="dismissCountDown > 0"
               @input="dismissCountDown=0"
-              dismissable>
+              dismissible>
       <div class="pb-2">This alert will dismiss after {{ dismissCountDown }} seconds...</div>
       <bs-progress color="warning" mode="determinate"
                    type="bar" :value="percentProgress"></bs-progress>
@@ -209,7 +205,7 @@ Do not use the `value` property when using `v-model`.
     <div class="row">
       <div class="col-12 col-md-6 mb-3 mb-md-0">
         <bs-button color="primary" @click="toggleAlert">
-          {{ showDismissibleAlert ? 'Hide' : 'Show' }} dismissable Alert
+          {{ showDismissibleAlert ? 'Hide' : 'Show' }} dismissible Alert
         </bs-button>
       </div>    
       <div class="col-12 col-md-6 mb-3 mb-md-0">
@@ -223,38 +219,38 @@ Do not use the `value` property when using `v-model`.
 
 <script>
 export default {
-    data () {
-        return {
-            dismissSecs: 10,
-            dismissCountDown: 0,
-            showDismissibleAlert: false,
-            timerInterval: null,
-        }
-    },
-    computed: {
-        percentProgress() {
-            return (this.dismissCountDown / this.dismissSecs) * 100;
-        }
-    },
-    watch: {
-        dismissCountDown(newValue) {
-            if (newValue < 1) {
-                clearInterval(this.timerInterval);
-            }
-        }
-    },
-    methods: {
-        showAlert() {
-            this.dismissCountDown = this.dismissSecs;
-            this.startTimer();
-        },
-        startTimer() {
-            this.timerInterval = setInterval(() => (this.dismissCountDown -= 1), 1000);
-        },
-        toggleAlert() {
-            this.showDismissibleAlert = !this.showDismissibleAlert;
-        },
+  data () {
+    return {
+      dismissSecs: 10,
+      dismissCountDown: 0,
+      showDismissibleAlert: false,
+      timerInterval: null,
     }
+  },
+  computed: {
+    percentProgress() {
+      return (this.dismissCountDown / this.dismissSecs) * 100;
+    }
+  },
+  watch: {
+    dismissCountDown(newValue) {
+      if (newValue < 1) {
+        clearInterval(this.timerInterval);
+      }
+    }
+  },
+  methods: {
+    showAlert() {
+      this.dismissCountDown = this.dismissSecs;
+      this.startTimer();
+    },
+    startTimer() {
+      this.timerInterval = setInterval(() => (this.dismissCountDown -= 1), 1000);
+    },
+    toggleAlert() {
+      this.showDismissibleAlert = !this.showDismissibleAlert;
+    },
+  }
 }
 </script>
 
@@ -263,8 +259,11 @@ export default {
   padding: 24px;
 }
 </style>
-
 ```
+:::
+
+:::warning
+Do not use the `value` property when using `v-model`.
 :::
 
 
@@ -277,7 +276,7 @@ export default {
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | color       | `String`    | `'primary'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component |
-| dismissable | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
+| dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | outlined    | `Boolean`   | `false`     | Create outline alert style |
 | icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |
 | transition  | `String`    | `'fade'`    | The component animation transition to display/hide |

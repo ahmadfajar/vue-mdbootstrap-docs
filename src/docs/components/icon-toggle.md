@@ -29,16 +29,16 @@ inside almost any component or html element. It utilizes
 
 <script>
 export default {
-    data() {
-        return {
-            passwordToggled: false
-        }
-    },
-    computed: {
-        inputType() {
-            return this.passwordToggled ? 'text' : 'password';
-        }
-    },
+  data() {
+    return {
+      passwordToggled: false
+    }
+  },
+  computed: {
+    inputType() {
+      return this.passwordToggled ? 'text' : 'password';
+    }
+  },
 }
 </script>
 

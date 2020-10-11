@@ -1,6 +1,6 @@
 :::lead
-**BsBadge** is small, and a lightweight component. It can be used for adaptive taggging such as adding context 
-to just about any content.
+**BsBadge** is small, and a lightweight component. It can be used for adaptive tagging such as 
+adding context to just about any content.
 :::
 
 
@@ -79,7 +79,7 @@ the `color` property will be used.
 ```
 :::
 
-If you wish to use different variation, you can change its appeareance by explicitly define the value 
+If you wish to use different variation, you can change its appearance by explicitly define the value 
 of `color` property. All color variants can be used as badge background and text color.
 
 :::demo
