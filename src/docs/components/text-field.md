@@ -5,8 +5,11 @@
 
 ## Overview
 
-Use `v-model` directive to create two-way data bindings on the `value` property as in 
-`v-model="password"`. This is useful to control or maintain the `value` property.
+**BsTextField** component mimics the HTML5 `<input>` element. This means that you can add 
+attributes like `required`, `readonly`, or `disabled` and it will react to them to give 
+the best experience. You can also use `v-model` directive to create two-way data bindings 
+on the `value` property as in `v-model="password"`. This is useful to control or maintain 
+the `value` property.
 
 :::demo
 ```html
@@ -20,6 +23,16 @@ Use `v-model` directive to create two-way data bindings on the `value` property 
     <div class="form-group">
       <bs-text-field type="password" v-model="password">
         <label class="col-md-3 col-xl-2 col-form-label">Password Field</label>
+      </bs-text-field>
+    </div>
+    <div class="form-group">
+      <bs-text-field value="Sandra Adams" readonly>
+        <label class="col-md-3 col-xl-2 col-form-label">State Readonly</label>
+      </bs-text-field>
+    </div>
+    <div class="form-group">
+      <bs-text-field value="Sandra Adams" disabled>
+        <label class="col-md-3 col-xl-2 col-form-label">State Disabled</label>
       </bs-text-field>
     </div>
   </div>
@@ -46,6 +59,7 @@ export default {
 :::warning
 Do not use the `value` property when using `v-model`.
 :::
+
 
 ## Browser Autocomplete
 
@@ -289,8 +303,8 @@ Google Material Design spec.
 
 ### Flat
 
-This style will remove the borders and create flat appearance. It is useful when combined with `readonly` 
-property to create appearance like plain text.
+This style will remove the borders and create flat appearance. It is useful when combined with 
+`readonly` property to create appearance like plain text.
 
 :::demo
 ```html

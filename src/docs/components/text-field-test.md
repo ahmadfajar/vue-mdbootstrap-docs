@@ -9,7 +9,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-text-field append-icon-outer="folder" prepend-icon="address-book" 
+      <bs-text-field append-icon="folder" append-icon-outer="folder" 
+                     prepend-icon="user-tie" prepend-icon-outer="user-tie" 
                      clear-button>
         <label class="col-md-3 col-form-label">
           Text Field
@@ -85,10 +86,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field prepend-icon="archway" prepend-icon-outer="archway" append-icon="heart"
+          <bs-text-field prepend-icon="user-tie" prepend-icon-outer="archway" append-icon="heart"
                          help-text="This is a help text."
                          floating-label filled>
-            <label>Text Field</label>
+            <label>Employee</label>
           </bs-text-field>
         </div>
       </div>
@@ -210,3 +211,116 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ```
 :::
 
+
+## Combobox
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="selectedPeople" 
+                   :data-source="peopleSrc" 
+                   placeholder="Select Employee" 
+                   prepend-icon="user-tie" prepend-icon-outer="user-tie">
+        <label class="col-md-3 col-form-label">Employee</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="selectedStates" 
+                   :data-source="states" 
+                   append-icon="building" append-icon-outer="building"
+                   placeholder="Select States"
+                   clear-button 
+                   multiple>
+        <label class="col-md-3 col-form-label">States</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="selectedPeople" filled
+                   :data-source="peopleSrc" 
+                   placeholder="Select Employee" 
+                   prepend-icon="user-tie" prepend-icon-outer="user-tie" 
+                   append-icon="building" append-icon-outer="building">
+        <label class="col-md-3 col-form-label">Employee</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="selectedStates" filled
+                   :data-source="states" multiple clear-button
+                   help-text="This is a help text." 
+                   placeholder="Select States" listbox-color="blue"
+                   prepend-icon="user-tie" prepend-icon-outer="user-tie" 
+                   append-icon="building" append-icon-outer="building">
+        <label class="col-md-3 col-form-label">States</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="selectedPeople" outlined
+                   :data-source="peopleSrc" 
+                   placeholder="Select Employee" 
+                   prepend-icon="user-tie" prepend-icon-outer="user-tie" 
+                   append-icon="building" append-icon-outer="building">
+        <label class="col-md-3 col-form-label">Employee</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="selectedStates" outlined
+                   :data-source="states" multiple clear-button
+                   help-text="This is a help text." 
+                   placeholder="Select States" listbox-color="blue"
+                   prepend-icon="user-tie" prepend-icon-outer="user-tie" 
+                   append-icon="building" append-icon-outer="building">
+        <label class="col-md-3 col-form-label">States</label>
+      </bs-combobox>
+    </div>
+    <div class="row">
+      <div class="col-lg">
+        <div class="form-group">
+          <bs-combobox v-model="selectedPeople" filled floating-label
+                      :data-source="peopleSrc" 
+                      help-text="This is a help text." 
+                      prepend-icon="user-tie" prepend-icon-outer="user-tie">
+            <label class="col-form-label">Employee</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="selectedStates" filled floating-label multiple clear-button
+                      :data-source="states" :persistent-help-text="false"
+                      help-text="This is a help text." 
+                      placeholder="Select States" 
+                      append-icon="building" append-icon-outer="building">
+            <label class="col-form-label">States</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div class="form-group">
+          <bs-combobox v-model="selectedPeople" outlined floating-label
+                      :data-source="peopleSrc" 
+                      help-text="This is a help text." 
+                      prepend-icon="user-tie" prepend-icon-outer="user-tie">
+            <label class="col-form-label">Employee</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="selectedStates" outlined floating-label multiple clear-button
+                      :data-source="states" :persistent-help-text="false"
+                      help-text="This is a help text." 
+                      placeholder="Select States" 
+                      append-icon="building" append-icon-outer="building">
+            <label class="col-form-label">States</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::

@@ -1,0 +1,54 @@
+{
+  "total": 7,
+  "data": [
+    {
+      "ProductID"    : 1,
+      "ProductName"  : "Chai",
+      "UnitPrice"    : 18,
+      "UnitsInStock" : 39,
+      "Discontinued" : true
+    },
+    {
+      "ProductID"    : 21,
+      "ProductName"  : "Chang",
+      "UnitPrice"    : 17,
+      "UnitsInStock" : 40,
+      "Discontinued" : true
+    },
+    {
+      "ProductID"    : 3,
+      "ProductName"  : "Aniseed Syrup",
+      "UnitPrice"    : 10,
+      "UnitsInStock" : 13,
+      "Discontinued" : false
+    },
+    {
+      "ProductID"    : 43,
+      "ProductName"  : "Chef Anton's Cajun Seasoning",
+      "UnitPrice"    : 22,
+      "UnitsInStock" : 53,
+      "Discontinued" : false
+    },
+    {
+      "ProductID"    : 56,
+      "ProductName"  : "Chef Anton's Gumbo Mix",
+      "UnitPrice"    : 21.35,
+      "UnitsInStock" : 0,
+      "Discontinued" : true
+    },
+    {
+      "ProductID"    : 6,
+      "ProductName"  : "Grandma's Boysenberry Spread",
+      "UnitPrice"    : 25,
+      "UnitsInStock" : 120,
+      "Discontinued" : false
+    },
+    {
+      "ProductID"    : 72,
+      "ProductName"  : "Uncle Bob's Organic Dried Pears",
+      "UnitPrice"    : 30,
+      "UnitsInStock" : 15,
+      "Discontinued" : false
+    }
+  ]
+}

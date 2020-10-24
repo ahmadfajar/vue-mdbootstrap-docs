@@ -328,7 +328,7 @@ export default {
 :::
 
 
-## Hover Display
+## Hover Display Support
 
 The DateTime picker can be displayed using hover instead of clicking with the `open-on-hover` property.
 
@@ -573,8 +573,8 @@ export default {
 
 ### Flat
 
-This style will remove the borders and create flat appearance. It is useful when combined with `readonly` 
-property to create appearance like plain text.
+This style will remove the borders and create flat appearance. It is useful when combined with 
+`readonly` property to create appearance like plain text.
 
 :::demo
 ```html
