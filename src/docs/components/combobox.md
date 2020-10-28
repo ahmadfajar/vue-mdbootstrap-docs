@@ -17,7 +17,7 @@ control or maintain the `value` property.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="employee" :data-source="peopleSrc">
+      <bs-combobox v-model="employee0" :data-source="peopleSrc">
         <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
       </bs-combobox>
     </div>
@@ -38,27 +38,31 @@ control or maintain the `value` property.
 export default {
   data() {
     return {
-      employee: null,
+      employee0: null,
       employee1: 2,
       employee2: 3,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+              {id: 1, name: 'Sandra Adams'},
+              {id: 2, name: 'Ali Connors'},
+              {id: 3, name: 'Trevor Hansen'},
+              {id: 4, name: 'Tucker Smith'},
+              {id: 5, name: 'Britta Holt'},
+              {id: 6, name: 'Jane Smith'},
+              {id: 7, name: 'John Smith'},
+              {id: 8, name: 'Sandra Williams'}
             ], {
-              idProperty: 'id',
+              idProperty: 'id'
             }
         ),
-        schema: {displayField: 'name', valueField: 'id', imageField: 'avatar'}
+        schema: {displayField: 'name', valueField: 'id'}
       },
     }
   },
+  beforeDestroy() {
+    this.peopleSrc.proxy.destroy();
+    this.peopleSrc = null;
+  }
 }
 </script>
 
@@ -69,6 +73,7 @@ export default {
 </style>
 ```
 :::
+
 
 :::warning
 Do not use the `value` property when using `v-model`.
@@ -98,22 +103,26 @@ export default {
       employee3: null,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+              {id: 1, name: 'Sandra Adams'},
+              {id: 2, name: 'Ali Connors'},
+              {id: 3, name: 'Trevor Hansen'},
+              {id: 4, name: 'Tucker Smith'},
+              {id: 5, name: 'Britta Holt'},
+              {id: 6, name: 'Jane Smith'},
+              {id: 7, name: 'John Smith'},
+              {id: 8, name: 'Sandra Williams'}
             ], {
-              idProperty: 'id',
+              idProperty: 'id'
             }
         ),
-        schema: {displayField: 'name', valueField: 'id', imageField: 'avatar'}
+        schema: {displayField: 'name', valueField: 'id'}
       },
     }
   },
+  beforeDestroy() {
+    this.peopleSrc.proxy.destroy();
+    this.peopleSrc = null;
+  }
 }
 </script>
 
@@ -130,19 +139,118 @@ export default {
 
 Define the `multiple` property explicitly to enable multiple selection mode.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="states0" 
+                   :data-source="statesUS" 
+                   placeholder="Select some States" 
+                   clear-button
+                   multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">US States</label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
 
-### Checkbox Color Style
+<script>
+export default {
+  data() {
+    return {
+      states0: [],
+      statesUS: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'US', operator: 'eq'}],
+            restProxy: {
+                browse: './data/states.json'
+            }
+        })
+      }
+    }
+  },
+  beforeDestroy() {
+    this.statesUS.proxy.destroy();
+    this.statesUS = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+### Controlling Checkbox Color Style and Position
 
 In multiple selection mode, the checkbox color can be changed via `check-option-color` 
 property. Any of the [MdBootstrap colors](#/reference/colors) variants can be used for
-this property value. If it is not defined, default value will be used.
+this property value. You can also change the checkbox position via `check-option-position` 
+property. Valid values for this property are: `left`, `right`. If these property is not 
+defined, then default value will be used.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="states1" 
+                   :data-source="statesCA" 
+                   check-option-color="primary" 
+                   check-option-position="right" 
+                   placeholder="Select some States"
+                   clear-button
+                   multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">Canada States</label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
 
-### Controlling Checkbox Position
+<script>
+export default {
+  data() {
+    return {
+      states1: [],
+      statesCA: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: './data/states.json'
+            }
+        })
+      }
+    }
+  },
+  beforeDestroy() {
+    this.statesCA.proxy.destroy();
+    this.statesCA = null;
+  }
+}
+</script>
 
-In multiple selection mode, the checkbox position can be changed via `check-option-position`
-property. Valid values for this property are: `left`, `right`. If it is not defined, default
-value will be used.
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
 
 
 ## Images or Avatars Support
@@ -151,10 +259,127 @@ The ListBox supports displaying images or avatars. Use `show-image` property to 
 option and define the `imageField` value in the data source. By default, `imageField` value 
 is set to `image`.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="employee4" 
+                   :data-source="peopleSrc" 
+                   circle-image
+                   show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">First Employee</label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox v-model="employee5" 
+                   :data-source="peopleSrc" 
+                   rounded-image 
+                   show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">Second Employee</label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      employee4: null,
+      employee5: null,
+      peopleSrc: {
+        proxy: new BsArrayStore([
+              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+            ], {
+              idProperty: 'id'
+            }
+        ),
+        schema: {displayField: 'name', valueField: 'id', imageField: 'avatar'}
+      },
+    }
+  },
+  beforeDestroy() {
+    this.peopleSrc.proxy.destroy();
+    this.peopleSrc = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 ### Controlling Image Size
 
-The size of images can be controlled via `image-size` property.
+The size of images can be controlled via `image-size` property. Sets this property
+to the desired numbers of pixels and image will displayed according to the value.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="employee6" 
+                   :data-source="peopleSrc" 
+                   image-size="32"
+                   rounded-image
+                   show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      employee6: null,
+      peopleSrc: {
+        proxy: new BsArrayStore([
+              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+            ], {
+              idProperty: 'id'
+            }
+        ),
+        schema: {displayField: 'name', valueField: 'id', imageField: 'avatar'}
+      },
+    }
+  },
+  beforeDestroy() {
+    this.peopleSrc.proxy.destroy();
+    this.peopleSrc = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
 
 
 ## Hover Display Support
@@ -162,11 +387,120 @@ The size of images can be controlled via `image-size` property.
 The Popover or ListBox container can be displayed using hover instead of clicking 
 with the `open-on-hover` property.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="employee8" 
+                   :data-source="peopleSrc" 
+                   open-on-hover>
+        <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      employee8: null,
+      peopleSrc: {
+        proxy: new BsArrayStore([
+              {id: 1, name: 'Sandra Adams'},
+              {id: 2, name: 'Ali Connors'},
+              {id: 3, name: 'Trevor Hansen'},
+              {id: 4, name: 'Tucker Smith'},
+              {id: 5, name: 'Britta Holt'},
+              {id: 6, name: 'Jane Smith'},
+              {id: 7, name: 'John Smith'},
+              {id: 8, name: 'Sandra Williams'}
+            ], {
+              idProperty: 'id'
+            }
+        ),
+        schema: {displayField: 'name', valueField: 'id'}
+      },
+    }
+  },
+  beforeDestroy() {
+    this.peopleSrc.proxy.destroy();
+    this.peopleSrc = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 ## Setting ListBox Views
 
 ListBox items can be organized in different ways by providing the template via `optionItem` 
 slot. You can also change the ListBox background color.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox v-model="selectedProduct" 
+                   :data-source="products" 
+                   placeholder="Select product"
+                   listbox-color="blue-green" 
+                   item-separator>
+        <label class="col-md-3 col-xl-2 col-form-label">Product</label>
+        <template slot="optionItem" slot-scope="{ item }">
+          <bs-list-tile-title>
+            <span>{{ item.ProductName }}</span>
+            <span class="float-right font-weight-light small">${{ item.UnitPrice }}</span>
+          </bs-list-tile-title>
+          <bs-list-tile-subtitle>Stock : {{ item.UnitsInStock }}</bs-list-tile-subtitle>
+        </template>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      selectedProduct: null,
+      products: {
+        proxy: new BsStore({
+            idProperty: 'ProductID',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            restProxy: {
+                browse: './data/product.json'
+            }
+        }),
+        schema: {displayField: 'ProductName', valueField: 'ProductID'}
+      }
+    }
+  },
+  beforeDestroy() {
+    this.products.proxy.destroy();
+    this.products = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
 
 
 ## Style Variants
@@ -178,11 +512,139 @@ slot. You can also change the ListBox background color.
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product0" 
+                       :data-source="products" 
+                       floating-label>
+            <label>Select Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product1" 
+                       :data-source="products" 
+                       placeholder="Select Product"
+                       floating-label>
+            <label>Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      product0: null,
+      product1: null,
+      products: {
+        proxy: new BsStore({
+            idProperty: 'ProductID',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            restProxy: {
+                browse: './data/product.json'
+            }
+        }),
+        schema: {displayField: 'ProductName', valueField: 'ProductID'}
+      }
+    }
+  },
+  beforeDestroy() {
+    this.products.proxy.destroy();
+    this.products = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 ### Filled
 
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product2" 
+                       :data-source="products" 
+                       floating-label 
+                       filled>
+            <label>Select Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product3" 
+                       :data-source="products" 
+                       placeholder="Select Product"
+                       floating-label 
+                       filled>
+            <label>Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      product2: null,
+      product3: null,
+      products: {
+        proxy: new BsStore({
+            idProperty: 'ProductID',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            restProxy: {
+                browse: './data/product.json'
+            }
+        }),
+        schema: {displayField: 'ProductName', valueField: 'ProductID'}
+      }
+    }
+  },
+  beforeDestroy() {
+    this.products.proxy.destroy();
+    this.products = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
 
 
 ### Outlined
@@ -190,11 +652,141 @@ Google Material Design spec.
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product4" 
+                       :data-source="products" 
+                       floating-label 
+                       outlined>
+            <label>Select Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="product5" 
+                       :data-source="products" 
+                       placeholder="Select Product"
+                       floating-label 
+                       outlined>
+            <label>Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      product4: null,
+      product5: null,
+      products: {
+        proxy: new BsStore({
+            idProperty: 'ProductID',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            restProxy: {
+                browse: './data/product.json'
+            }
+        }),
+        schema: {displayField: 'ProductName', valueField: 'ProductID'}
+      }
+    }
+  },
+  beforeDestroy() {
+    this.products.proxy.destroy();
+    this.products = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 ### Flat
 
-This style will remove the borders and create flat appearance. It is useful when combined with 
-`readonly` property to create appearance like plain text.
+This style will remove the borders and create flat appearance and can be combined with
+`readonly` property.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox :data-source="products" 
+                       :value="product6" 
+                       flat 
+                       readonly>
+            <label class="col-md-3 col-xl-2 col-form-label">Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox :data-source="products" 
+                       :value="product7"
+                       floating-label 
+                       flat 
+                       readonly>
+            <label>Product</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      product6: 3,
+      product7: 43,
+      products: {
+        proxy: new BsStore({
+            idProperty: 'ProductID',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            restProxy: {
+                browse: './data/product.json'
+            }
+        }),
+        schema: {displayField: 'ProductName', valueField: 'ProductID'}
+      }
+    }
+  },
+  beforeDestroy() {
+    this.products.proxy.destroy();
+    this.products = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
 
 
 ## Help Text
@@ -202,11 +794,259 @@ This style will remove the borders and create flat appearance. It is useful when
 The `help-text` property on `<bs-combobox>` adds the provided string beneath the combobox field.
 Using `persistent-help-text` keeps the help text visible when the combobox field is not focused.
 
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState0" 
+                       :data-source="statesCA" 
+                       :persistent-help-text="false"
+                       help-text="Select Canada State from the list" 
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState1"
+                       :data-source="statesCA" 
+                       help-text="Select Canada State from the list" 
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState2" 
+                       :data-source="statesCA" 
+                       :persistent-help-text="false"
+                       help-text="Select Canada State from the list" 
+                       filled
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState3"
+                       :data-source="statesCA" 
+                       help-text="Select Canada State from the list" 
+                       filled
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState4" 
+                       :data-source="statesCA" 
+                       :persistent-help-text="false"
+                       help-text="Select Canada State from the list" 
+                       outlined
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState5"
+                       :data-source="statesCA" 
+                       help-text="Select Canada State from the list" 
+                       outlined
+                       floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      caState0: null,
+      caState1: null,
+      caState2: null,
+      caState3: null,
+      caState4: null,
+      caState5: null,
+      statesCA: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: './data/states.json'
+            }
+        })
+      }
+    }
+  },
+  beforeDestroy() {
+    this.statesCA.proxy.destroy();
+    this.statesCA = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 ## Icons
 
 You can add icons to the combobox field with `prepend-icon`, `prepend-icon-outer`, `append-icon` 
 or `append-icon-outer` property.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState6" 
+                       :data-source="statesCA" 
+                       prepend-icon="building" 
+                       floating-label 
+                       filled>
+            <label>Prepend</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState7" 
+                       :data-source="statesCA" 
+                       prepend-icon-outer="building" 
+                       floating-label 
+                       filled>
+            <label>Prepend Outer</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState8" 
+                       :data-source="statesCA" 
+                       append-icon="building" 
+                       floating-label 
+                       filled>
+            <label>Append</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState9" 
+                       :data-source="statesCA" 
+                       append-icon-outer="building" 
+                       floating-label 
+                       filled>
+            <label>Append Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox v-model="caState10"
+                       :data-source="statesCA" 
+                       prepend-icon="building" 
+                       floating-label 
+                       outlined>
+            <label>Prepend</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState11"
+                       :data-source="statesCA" 
+                       prepend-icon-outer="building" 
+                       floating-label 
+                       outlined>
+            <label>Prepend Outer</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState12"
+                       :data-source="statesCA" 
+                       append-icon="building" 
+                       floating-label 
+                       outlined>
+            <label>Append</label>
+          </bs-combobox>
+        </div>
+        <div class="form-group">
+          <bs-combobox v-model="caState13"
+                       :data-source="statesCA" 
+                       append-icon-outer="building" 
+                       floating-label 
+                       outlined>
+            <label>Append Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      caState6: null,
+      caState7: null,
+      caState8: null,
+      caState9: null,
+      caState10: null,
+      caState11: null,
+      caState12: null,
+      caState13: null,
+      statesCA: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: './data/states.json'
+            }
+        })
+      }
+    }
+  },
+  beforeDestroy() {
+    this.statesCA.proxy.destroy();
+    this.statesCA = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
 
 
 ## Component Reference
@@ -232,7 +1072,7 @@ or `append-icon-outer` property.
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | help-text      | `String`  |         | The help text to display below the field component. |
 | id             | `String`  |         | Sets `<select>` element `ID` attribute. This property value is auto generates. |
-| image-size     | `Number`  |         | Sets the image size for the ListBox items when `show-image` is enabled. |
+| image-size     | `Number`/`String` | | Sets the image size for each ListBox items when `show-image` is enabled. |
 | item-separator | `Boolean` | `false` | Show or hide the ListBox item separator. |
 | listbox-color  | `String`  |         | Sets the ListBox background color. Any of [MdBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variants can be applied. |
 | minimum-items-for-search | `Number`/`String` | `15` | Sets minimum character to start searching an item inside the ListBox options. |
@@ -266,10 +1106,15 @@ or `append-icon-outer` property.
 
 | Name    | Argument Type     | Description |
 |---------|-------------------|-------------|
-| blur    | `FocusEvent`      | Triggers when cursor leave the `<input>` element. |
-| change  | `String`/`Number` | Triggers when the `value` is changed. |
-| focus   | `FocusEvent`      | Triggers when cursor entered the `<input>` element. |
-| input   | `String`/`Number` | Used to update the `value` property. |
+| change  | (`Object` value, `Object` oldValue) | Triggers when selected item is changed. |
+| close   |                | Triggers when Popover is hiding. |
+| data-bind   | `Object[]` | Triggers after data has been fetched. |
+| data-error  | `Object`   | Triggers when error occured while fetching the data. |
+| data-filter | `Object[]` | Triggers when filtering the data. |
+| deselect | `Object` | Triggers when a selected item is deselected. |
+| input    | `String`/`Number`/`Object`/`Boolean` | Used to update the `value` property. |
+| open     | `Boolean`           | Triggers when updating Popover state: `show` or `hide`. |
+| select   | `Object[]`/`Object` | Triggers when item is selected. |
 
 </div>
 

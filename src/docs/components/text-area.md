@@ -5,8 +5,11 @@
 
 ## Overview
 
-Use `v-model` directive to create two-way data bindings on the `value` property as in `v-model="myText"`.
-This is useful to control or maintain the `value` property.
+**BsTextArea** component mimics the HTML5 `<textarea>` element. This means that you can add 
+attributes like `required`, `readonly`, or `disabled` and it will react to them to give 
+the best experience. You can also use `v-model` directive to create two-way data bindings 
+on the `value` property as in `v-model="myText"`. This is useful to control or maintain 
+the `value` property.
 
 :::demo
 ```html
@@ -14,12 +17,17 @@ This is useful to control or maintain the `value` property.
   <div class="my-demo-wrapper">
     <div class="form-group">
       <bs-text-area>
-        <label class="col-md-3 col-xl-2 col-form-label">TextArea 1</label>
+        <label class="col-md-3 col-xl-2 col-form-label">TextArea</label>
       </bs-text-area>
     </div>
     <div class="form-group">
-      <bs-text-area v-model="myText">
-        <label class="col-md-3 col-xl-2 col-form-label">TextArea 2</label>
+      <bs-text-area :value="myText" readonly>
+        <label class="col-md-3 col-xl-2 col-form-label">State Readonly</label>
+      </bs-text-area>
+    </div>
+    <div class="form-group">
+      <bs-text-area :value="myText" disabled>
+        <label class="col-md-3 col-xl-2 col-form-label">State Disabled</label>
       </bs-text-area>
     </div>
   </div>
@@ -29,7 +37,7 @@ This is useful to control or maintain the `value` property.
 export default {
   data() {
     return {
-      myText: null,
+      myText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     }
   },
 }
@@ -57,8 +65,8 @@ The `autocomplete` property gives you the option to enable the browser to predic
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-text-area autocomplete="email" floating-label>
-        <label>Field Label</label>
+      <bs-text-area autocomplete="email">
+        <label class="col-md-3 col-xl-2 col-form-label">Field Label</label>
       </bs-text-area>
     </div>
   </div>
@@ -379,9 +387,9 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-area :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label>
+                        value="Grocery delivery" 
+                        help-text="For example, flowers or used cars" 
+                        floating-label>
             <label>Product or Service</label>
           </bs-text-area>
         </div>
@@ -389,7 +397,7 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-area help-text="Enter your profile information" 
-                         floating-label>
+                        floating-label>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -399,10 +407,10 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-area :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label 
-                         filled>
+                        value="Grocery delivery" 
+                        help-text="For example, flowers or used cars" 
+                        floating-label 
+                        filled>
             <label>Product or Service</label>
           </bs-text-area>
         </div>
@@ -410,8 +418,8 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-area help-text="Enter your profile information" 
-                         floating-label 
-                         filled>
+                        floating-label 
+                        filled>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -421,10 +429,10 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-area :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label 
-                         outlined>
+                        value="Grocery delivery" 
+                        help-text="For example, flowers or used cars" 
+                        floating-label 
+                        outlined>
             <label>Product or Service</label>
           </bs-text-area>
         </div>

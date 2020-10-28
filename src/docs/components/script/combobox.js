@@ -2,13 +2,40 @@ import {BsArrayStore, BsStore} from "vue-mdbootstrap";
 
 export default {
     data: () => ({
-        selectedPeople: null,
-        employee: null,
+        employee0: null,
         employee1: 2,
         employee2: 3,
         employee3: null,
+        employee4: null,
+        employee5: null,
+        employee6: null,
+        employee7: null,
+        employee8: null,
+        states0: [],
+        states1: [],
+        caState0: null,
+        caState1: null,
+        caState2: null,
+        caState3: null,
+        caState4: null,
+        caState5: null,
+        caState6: null,
+        caState7: null,
+        caState8: null,
+        caState9: null,
+        caState10: null,
+        caState11: null,
+        caState12: null,
+        caState13: null,
         selectedProduct: null,
-        selectedStates: [],
+        product0: null,
+        product1: null,
+        product2: null,
+        product3: null,
+        product4: null,
+        product5: null,
+        product6: 3,
+        product7: 43,
         peopleSrc: {
             proxy: new BsArrayStore([
                     {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
@@ -37,7 +64,7 @@ export default {
             }),
             schema: {displayField: 'ProductName', valueField: 'ProductID'}
         },
-        states: {
+        statesUS: {
             proxy: new BsStore({
                 idProperty: 'value',
                 dataProperty: 'data',
@@ -50,13 +77,28 @@ export default {
                 }
             })
         },
+        statesCA: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
     }),
     beforeDestroy() {
         this.peopleSrc.proxy.destroy();
         this.products.proxy.destroy();
-        this.states.proxy.destroy();
+        this.statesUS.proxy.destroy();
+        this.statesCA.proxy.destroy();
         this.peopleSrc = null;
         this.products = null;
-        this.states = null;
+        this.statesUS = null;
+        this.statesCA = null;
     }
 }
