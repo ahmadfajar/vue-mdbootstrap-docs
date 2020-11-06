@@ -498,6 +498,8 @@ export default {
 
 ### BsGrid - `<bs-grid>`
 
+The Grid main component.
+
 #### Properties
 
 <div class="cmp-property">
@@ -553,8 +555,8 @@ export default {
 | Name    | Description  |
 |---------|--------------|
 | default | Contents for registering columns. |
-| columnheader | Contents for custom columns header. |
 | datarow | Contents for Grid rows. |
+| columnheader | Contents for custom columns header. |
 | emptyMessage | Contents for empty dataset message. |
 | gridfooter | Contents for custom Grid footer. |
 | toolbar | Contents for Grid toolbar. |
@@ -564,7 +566,118 @@ export default {
 
 ### BsGridColumn - `<bs-grid-column>`
 
+The component for registering Grid columns and to render the column header.
+
 #### Properties
+
+<div class="cmp-property">
+
+| Property    | Type      | Default | Description |
+|-------------|-----------|---------|-------------|
+| aggregate   | `String`/`Function` |  | Aggregate function to pass to the column footer. When `String` is passed, valid values are: `sum`, `avg`. |
+| cell-data   | `Boolean` | `true` | Render this column in the Grid rows. |
+| column-cls  | `String`  |  | Column css class name. |
+| data-align  | `String`  |  | Cell data alignment, valid values: `left`, `right`, `center`, and `justify`. |
+| data-style  | `Object`  |  | Cell data css styles. |
+| field       | `String`  |  | The field name in the data source. |
+| filterable  | `Boolean`/`Object` | `true` | Enable or disable column filtering. **[1]** |
+| footer-cls  | `String`  |  | Sets column footer css class name. |
+| footer-text | `String`  |  | Sets column footer text. |
+| formatter   | `Function`|  | Cell data formatter function. |
+| formatter-options | `String`/`Object`/`Array` |  | Value to pass to the second parameter in the formatter function. |
+| header-align | `String` |  | Column header alignment, valid values: `left`, `right`, `center`, and `justify`. |
+| header-style | `Object` |  | Column header css styles. |
+| label     | `String` |  | Column header label. |
+| min-width | `Number`/`String` | `100` | Sets the column minimum width. |
+| order     | `Number`/`String`  |  | Column order in the Grid rows. |
+| row-numbering | `Boolean` | `false`  | Render this column as Grid row numbering. |  
+| sortable   | `Boolean` | `true` | Enable or disable column sorter. |
+| text-align | `String`  |  | Column header and cell data alignment, valid values: `left`, `right`, `center`, and `justify`. |
+| width      | `Number`/`String` |  | Sets the column width. |
+
+</div>
+
+**[1]** When `filterable` is defined as object, the properties are:
+
+<div class="cmp-property">
+
+| Property | Type      | Default | Description |
+|----------|-----------|---------|-------------|
+| button   | `Boolean` | `false` | Show or hide action button to start the filtering operation. |
+| enabled  | `Boolean` | `true`  | Enable or disable the column filtering. |
+| field    | `String`  |  | Default is the field name registered by the column. | 
+| operator | `String`  | `'eq'`  | The operator to be used when filtering the dataset. Valid values are: `eq`, `neq`, `gt`, `gte`, `lt`, `lte`, `in`, `notin`, `startswith`, `endswith`, `contains`, `fts`. <br/> **Note**:<br/> `fts` operator is not fully supported by `BsArrayStore` and `BsStore` yet. <br/> When using `remoteFilter`, you have to implement these operators in the backend. |
+| placeholder | `Boolean` | `true` | Show or hide placeholder on input field. |
+
+</div>
+
+
+### BsGridCell - `<bs-grid-cell>`
+
+The component for rendering the Grid cell data. This component is used in custom cell data rendering.
+
+#### Properties
+
+<div class="cmp-property">
+
+| Property | Type     | Default | Description |
+|----------|----------|---------|-------------|
+| column   | `Object` |  | The column object for this Cell. |
+| item     | `Object` |  | The row item object for this Cell. |
+| index    | `Number`/`String` |  | The row index position. |
+
+</div>
+
+
+#### Slots
+
+<div class="cmp-property">
+
+| Name    | Description  |
+|---------|--------------|
+| default | Contents for cell data. |
+
+</div>
+
+
+### BsGridCellNumbering - `<bs-grid-cell-numbering>`
+
+The component for rendering the Grid row numbering cell. This component is used in custom cell data rendering.
+
+#### Properties
+
+<div class="cmp-property">
+
+| Property | Type     | Default | Description |
+|----------|----------|---------|-------------|
+| column   | `Object` |  | The column object for this Cell. |
+| item     | `Object` |  | The row item object for this Cell. |
+| index    | `Number`/`String` |  | The row index position. |
+
+</div>
+
+
+### BsGridToolSearch - `<bs-grid-tool-search>`
+
+The component to display search field in the Grid toolbar slots.
+
+#### Properties
+
+<div class="cmp-property">
+
+| Property  | Type      | Default | Description |
+|-----------|-----------|---------|-------------|
+| autofocus | `Boolean` |  | Sets search field autofocus. |
+| dark-mode | `Boolean` |  | Enable or disable darkmode search field. |
+| field     | `String`  |  | The field name in the data source to apply the filtering. |
+| inner-cls | `String`  |  | Css class name to apply to the search field. |
+| logic     | `String`  | `'AND'` | The filtering logic. |
+| minlength | `Number`/`String` | `3` | Minimum characters to start filtering. |
+| name      | `String`  |  | Sets `<input>` element `name` attribute. |
+| operator  | `String`  | `'contains'` | The filtering operation to apply. Valid values are: `eq`, `neq`, `startwith`, `endwith`, `contains`, `fts`. |
+| placeholder | `String`| `'Search...'` | The field placeholder. |
+
+</div>
 
 
 <script src="./script/grid.js"></script>
