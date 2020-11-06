@@ -60,7 +60,7 @@ export default {
 
             const cssTpl = `${(style || '').trim()}\n`;
             const htmlTpl = `${resourcesTpl}\n<div id="app">${html}</div>`;
-            let jsTpl = (script || '').replace(/export default/, 'var Main =').trim();
+            let jsTpl = (script || '').replace(/import.*";/, '').replace(/export default/, 'var Main =').trim();
 
             jsTpl = jsTpl
                 ? jsTpl + '\nvar Ctor = Vue.extend(Main);\nnew Ctor().$mount(\'#app\');'

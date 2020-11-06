@@ -516,7 +516,7 @@ The component to display the navigation item.
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| click  | `MouseEvent`, `this` | Fires when a non-disabled ListNavItem is clicked. |
+| click  | (`MouseEvent` event, `this` sender) | Fires when a non-disabled ListNavItem is clicked. |
 | input  | `Boolean` | Used to update component state of `active` property. |
 
 </div>

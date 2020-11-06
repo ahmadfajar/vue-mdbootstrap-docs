@@ -35,6 +35,8 @@ control or maintain the `value` property.
 </template>
 
 <script>
+import {BsArrayStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -97,6 +99,8 @@ Define the `clear-button` property explicitly, so that the field value can be cl
 </template>
 
 <script>
+import {BsArrayStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -156,6 +160,8 @@ Define the `multiple` property explicitly to enable multiple selection mode.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -218,6 +224,8 @@ defined, then default value will be used.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -283,6 +291,8 @@ is set to `image`.
 </template>
 
 <script>
+import {BsArrayStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -344,6 +354,8 @@ to the desired numbers of pixels and image will displayed according to the value
 </template>
 
 <script>
+import {BsArrayStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -402,6 +414,8 @@ with the `open-on-hover` property.
 </template>
 
 <script>
+import {BsArrayStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -469,6 +483,8 @@ slot. You can also change the ListBox background color.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -541,6 +557,8 @@ Google Material Design spec.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -612,6 +630,8 @@ Google Material Design spec.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -683,6 +703,8 @@ Google Material Design spec.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -754,6 +776,8 @@ This style will remove the borders and create flat appearance and can be combine
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -875,6 +899,8 @@ Using `persistent-help-text` keeps the help text visible when the combobox field
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {
@@ -1006,6 +1032,8 @@ or `append-icon-outer` property.
 </template>
 
 <script>
+import {BsStore} from "vue-mdbootstrap";
+
 export default {
   data() {
     return {

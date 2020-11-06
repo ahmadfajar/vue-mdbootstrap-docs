@@ -40,6 +40,21 @@ const navs = [{
         view: viewResolver("components/card"),
         route: "/components/card"
     }, {
+        title: "Data Grid",
+        children: [{
+            title: "Grid",
+            view: viewResolver("components/grid"),
+            route: "/components/grid"
+        }, {
+            title: "TreeGrid",
+            // view: viewResolver("components/treegrid"),
+            route: "/components/treegrid"
+        }]
+    }, {
+        title: "DateTime Picker",
+        // view: viewResolver("components/datetime-picker"),
+        route: "/components/datetime-picker"
+    }, {
         title: "Divider",
         view: viewResolver("components/divider"),
         route: "/components/divider"
@@ -103,6 +118,10 @@ const navs = [{
             route: "/components/input/field-test"
         }]
     }, {
+        title: "Lightbox",
+        // view: viewResolver("components/lightbox"),
+        route: "/components/lightbox"
+    }, {
         title: "Lists",
         children: [{
             title: "List Tile",
@@ -113,6 +132,10 @@ const navs = [{
             view: viewResolver("components/list-navigation"),
             route: "/components/lists/navigation"
         }]
+    }, {
+        title: "Modal",
+        // view: viewResolver("components/modal"),
+        route: "/components/modal"
     }, {
         title: "Menu",
         view: viewResolver("components/menu"),
@@ -125,6 +148,14 @@ const navs = [{
         title: "Subheader",
         view: viewResolver("components/subheader"),
         route: "/components/subheader"
+    }, {
+        title: "Tabs",
+        // view: viewResolver("components/tabs"),
+        route: "/components/tabs"
+    }, {
+        title: "Tooltip",
+        // view: viewResolver("components/tooltip"),
+        route: "/components/tooltip"
     }]
 }, {
     title: "Reference",
@@ -133,6 +164,10 @@ const navs = [{
         title: "Color Variants",
         view: viewResolver("reference/colors"),
         route: "/reference/colors"
+    }, {
+        title: "Notification",
+        // view: viewResolver("components/notification"),
+        route: "/components/notification"
     }, {
         title: "Shadows",
         view: viewResolver("reference/shadows"),

@@ -185,26 +185,29 @@ export default {
 
 </div>
 
-**[1]** The item properties described below:
- 
-```json
-[{
-  "value": "String, Number, Boolean, Array (required)",
-  "label": "String (required)",
-  "icon": "String",
-  "iconSize": "String. Render the icon with predefined size, see 'BsButton' for valid values.",
-  "iconFixed": "Boolean. Render Fontawesome Icon with fixed width",
-  "iconFlip": "Boolean. Flip the icon, valid values are: horizontal, vertical, both.",
-  "iconPulse": "Boolean. Apply PULSE animation to the icon",
-  "iconRotation": "Number. Rotate the icon, valid values are: 90, 180, 270.",
-  "iconSpin": "String. Apply SPIN animation to the icon.",
-  "id": "String. The `<input>` element ID.",
-  "name": "String. The `<input>` element name. It is used when multiple is TRUE.",
-  "disabled": "Boolean. Item `<input>` element state.",
-  "readonly": "Boolean. Item `<input>` element state."
-}]
-```
+#### Items Properties
 
+**[1]** Items are collection of button objects and have properties as described below:
+
+<div class="cmp-property">
+
+| Property  | Type      | Description |
+|-----------|-----------|-------------|
+| value <bs-badge color="danger text-white">required</bs-badge> | `String`/`Number`/`Boolean`/`Array` | The item value. |
+| label <bs-badge color="danger text-white">required</bs-badge> | `String`  | The item label.  |
+| icon      | `String`  | The icon to display inside component. Use any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
+| iconSize  | `String`  | Render the icon with predefined size, valid values are: `xs`, `sm`, `lg`. |
+| iconFixed | `Boolean` | Render Fontawesome Icon with fixed width. |
+| iconFlip  | `Boolean` | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
+| iconPulse | `Boolean` | Apply **pulse** animation to the icon. |
+| iconRotation | `Number` | Rotate the icon, valid values are: `90`, `180`, `270`. |
+| iconSpin  | `Boolean` | Apply **spin** animation to the icon. |
+| id        | `String`  | Item `<input>` element ID. |
+| name      | `String`  | Item `<input>` element name. It is used when `multiple` is `true`. |
+| disabled  | `Boolean` | Item `<input>` element state. |
+| readonly  | `Boolean` | Item `<input>` element state. |
+
+</div>
 
 ### Events
 
