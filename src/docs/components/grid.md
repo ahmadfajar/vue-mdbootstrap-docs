@@ -6,20 +6,37 @@ sorting, searching, filtering and row selection.
 
 ## Overview
 
-The standard **BsGrid** will by default render your data as simple rows.
+The standard **BsGrid** will by default render your data as simple rows. **BsGrid** 
+supports data binding to local and remote sets of data by using `BsArrayStore` or
+`BsStore`.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source0" pageable row-hover sortable>
-        <bs-grid-column field="name" label="Dessert (100g serving)" min-width="175"></bs-grid-column>
-        <bs-grid-column field="calories" label="Calories" width="120"></bs-grid-column>
-        <bs-grid-column field="fat" label="Fat (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="carbs" label="Carbs (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="protein" label="Protein (g)" width="120"></bs-grid-column>
-        <bs-grid-column field="iron" label="Iron (%)" width="100"></bs-grid-column>
+      <bs-grid :data-source="source0" 
+               pageable 
+               row-hover 
+               sortable>
+        <bs-grid-column field="name" 
+                        label="Dessert (100g serving)" 
+                        min-width="175"></bs-grid-column>
+        <bs-grid-column field="calories" 
+                        label="Calories" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="fat" 
+                        label="Fat (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="carbs" 
+                        label="Carbs (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="protein" 
+                        label="Protein (g)" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="iron" 
+                        label="Iron (%)" 
+                        width="100"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -62,20 +79,45 @@ export default {
 :::
 
 
-## Pagination
+## Paging
+
+By default, paging in the Grid UI is disabled. To enable the paging functionality  
+of the Grid, define the `pageable` property explicitly. You can also customize the 
+paging capabilities by defining the value of `pageable` property as object.
+
+In order for paging to work properly:
+* If `pageable` value is `true`, then define the number of records for the Grid to 
+  display on each page in the data source.
+* Define the total number of records in the dataset.
+* If `remotePaging` value is `true`, then the backend must handle correctly the 
+  number of records to display.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source1" :pageable="pagination" row-hover>
-        <bs-grid-column field="name" label="Dessert (100g serving)" min-width="175"></bs-grid-column>
-        <bs-grid-column field="calories" label="Calories" width="120"></bs-grid-column>
-        <bs-grid-column field="fat" label="Fat (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="carbs" label="Carbs (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="protein" label="Protein (g)" width="120"></bs-grid-column>
-        <bs-grid-column field="iron" label="Iron (%)" width="100"></bs-grid-column>
+      <bs-grid :data-source="source1" 
+               :pageable="pagination" 
+               row-hover>
+        <bs-grid-column field="name" 
+                        label="Dessert (100g serving)" 
+                        min-width="175"></bs-grid-column>
+        <bs-grid-column field="calories" 
+                        label="Calories" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="fat" 
+                        label="Fat (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="carbs" 
+                        label="Carbs (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="protein" 
+                        label="Protein (g)" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="iron" 
+                        label="Iron (%)" 
+                        width="100"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -126,19 +168,41 @@ export default {
 
 ## Row Numbering
 
+The Grid UI has built-in feature to display the row number. This can be achieve by 
+registering the column and explicitly set the `row-numbering` property. And when
+using custom cell rendering feature, use `<bs-grid-cell-numbering>` inside `datarow`
+slots to properly display the row number in a cell.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source2" pageable row-hover>
-        <bs-grid-column label="#" text-align="right" width="50" row-numbering></bs-grid-column>
-        <bs-grid-column field="name" label="Dessert (100g serving)" min-width="175"></bs-grid-column>
-        <bs-grid-column field="calories" label="Calories" width="120"></bs-grid-column>
-        <bs-grid-column field="fat" label="Fat (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="carbs" label="Carbs (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="protein" label="Protein (g)" width="120"></bs-grid-column>
-        <bs-grid-column field="iron" label="Iron (%)" width="100"></bs-grid-column>
+      <bs-grid :data-source="source2" 
+               pageable 
+               row-hover>
+        <bs-grid-column label="#" 
+                        text-align="right" 
+                        width="50" 
+                        row-numbering></bs-grid-column>
+        <bs-grid-column field="name" 
+                        label="Dessert (100g serving)" 
+                        min-width="175"></bs-grid-column>
+        <bs-grid-column field="calories" 
+                        label="Calories" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="fat" 
+                        label="Fat (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="carbs" 
+                        label="Carbs (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="protein" 
+                        label="Protein (g)" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="iron" 
+                        label="Iron (%)" 
+                        width="100"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -183,18 +247,39 @@ export default {
 
 ## Sorting
 
+By default, sorting in the Grid is disabled. To enable the sorting functionality 
+of the Grid, explicitly set the `sortable` property. To enhance the performance 
+of the Grid, apply the sorting operations on the server by setting the `remoteSort` 
+option in the data source to `true`.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source3" pageable row-hover sortable>
-        <bs-grid-column :sortable="false" field="name" label="Dessert (100g serving)" min-width="175"></bs-grid-column>
-        <bs-grid-column field="calories" label="Calories" width="120"></bs-grid-column>
-        <bs-grid-column field="fat" label="Fat (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="carbs" label="Carbs (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="protein" label="Protein (g)" width="120"></bs-grid-column>
-        <bs-grid-column field="iron" label="Iron (%)" width="100"></bs-grid-column>
+      <bs-grid :data-source="source3" 
+               pageable 
+               row-hover 
+               sortable>
+        <bs-grid-column :sortable="false" 
+                        field="name" 
+                        label="Dessert (100g serving)" 
+                        min-width="175"></bs-grid-column>
+        <bs-grid-column field="calories" 
+                        label="Calories" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="fat" 
+                        label="Fat (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="carbs" 
+                        label="Carbs (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="protein" 
+                        label="Protein (g)" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="iron" 
+                        label="Iron (%)" 
+                        width="100"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -239,17 +324,40 @@ export default {
 
 ## Filtering
 
+By default, the filtering functionality of the Grid is disabled. To control filtering 
+in the Grid, use the `filterable` property on the `<bs-grid>`. Additionally, you can 
+customize which column has its filter functionality enabled by setting the `filterable` 
+property to `false` on the `<bs-grid-column>`. 
+
+And to enhance the performance of the Grid, apply the filter operations on the server 
+by setting the `remoteFilter` option in the data source to `true`.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="stateSources0" :filterable="{minlength: 2, operator: 'contains'}" pageable row-hover sortable>
-        <bs-grid-column text-align="right" width="50" row-numbering></bs-grid-column>
-        <bs-grid-column field="value" label="ID" width="75"></bs-grid-column>
-        <bs-grid-column field="text" label="State Name" min-width="150"></bs-grid-column>
-        <bs-grid-column field="country" label="Country ID" width="125"></bs-grid-column>
-        <bs-grid-column :filterable="false" field="description" label="Comments" min-width="150"></bs-grid-column>
+      <bs-grid :data-source="stateSources0" 
+               :filterable="{minlength: 2, operator: 'contains'}" 
+               pageable 
+               row-hover 
+               sortable>
+        <bs-grid-column text-align="right" 
+                        width="50" 
+                        row-numbering></bs-grid-column>
+        <bs-grid-column field="value" 
+                        label="ID" 
+                        width="75"></bs-grid-column>
+        <bs-grid-column field="text" 
+                        label="State Name" 
+                        min-width="150"></bs-grid-column>
+        <bs-grid-column field="country" 
+                        label="Country ID" 
+                        width="125"></bs-grid-column>
+        <bs-grid-column :filterable="false" 
+                        field="description" 
+                        label="Comments" 
+                        min-width="150"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -292,26 +400,47 @@ export default {
 :::
 
 
-### Custom Filter
+### Search Panel
+
+There are situations when you would like to enable the end user to search inside 
+the grid cells for a given value. The Grid UI supports such searching by adding 
+a search field inside the grid toolbar. Additionally, it is possible to customize
+which field to search using `field` property and the filter operator to be used
+using `operator` property.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="stateSources1" pageable row-hover sortable>
+      <bs-grid :data-source="stateSources1" 
+               pageable 
+               row-hover 
+               sortable>
         <bs-grid-toolbar slot="toolbar">
           <div class="row justify-content-end">
             <div class="col-lg-6">
-              <bs-grid-tool-search field="text" operator="contains" placeholder="Search..."></bs-grid-tool-search>
+              <bs-grid-tool-search field="text" 
+                                   operator="contains"></bs-grid-tool-search>
             </div>
           </div>
         </bs-grid-toolbar>
-        <bs-grid-column text-align="right" width="50" row-numbering></bs-grid-column>
-        <bs-grid-column field="value" label="ID" width="75"></bs-grid-column>
-        <bs-grid-column field="text" label="State Name" min-width="150"></bs-grid-column>
-        <bs-grid-column field="country" label="Country ID" width="125"></bs-grid-column>
-        <bs-grid-column field="description" label="Comments" min-width="150" :filterable="false"></bs-grid-column>
+        <bs-grid-column text-align="right" 
+                        width="50" 
+                        row-numbering></bs-grid-column>
+        <bs-grid-column field="value" 
+                        label="ID" 
+                        width="75"></bs-grid-column>
+        <bs-grid-column field="text" 
+                        label="State Name" 
+                        min-width="150"></bs-grid-column>
+        <bs-grid-column field="country" 
+                        label="Country ID" 
+                        width="125"></bs-grid-column>
+        <bs-grid-column :filterable="false" 
+                        field="description" 
+                        label="Comments" 
+                        min-width="150"></bs-grid-column>
       </bs-grid>
     </bs-card>
   </div>
@@ -356,32 +485,81 @@ export default {
 
 ## Custom Renderer Support
 
+### Custom Cell Rendering
+
+To enable the Grid cell rendering functionality, use the `datarow` slots and 
+explicitly defined the component to render the cell using `<bs-grid-cell>` 
+component.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source4" pageable row-hover sortable>
-        <bs-grid-column field="name" label="Dessert (100g serving)" min-width="175"></bs-grid-column>
-        <bs-grid-column field="calories" label="Calories" width="120" text-align="center"></bs-grid-column>
-        <bs-grid-column field="fat" label="Fat (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="carbs" label="Carbs (g)" width="100"></bs-grid-column>
-        <bs-grid-column field="protein" label="Protein (g)" width="120"></bs-grid-column>
-        <bs-grid-column field="iron" label="Iron (%)" width="100" text-align="center"></bs-grid-column>
-        <bs-grid-column label="Action" width="100" text-align="center"></bs-grid-column>
+      <bs-grid :data-source="source4" 
+               row-hover 
+               sortable>
+        <bs-grid-column field="name" 
+                        label="Dessert (100g serving)" 
+                        min-width="175"></bs-grid-column>
+        <bs-grid-column field="calories" 
+                        label="Calories" 
+                        width="120" 
+                        text-align="center"></bs-grid-column>
+        <bs-grid-column field="fat" 
+                        label="Fat (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="carbs" 
+                        label="Carbs (g)" 
+                        width="100"></bs-grid-column>
+        <bs-grid-column field="protein" 
+                        label="Protein (g)" 
+                        width="120"></bs-grid-column>
+        <bs-grid-column field="iron" 
+                        label="Iron (%)" 
+                        width="100" 
+                        text-align="center"></bs-grid-column>
+        <bs-grid-column label="Action" 
+                        width="100" 
+                        text-align="center"></bs-grid-column>
         
         <template v-slot:datarow="{ columns, item, index }">
-          <bs-grid-cell :column="columns[0]" :item="item" :index="index"></bs-grid-cell>
-          <bs-grid-cell :column="columns[1]" :item="item" :index="index"></bs-grid-cell>
-          <bs-grid-cell :column="columns[2]" :item="item" :index="index"></bs-grid-cell>
-          <bs-grid-cell :column="columns[3]" :item="item" :index="index"></bs-grid-cell>
-          <bs-grid-cell :column="columns[4]" :item="item" :index="index"></bs-grid-cell>
-          <bs-grid-cell :column="columns[5]" :item="item" :index="index" :class="{'bg-warning': item.iron > 15}">
+          <bs-grid-cell :column="columns[0]" 
+                        :item="item" 
+                        :index="index"></bs-grid-cell>
+          <bs-grid-cell :column="columns[1]" 
+                        :item="item" 
+                        :index="index"></bs-grid-cell>
+          <bs-grid-cell :column="columns[2]" 
+                        :item="item" 
+                        :index="index"></bs-grid-cell>
+          <bs-grid-cell :column="columns[3]" 
+                        :item="item" 
+                        :index="index"></bs-grid-cell>
+          <bs-grid-cell :column="columns[4]" 
+                        :item="item" 
+                        :index="index"></bs-grid-cell>
+          <bs-grid-cell :column="columns[5]" 
+                        :item="item" 
+                        :index="index" 
+                        :class="{'bg-warning': item.iron > 15}">
             {{ item.iron }}%
           </bs-grid-cell>
-          <bs-grid-cell :column="columns[6]" :item="item" :index="index">
-            <bs-button icon="pen" mode="icon" size="sm" color="secondary" flat @click="btnClick(item, 'Edit Item')"></bs-button>
-            <bs-button icon="trash-alt" mode="icon" size="sm" color="danger" flat @click="btnClick(item, 'Delete Item')"></bs-button>
+          <bs-grid-cell :column="columns[6]" 
+                        :item="item" 
+                        :index="index">
+            <bs-button icon="pen" 
+                       mode="icon" 
+                       size="sm" 
+                       color="secondary" 
+                       flat 
+                       @click="btnClick(item, 'Edit Item')"></bs-button>
+            <bs-button icon="trash-alt" 
+                       mode="icon" 
+                       size="sm" 
+                       color="danger" 
+                       flat 
+                       @click="btnClick(item, 'Delete Item')"></bs-button>
           </bs-grid-cell>
         </template>
       </bs-grid>
@@ -433,23 +611,66 @@ export default {
 
 ### Multi Column Header
 
+To enable multi-column header of the Grid use the `columnheader` slots. 
+
+In order to correctly display the Grid rows on multi-column header:
+* Use `rowspan` and `colspan` property to define the row spanning and 
+  column spanning.
+* Sets the `cell-data` property to `false` on the joined column to 
+  ignore the joined column when rendering the Grid rows.
+* Sets the `order` property value to correctly order the columns when 
+  rendering the Grid rows.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-grid :data-source="source5" :flip-on-small-screen="false" bordered pageable row-hover sortable>
+      <bs-grid :data-source="source5" 
+               :flip-on-small-screen="false" 
+               bordered 
+               row-hover 
+               sortable>
         <template v-slot:columnheader>
           <bs-grid-rowhead>
-            <bs-grid-column field="name" label="Dessert (100g serving)" min-width="175" rowspan="2"></bs-grid-column>
-            <bs-grid-column field="calories" label="Calories" width="100" rowspan="2" text-align="center"></bs-grid-column>
-            <bs-grid-column :cell-data="false" label="Join Column" colspan="3" header-align="center" order="6"></bs-grid-column>
-            <bs-grid-column field="iron" label="Iron (%)" width="100" rowspan="2" text-align="center" order="5"></bs-grid-column>
+            <bs-grid-column field="name" 
+                            label="Dessert (100g serving)" 
+                            min-width="175" 
+                            rowspan="2"></bs-grid-column>
+            <bs-grid-column field="calories" 
+                            label="Calories" 
+                            width="100" 
+                            rowspan="2" 
+                            text-align="center"></bs-grid-column>
+            <bs-grid-column :cell-data="false" 
+                            label="Join Column" 
+                            colspan="3" 
+                            header-align="center" 
+                            order="6"></bs-grid-column>
+            <bs-grid-column field="iron" 
+                            label="Iron (%)" 
+                            width="100" 
+                            rowspan="2" 
+                            text-align="center" 
+                            order="5"></bs-grid-column>
           </bs-grid-rowhead>
           <bs-grid-rowhead>
-            <bs-grid-column field="fat" label="Fat (g)" width="100" text-align="right" order="2"></bs-grid-column>
-            <bs-grid-column field="carbs" label="Carbs (g)" width="100" text-align="right" order="3"></bs-grid-column>
-            <bs-grid-column field="protein" label="Protein (g)" width="120" text-align="right" order="4" class="border-right"></bs-grid-column>
+            <bs-grid-column field="fat" 
+                            label="Fat (g)" 
+                            width="100" 
+                            text-align="right" 
+                            order="2"></bs-grid-column>
+            <bs-grid-column field="carbs" 
+                            label="Carbs (g)" 
+                            width="100" 
+                            text-align="right" 
+                            order="3"></bs-grid-column>
+            <bs-grid-column field="protein" 
+                            label="Protein (g)" 
+                            width="120" 
+                            text-align="right" 
+                            order="4" 
+                            class="border-right"></bs-grid-column>
           </bs-grid-rowhead>
         </template>
       </bs-grid>
@@ -493,6 +714,11 @@ export default {
 ```
 :::
 
+:::warning
+Grid with multi column header can't be displayed correctly on small screen device.
+To fix this situation, sets the `flip-on-small-screen` property to `false`.
+:::
+
 
 ## Component Reference
 
@@ -519,7 +745,7 @@ The Grid main component.
 | sortable  | `Boolean`/`Object` | `false` | Enable or disable column sort. |
 
 </div>
-
+<br>
 
 **[1]** When `filterable` is defined as object, the properties are:
 
@@ -534,18 +760,32 @@ The Grid main component.
 | placeholder | `Boolean` | `true` | Enable or disable placeholder on input filter. |
 
 </div>
+<br>
 
 **[2]** When `pageable` is defined as object, the properties are:
 
-<div class="cmp-property">
+* messages: `Object` 
 
-| Property | Type     | Description |
-|----------|----------|-------------|
-| messages | `Object` | Enable or disable row selection mode. |
-| pageSize | `Number` | Display Grid footer at bottom. |
-| paging   | `Array`  | Enable or disable column sort. |
+  Configure the pagination text messages. The object properties are:
 
-</div>
+  * display: `String` 
+
+    Sets the displayed items pattern format. The default value is `'{0}-{1} of {2} items'`.
+
+  * empty: `String` 
+
+    Sets the empty message when no data to be displayed.
+
+  * pager: `String` 
+    Sets the text placed after paging combobox.
+
+* pageSize: `Number` 
+
+  Number of items per-page. When empty, value from `BsStore` or `BsArrayStore` will be used.
+
+* paging: `Array` 
+
+  Sets the paging combobox list values.
 
 
 #### Slots
@@ -562,7 +802,7 @@ The Grid main component.
 | toolbar | Contents for Grid toolbar. |
 
 </div>
-
+<br>
 
 ### BsGridColumn - `<bs-grid-column>`
 
@@ -596,6 +836,7 @@ The component for registering Grid columns and to render the column header.
 | width      | `Number`/`String` |  | Sets the column width. |
 
 </div>
+<br>
 
 **[1]** When `filterable` is defined as object, the properties are:
 
@@ -610,7 +851,7 @@ The component for registering Grid columns and to render the column header.
 | placeholder | `Boolean` | `true` | Show or hide placeholder on input field. |
 
 </div>
-
+<br>
 
 ### BsGridCell - `<bs-grid-cell>`
 
@@ -638,7 +879,7 @@ The component for rendering the Grid cell data. This component is used in custom
 | default | Contents for cell data. |
 
 </div>
-
+<br>
 
 ### BsGridCellNumbering - `<bs-grid-cell-numbering>`
 
@@ -655,7 +896,7 @@ The component for rendering the Grid row numbering cell. This component is used 
 | index    | `Number`/`String` |  | The row index position. |
 
 </div>
-
+<br>
 
 ### BsGridToolSearch - `<bs-grid-tool-search>`
 
@@ -667,8 +908,8 @@ The component to display search field in the Grid toolbar slots.
 
 | Property  | Type      | Default | Description |
 |-----------|-----------|---------|-------------|
-| autofocus | `Boolean` |  | Sets search field autofocus. |
-| dark-mode | `Boolean` |  | Enable or disable darkmode search field. |
+| autofocus | `Boolean` | `false` | Sets search field autofocus. |
+| dark-mode | `Boolean` | `false` | Enable or disable dark background on search field. It is usefull when `<bs-grid-toolbar>` background color is other than `light-grey`, `light`, `white`, or light color. |
 | field     | `String`  |  | The field name in the data source to apply the filtering. |
 | inner-cls | `String`  |  | Css class name to apply to the search field. |
 | logic     | `String`  | `'AND'` | The filtering logic. |
