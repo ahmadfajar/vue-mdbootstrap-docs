@@ -883,7 +883,7 @@ export default {
 | readonly     | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required     | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | transition   | `String`  | `'popover'` | Transition animation when showing the DateTime picker. This animation is effected by `picker-placement` property. |
-| value <bs-badge color="unique text-white">v-model</bs-badge> | `String`/`Number` |  | The value monitored by `v-model` to maintain field value. The value must be convertible to datetime. |
+| value <bs-badge color="unique text-white">v-model</bs-badge> | `String`/`Number` |  | The value monitored by `v-model` to maintain the field value. The value must be convertible to datetime. |
 | value-format | `String`  | `'L'`    | The date format for output value. See [moment](https://momentjs.com/docs/#/displaying/) for valid format. |
 | view-mode    | `String`  | `'date'` | DateTime picker view mode, valid values are: `date`, `month`, `year` or `time`. |
 

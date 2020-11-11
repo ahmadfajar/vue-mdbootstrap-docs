@@ -52,7 +52,7 @@ const navs = [{
         }]
     }, {
         title: "DateTime Picker",
-        // view: viewResolver("components/datetime-picker"),
+        view: viewResolver("components/datetime-picker"),
         route: "/components/datetime-picker"
     }, {
         title: "Divider",
@@ -112,10 +112,10 @@ const navs = [{
             title: "Toggle Field",
             // view: viewResolver("components/image-holder"),
             route: "/components/input/toggle-field"
-        }, {
-            title: "Field Test",
-            view: viewResolver("components/text-field-test"),
-            route: "/components/input/field-test"
+        // }, {
+        //     title: "Field Test",
+        //     view: viewResolver("components/text-field-test"),
+        //     route: "/components/input/field-test"
         }]
     }, {
         title: "Lightbox",

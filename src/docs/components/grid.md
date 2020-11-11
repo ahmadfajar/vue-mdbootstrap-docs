@@ -829,7 +829,7 @@ The component for registering Grid columns and to render the column header.
 | header-style | `Object` |  | Column header css styles. |
 | label     | `String` |  | Column header label. |
 | min-width | `Number`/`String` | `100` | Sets the column minimum width. |
-| order     | `Number`/`String`  |  | Column order in the Grid rows. |
+| order     | `Number`/`String`  |  | Grid rows column order. |
 | row-numbering | `Boolean` | `false`  | Render this column as Grid row numbering. |  
 | sortable   | `Boolean` | `true` | Enable or disable column sorter. |
 | text-align | `String`  |  | Column header and cell data alignment, valid values: `left`, `right`, `center`, and `justify`. |

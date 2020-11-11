@@ -14,13 +14,5 @@ module.exports = {
             .use('vue-markdown-loader')
                 .loader('vue-markdown-loader/lib/markdown-compiler')
                 .options(mdLoaderOptions);
-                // .options({
-                //     raw: true,
-                //     html: true,
-                //     linkify: true,
-                //     typographer: true,
-                //     preventExtract: true,
-                //     wrapper: 'article class="markdown-body"'
-                // })
     }
 };
