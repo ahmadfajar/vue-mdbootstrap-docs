@@ -154,7 +154,7 @@ const navs = [{
         route: "/components/tabs"
     }, {
         title: "Tooltip",
-        // view: viewResolver("components/tooltip"),
+        view: viewResolver("components/tooltip"),
         route: "/components/tooltip"
     }]
 }, {
