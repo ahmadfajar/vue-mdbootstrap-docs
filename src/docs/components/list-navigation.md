@@ -74,7 +74,6 @@ customize indentation from the left side.
         <bs-appbar-title title="Topics" class="text-white"></bs-appbar-title>
         <bs-spacer></bs-spacer>
         <bs-button color="light-grey"
-                   class="ml-auto"
                    mode="icon"
                    flat>
           <bs-icon icon="MoreVert" size="24"></bs-icon>
@@ -169,7 +168,6 @@ navigation items.
         <bs-appbar-title title="Mail" class="text-white"></bs-appbar-title>
         <bs-spacer></bs-spacer>
         <bs-button color="light-grey"
-                   class="ml-auto"
                    mode="icon"
                    flat>
           <bs-icon icon="MoreVert" size="24"></bs-icon>

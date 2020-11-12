@@ -150,7 +150,7 @@ const navs = [{
         route: "/components/subheader"
     }, {
         title: "Tabs",
-        // view: viewResolver("components/tabs"),
+        view: viewResolver("components/tabs"),
         route: "/components/tabs"
     }, {
         title: "Tooltip",
