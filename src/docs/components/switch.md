@@ -3,7 +3,8 @@
 with the `v-model` to maintain the component state.
 :::
 
-## Overview
+
+## Basic Example
 
 :::demo
 ```html

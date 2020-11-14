@@ -134,7 +134,7 @@ const navs = [{
         }]
     }, {
         title: "Modal",
-        // view: viewResolver("components/modal"),
+        view: viewResolver("components/modal"),
         route: "/components/modal"
     }, {
         title: "Menu",

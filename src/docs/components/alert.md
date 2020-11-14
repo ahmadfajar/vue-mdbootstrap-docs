@@ -8,13 +8,15 @@ success to neutral information.
 
 ## Overview
 
-### Basic Example
+By default, `<bs-alert>` is set to primary color. You can use `color` property to change its color and 
+add some emotional weight. Any of [MdBootstrap colors](#/reference/colors) variants can be applied to the 
+`color` property.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-alert color="primary">
+    <bs-alert>
       Simple alert with primary color
     </bs-alert>
     <bs-alert color="info">
@@ -41,7 +43,9 @@ success to neutral information.
 :::
 
 
-### Outline Alert
+## Outline Style
+
+Use the `outlined` property to enable the **outline style**.
 
 :::demo
 ```html

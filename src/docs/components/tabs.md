@@ -5,7 +5,7 @@ are the content.
 :::
 
 
-## Overview
+## Basic Example
 
 :::demo
 ```html
@@ -56,7 +56,7 @@ The Tabs component has four style variants.
 **Bootstrap tabs style** variant is default style variant when `variant` property is not 
 defined. To explicitly define this style variant, sets `variant` property value of `<bs-tabs>`
 to `'tabs'`. When use inside `<bs-card>` component, sets `inner-class` property value to 
-`'card-header'` to have proper Bootstrap tabs style.
+`'card-header'` to have an appropriate Bootstrap tabs style.
 
 :::demo
 ```html
@@ -104,7 +104,7 @@ export default {
 
 **Bootstrap pill style** is another style variant from Bootstrap. To use it, sets
 `variant` property value of `<bs-tabs>` to `'pills'`. When use inside `<bs-card>` 
-component, sets `inner-class` property value to `'card-header'` to have proper 
+component, sets `inner-class` property value to `'card-header'` to have an appropriate 
 Bootstrap Pill style.
 
 :::demo
@@ -155,7 +155,7 @@ export default {
 
 **Material style** variant can be enabled, by setting `variant` property value of `<bs-tabs>` 
 to `'material'` and use any [color variants](#/reference/colors) for `color` property value
-to have a proper tabs color.
+to have an appropriate tabs color.
 
 :::demo
 ```html
@@ -223,7 +223,7 @@ export default {
 
 **Modern style** variant can be enabled, by setting `variant` property value of `<bs-tabs>` 
 to `'modern'` and use any [color variants](#/reference/colors) for `color` property value
-to have a proper tabs color.
+to have an appropriate tabs color.
 
 :::demo
 ```html
