@@ -483,7 +483,7 @@ export default {
 :::
 
 
-## Custom Renderer Support
+## Custom Rendering Support
 
 ### Custom Cell Rendering
 

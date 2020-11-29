@@ -119,7 +119,7 @@ const navs = [{
         }]
     }, {
         title: "Lightbox",
-        // view: viewResolver("components/lightbox"),
+        view: viewResolver("components/lightbox"),
         route: "/components/lightbox"
     }, {
         title: "Lists",

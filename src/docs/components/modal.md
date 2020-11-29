@@ -265,7 +265,7 @@ export default {
 | body-class   | `String`/`Array` |  | Additional css class name for dialog body container. |
 | esc-close    | `Boolean` | `true`  | Close modal dialog when **ESC** key is pressed. |
 | footer-class | `String`/`Array` |  | Additional css class name for dialog footer container. |
-| fullscreen   | `Boolean` | `false` | Show modal dialog in full screen. |
+| full-page    | `Boolean` | `false` | Show modal dialog in full page mode. |
 | header-class | `String`/`Array` |  | Additional css class name for dialog header container. |
 | max-width    | `Number`/`String` | | Modal dialog maximum width. |  
 | open         | `Boolean` | `false` | Component state, show or hide. |
@@ -275,7 +275,7 @@ export default {
 | overlay-opacity | `Number` | `0.4` | The overlay opacity. |
 | scrollable | `Boolean` | `false` | Show a modal dialog that has a scrollable body. |
 | title      | `String` |  | Modal dialog title. |
-| transition | `String` | `'scale'` | Transition animation when showing the dialog. Valid values are: `scale`, `slide-top`, `slide-bottom`, `slide-left`, `slide-right`, `fade`. |
+| transition | `String` | `'scale'` | Transition animation name when showing the dialog. Valid values are: `scale`, `slide-top`, `slide-bottom`, `slide-left`, `slide-right`, `fade`. |
 | width      | `Number`/`String` |  | Modal dialog width. |
 
 </div>
@@ -287,8 +287,8 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| open   | `Boolean`     | Used to update the `open` property value. |
-| close  | `String`      | Returns a debug message that triggers a modal close. |
+| update:open | `Boolean` | Used to update the `open` property value. |
+| close  | `String`       | Triggers when the dialog is closed. The input argument contains a debug message that triggers the event. |
 
 </div>
 
