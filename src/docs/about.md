@@ -5,17 +5,19 @@ the <a href="https://material.io/design" target="_blank">Google Material Design<
 *Bootstrap v4* css framework for building responsive, mobile-first sites.
 :::
 
+
 ## Requirements
 
-- [Vue.js](https://vuejs.org/) `v2.6` is required, `v2.6.11` is recommended
-- [Bootstrap](https://getbootstrap.com/) `v4.4` is required, `v4.5.2` is recommended
-- [vue-router](https://www.npmjs.com/package/vue-router) `v3.x` is optional, and is required for building 
+- <a href="https://vuejs.org/" target="blank">Vue.js</a> `v2.6` is required, `v2.6.12` is recommended
+- <a href="https://getbootstrap.com/" target="blank">Bootstrap</a> `v4.4` is required, `v4.5.2` is recommended
+- <a href="https://www.npmjs.com/package/vue-router" target="blank">vue-router</a> `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
-- [vuex](https://www.npmjs.com/package/vuex) `v3.x` is optional, and is required for building 
+- <a href="https://www.npmjs.com/package/vuex" target="blank">vuex</a> `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
-- [vuelidate](https://www.npmjs.com/package/vuelidate) is optional, and is required for building 
+- <a href="https://www.npmjs.com/package/vuelidate" target="blank">vuelidate</a> is optional, and is required for building 
   Single Page Application (SPA) using NPM 
   
+
 ## Documentation Sections
 
 The online documentation consists of the following sections:
@@ -25,16 +27,18 @@ The online documentation consists of the following sections:
 - [Data Models](#/models) - Non visual component library documentation
 - [Reference](#/reference) - Additional resources documentation
 
+
 ## Additional Information
 
 Before getting started with **Vue MdBootstrap**, you should have general familiarity with Vue functionality
 and Bootstrap v4 CSS. If you are unfamiliar with Vue and/or Bootstrap, some good starting points would be:
 
-- [Vue Guide](https://vuejs.org/v2/guide/)
-- [Vue API](https://vuejs.org/v2/api/)
-- [Bootstrap v4 documentation](https://getbootstrap.com/)
-- [Vue loader scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) if using scoped
+- <a href="https://vuejs.org/v2/guide/" target="blank">Vue Guide</a> 
+- <a href="https://vuejs.org/v2/api/" target="blank">Vue API</a> 
+- <a href="https://getbootstrap.com/" target="blank">Bootstrap v4 documentation</a> 
+- <a href="https://vue-loader.vuejs.org/guide/scoped-css.html" target="blank">Vue loader scoped CSS</a> if using scoped
   styles in SFC (Single File Component) `.vue` files
+
   
 ## Important HTML Globals
 

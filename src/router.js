@@ -21,6 +21,12 @@ function registerRoute(navs) {
 }
 
 routes.push({
+    path: '/components',
+    component: require('./docs/components')
+}, {
+    path: '/reference',
+    component: require('./docs/references') //viewResolver("reference")
+}, {
     path: '/',
     redirect: '/about'
 });
