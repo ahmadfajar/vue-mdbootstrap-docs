@@ -167,7 +167,7 @@ export default {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color    | `String`  | `'default'` | Default buttons color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
+| color    | `String`  | `'default'` | Default buttons color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | disabled | `Boolean` | `false`  | The default `<input>` element state.  |
 | flat     | `Boolean` | `false`  | Create button toggle with flat style or not. |
 | icon-position | `String`  | `'left'` | Place icon at `left` (before text) or at `right` (after text). |
@@ -180,7 +180,7 @@ export default {
 | readonly | `Boolean` | `false`  | The default `<input>` element state. |
 | required | `Boolean` | `false`  | When placed inside `<form>`, the item must be selected, before submitted. |
 | size     | `String`  |   | Create buttons with predefined size, valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |   | Button color when selected. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
+| toggle-color | `String`  |   | Button color when selected. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `String`/`Number`/`Boolean`/`Array`  |   | Value monitored by `v-model` that represents the selected value. |
 
 </div>

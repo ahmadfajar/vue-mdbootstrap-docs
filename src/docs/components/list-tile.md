@@ -752,7 +752,7 @@ export default {
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
 | active-item-bordered | `String` |  | Give border around the active item. Valid values are: `left`, `right`, `left-right`, `top`, `bottom`, `top-bottom`. |
-| color           | `String`  | `'white'` | ListView color appearance. Any of [MdBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
+| color           | `String`  | `'white'` | ListView color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
 | overflow-hidden | `Boolean` | `false`   | Apply css `'overflow-hidden'` or not. |
 | single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. |
 | space-around    | `String`  |   | Give some space around each item. Valid values are: `both`, `left`, `right`. |

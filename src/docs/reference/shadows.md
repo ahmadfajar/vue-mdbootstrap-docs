@@ -1,7 +1,7 @@
 :::lead
-**Vue MdBootstrap** shadow is an effect used in web elements which provides important visual cues about objects 
+**Vue MDBootstrap** shadow is an effect used in web elements which provides important visual cues about objects 
 depth and directional movement. They are the only visual cue indicating the amount of separation between surfaces. 
-An object’s elevation determines the appearance of its shadow. Creating shadows with Vue MdBootstrap is very easy. 
+An object’s elevation determines the appearance of its shadow. Creating shadows with Vue MDBootstrap is very easy. 
 You only need to add one of the shadow classes to the chosen element.
 :::
 

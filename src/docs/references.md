@@ -1,5 +1,5 @@
 :::lead
-Table of contents Vue MdBootstrap reference
+Table of contents for the Vue MDBootstrap reference
 :::
 
 <div class="h3">Coming soon...</div>

@@ -1,37 +1,27 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import navs from './navigation';
+import {menuNavs, navs} from './navigation';
 
 const routes = [];
 
-function registerRoute(navs) {
-    navs.forEach((nav) => {
-        if (nav.children) {
-            registerRoute(nav.children);
-        } else if (nav.route) {
+function registerRoute(menuNavs) {
+    menuNavs.forEach((menu) => {
+        if (menu.children) {
+            registerRoute(menu.children);
+        } else if (menu.route) {
             routes.push({
-                path: nav.route,
-                component: nav.view,
+                path: menu.route,
+                component: menu.view,
                 meta: {
-                    title: nav.title
+                    title: menu.title
                 }
             });
         }
     });
 }
 
-routes.push({
-    path: '/components',
-    component: require('./docs/components')
-}, {
-    path: '/reference',
-    component: require('./docs/references') //viewResolver("reference")
-}, {
-    path: '/',
-    redirect: '/about'
-});
-
-registerRoute(navs);
+navs.forEach(nav => routes.push(nav));
+registerRoute(menuNavs);
 
 Vue.use(VueRouter);
 

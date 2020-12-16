@@ -596,7 +596,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 |----------|-----------|----------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false`  | The button component state. |
 | block    | `Boolean` | `false`  | Create block level button or match button's width to the parent width. See [Bootstrap](https://getbootstrap.com/docs/4.5/components/buttons/#sizes) for more information. |
-| color    | `String`  | `'default'` | Change component color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
+| color    | `String`  | `'default'` | Change component color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | disabled | `Boolean` | `false`  | The `<button>` element state. |
 | dropdown-toggle | `Boolean` | `false` | Render as `dropdown` button when used inside `<bs-menu>` component. |
 | flat     | `Boolean` | `false`  | Create button with flat style or not. |

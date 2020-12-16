@@ -200,7 +200,7 @@ export default {
 ### Controlling Checkbox Color Style and Position
 
 In multiple selection mode, the checkbox color can be changed via `check-option-color` 
-property. Any of the [MdBootstrap colors](#/reference/colors) variants can be used for
+property. Any of the [MDBootstrap colors](#/reference/colors) variants can be used for
 this property value. You can also change the checkbox position via `check-option-position` 
 property. Valid values for this property are: `left`, `right`. If these property is not 
 defined, then default value will be used.
@@ -1087,7 +1087,7 @@ export default {
 |--------------|-----------|---------|-------------|
 | append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
 | append-icon-outer     | `String` | | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| check-option-color    | `String` | `'purple'` | Sets the checkbox color for ListBox options. Any of the [MdBootstrap colors](#/reference/colors) variants can be applied. |
+| check-option-color    | `String` | `'purple'` | Sets the checkbox color for ListBox options. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied. |
 | check-option-position | `String` | `'left'`   | Sets the checkbox position for ListBox options. Valid values are: `left`, `right`. |
 | circle-image | `Boolean` | `false` | Sets **circle** effect for the displayed image from ListBox item. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
@@ -1102,7 +1102,7 @@ export default {
 | id             | `String`  |         | Sets `<select>` element `ID` attribute. This property value is auto generates. |
 | image-size     | `Number`/`String` | | Sets the image size for each ListBox items when `show-image` is enabled. |
 | item-separator | `Boolean` | `false` | Show or hide the ListBox item separator. |
-| listbox-color  | `String`  |         | Sets the ListBox background color. Any of [MdBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variants can be applied. |
+| listbox-color  | `String`  |         | Sets the ListBox background color. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variants can be applied. |
 | minimum-items-for-search | `Number`/`String` | `15` | Sets minimum character to start searching an item inside the ListBox options. |
 | multiple | `Boolean` | `false`  | Enable or disable multiple selection. |
 | name     | `String`/`Number` |  | Sets `<select>` element `name` attribute. |

@@ -1,20 +1,20 @@
 ::: lead
-**Vue MdBootstrap** is a collection of **Vue.js** components and built according to 
+**Vue MDBootstrap** is a collection of **Vue.js** components and built according to 
 the <a href="https://material.io/design" target="_blank">Google Material Design</a> specs.
-**Vue MdBootstrap** is based on the world's most popular framework - *Vue.js* and utilize
+**Vue MDBootstrap** is based on the world's most popular framework - *Vue.js* and utilize
 *Bootstrap v4* css framework for building responsive, mobile-first sites.
 :::
 
 
 ## Requirements
 
-- <a href="https://vuejs.org/" target="blank">Vue.js</a> `v2.6` is required, `v2.6.12` is recommended
-- <a href="https://getbootstrap.com/" target="blank">Bootstrap</a> `v4.4` is required, `v4.5.2` is recommended
-- <a href="https://www.npmjs.com/package/vue-router" target="blank">vue-router</a> `v3.x` is optional, and is required for building 
+- <a href="https://vuejs.org/" target="_blank">Vue.js</a> `v2.6` is required, `v2.6.12` is recommended
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> `v4.4` is required, `v4.5.2` is recommended
+- <a href="https://www.npmjs.com/package/vue-router" target="_blank">vue-router</a> `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
-- <a href="https://www.npmjs.com/package/vuex" target="blank">vuex</a> `v3.x` is optional, and is required for building 
+- <a href="https://www.npmjs.com/package/vuex" target="_blank">vuex</a> `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
-- <a href="https://www.npmjs.com/package/vuelidate" target="blank">vuelidate</a> is optional, and is required for building 
+- <a href="https://www.npmjs.com/package/vuelidate" target="_blank">vuelidate</a> is optional, and is required for building 
   Single Page Application (SPA) using NPM 
   
 
@@ -30,13 +30,13 @@ The online documentation consists of the following sections:
 
 ## Additional Information
 
-Before getting started with **Vue MdBootstrap**, you should have general familiarity with Vue functionality
+Before getting started with **Vue MDBootstrap**, you should have general familiarity with Vue functionality
 and Bootstrap v4 CSS. If you are unfamiliar with Vue and/or Bootstrap, some good starting points would be:
 
-- <a href="https://vuejs.org/v2/guide/" target="blank">Vue Guide</a> 
-- <a href="https://vuejs.org/v2/api/" target="blank">Vue API</a> 
-- <a href="https://getbootstrap.com/" target="blank">Bootstrap v4 documentation</a> 
-- <a href="https://vue-loader.vuejs.org/guide/scoped-css.html" target="blank">Vue loader scoped CSS</a> if using scoped
+- <a href="https://vuejs.org/v2/guide/" target="_blank">Vue Guide</a> 
+- <a href="https://vuejs.org/v2/api/" target="_blank">Vue API</a> 
+- <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" target="_blank">Bootstrap v4 documentation</a> 
+- <a href="https://vue-loader.vuejs.org/guide/scoped-css.html" target="_blank">Vue loader scoped CSS</a> if using scoped
   styles in SFC (Single File Component) `.vue` files
 
   

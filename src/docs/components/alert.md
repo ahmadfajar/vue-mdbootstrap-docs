@@ -9,7 +9,7 @@ success to neutral information.
 ## Overview
 
 By default, `<bs-alert>` is set to primary color. You can use `color` property to change its color and 
-add some emotional weight. Any of [MdBootstrap colors](#/reference/colors) variants can be applied to the 
+add some emotional weight. Any of [MDBootstrap colors](#/reference/colors) variants can be applied to the 
 `color` property.
 
 :::demo
@@ -279,7 +279,7 @@ Do not use the `value` property when using `v-model`.
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `'primary'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component |
+| color       | `String`    | `'primary'` | Applies one of the [MDBootstrap colors](#/reference/colors) variants to the component |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | outlined    | `Boolean`   | `false`     | Create outline alert style |
 | icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |

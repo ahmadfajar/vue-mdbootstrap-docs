@@ -55,7 +55,7 @@ export default {
 
 DateTime picker colors can be set using the `color` and `header-color` property. If 
 `header-color` property is not provided, the header panel will use the `color` 
-property value. Any color variant from [MdBootstrap colors](#/reference/colors) can 
+property value. Any color variant from [MDBootstrap colors](#/reference/colors) can 
 be applied to the `<bs-date-picker>`. 
 
 :::demo
@@ -280,7 +280,7 @@ export default {
 
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
-| color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
+| color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | first-day-of-week | `Number`/`String`  | `0` | Default first day of the week. |
 | format       | `String`  | `'L'`   | The date format for output value. See [moment](https://momentjs.com/docs/#/displaying/) for valid format. |
 | full-width   | `Boolean` | `false` | Whether to display DateTime picker in 100% width or not. |

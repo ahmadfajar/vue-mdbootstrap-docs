@@ -1,14 +1,17 @@
 ::: lead
-**Vue MdBootstrap** can be used to built Single Page Application by using module bundler or built common 
-web page by using the resources from the CDN.
+**Vue MDBootstrap** can be used to built Single Page Application by using module 
+bundler or built common web page by using the resources from the CDN.
 :::
 
 ## Using Module Bundlers
 
-If you are building Single Page Application and using module bundlers like [Webpack](https://webpack.js.org/),
-[Vue Cli](https://cli.vuejs.org/) or [Symfony Encore](https://symfony.com/doc/current/frontend/encore/installation.html), you may prefer to directly
-include the package into your project. To get started, use `yarn` or `npm` to get the latest version
-of Vue.js, and Vue MdBootstrap:
+If you are building Single Page Application and using module bundlers like 
+<a href="https://webpack.js.org/" target="_blank">Webpack</a>, 
+<a href="https://cli.vuejs.org/" target="_blank">Vue Cli</a> or 
+<a href="https://symfony.com/doc/current/frontend/encore/installation.html" 
+target="_blank">Symfony Encore</a>, you may prefer to directly include the package 
+into your project. To get started, use `yarn` or `npm` to get the latest version of 
+Vue.js, and Vue MDBootstrap.
 
 ```bash
 # With npm
@@ -20,7 +23,7 @@ yarn add vue vue-mdbootstrap
 yarn add node-sass --dev
 ```
 
-Then, register Vue MdBootstrap in your app entry point:
+Then, register Vue MDBootstrap in your app entry point.
 
 ```js
 // main.js
@@ -35,11 +38,12 @@ Vue.use(AxiosPlugin);
 
 ## Using CDN
 
-If you aren't building Single Page Application and not using module bundlers, and your goals is building 
-common web page to display on the web browser, grab the supplied **css** and **js** from the
-**dist** folder. Or you can get the latest version of the resource from 
-[unpkg.com/vue-mdbootstrap](https://unpkg.com/vue-mdbootstrap) and use the js and css 
-files on your html `<head>` section on the page to get started. 
+If you aren't building Single Page Application and not using module bundlers, and 
+your goals is building common web page to display on the web browser, grab the 
+supplied **css** and **js** from the **dist** folder. Or you can get the latest 
+version of the resource from <a href="https://unpkg.com/vue-mdbootstrap" 
+target="_blank">unpkg.com/vue-mdbootstrap</a> and use the js and css files on your 
+html `<head>` section on the page to get started. 
 
 Code below is an example how to load and initialize the components.
 
@@ -49,8 +53,9 @@ Code below is an example how to load and initialize the components.
 <script src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js" crossorigin="anonymous"></script>
 ```
 
-If you are using `BsGrid`, `BsTreeGrid`, `BsModel`, `BsStore`, `BsTreeStore` and/or need to perform
-HTTP Request, you can use example code below in your javascript to initialize axios plugin.
+If you are using `BsGrid`, `BsTreeGrid`, `BsModel`, `BsStore`, `BsTreeStore` and/or 
+need to perform HTTP Request, you can use example code below in your javascript to 
+initialize axios plugin.
 
 ```js
 Vue.use(AxiosPlugin, {baseURL: "http://localhost/<api-url>"});
@@ -58,9 +63,10 @@ Vue.use(AxiosPlugin, {baseURL: "http://localhost/<api-url>"});
 
 ## Demos
 
-You can clone the demos from [here](https://github.com/ahmadfajar/vue-mdbootstrap-demos) to see it in action.
+You can clone the demos from [here](https://github.com/ahmadfajar/vue-mdbootstrap-demos) 
+to see it in action.
 
 ## Start coding
 
-Now you have implemented **Vue MdBootstrap** to your project, and it’s time to write your code. 
-Please refer to each component’s documentation to learn how to use them.
+Now you have implemented **Vue MDBootstrap** to your project, and it’s time to write your 
+code. Please refer to each component’s documentation to learn how to use them.

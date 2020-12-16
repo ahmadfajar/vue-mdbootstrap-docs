@@ -857,7 +857,7 @@ export default {
 | append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
 | autofocus    | `Boolean` | `false` | Autofocus field when document is loaded. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
-| color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MdBootstrap colors](#/reference/colors) variant can be used. |
+| color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | display-format     | `String`|     | The display date format. See [moment](https://momentjs.com/docs/#/displaying/) for valid format. If not defined then it will takes from `value-format` property. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. |

@@ -1,8 +1,8 @@
 ::: lead
-**Vue MdBootstrap** provides color class which follows the [Material Design](https://material.io/design) 
+**Vue MDBootstrap** provides color class which follows the [Material Design](https://material.io/design) 
 specification, and derived from Bootstrap V4 CSS. Each color might exposed various tones varying from 
 bright to dark. This will aid you in creating an inviting and color-consistent design. When using Vue 
-MdBootstrap components, these variants refers to their variant-name, rather than by the underlying 
+MDBootstrap components, these variants refers to their variant-name, rather than by the underlying 
 CSS classname.
 :::
 
@@ -59,12 +59,12 @@ Text color can be applied to any html element by using the classname `text-{Colo
 :::
 
 
-## MdBootstrap colors
+## MDBootstrap colors
 
 <ColorPalete palette="bootstrap"></ColorPalete>
 
 ::: info
-These color variants can be applied on some Vue MdBootstrap components via its property.
+These color variants can be applied on some Vue MDBootstrap components via its property.
 :::
 
 
@@ -73,7 +73,7 @@ These color variants can be applied on some Vue MdBootstrap components via its p
 <ColorPalete palette="material"></ColorPalete>
 
 ::: info
-These color variants can be applied on some Vue MdBootstrap components via its property.
+These color variants can be applied on some Vue MDBootstrap components via its property.
 :::
 
 

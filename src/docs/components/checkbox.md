@@ -148,7 +148,7 @@ matches `@media (min-width: 768px)`, it will be served in two columns only.
 
 ## Color Style
 
-Any color variant from [MdBootstrap colors](#/reference/colors) can be applied to the `<bs-checkbox-group>`
+Any color variant from [MDBootstrap colors](#/reference/colors) can be applied to the `<bs-checkbox-group>`
 and `<bs-checkbox>`. You can make each `<bs-checkbox>` have different color or applied default color
 to the `<bs-checkbox-group>`. 
 
@@ -212,7 +212,7 @@ export default {
 | Property    | Type      | Default   | Description |
 |-------------|-----------|-----------|-------------|
 | checked <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean`/`String`/`Number`/`Object` | | The checkbox value monitored by `v-model` to maintain checked state. |
-| color       | `String`  | `'default'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component. |
+| color       | `String`  | `'default'` | Applies one of the [MDBootstrap colors](#/reference/colors) variants to the component. |
 | disabled    | `Boolean` | `false`   | Enable/disable the checkbox component and the `<input>` element. |
 | false-value | `Boolean` | `false`   | Sets value for falsy state. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
@@ -254,7 +254,7 @@ export default {
 
 | Property | Type      | Default | Description |
 |----------|-----------|---------|-------------|
-| color       | `String`  | `'default'` | Sets default color to be applied. Any of the [MdBootstrap colors](#/reference/colors) variants can be applied to the component. |
+| color       | `String`  | `'default'` | Sets default color to be applied. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied to the component. |
 | columns     | `Number`  |  | Sets the maximum number of columns to display the checkbox. When the number of items exceed the number of columns, then the remaining items will be displayed on the next row. |
 | disabled    | `Boolean` | `false`   | Sets default disabled state. |
 | external-validator | `Object` |  | The external validator plugin to be used when validate the field value. |

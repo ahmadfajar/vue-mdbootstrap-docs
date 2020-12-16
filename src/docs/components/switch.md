@@ -38,7 +38,7 @@ export default {
 
 ### Color
 
-Any color variant from [MdBootstrap colors](#/reference/colors) can be applied to the `<bs-switch>`.
+Any color variant from [MDBootstrap colors](#/reference/colors) can be applied to the `<bs-switch>`.
 
 :::demo
 ```html
@@ -119,7 +119,7 @@ export default {
 | Property    | Type      | Default | Description |
 |-------------|-----------|---------|-------------|
 | checked <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean`/`String`/`Number`/`Object` | | The value monitored by `v-model` to maintain checked state. |
-| color       | `String`  | `'default'` | Applies one of the [MdBootstrap colors](#/reference/colors) variants to the component. |
+| color       | `String`  | `'default'` | Applies one of the [MDBootstrap colors](#/reference/colors) variants to the component. |
 | disabled    | `Boolean` | `false` | Enable/disable the switch component and the `<input>` element. |
 | false-value | `Boolean` | `false` | Sets value for falsy state. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
