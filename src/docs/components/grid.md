@@ -58,7 +58,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -145,7 +145,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -224,7 +224,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -301,7 +301,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -379,7 +379,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'text', direction: 'asc'}],
         restProxy: {
-          browse: './data/states.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
         }
       }),
     }
@@ -462,7 +462,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'text', direction: 'asc'}],
         restProxy: {
-          browse: './data/states.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
         }
       }),
     }
@@ -583,7 +583,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -694,7 +694,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: './data/deserts.json'
+          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }

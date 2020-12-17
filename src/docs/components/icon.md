@@ -148,6 +148,12 @@ export default {
 <style scoped>
 .my-demo-wrapper {
   margin: 24px;
+
+  .icon-box-56 {
+    height: 56px;
+    width: 56px;
+  }
+
 }
 </style>
 ```

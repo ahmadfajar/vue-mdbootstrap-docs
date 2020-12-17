@@ -32,9 +32,15 @@ import VueMdb, { AxiosPlugin } from "vue-mdbootstrap";
 
 // Default requirement
 Vue.use(VueMdb);
-// Optionally, install the axios plugin
+// Optionally, install the MDBootstrap Axios plugin plugin
+// only requires if using BsGrid, BsTreeGrid, BsModel, BsStore, BsTreeStore or needs to perform HTTP Request
 Vue.use(AxiosPlugin);
 ```
+
+Now, you are ready to go. You can use any of **Vue MDBootstrap** components without 
+using `import` statement again. Please note, these components still need css from 
+**Bootstrap4** css framework. 
+
 
 ## Using CDN
 
@@ -55,16 +61,14 @@ Code below is an example how to load and initialize the components.
 
 If you are using `BsGrid`, `BsTreeGrid`, `BsModel`, `BsStore`, `BsTreeStore` and/or 
 need to perform HTTP Request, you can use example code below in your javascript to 
-initialize axios plugin.
+initialize MDBootstrap Axios plugin.
 
 ```js
 Vue.use(AxiosPlugin, {baseURL: "http://localhost/<api-url>"});
 ```
 
-## Demos
+Now, you can use any of **Vue MDBootstrap** components in your html page.
 
-You can clone the demos from [here](https://github.com/ahmadfajar/vue-mdbootstrap-demos) 
-to see it in action.
 
 ## Start coding
 

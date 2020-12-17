@@ -239,7 +239,7 @@ When dialog content become too long, you can make the dialog content scrollable.
 export default {
   data() {
     return {
-      trueModalVisible: false,
+      scrollableModalVisible: false,
     }
   },
 }

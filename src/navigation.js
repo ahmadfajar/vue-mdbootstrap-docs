@@ -39,17 +39,17 @@ export const menuNavs = [{
         title: "Card",
         route: "/components/card",
         view: viewResolver("components/card"),
-    }, {
-        title: "Data Grid",
-        children: [{
-            title: "Grid",
-            route: "/components/grid",
-            view: viewResolver("components/grid"),
-        }, {
-            title: "TreeGrid",
-            route: "/components/treegrid",
-            // view: viewResolver("components/treegrid"),
-        }]
+    // }, {
+    //     title: "Data Grid",
+    //     children: [{
+    //         title: "Grid",
+    //         route: "/components/grid",
+    //         view: viewResolver("components/grid"),
+    //     }, {
+    //         title: "TreeGrid",
+    //         route: "/components/treegrid",
+    //         view: viewResolver("components/treegrid"),
+    //     }]
     }, {
         title: "DateTime Picker",
         route: "/components/datetime-picker",
@@ -58,6 +58,10 @@ export const menuNavs = [{
         title: "Divider",
         route: "/components/divider",
         view: viewResolver("components/divider"),
+    }, {
+        title: "Grid",
+        route: "/components/grid",
+        view: viewResolver("components/grid"),
     }, {
         title: "Icon",
         route: "/components/icon",
@@ -89,21 +93,21 @@ export const menuNavs = [{
             route: "/components/input/switch",
             view: viewResolver("components/switch"),
         }, {
-            title: "Text Area",
-            route: "/components/input/text-area",
-            view: viewResolver("components/text-area"),
-        }, {
             title: "Text Field",
             route: "/components/input/text-field",
             view: viewResolver("components/text-field"),
         }, {
+            title: "TextArea Field",
+            route: "/components/input/text-area",
+            view: viewResolver("components/text-area"),
+        }, {
             title: "DateTime Field",
             route: "/components/input/datetime-field",
             view: viewResolver("components/datetime-field"),
-        }, {
-            title: "Number Field",
-            route: "/components/input/number-field",
-            // view: viewResolver("components/image-holder"),
+        // }, {
+        //     title: "Number Field",
+        //     route: "/components/input/number-field",
+        //     view: viewResolver("components/image-holder"),
         }, {
             title: "Search Field",
             route: "/components/input/search-field",
@@ -133,13 +137,13 @@ export const menuNavs = [{
             view: viewResolver("components/list-navigation"),
         }]
     }, {
-        title: "Modal",
-        route: "/components/modal",
-        view: viewResolver("components/modal"),
-    }, {
         title: "Menu",
         route: "/components/menu",
         view: viewResolver("components/menu"),
+    }, {
+        title: "Modal",
+        route: "/components/modal",
+        view: viewResolver("components/modal"),
     }, {
         title: "Progress Control",
         route: "/components/progress-control",

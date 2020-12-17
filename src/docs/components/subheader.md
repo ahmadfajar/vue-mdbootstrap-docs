@@ -16,7 +16,7 @@ lists or page layouts.
           <bs-list-view>
             <bs-subheader>Today</bs-subheader>
             <bs-list-tile>
-              <bs-list-tile-leading img-src="img/1.jpg" circle></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg" circle></bs-list-tile-leading>
               <bs-list-tile-content>
                 <bs-list-tile-title>Jason Oner</bs-list-tile-title>
               </bs-list-tile-content>
@@ -25,7 +25,7 @@ lists or page layouts.
               </bs-list-tile-action>
             </bs-list-tile>
             <bs-list-tile>
-              <bs-list-tile-leading img-src="img/2.jpg" circle></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg" circle></bs-list-tile-leading>
               <bs-list-tile-content>
                 <bs-list-tile-title>Ranee Carlson</bs-list-tile-title>
               </bs-list-tile-content>
@@ -34,7 +34,7 @@ lists or page layouts.
               </bs-list-tile-action>
             </bs-list-tile>
             <bs-list-tile>
-              <bs-list-tile-leading img-src="img/3.jpg" circle></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg" circle></bs-list-tile-leading>
               <bs-list-tile-content>
                 <bs-list-tile-title>Cindy Baker</bs-list-tile-title>
               </bs-list-tile-content>
@@ -47,7 +47,7 @@ lists or page layouts.
           <bs-list-view>
             <bs-subheader>History</bs-subheader>
             <bs-list-tile>
-              <bs-list-tile-leading img-src="img/4.jpg" circle></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg" circle></bs-list-tile-leading>
               <bs-list-tile-content>
                 <bs-list-tile-title>Ali Connors</bs-list-tile-title>
               </bs-list-tile-content>
@@ -56,7 +56,7 @@ lists or page layouts.
               </bs-list-tile-action>
             </bs-list-tile>
             <bs-list-tile>
-              <bs-list-tile-leading img-src="img/5.jpg" circle></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg" circle></bs-list-tile-leading>
               <bs-list-tile-content>
                 <bs-list-tile-title>Travis Howard</bs-list-tile-title>
               </bs-list-tile-content>

@@ -1,5 +1,5 @@
 :::lead
-**BsImageHolder** is a lightweight component which is primarily used to create SVG to visualize 
+**BsImageHolder** is a lightweight component which is primarily used to create SVG shape to visualize 
 image placeholder.
 :::
 

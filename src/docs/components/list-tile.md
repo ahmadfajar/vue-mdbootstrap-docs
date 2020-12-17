@@ -163,13 +163,13 @@ export default {
   data() { 
     return {
       chats1: [
-        {active: true, fullname: 'Jason Oner', avatar: 'img/1.jpg'},
-        {active: true, fullname: 'Ranee Carlson', avatar: 'img/2.jpg'},
-        {active: false, fullname: 'Cindy Baker', avatar: 'img/3.jpg'},
-        {active: false, fullname: 'Ali Connors', avatar: 'img/4.jpg'}
+        {active: true, fullname: 'Jason Oner', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
+        {active: true, fullname: 'Ranee Carlson', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+        {active: false, fullname: 'Cindy Baker', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+        {active: false, fullname: 'Ali Connors', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
       ],
       chats2: [
-        {fullname: 'Travis Howard', avatar: 'img/5.jpg'}
+        {fullname: 'Travis Howard', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'}
       ],
     }; 
   },
@@ -241,27 +241,27 @@ export default {
   data() { 
     return {
       recipes: [{
-        url: "img/crunchy-croissants.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/crunchy-croissants.jpg",
         title: "Crunchy Croissants",
         desc: "Buttery, flaky pastry named for its crescent shaped."
       }, {
-        url: "img/grilled-eggplant.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/grilled-eggplant.jpg",
         title: "Grilled Eggplant",
         desc: "Tender with a rich, complex flavor when cooked."
       }, {
-        url: "img/tangerine-salad.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/tangerine-salad.jpg",
         title: "Tangerine Salad",
         desc: "Peak tangerine season lasts from autumn to spring."
       }, {
-        url: "img/pomegranate-juice.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/pomegranate-juice.jpg",
         title: "Pomegranate Juice",
         desc: "A superfood for good skin, hair and health."
       }, {
-        url: "img/simple-salsa.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/simple-salsa.jpg",
         title: "Chili Salsa",
         desc: "Heat up any taco night with minimal preparation."
       }, {
-        url: "img/flour-scratch.jpg",
+        url: "http://vue-mdbootstrap.fajarconsultant.com/img/flour-scratch.jpg",
         title: "Flour from scratch",
         desc: "Grind grains, nuts, or beans in your coffee grinder."
       }],
@@ -334,22 +334,22 @@ export default {
     return {
       cardItems: [
         {
-          avatar: 'img/1.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg',
           title: 'Brunch this weekend?',
           subtitle: "<b>Ali Connors</b> &#8212; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
         },
         {
-          avatar: 'img/2.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg',
           title: 'Summer BBQ',
           subtitle: "<b>to Alex, Scott, Jennifer</b> &mdash; Wish I could come, but I'm out of town this weekend."
         },
         {
-          avatar: 'img/3.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg',
           title: 'Oui oui',
           subtitle: "<b>Sandra Adams</b> &mdash; Do you have Paris recommendations? Have you ever been?"
         },
         {
-          avatar: 'img/4.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg',
           title: 'Birthday gift',
           subtitle: "<b>Trevor Hansen</b> &mdash; Have any ideas about what we should get Heidi for her birthday?"
         }
@@ -424,6 +424,10 @@ export default {
 .my-demo-wrapper {
   padding: 24px 24px 60px;
 }
+
+.mobi-card {
+  max-width: 400px;
+}
 </style>
 ```
 :::
@@ -437,7 +441,7 @@ export default {
   <div class="my-demo-wrapper">
     <bs-side-drawer width="280" class="mx-auto" color="white" shadow>
       <div class="p-3 text-center">
-          <img src="img/kitty-1.jpg" alt="image" class="rounded-circle">      
+          <img src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" alt="image" class="rounded-circle">      
           <div class="h5 mt-3">Kitty Doe</div>  
       </div>
       <bs-divider></bs-divider>
@@ -502,6 +506,16 @@ export default {
 <style lang="scss">
 .my-demo-wrapper {
   padding: 24px 24px 60px;
+
+  > .md-side-drawer {
+    position: relative;
+    height: auto !important;
+    z-index: auto !important;
+
+    img {
+      width: 90px;
+    }
+  }
 }
 </style>
 ```
@@ -705,22 +719,22 @@ export default {
     return {
       cardItems: [
         {
-          avatar: 'img/1.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg',
           title: 'Brunch this weekend?',
           subtitle: "<b>Ali Connors</b> &#8212; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
         },
         {
-          avatar: 'img/2.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg',
           title: 'Summer BBQ',
           subtitle: "<b>to Alex, Scott, Jennifer</b> &mdash; Wish I could come, but I'm out of town this weekend."
         },
         {
-          avatar: 'img/3.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg',
           title: 'Oui oui',
           subtitle: "<b>Sandra Adams</b> &mdash; Do you have Paris recommendations? Have you ever been?"
         },
         {
-          avatar: 'img/4.jpg',
+          avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg',
           title: 'Birthday gift',
           subtitle: "<b>Trevor Hansen</b> &mdash; Have any ideas about what we should get Heidi for her birthday?"
         }

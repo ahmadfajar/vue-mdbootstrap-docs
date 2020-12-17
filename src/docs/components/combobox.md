@@ -175,7 +175,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'US', operator: 'eq'}],
             restProxy: {
-                browse: './data/states.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -239,7 +239,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: './data/states.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -300,14 +300,14 @@ export default {
       employee5: null,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+              {id: 1, name: 'Sandra Adams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
             ], {
               idProperty: 'id'
             }
@@ -362,14 +362,14 @@ export default {
       employee6: null,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'img/4.jpg'}
+              {id: 1, name: 'Sandra Adams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
             ], {
               idProperty: 'id'
             }
@@ -496,7 +496,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: './data/product.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -571,7 +571,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: './data/product.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -644,7 +644,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: './data/product.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -717,7 +717,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: './data/product.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -790,7 +790,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: './data/product.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -919,7 +919,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: './data/states.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -1054,7 +1054,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: './data/states.json'
+                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
