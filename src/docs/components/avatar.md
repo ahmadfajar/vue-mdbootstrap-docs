@@ -1,13 +1,13 @@
 :::lead
 **BsAvatar** is a component which are typically used to display a user profile as a picture, icon, or 
-short text. **BsAvatar** provides several properties for customizing its appearance such as size and 
-roundness.
+short text. The **BsAvatar** component provides several properties for customizing its appearance such 
+as size and roundness.
 :::
 
 
 ## Overview
 
-**BsAvatar** is a lightweight component, which render inline by default, so that are vertically 
+`<bs-avatar>` is a lightweight component, which render inline by default, so that are vertically 
 centered beside any adjoining plain text. It also can be used as children of other components.
 
 :::demo

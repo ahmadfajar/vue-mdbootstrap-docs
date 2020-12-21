@@ -162,6 +162,8 @@ Define the `multiple` property explicitly to enable multiple selection mode.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -175,7 +177,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'US', operator: 'eq'}],
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -226,6 +228,8 @@ defined, then default value will be used.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -239,7 +243,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -264,8 +268,8 @@ export default {
 ## Images or Avatars Support
 
 The ListBox supports displaying images or avatars. Use `show-image` property to enable this
-option and define the `imageField` value in the data source. By default, `imageField` value 
-is set to `image`.
+option and define the value of property `imageField` in the data source. By default, the 
+value of property `imageField` is set to `image`.
 
 :::demo
 ```html
@@ -335,7 +339,7 @@ export default {
 ### Controlling Image Size
 
 The size of images can be controlled via `image-size` property. Sets this property
-to the desired numbers of pixels and image will displayed according to the value.
+to the desired numbers of pixels and the image will displayed according to the value.
 
 :::demo
 ```html
@@ -485,6 +489,8 @@ slot. You can also change the ListBox background color.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -496,7 +502,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -559,6 +565,8 @@ Google Material Design spec.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -571,7 +579,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -632,6 +640,8 @@ Google Material Design spec.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -644,7 +654,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -705,6 +715,8 @@ Google Material Design spec.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -717,7 +729,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -778,6 +790,8 @@ This style will remove the borders and create flat appearance and can be combine
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -790,7 +804,7 @@ export default {
             totalProperty: 'total',
             remoteSort: false,
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/product.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/product.json'
             }
         }),
         schema: {displayField: 'ProductName', valueField: 'ProductID'}
@@ -901,6 +915,8 @@ Using `persistent-help-text` keeps the help text visible when the combobox field
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -919,7 +935,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }
@@ -1034,6 +1050,8 @@ or `append-icon-outer` property.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -1054,7 +1072,7 @@ export default {
             remoteFilter: false,
             filters: [{property: 'country', value: 'CA', operator: 'eq'}],
             restProxy: {
-                browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
       }

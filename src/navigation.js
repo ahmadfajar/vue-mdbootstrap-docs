@@ -162,6 +162,30 @@ export const menuNavs = [{
         view: viewResolver("components/tooltip"),
     }]
 }, {
+    title: "Directives",
+    icon: "bolt",
+    children: [{
+        title: "Click Outside",
+        route: "/directives/click-outside",
+        view: viewResolver("directives/click-outside"),
+    }, {
+        title: "Resize",
+        route: "/directives/resize",
+        view: viewResolver("directives/window-resize"),
+    }, {
+        title: "Scroll",
+        route: "/directives/scroll",
+        view: viewResolver("directives/scroll"),
+    }, {
+        title: "Tooltip",
+        route: "/directives/tooltip",
+        view: viewResolver("directives/tooltip"),
+    }, {
+        title: "Touch",
+        route: "/directives/touch",
+        view: viewResolver("directives/touch"),
+    }]
+}, {
     title: "Reference",
     icon: "leaf",
     children: [{
@@ -169,22 +193,18 @@ export const menuNavs = [{
         route: "/reference/colors",
         view: viewResolver("reference/colors"),
     }, {
+        title: "Form Validation",
+        route: "/reference/form-validation",
+        view: viewResolver("reference/form-validation"),
+    }, {
         title: "Notification",
-        route: "/components/notification",
-        // view: viewResolver("components/notification"),
+        route: "/reference/notification",
+        view: viewResolver("reference/notification"),
     }, {
         title: "Shadows",
         route: "/reference/shadows",
         view: viewResolver("reference/shadows"),
     }]
-// }, {
-//     title: "Test 1",
-//     route: "/test-1",
-//     icon: "bs-outline-info"
-// }, {
-//     title: "Test 2",
-//     route: "/test-2",
-//     icon: "bs-outline-info"
 }];
 
 export const navs = [{
@@ -194,6 +214,9 @@ export const navs = [{
     path: '/components',
     component: viewResolver('components'),
     meta: {title: 'Components'}
+}, {
+    path: '/directives',
+    component: viewResolver('directives')
 }, {
     path: '/reference',
     component: viewResolver('references')

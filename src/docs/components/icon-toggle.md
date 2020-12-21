@@ -1,6 +1,6 @@
 :::lead
 **BsIconToggle** is a lightweight component which is used to toggle two different icon. It can be used
-inside almost any component or html element. It utilizes
+inside almost any component or html element. **BsIconToggle** utilizes
 [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) component to display the icon.
 :::
 

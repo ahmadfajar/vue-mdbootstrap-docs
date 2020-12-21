@@ -1,5 +1,5 @@
 :::lead
-**BsRadio** is a component which allows user to select an option. These components must be used 
+**BsRadio** is a component that allows user to select an option. These components must be used 
 with the `v-model` to maintain the component state.
 :::
 

@@ -5,7 +5,7 @@
 <br>
 <div class="list-group">
   <a href="#/components/alert" class="list-group-item list-group-item-action">
-    <b>Alert</b> - A component which provide contextual feedback message for typical user actions with 
+    <b>Alert</b> - A component that provides contextual feedback messages for typical user actions with 
     the handful of available and flexible alert messages.
   </a>
   <a href="#/components/avatar" class="list-group-item list-group-item-action">
@@ -66,11 +66,11 @@
         from a list of options. <bs-badge color="warning">updated</bs-badge>
       </a>
       <a href="#/components/input/radio" class="list-group-item list-group-item-action">
-        <b>Radio</b> - A component which allows user to select an option. These components must be used 
+        <b>Radio</b> - A component that allows user to select an option. These components must be used 
         with the <code class="text-pink">v-model</code> to maintain the component state.
       </a>
       <a href="#/components/input/switch" class="list-group-item list-group-item-action">
-        <b>Switch</b> - A component which allows user to select an option. These components must be used 
+        <b>Switch</b> - A component that allows user to select an option. These components must be used 
         with the <code class="text-pink">v-model</code> to maintain the component state.
         <bs-badge color="warning">updated</bs-badge>
       </a>

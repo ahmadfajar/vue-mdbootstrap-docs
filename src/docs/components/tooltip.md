@@ -15,7 +15,7 @@ The Tooltip component can be wrapped on almost any element.
     <div class="row">
       <div class="col-md text-center">
         <bs-tooltip content="I am a tooltip">
-          <bs-button>Button</bs-button>
+          <bs-button color="indigo">Button</bs-button>
         </bs-tooltip>
       </div>
       <div class="col-md">
@@ -40,6 +40,11 @@ The Tooltip component can be wrapped on almost any element.
 ```
 :::
 
+:::info
+The Tooltip component can also be used using directive `v-tooltip`, see 
+[documentation](#/directives/tooltip) how to use the `v-tooltip` directive.
+:::
+
 
 ## Display Placement
 
@@ -52,22 +57,22 @@ A tooltip can be aligned to any of the four sides of the activator element.
     <div class="row">
       <div class="col-md text-center">
         <bs-tooltip content="Tooltip on top side" placement="top">
-          <bs-button>Top</bs-button>
+          <bs-button color="indigo">Top</bs-button>
         </bs-tooltip>
       </div>
       <div class="col-md text-center">
         <bs-tooltip content="Tooltip on bottom side" placement="bottom">
-          <bs-button>Bottom</bs-button>
+          <bs-button color="indigo">Bottom</bs-button>
         </bs-tooltip>
       </div>
       <div class="col-md text-center">
         <bs-tooltip content="Tooltip on left side" placement="left">
-          <bs-button>Left</bs-button>
+          <bs-button color="indigo">Left</bs-button>
         </bs-tooltip>
       </div>
       <div class="col-md text-center">
         <bs-tooltip content="Tooltip on right side" placement="right">
-          <bs-button>Right</bs-button>
+          <bs-button color="indigo">Right</bs-button>
         </bs-tooltip>
       </div>
     </div>

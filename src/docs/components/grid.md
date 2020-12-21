@@ -45,6 +45,8 @@ supports data binding to local and remote sets of data by using `BsArrayStore` o
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -53,12 +55,12 @@ export default {
         dataProperty: 'data',
         totalProperty: 'total',
         pageSize: 10,
-        remoteFilter: false,
-        remotePaging: false,
-        remoteSort: false,
+        remoteFilter: false, // default is TRUE
+        remotePaging: false, // default is TRUE
+        remoteSort: false,   // default is TRUE
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -126,6 +128,8 @@ In order for paging to work properly:
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -145,7 +149,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -211,6 +215,8 @@ slots to properly display the row number in a cell.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -224,7 +230,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -288,6 +294,8 @@ option in the data source to `true`.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -301,7 +309,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -366,6 +374,8 @@ by setting the `remoteFilter` option in the data source to `true`.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -379,7 +389,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'text', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
         }
       }),
     }
@@ -449,6 +459,8 @@ using `operator` property.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -462,7 +474,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'text', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
         }
       }),
     }
@@ -570,6 +582,8 @@ component.
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -583,7 +597,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -681,6 +695,8 @@ In order to correctly display the Grid rows on multi-column header:
 <script>
 import {BsStore} from "vue-mdbootstrap";
 
+Vue.use(AxiosPlugin);
+
 export default {
   data() {
     return {
@@ -694,7 +710,7 @@ export default {
         remoteSort: false,
         sorts: [{property: 'name', direction: 'asc'}],
         restProxy: {
-          browse: 'http://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
+          browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/deserts.json'
         }
       }),
     }
@@ -764,26 +780,26 @@ The Grid main component.
 
 **[2]** When `pageable` is defined as object, the properties are:
 
-* messages: `Object` 
+* <span class="text-primary font-weight-bold">messages</span>: `Object` 
 
   Configure the pagination text messages. The object properties are:
 
-  * display: `String` 
+  * <span class="text-primary font-weight-bold">display</span>: `String` 
 
     Sets the displayed items pattern format. The default value is `'{0}-{1} of {2} items'`.
 
-  * empty: `String` 
+  * <span class="text-primary font-weight-bold">empty</span>: `String` 
 
     Sets the empty message when no data to be displayed.
 
-  * pager: `String` 
+  * <span class="text-primary font-weight-bold">pager</span>: `String` 
     Sets the text placed after paging combobox.
 
-* pageSize: `Number` 
+* <span class="text-primary font-weight-bold">pageSize</span>: `Number` 
 
   Number of items per-page. When empty, value from `BsStore` or `BsArrayStore` will be used.
 
-* paging: `Array` 
+* <span class="text-primary font-weight-bold">paging</span>: `Array` 
 
   Sets the paging combobox list values.
 

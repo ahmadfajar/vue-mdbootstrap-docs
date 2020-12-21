@@ -101,6 +101,41 @@ module.exports = {
                 return "</div></demo-block>\n";
             },
         }],
+        [require("markdown-it-container"), "ValidationDemo", {
+            validate: function (params) {
+                return params.trim().match(/^ValidationDemo\s*(.*)$/);
+            },
+
+            render: function (tokens, idx) {
+                const m = tokens[idx].info.trim().match(/^ValidationDemo\s*(.*)$/);
+
+                if (tokens[idx].nesting === 1) {
+                    const description = m && m.length > 1 ? m[1] : "";
+                    const content     = tokens[idx + 1].content;
+
+                    const stripped = striptags.strip(replaceTag(content, "template"), ["script", "style"]);
+                    const html     = convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
+
+                    const template = striptags.fetch(content, "template");
+                    const script   = striptags.fetch(content, "script");
+                    const style    = striptags.fetch(content, "style");
+
+                    const descriptionHTML = description
+                        ? md.render(replaceTag(description, "template"))
+                        : "";
+
+                    let jsfiddle = {html: template, script: script, style: style};
+                    jsfiddle     = md.utils.escapeHtml(JSON.stringify(jsfiddle));
+
+                    return `<demo-validation :jsfiddle="${jsfiddle}">
+                    <div class="demo-wrapper" slot="source">${template}</div>
+                    ${descriptionHTML}
+                    <div class="highlight" slot="highlight">`;
+                }
+
+                return "</div></demo-validation>\n";
+            },
+        }],
         [require("markdown-it-container"), "pureHtml", {
             validate: function (params) {
                 return params.trim().match(/^pureHtml\s*(.*)$/);
