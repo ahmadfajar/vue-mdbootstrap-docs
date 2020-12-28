@@ -24,7 +24,6 @@ The online documentation consists of the following sections:
 
 - [Components](#/components) - Vue.js visual component library documentation
 - [Directives](#/directives) - Vue.js custom directive documentation
-- [Data Models](#/models) - Non visual component library documentation
 - [Reference](#/reference) - Additional resources documentation
 
 

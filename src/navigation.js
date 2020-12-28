@@ -189,9 +189,28 @@ export const menuNavs = [{
     title: "Reference",
     icon: "leaf",
     children: [{
+        title: "Axios Plugin",
+        route: "/reference/axios-plugin",
+        view: viewResolver("reference/axios-plugin"),
+    }, {
         title: "Color Variants",
         route: "/reference/colors",
         view: viewResolver("reference/colors"),
+    }, {
+        title: "Data Models",
+        children: [{
+            title: "BsModel",
+            route: "/reference/data-model/bs-model",
+            view: viewResolver("reference/bs-model"),
+        }, {
+            title: "BsStore",
+            route: "/reference/data-model/bs-store",
+            // view: viewResolver("reference/bs-store"),
+        }, {
+            title: "BsArrayStore",
+            route: "/reference/data-model/bs-array-store",
+            // view: viewResolver("reference/bs-array-store"),
+        }]
     }, {
         title: "Form Validation",
         route: "/reference/form-validation",

@@ -14,7 +14,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```html
 <template>
   <div class="my-demo-wrapper d-flex justify-content-center">
-    <bs-avatar class="m-2" img-src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" circle></bs-avatar>
+    <bs-avatar class="m-2" img-src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" circle></bs-avatar>
     <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" circle></bs-avatar>
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends" circle></bs-avatar>
     <bs-avatar class="bg-grey-600 darken-3 text-white m-2"
@@ -36,7 +36,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ```html
 <template>
   <div class="my-demo-wrapper d-flex justify-content-center">
-    <bs-avatar class="m-2 bg-teal" img-src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" circle></bs-avatar>
+    <bs-avatar class="m-2 bg-teal" img-src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" circle></bs-avatar>
     <bs-avatar class="bg-teal text-white m-2" icon="bs-folder-shared" rounded></bs-avatar>
     <bs-avatar class="bg-deep-orange darken-3 text-white m-2" icon="user-friends"></bs-avatar>
   </div>
@@ -90,7 +90,7 @@ width by explicitly define its size property as `object`, such as `{height: 40, 
       <bs-list-view class="border rounded-lg">
         <bs-list-tile>
           <bs-list-tile-leading size="42">
-            <bs-avatar img-src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" size="40" circle></bs-avatar>
+            <bs-avatar img-src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" size="40" circle></bs-avatar>
           </bs-list-tile-leading>
           <bs-list-tile-content>
             <bs-list-tile-title>Avatar using external image</bs-list-tile-title>

@@ -315,7 +315,7 @@ This can be useful when there are multiple interactive items within the `<bs-men
           <template v-slot:content>
             <bs-list-view>
               <bs-list-tile>
-                <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg" rounded></bs-list-tile-leading>
+                <bs-list-tile-leading img-src="https://vue-mdbootstrap.fajarconsultant.com/img/2.jpg" rounded></bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>John Doe</bs-list-tile-title>
                   <bs-list-tile-subtitle>Going further more, etc.. </bs-list-tile-subtitle>
@@ -346,11 +346,11 @@ This can be useful when there are multiple interactive items within the `<bs-men
       </div>
       <div class="col-md-6 col-xl-4">
         <bs-menu v-model="popup2" placement="right-bottom" :content-click-close="false">
-          <bs-avatar size="72" class="md-shadow-1" img-src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" rounded></bs-avatar>
+          <bs-avatar size="72" class="md-shadow-1" img-src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" rounded></bs-avatar>
           <template v-slot:content>
             <bs-list-view>
               <bs-list-tile>
-                <bs-list-tile-leading img-src="http://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" rounded></bs-list-tile-leading>
+                <bs-list-tile-leading img-src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-2.jpg" rounded></bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>Kitty Doe</bs-list-tile-title>
                   <bs-list-tile-subtitle>Going further from an Avatar</bs-list-tile-subtitle>
