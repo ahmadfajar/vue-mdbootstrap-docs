@@ -264,91 +264,100 @@ export default {
 
 <div class="refs-api">
 
-* INSTANCE METHOD
+-   INSTANCE METHOD
 
-* <span class="text-primary font-weight-bold">add</span>(`Object|String` option) : <em class="text-grey-500">Object</em>
+-   <span class="text-primary font-weight-bold">add</span>(`Object|String` option) : <em class="text-grey-500">Object</em>
 
-  Returns the Notification's instance or NULL if failed.
+    Create a notification and returns the instance or *NULL* if failed.
 
-  If `option` is `string` then it will be interpret as notification message and if
-  `option` is `object` the properties are :
-  * <span class="text-primary">message</span> : `String`
-  * <span class="text-primary">title</span> : `String`
-  * <span class="text-primary">variant</span> : `String`
-  * <span class="text-primary">timeout</span> : `Number`, default `6000`
-  * <span class="text-primary">position</span> : `String`, default `bottom-right`
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-    Valid values are: `top-right`, `top-left`, `top-center`, `top-full-width`, 
-    `bottom-right`, `bottom-left`, `bottom-center`, `bottom-full-width`
+    -   <span class="text-unique font-weight-bold">option</span> : The notificaion's configuration.  
+        If `option` is `string` then it will be interpret as notification message and if `option` 
+        is `object` the properties are :
 
-  * <span class="text-primary">clickClose</span> : `Boolean`, default `false`
-  * <span class="text-primary">closeButton</span> : `Boolean`, default `true`
-  * <span class="text-primary">closeOnHover</span> : `Boolean`, default `false`
-  * <span class="text-primary">preventDuplicates</span> : `Boolean`, default `false`
-  * <span class="text-primary">progressBar</span> : `Boolean`, default `false`
-  * <span class="text-primary">progressBarValue</span> : `Number`
+        -   <span class="text-primary">message</span> : `String`
+        -   <span class="text-primary">title</span> : `String`
+        -   <span class="text-primary">variant</span> : `String`
+        -   <span class="text-primary">timeout</span> : `Number`, default `6000`
+        -   <span class="text-primary">position</span> : `String`, default `bottom-right`
 
-    If `null`, the notification's progressBar will automatically be adjusted with the timeout 
-    and the remaining times.
+            Valid values are: `top-right`, `top-left`, `top-center`, `top-full-width`, 
+            `bottom-right`, `bottom-left`, `bottom-center`, `bottom-full-width`
 
-* <span class="text-primary font-weight-bold">clearAll</span>()
-* <span class="text-primary font-weight-bold">close</span>(`Object` data)
+        -   <span class="text-primary">clickClose</span> : `Boolean`, default `false`
+        -   <span class="text-primary">closeButton</span> : `Boolean`, default `true`
+        -   <span class="text-primary">closeOnHover</span> : `Boolean`, default `false`
+        -   <span class="text-primary">preventDuplicates</span> : `Boolean`, default `false`
+        -   <span class="text-primary">progressBar</span> : `Boolean`, default `false`
+        -   <span class="text-primary">progressBarValue</span> : `Number`
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+            If `null`, the notification's progressBar will automatically be adjusted with the timeout 
+            and the remaining times.
 
-  <span class="text-unique font-weight-bold">data</span> : The notification's instance.
+-   <span class="text-primary font-weight-bold">clearAll</span>()
 
-* <span class="text-primary font-weight-bold">removeByType</span>(`String` type)
+    Close and destroy all the notification's instances.
 
-  Valid values are: `default`, `custom`, `error`, `info`, `success`, `warning`
+-   <span class="text-primary font-weight-bold">close</span>(`Object` data)
 
-* <span class="text-primary font-weight-bold">setProgressValue</span>(`Object` data, `Number` value)
+    Close a notification and destroy its instance.
+
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
+
+    -   <span class="text-unique font-weight-bold">data</span> : The notification's instance.
+
+-   <span class="text-primary font-weight-bold">removeByType</span>(`String` type)
+
+    Close and remove a notification by its type. Valid values are: `default`, `custom`, `error`, `info`, `success`, `warning`.
+
+-   <span class="text-primary font-weight-bold">setProgressValue</span>(`Object` data, `Number` value)
   
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">data</span> : The notification's instance.
+    -   <span class="text-unique font-weight-bold">data</span> : The notification's instance.
 
-  <span class="text-unique font-weight-bold">value</span> : The progress bar value.
+    -   <span class="text-unique font-weight-bold">value</span> : The progress bar value.
 
-* <span class="text-primary font-weight-bold">error</span>(`Object|String` option, `String` title) : <em class="text-grey-500">Object</em>
+-   <span class="text-primary font-weight-bold">error</span>(`Object|String` option, `String` [title]) : <em class="text-grey-500">Object</em>
 
-  Returns the Notification's instance or NULL if failed.
+    Create ***error*** notification and returns the instance or *NULL* if failed.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">option</span> : The notification's options.
+    -   <span class="text-unique font-weight-bold">option</span> : The notification's configuration.
 
-  <span class="text-unique font-weight-bold">title</span> : The notification's title, optional.
+    -   <span class="text-unique font-weight-bold">title</span> : The notification's title. *(optional)*
 
-* <span class="text-primary font-weight-bold">info</span>(`Object|String` option, `String` title) : <em class="text-grey-500">Object</em>
+-   <span class="text-primary font-weight-bold">info</span>(`Object|String` option, `String` [title]) : <em class="text-grey-500">Object</em>
 
-  Returns the Notification's instance or NULL if failed.
+    Create ***info*** notification and returns the instance or *NULL* if failed.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">option</span> : The notification's options.
+    -   <span class="text-unique font-weight-bold">option</span> : The notification's configuration.
 
-  <span class="text-unique font-weight-bold">title</span> : The notification's title, optional.
+    -   <span class="text-unique font-weight-bold">title</span> : The notification's title. *(optional)*
 
-* <span class="text-primary font-weight-bold">success</span>(`Object|String` option, `String` title) : <em class="text-grey-500">Object</em>
+-   <span class="text-primary font-weight-bold">success</span>(`Object|String` option, `String` [title]) : <em class="text-grey-500">Object</em>
 
-  Returns the Notification's instance or NULL if failed.
+    Create ***success*** notification and returns the instance or *NULL* if failed.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">option</span> : The notification's options.
+    -   <span class="text-unique font-weight-bold">option</span> : The notification's configuration.
 
-  <span class="text-unique font-weight-bold">title</span> : The notification's title, optional.
+    -   <span class="text-unique font-weight-bold">title</span> : The notification's title. *(optional)*
 
-* <span class="text-primary font-weight-bold">warning</span>(`Object|String` option, `String` title) : <em class="text-grey-500">Object</em>
+-   <span class="text-primary font-weight-bold">warning</span>(`Object|String` option, `String` [title]) : <em class="text-grey-500">Object</em>
 
-  Returns the Notification's instance or NULL if failed.
+    Create ***warning*** notification and returns the instance or *NULL* if failed.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">option</span> : The notification's options.
+    -   <span class="text-unique font-weight-bold">option</span> : The notification's configuration.
 
-  <span class="text-unique font-weight-bold">title</span> : The notification's title, optional.
+    -   <span class="text-unique font-weight-bold">title</span> : The notification's title. *(optional)*
 
 </div>
 

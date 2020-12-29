@@ -6,12 +6,10 @@ bundler or built common web page by using the resources from the CDN.
 ## Using Module Bundlers
 
 If you are building Single Page Application and using module bundlers like 
-<a href="https://webpack.js.org/" target="_blank">Webpack</a>, 
-<a href="https://cli.vuejs.org/" target="_blank">Vue Cli</a> or 
-<a href="https://symfony.com/doc/current/frontend/encore/installation.html" 
-target="_blank">Symfony Encore</a>, you may prefer to directly include the package 
-into your project. To get started, use `yarn` or `npm` to get the latest version of 
-Vue.js, and Vue MDBootstrap.
+[Webpack](https://webpack.js.org), [Vue Cli](https://cli.vuejs.org) or
+[Symfony Encore](https://symfony.com/doc/current/frontend/encore/installation.html), 
+you may prefer to directly include the package into your project. To get started, 
+use `yarn` or `npm` to get the latest version of *Vue.js*, and *Vue MDBootstrap*.
 
 ```bash
 # With npm
@@ -47,9 +45,8 @@ using `import` statement again. Please note, these components still need css fro
 If you aren't building Single Page Application and not using module bundlers, and 
 your goals is building common web page to display on the web browser, grab the 
 supplied **css** and **js** from the **dist** folder. Or you can get the latest 
-version of the resource from <a href="https://unpkg.com/vue-mdbootstrap" 
-target="_blank">unpkg.com/vue-mdbootstrap</a> and use the js and css files on your 
-html `<head>` section on the page to get started. 
+version of the resource from [unpkg.com/vue-mdbootstrap](https://unpkg.com/vue-mdbootstrap) 
+and use the js and css files on your html `<head>` section on the page to get started. 
 
 Code below is an example how to load and initialize the components.
 

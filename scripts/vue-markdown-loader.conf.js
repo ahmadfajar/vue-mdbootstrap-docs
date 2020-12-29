@@ -1,8 +1,9 @@
-const md        = require("markdown-it")();
-const slugify   = require("transliteration").slugify;
-const striptags = require("./strip-tags");
+const md            = require("markdown-it")();
+const slugify       = require("transliteration").slugify;
+const striptags     = require("./strip-tags");
+const stringUtils   = require("./string-utils");
 // const hljs      = require("highlight.js");
-const hljs      = require("highlight.js/lib/core");
+const hljs          = require("highlight.js/lib/core");
 
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 hljs.registerLanguage('typescript', require('highlight.js/lib/languages/typescript'));
@@ -17,24 +18,6 @@ hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
 hljs.registerLanguage('shell', require('highlight.js/lib/languages/shell'));
 hljs.registerLanguage('plaintext', require('highlight.js/lib/languages/plaintext'));
 
-
-function convert(str) {
-    str = str.replace(/(&#x)(\w{4});/gi, function ($0) {
-        return String.fromCharCode(parseInt(encodeURIComponent($0)
-            .replace(/(%26%23x)(\w{4})(%3B)/g, "$2"), 16));
-    });
-
-    return str;
-}
-
-function replaceTag(html, tag) {
-    return html.replace('<' + tag + '>', '').replace('</' + tag + '>', '');
-}
-
-function stripTag(html, tag) {
-    const reg = RegExp("<" + tag + ">.*</" + tag + ">");
-    return html.replace(reg, "");
-}
 
 module.exports = {
     raw: true,
@@ -66,6 +49,13 @@ module.exports = {
                 permalinkSymbol: "#"
             },
         ],
+        [
+            require("./md-external-link"),
+            {
+                externalTarget: "_blank",
+                internalDomains: [ "vue-mdbootstrap.fajarconsultant.com", "localhost" ]
+            },
+        ],
         [require("markdown-it-container"), "demo", {
             validate: function (params) {
                 return params.trim().match(/^demo\s*(.*)$/);
@@ -78,15 +68,15 @@ module.exports = {
                     const description = m && m.length > 1 ? m[1] : "";
                     const content     = tokens[idx + 1].content;
 
-                    const stripped = striptags.strip(replaceTag(content, "template"), ["script", "style"]);
-                    const html     = convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
+                    const stripped = striptags.strip(stringUtils.stripTag(content, "template"), ["script", "style"]);
+                    // const html     = stringUtils.convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
 
                     const template = striptags.fetch(content, "template");
                     const script   = striptags.fetch(content, "script");
                     const style    = striptags.fetch(content, "style");
 
                     const descriptionHTML = description
-                        ? md.render(replaceTag(description, "template"))
+                        ? md.render(stringUtils.stripTag(description, "template"))
                         : "";
 
                     let jsfiddle = {html: template, script: script, style: style};
@@ -113,15 +103,15 @@ module.exports = {
                     const description = m && m.length > 1 ? m[1] : "";
                     const content     = tokens[idx + 1].content;
 
-                    const stripped = striptags.strip(replaceTag(content, "template"), ["script", "style"]);
-                    const html     = convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
+                    const stripped = striptags.strip(stringUtils.stripTag(content, "template"), ["script", "style"]);
+                    // const html     = stringUtils.convert(stripped).replace(/(<[^>]*)=""(?=.*>)/g, "$1");
 
                     const template = striptags.fetch(content, "template");
                     const script   = striptags.fetch(content, "script");
                     const style    = striptags.fetch(content, "style");
 
                     const descriptionHTML = description
-                        ? md.render(replaceTag(description, "template"))
+                        ? md.render(stringUtils.stripTag(description, "template"))
                         : "";
 
                     let jsfiddle = {html: template, script: script, style: style};
@@ -148,12 +138,10 @@ module.exports = {
                     const description = m && m.length > 1 ? m[1] : "";
                     const content     = tokens[idx + 1].content;
 
-                    let stripped = stripTag(content, "script");
-                    stripped     = stripTag(stripped, "style");
-
-                    const html   = convert(stripped);
-                    const script = striptags.fetch(content, "script");
-                    const style  = striptags.fetch(content, "style");
+                    const stripped = stringUtils.stripTags(content, ["script", "style"]);
+                    const html     = stringUtils.convert(stripped);
+                    const script   = striptags.fetch(content, "script");
+                    const style    = striptags.fetch(content, "style");
 
                     const descriptionHTML = description ? md.render(description) : "";
 

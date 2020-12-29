@@ -37,54 +37,54 @@ let vm = new Vue({
 
 <div class="refs-api">
 
-* INSTANCE METHOD
+-   INSTANCE METHOD
 
-* <span class="text-primary font-weight-bold">get</span>(`String` url, `Object` [data], `Object` [options]) : <em class="text-grey-500">Promise</em>
+-   <span class="text-primary font-weight-bold">get</span>(`String` url, `Object` [data], `Object` [options]) : <em class="text-grey-500">Promise</em>
 
-  Send **HTTP GET** to the remote server and returns **Promise** instance.
+    Send **HTTP GET** to the remote server and returns **Promise** instance.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">url</span> : The API url.
+    -   <span class="text-unique font-weight-bold">url</span> : The API url.
 
-  <span class="text-unique font-weight-bold">data</span> : The additional data to be send. *(optional)*
+    -   <span class="text-unique font-weight-bold">data</span> : The additional data to be send. *(optional)*
 
-  <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
+    -   <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
 
-* <span class="text-primary font-weight-bold">post</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
+-   <span class="text-primary font-weight-bold">post</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
 
-  Send **HTTP POST** to the remote server and returns **Promise** instance.
+    Send **HTTP POST** to the remote server and returns **Promise** instance.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">url</span> : The API url.
+    -   <span class="text-unique font-weight-bold">url</span> : The API url.
 
-  <span class="text-unique font-weight-bold">data</span> : The data to be send.
+    -   <span class="text-unique font-weight-bold">data</span> : The data to be send.
 
-  <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
+    -   <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
 
-* <span class="text-primary font-weight-bold">put</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
+-   <span class="text-primary font-weight-bold">put</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
 
-  Send **HTTP PUT** to the remote server and returns **Promise** instance.
+    Send **HTTP PUT** to the remote server and returns **Promise** instance.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">url</span> : The API url.
+    -   <span class="text-unique font-weight-bold">url</span> : The API url.
 
-  <span class="text-unique font-weight-bold">data</span> : The data to be send.
+    -   <span class="text-unique font-weight-bold">data</span> : The data to be send.
 
-  <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
+    -   <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
 
-* <span class="text-primary font-weight-bold">delete</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
+-   <span class="text-primary font-weight-bold">delete</span>(`String` url, `Object` data, `Object` [options]) : <em class="text-grey-500">Promise</em>
 
-  Send **HTTP DELETE** to the remote server and returns **Promise** instance.
+    Send **HTTP DELETE** to the remote server and returns **Promise** instance.
 
-  <span class="text-muted font-weight-bold">PARAMETERS<span>
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
 
-  <span class="text-unique font-weight-bold">url</span> : The API url.
+    -   <span class="text-unique font-weight-bold">url</span> : The API url.
 
-  <span class="text-unique font-weight-bold">data</span> : The data to be send.
+    -   <span class="text-unique font-weight-bold">data</span> : The data to be send.
 
-  <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
+    -   <span class="text-unique font-weight-bold">options</span> : The configuration options. *(optional)*
 
 </div>

@@ -11,7 +11,7 @@ to the 3rd party form validation library. Here, we will guide you how to integra
 validation for Vue.js. Installation instructions and other documentation can be found at 
 their [website](https://vuelidate.js.org).
 
-:::ValidationDemo
+::: ValidationDemo
 ```html
 <template>
   <div class="my-demo-wrapper">
