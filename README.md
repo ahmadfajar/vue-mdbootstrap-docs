@@ -1,6 +1,6 @@
-# Vue MdBootstrap Documentation Website
+# Vue MDBootstrap Documentation Website
 
-This is a source code of **Vue MdBootstrap Documentation**.
+This is a source code of **Vue MDBootstrap Documentation**.
 
 
 ## How to install
