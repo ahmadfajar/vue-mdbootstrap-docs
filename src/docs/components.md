@@ -108,7 +108,7 @@
   <a href="#/components/lists/navigation" class="list-group-item list-group-item-action">
     <b>Navigation</b> - A component used for displaying a series of item and mainly used for navigation. It 
     can contain an icon, nested items, and provide a consistent styling for organizing the items.
-    <bs-badge color="warning">updated</bs-badge>
+    <bs-badge>v1.1.0</bs-badge>
   </a>
   <a href="#/components/progress-control" class="list-group-item list-group-item-action">
     <b>Progress Control</b> - A component which are typically used for displaying simple or complex progress 
