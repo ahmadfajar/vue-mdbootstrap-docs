@@ -94,7 +94,7 @@ export default {
             remoteFilter: false,
             remotePaging: false,
             remoteSort: false,
-            sorts: [{property: 'text', direction: 'asc'}],
+            sorts: [{ property: 'text', direction: 'asc' }],
             restProxy: {
                 browse: './data/states.json'
             }
@@ -107,7 +107,7 @@ export default {
             remoteFilter: false,
             remotePaging: false,
             remoteSort: false,
-            sorts: [{property: 'text', direction: 'asc'}],
+            sorts: [{ property: 'text', direction: 'asc' }],
             restProxy: {
                 browse: './data/states.json'
             }

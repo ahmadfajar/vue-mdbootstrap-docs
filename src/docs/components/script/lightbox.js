@@ -3,7 +3,7 @@ export default {
         showGalleryItems1: false,
         showGalleryItems2: false,
         showSingleItem: false,
-        buttons: {download: true, rotate: true, menubar: true, close: true},
+        buttons: { download: true, rotate: true, menubar: true, close: true },
         galleryItems1: [{
             thumbnail: 'https://unsplash.it/200.jpg?image=251',
             imageSrc: 'https://unsplash.it/1200/768.jpg?image=251',

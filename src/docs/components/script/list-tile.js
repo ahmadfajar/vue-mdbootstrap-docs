@@ -1,13 +1,13 @@
 export default {
     data: () => ({
         chats1: [
-            {active: true, fullname: 'Jason Oner', avatar: 'img/1.jpg'},
-            {active: true, fullname: 'Ranee Carlson', avatar: 'img/2.jpg'},
-            {active: false, fullname: 'Cindy Baker', avatar: 'img/3.jpg'},
-            {active: false, fullname: 'Ali Connors', avatar: 'img/4.jpg'}
+            { active: true, fullname: 'Jason Oner', avatar: 'img/1.jpg' },
+            { active: true, fullname: 'Ranee Carlson', avatar: 'img/2.jpg' },
+            { active: false, fullname: 'Cindy Baker', avatar: 'img/3.jpg' },
+            { active: false, fullname: 'Ali Connors', avatar: 'img/4.jpg' }
         ],
         chats2: [
-            {fullname: 'Travis Howard', avatar: 'img/5.jpg'}
+            { fullname: 'Travis Howard', avatar: 'img/5.jpg' }
         ],
         cardItems: [
             {

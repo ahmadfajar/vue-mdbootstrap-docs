@@ -1,5 +1,5 @@
 export default {
-    data () {
+    data() {
         return {
             dismissSecs: 10,
             dismissCountDown: 0,

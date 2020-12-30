@@ -59,6 +59,138 @@ let dsStore = new BsStore({
 ```
 
 
+## Working with Filters
+
+### Filter dataset at creation time
+
+***BsStore*** provides functionality to define filters at creation time. The filters 
+we define here will be treated as default filters. See example below :
+
+```js
+import { BsStore } from "vue-mdbootstrap";
+
+let dsStore = new BsStore({
+  idProperty: 'id',
+  dataProperty: 'data',
+  totalProperty: 'total', 
+  pageSize: 15, 
+  filters: [{ property: 'fullName', value: 'john', operator: 'contains' }],
+  restProxy: { 
+    browse: './api/users', 
+    delete: { url: './api/users', method: 'delete' }, 
+    save: { url: './api/users', method: 'post' }, 
+    update: { url: './api/users', method: 'put' } 
+  }
+});
+
+// load the data
+dsStore.load()
+  .then(() => {
+    console.info('datas: ', dsStore.dataItems);
+  })
+  .catch((error) => {
+    console.warn(error);
+  });
+```
+
+### Filter dataset on demands
+
+***BsStore*** also provides functionality to filter dataset on demands. See example below :
+
+```js
+import { BsStore } from "vue-mdbootstrap";
+
+let dsStore = new BsStore({
+  idProperty: 'id',
+  dataProperty: 'data',
+  totalProperty: 'total', 
+  pageSize: 15, 
+  restProxy: { 
+    browse: './api/users', 
+    delete: { url: './api/users', method: 'delete' }, 
+    save: { url: './api/users', method: 'post' }, 
+    update: { url: './api/users', method: 'put' } 
+  }
+});
+
+// apply filter to the dataset
+dsStore.filters = [{ property: 'fullName', value: 'john', operator: 'contains' }];
+
+// load the dataset
+dsStore.load()
+  .then(() => {
+    console.info('datas: ', dsStore.dataItems);
+  })
+  .catch((error) => {
+    console.warn(error);
+  });
+```
+
+
+## Sorting dataset
+
+### Sort dataset at creation time
+
+***BsStore*** provides functionality to define sorters criteria at creation time. See example below :
+
+```js
+import { BsStore } from "vue-mdbootstrap";
+
+let dsStore = new BsStore({
+  idProperty: 'id',
+  dataProperty: 'data',
+  totalProperty: 'total', 
+  pageSize: 15, 
+  sorts: [{ property: 'fullName', direction: 'asc' }],
+  restProxy: { 
+    browse: './api/users', 
+    delete: { url: './api/users', method: 'delete' }, 
+    save: { url: './api/users', method: 'post' }, 
+    update: { url: './api/users', method: 'put' } 
+  }
+});
+
+// load the dataset
+dsStore.load()
+  .then(() => {
+    console.info('datas: ', dsStore.dataItems);
+  })
+  .catch((error) => {
+    console.warn(error);
+  });
+```
+
+### Sort dataset on demands
+
+***BsStore*** also provides functionality to sort dataset on demands. See example below :
+
+```js
+import { BsStore } from "vue-mdbootstrap";
+
+let dsStore = new BsStore({
+  idProperty: 'id',
+  dataProperty: 'data',
+  totalProperty: 'total', 
+  pageSize: 15, 
+  restProxy: { 
+    browse: './api/users', 
+    delete: { url: './api/users', method: 'delete' }, 
+    save: { url: './api/users', method: 'post' }, 
+    update: { url: './api/users', method: 'put' } 
+  }
+});
+
+// define sorters criteria then load the dataset
+dsStore.setSorters([{ property: 'fullName', direction: 'asc' }])
+  .load()
+  .then(() => {
+    console.info('datas: ', dsStore.dataItems);
+  })
+  .catch((error) => {
+    console.warn(error);
+  });
+```
+
 ## API
 
 <div class="refs-api">
@@ -386,7 +518,7 @@ let dsStore = new BsStore({
     Self</em> <bs-badge variant="info">
     inherit: AbstractStore</bs-badge>
 
-    Define the filter logic to be used when filtering the Store's dataset and returns itself.
+    Define the filter logic to be used when multiple filters is exists and returns itself.
 
     <span class="text-muted font-weight-bold">PARAMETERS<span>
 
@@ -405,6 +537,25 @@ let dsStore = new BsStore({
 
     -   <span class="text-unique font-weight-bold">includeDefault</span> : Include default 
         filters or not, default is `false`. *(optional)*
+
+-   <span class="text-primary font-weight-bold">setPageSize</span>(`Number` value) : <em class="text-grey-500">
+    Self</em> <bs-badge variant="info">inherit: AbstractStore</bs-badge>
+
+    Set the number of items within a page and returns itself.
+
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
+
+    -   <span class="text-unique font-weight-bold">value</span> : Number of items within a page.
+
+-   <span class="text-primary font-weight-bold">setSorters</span>(
+    `ISorter|ISorter[]|Object|Object[]` sorters) : <em class="text-grey-500">
+    Self</em> <bs-badge variant="info">inherit: AbstractStore</bs-badge>
+
+    Set sorter's criteria collection and returns itself.
+
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
+
+    -   <span class="text-unique font-weight-bold">sorters</span> : The sorts method criteria.
 
 -   <span class="text-primary font-weight-bold">sort</span>(`String|ISorter[]` criteria, 
     `String` [direction]) : <em class="text-grey-500">BsModel[]</em>

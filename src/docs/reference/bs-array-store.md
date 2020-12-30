@@ -13,7 +13,7 @@ Below is basic example of how to instantiate the **BsArrayStore** class.
 ```js
 import { BsArrayStore } from "vue-mdbootstrap";
 
-let dsStore = new BsArrayStore(
+let myStore = new BsArrayStore(
   [
     {id: 1, name: 'Sandra Adams'},
     {id: 2, name: 'Ali Connors'},
@@ -27,6 +27,49 @@ let dsStore = new BsArrayStore(
     idProperty: 'id'
   }
 );
+```
+
+
+## Working with Filters
+
+***BsArrayStore*** provides functionality to filter dataset on demands. See example below :
+
+```js
+import { BsArrayStore } from "vue-mdbootstrap";
+
+let myStore = new BsArrayStore(
+  [{...}, {...}, {...}],
+  { idProperty: 'id' }
+);
+
+// apply filter to the dataset
+myStore.filters = [{ property: 'name', value: 'john', operator: 'startwith' }];
+
+// do something
+console.info('datas: ', myStore.dataItems);
+```
+
+
+## Sorting dataset
+
+***BsArrayStore*** provides functionality to sort dataset on demands. See example below :
+
+```js
+import { BsArrayStore } from "vue-mdbootstrap";
+
+let myStore = new BsArrayStore(
+  [{...}, {...}, {...}],
+  { idProperty: 'id' }
+);
+
+// sorts by a single field
+const results = myStore.sort('name', 'asc');
+
+// sorts by multiple fields
+const results = myStore.sort([
+  {property: 'age', direction: 'desc'},
+  {property: 'name', direction: 'asc'}
+]);
 ```
 
 
@@ -307,7 +350,7 @@ let dsStore = new BsArrayStore(
     Self</em> <bs-badge variant="info">
     inherit: AbstractStore</bs-badge>
 
-    Define the filter logic to be used when filtering the Store's dataset and returns itself.
+    Define the filter logic to be used when multiple filters is exists and returns itself.
 
     <span class="text-muted font-weight-bold">PARAMETERS<span>
 
@@ -325,6 +368,25 @@ let dsStore = new BsArrayStore(
 
     -   <span class="text-unique font-weight-bold">includeDefault</span> : Include default filters or not, 
         default is `false`. *(optional)*
+
+-   <span class="text-primary font-weight-bold">setPageSize</span>(`Number` value) : <em class="text-grey-500">
+    Self</em> <bs-badge variant="info">inherit: AbstractStore</bs-badge>
+
+    Set the number of items within a page and returns itself.
+
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
+
+    -   <span class="text-unique font-weight-bold">value</span> : Number of items within a page.
+
+-   <span class="text-primary font-weight-bold">setSorters</span>(
+    `ISorter|ISorter[]|Object|Object[]` sorters) : <em class="text-grey-500">
+    Self</em> <bs-badge variant="info">inherit: AbstractStore</bs-badge>
+
+    Set sorter's criteria collection and returns itself.
+
+    <span class="text-muted font-weight-bold">PARAMETERS<span>
+
+    -   <span class="text-unique font-weight-bold">sorters</span> : The sorts method criteria.
 
 -   <span class="text-primary font-weight-bold">sort</span>(`String|ISorter[]` criteria, 
     `String` [direction]) : <em class="text-grey-500">BsModel[]</em>

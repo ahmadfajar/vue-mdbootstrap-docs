@@ -22,6 +22,7 @@ module.exports = {
                 .end()
             .use('vue-markdown-loader')
                 .loader('vue-markdown-loader/lib/markdown-compiler')
-                .options(mdLoaderOptions);
+                .options(mdLoaderOptions)
+                .end();
     }
 };
