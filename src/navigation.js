@@ -111,15 +111,11 @@ export const menuNavs = [{
         }, {
             title: "Search Field",
             route: "/components/input/search-field",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/search-field"),
         }, {
             title: "Toggle Field",
             route: "/components/input/toggle-field",
             // view: viewResolver("components/image-holder"),
-        // }, {
-        //     title: "Field Test",
-        //     route: "/components/input/field-test",
-        //     view: viewResolver("components/text-field-test"),
         }]
     }, {
         title: "Lightbox",
