@@ -4,6 +4,8 @@ It can contain an icon, nested items, and provide a consistent styling for organ
 doesn't have the flexibility like **BsListTile**.
 :::
 
+*Available in Vue MDBootstrap since v1.1.0*
+
 
 ## Overview
 

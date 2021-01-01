@@ -305,7 +305,9 @@ The component for card footer.
 
 ### BsCardMedia - `<bs-card-media>`
 
-The component for displaying image inside a card.
+The component for displaying image inside a card. 
+
+*Available in Vue MDBootstrap since v1.1.0*
 
 #### Properties
 

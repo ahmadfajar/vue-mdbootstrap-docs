@@ -86,6 +86,10 @@
         <b>DateTime Field</b> - A fully featured date selection component which lets users select a date, 
         time, month, year, or datetime. <bs-badge color="warning">updated</bs-badge>
       </a>
+      <a href="#/components/input/search-field" class="list-group-item list-group-item-action">
+        <b>Search Field</b> - A standalone input field component for collecting search 
+        keywords. <bs-badge color="warning">updated</bs-badge>
+      </a>
     </div>
   </div>
   <a href="#/components/lightbox" class="list-group-item list-group-item-action">
