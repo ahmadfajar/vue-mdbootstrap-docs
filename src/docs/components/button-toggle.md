@@ -146,7 +146,7 @@ export default {
 ## Toggle Styles
 
 **BsButtonToggle** comes with four predefined styles. Other than *default* style,
-example below, shows you how to enable *Raised style*, *Outlined style* or *Flat style*.
+example below, shows you how to enable *Raised style*, *Outlined style* and *Flat style*.
 
 :::demo
 ```html

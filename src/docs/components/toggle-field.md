@@ -139,7 +139,7 @@ export default {
 ## Toggle Styles
 
 **BsButtonToggleField** comes with four predefined styles. Other than *default* style,
-example below, shows you how to enable *Raised style*, *Outlined style* or *Flat style*.
+example below, shows you how to enable *Raised style*, *Outlined style* and *Flat style*.
 
 :::demo
 ```html
@@ -309,8 +309,8 @@ export default {
 
 ## Used With Other Input Controls
 
-`<bs-button-toggle-field>` its main purpose is to be used as a form element. Example below, 
-shows you how to mixed `<bs-button-toggle-field>` with another form elements.
+`<bs-button-toggle-field>` main purpose is to be used as a form element. Example below, 
+shows you how to mixed `<bs-button-toggle-field>` with other form elements.
 
 :::demo
 ```html
