@@ -16,7 +16,7 @@
       <bs-appbar-title :title="pageTitle" class="text-white" />
       <bs-spacer />
       <bs-appbar-items>
-        <span class="mr-3 text-white align-self-center">v1.1.1</span>
+        <span class="mr-3 text-white align-self-center">v1.1.2</span>
         <bs-button 
           color="light-grey"
           flat

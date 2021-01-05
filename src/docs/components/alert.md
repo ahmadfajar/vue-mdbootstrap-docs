@@ -195,25 +195,36 @@ This is useful to control the dismissible, because when user closes the alert, y
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-alert v-model="showDismissibleAlert"
-              color="teal" dismissible>
+    <bs-alert 
+      v-model="showDismissibleAlert"
+      color="teal" 
+      dismissible>
       This is a dismissible alert.
     </bs-alert>
-    <bs-alert :value="dismissCountDown > 0"
-              @input="dismissCountDown=0"
-              dismissible>
+    <bs-alert 
+      :value="dismissCountDown > 0"
+      @input="dismissCountDown=0"
+      dismissible>
       <div class="pb-2">This alert will dismiss after {{ dismissCountDown }} seconds...</div>
-      <bs-progress color="warning" mode="determinate"
-                   type="bar" :value="percentProgress"></bs-progress>
+      <bs-progress 
+        :value="percentProgress"
+        color="warning" 
+        mode="determinate"
+        type="bar"> 
+      </bs-progress>
     </bs-alert>
     <div class="row">
       <div class="col-12 col-md-6 mb-3 mb-md-0">
-        <bs-button color="primary" @click="toggleAlert">
+        <bs-button 
+          color="primary" 
+          @click="toggleAlert">
           {{ showDismissibleAlert ? 'Hide' : 'Show' }} dismissible Alert
         </bs-button>
       </div>    
       <div class="col-12 col-md-6 mb-3 mb-md-0">
-        <bs-button color="primary" @click="showAlert">
+        <bs-button 
+          color="primary" 
+          @click="showAlert">
           Show Alert with timer
         </bs-button>
       </div>

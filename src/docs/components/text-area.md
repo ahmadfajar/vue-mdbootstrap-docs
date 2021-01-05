@@ -339,13 +339,20 @@ with `readonly` property to create appearance like plain text.
       <div class="col-lg-7">
         <div class="form-group">
           <bs-text-area v-model="flat1" flat>
-            <label class="col-md-3 col-xl-2 col-form-label">Field Label</label>
+            <label class="col-md-3 col-xl-2 col-form-label">
+              Field Label
+            </label>
           </bs-text-area>
         </div>
       </div>
       <div class="col-lg-5">
         <div class="form-group">
-          <bs-text-area v-model="flat2" placeholder="Placeholder" flat floating-label readonly>
+          <bs-text-area 
+            v-model="flat2" 
+            placeholder="Placeholder" 
+            flat 
+            floating-label 
+            readonly>
             <label>Field Label</label>
           </bs-text-area>
         </div>
@@ -386,18 +393,20 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area :persistent-help-text="false"
-                        value="Grocery delivery" 
-                        help-text="For example, flowers or used cars" 
-                        floating-label>
+          <bs-text-area 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label>
             <label>Product or Service</label>
           </bs-text-area>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area help-text="Enter your profile information" 
-                        floating-label>
+          <bs-text-area 
+            help-text="Enter your profile information" 
+            floating-label>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -406,20 +415,22 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area :persistent-help-text="false"
-                        value="Grocery delivery" 
-                        help-text="For example, flowers or used cars" 
-                        floating-label 
-                        filled>
+          <bs-text-area 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label 
+            filled>
             <label>Product or Service</label>
           </bs-text-area>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area help-text="Enter your profile information" 
-                        floating-label 
-                        filled>
+          <bs-text-area 
+            help-text="Enter your profile information" 
+            floating-label 
+            filled>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -428,20 +439,22 @@ Using `persistent-help-text` keeps the help text visible when the TextArea field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area :persistent-help-text="false"
-                        value="Grocery delivery" 
-                        help-text="For example, flowers or used cars" 
-                        floating-label 
-                        outlined>
+          <bs-text-area 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label 
+            outlined>
             <label>Product or Service</label>
           </bs-text-area>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area help-text="Enter your profile information" 
-                        floating-label 
-                        outlined>
+          <bs-text-area 
+            help-text="Enter your profile information" 
+            floating-label 
+            outlined>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -541,7 +554,7 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
 | autofocus    | `Boolean` | `false` | Autofocus area when document is loaded. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<textarea>` element. |
-| external-validator | `Object` |    | Sets external validator plugin to be used when validate the area value. |
+| external-validator | `Object` |    | Sets external validator plugin to be used when validate the area value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-areas) spec. |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating area label. See [Google Material Design](https://material.io/components/text-areas) spec. |

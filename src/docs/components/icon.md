@@ -214,7 +214,7 @@ export default {
 |----------|----------|----------|-------------|
 | flip     | `string` |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | height   | `Number` | `20` | The icon's height in pixel. |
-| icon <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The icon's name or alias. |
+| icon <bs-badge variant="danger">required</bs-badge> | `String` |  | The icon's name or alias. |
 | pulse    | `Boolean`| `false` | Apply **pulse** animation to the icon. |
 | rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | size     | `Number` |  | Shortcut to create equal height and width. |

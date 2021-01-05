@@ -115,7 +115,7 @@ export const menuNavs = [{
         }, {
             title: "Toggle Field",
             route: "/components/input/toggle-field",
-            // view: viewResolver("components/image-holder"),
+            view: viewResolver("components/toggle-field"),
         }]
     }, {
         title: "Lightbox",

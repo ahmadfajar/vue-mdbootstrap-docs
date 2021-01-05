@@ -6,7 +6,8 @@ adding context to just about any content.
 
 ## Overview
 
-**BsBadge** can scale to match the size of the immediate parent element by using relative font sizing.
+`<bs-badge>` utilize [Boostrap v4 CSS](https://getbootstrap.com/docs/4.5/components/badge/) 
+classes and can scale to match the size of the immediate parent element by using relative font sizing.
 
 :::demo
 ```html
@@ -28,7 +29,7 @@ adding context to just about any content.
 ```
 :::
 
-**BsBadge** can be used as part of links or buttons to provide a counter (or similar flag).
+`<bs-badge>` can be used as part of links or buttons to provide a counter (or similar flag).
 
 :::demo
 ```html

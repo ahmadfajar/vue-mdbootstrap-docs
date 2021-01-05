@@ -1,10 +1,13 @@
 :::lead
-**BsButton** is a component for actions in form, dialog, and more. Includes support for a handful of
-color variations, sizes, states, and more.
+**BsButton** is a component for actions in form, dialog, and more. Includes support for 
+a handful of color variations, sizes, states, and more.
 :::
 
 
 ## Overview
+
+`<bs-button>` uses [Boostrap v4 CSS](https://getbootstrap.com/docs/4.5/components/buttons/) 
+classes internally, and made some modifications to meet the *Material Design specifications*.
 
 :::demo
 ```html
@@ -65,6 +68,10 @@ with specific value, such as `button`, `submit`, or `reset`.
 
 
 ## Button Styles
+
+The `<bs-button>` component comes with seven predefined styles: *Default*, *Raised*, *Outlined*, *Flat*, 
+*Rounded*, *Pill* and *Transparent* style. Other than *Default* style, example below will shows you how 
+to enable another styles.
 
 ### Raised style
 
@@ -206,83 +213,6 @@ with specific value, such as `button`, `submit`, or `reset`.
 ```
 :::
 
-### Combination style
-
-:::demo
-```html
-<template>
-  <div class="my-demo-wrapper text-center">
-    <bs-button color="primary" 
-               class="text-nowrap" 
-               raised rounded>
-      raised rounded
-    </bs-button>
-    <bs-button color="primary" 
-               class="text-nowrap" 
-               raised outlined rounded>
-      outlined raised rounded
-    </bs-button>
-    <bs-button color="primary" 
-               class="text-nowrap" 
-               outlined rounded>
-      outlined rounded
-    </bs-button>
-    <bs-button color="primary" 
-               class="text-nowrap" 
-               flat raised rounded>
-      flat raised rounded
-    </bs-button>
-    <bs-button color="primary" 
-               class="text-nowrap" 
-               flat rounded>
-      flat rounded
-    </bs-button>
-    <bs-button color="success" 
-               class="text-nowrap" 
-               raised pill>
-      raised pill
-    </bs-button>
-    <bs-button color="success" 
-               class="text-nowrap" 
-               raised outlined pill>
-      outlined raised pill
-    </bs-button>
-    <bs-button color="success" 
-               class="text-nowrap" 
-               outlined pill>
-      outlined pill
-    </bs-button>
-    <bs-button color="success" 
-               class="text-nowrap" 
-               flat raised pill>
-      flat raised pill
-    </bs-button>
-    <bs-button color="success" 
-               class="text-nowrap" 
-               flat pill>
-      flat pill
-    </bs-button>
-  </div>
-</template>
-
-<style lang="scss">
-.my-demo-wrapper {
-  padding: 24px;
-  
-  .btn {
-    margin-bottom: 16px;
-    margin-right: 8px;
-  }
-}
-</style>
-```
-:::
-
-:::warning
-- `outlined` and `flat` property can't be combined, if both `true`, then `outlined` will take precedence.
-- `pill` and `rounded` property can't be combined, if both `true`, then `pill` will take precedence.
-:::
-
 ### Transparent style
 
 :::demo
@@ -320,6 +250,110 @@ with specific value, such as `button`, `submit`, or `reset`.
 If `transparent` property is `true` then `color` property will have no effect.
 :::
 
+### Combination style
+
+Other than those seven styles above, some styles can be combine to create another effect. 
+Example below will shows you how to do it.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper text-center">
+    <bs-button 
+      color="primary" 
+      class="text-nowrap" 
+      raised 
+      rounded>
+      raised rounded
+    </bs-button>
+    <bs-button 
+      color="primary" 
+      class="text-nowrap" 
+      raised 
+      outlined 
+      rounded>
+      outlined raised rounded
+    </bs-button>
+    <bs-button 
+      color="primary" 
+      class="text-nowrap" 
+      outlined 
+      rounded>
+      outlined rounded
+    </bs-button>
+    <bs-button 
+      color="primary" 
+      class="text-nowrap" 
+      flat 
+      raised 
+      rounded>
+      flat raised rounded
+    </bs-button>
+    <bs-button 
+      color="primary" 
+      class="text-nowrap" 
+      flat 
+      rounded>
+      flat rounded
+    </bs-button>
+    <bs-button 
+      color="success" 
+      class="text-nowrap" 
+      raised 
+      pill>
+      raised pill
+    </bs-button>
+    <bs-button 
+      color="success" 
+      class="text-nowrap" 
+      raised 
+      outlined 
+      pill>
+      outlined raised pill
+    </bs-button>
+    <bs-button 
+      color="success" 
+      class="text-nowrap" 
+      outlined 
+      pill>
+      outlined pill
+    </bs-button>
+    <bs-button 
+      color="success" 
+      class="text-nowrap" 
+      flat 
+      raised 
+      pill>
+      flat raised pill
+    </bs-button>
+    <bs-button 
+      color="success" 
+      class="text-nowrap" 
+      flat 
+      pill>
+      flat pill
+    </bs-button>
+  </div>
+</template>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+  
+  .btn {
+    margin-bottom: 16px;
+    margin-right: 8px;
+  }
+}
+</style>
+```
+:::
+
+:::warning
+- `outlined` and `flat` property can't be combined, if both `true`, then `outlined` will take precedence.
+- `pill` and `rounded` property can't be combined, if both `true`, then `pill` will take precedence.
+:::
+
 
 ## Icon
 
@@ -333,118 +367,134 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
   <div class="my-demo-wrapper px-3">
     <div class="row text-center">
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance" 
-                   icon-size="sm">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance" 
+          icon-size="sm">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance" 
-                   icon-size="lg">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance" 
+          icon-size="lg">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance" 
-                   icon-size="lg" 
-                   icon-flip="horizontal">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance" 
+          icon-size="lg" 
+          icon-flip="horizontal">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance" 
-                   icon-size="lg" 
-                   icon-flip="vertical">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance" 
+          icon-size="lg" 
+          icon-flip="vertical">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="ambulance" 
-                   icon-size="lg" 
-                   icon-flip="both">
+        <bs-button 
+          mode="icon" 
+          icon="ambulance" 
+          icon-size="lg" 
+          icon-flip="both">
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="spinner" 
-                   icon-size="lg" 
-                   icon-spin>
+        <bs-button 
+          mode="icon" 
+          icon="spinner" 
+          icon-size="lg" 
+          icon-spin>
         </bs-button>
       </div>
       <div class="col-4 col-md-3 col-xl mb-3">
-        <bs-button mode="icon" 
-                   icon="spinner" 
-                   icon-size="lg" 
-                   icon-pulse>
+        <bs-button 
+          mode="icon" 
+          icon="spinner" 
+          icon-size="lg" 
+          icon-pulse>
         </bs-button>
       </div>
     </div>
     <div class="row text-center">
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="left">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="left">
           Icon Left
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right">
           Icon Right
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-flip="horizontal">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-flip="horizontal">
           Flip Horizontal
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-flip="vertical">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-flip="vertical">
           Flip Vertical
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-flip="both">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-flip="both">
           Flip Both
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-rotation="90">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-rotation="90">
           Rotate 90&deg;
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-size="lg">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-size="lg">
           Icon size LG
         </bs-button>
       </div>
       <div class="col-12 col-sm-6 col-xl-3 mb-3">
-        <bs-button color="primary" 
-                   icon="ambulance" 
-                   icon-position="right" 
-                   icon-size="2x">
+        <bs-button 
+          color="primary" 
+          icon="ambulance" 
+          icon-position="right" 
+          icon-size="2x">
           Icon size 2x
         </bs-button>
       </div>
@@ -463,7 +513,7 @@ any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=f
 
 ## Sizing
 
-`<bs-button>` can be set in different size: xs (extra-small), sm (small), or large, (large).
+`<bs-button>` can be set in different size: `xs` (extra-small), `sm` (small), or `lg` (large).
 
 :::demo
 ```html
@@ -530,6 +580,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 </style>
 ```
 :::
+
 
 ## Button Toolbar
 

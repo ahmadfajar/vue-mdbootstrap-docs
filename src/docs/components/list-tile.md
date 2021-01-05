@@ -1,6 +1,6 @@
 :::lead
 **BsListTile** is a component used to display information. It can contain an avatar, content, actions, 
-subheaders and much more. BsListTile present content in a way that makes it easy to identify a specific 
+subheaders and much more. BsListTile presents content in a way that makes it easy to identify a specific 
 item in a collection. They provide a consistent styling for organizing groups of text and images.
 :::
 
@@ -14,14 +14,25 @@ by different components.
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-deep-purple rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-deep-purple rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Menus" 
+          class="text-white">
+        </bs-appbar-title>
       </bs-appbar>
       <bs-list-view>
         <bs-list-tile navigable>
@@ -100,57 +111,88 @@ by different components.
 
 ## Avatar with Title and Icon
 
-Here we combine `bs-list-tile-leading` and bs-list-tile-action in a single-line list.
+The `<bs-list-tile-leading>` has built-in support for displaying *avatar*, and we can use 
+`<font-awesome-icon>` or `<bs-icon>` inside the `<bs-list-tile-action>` to display an
+*icon*. And use `<bs-list-tile-title>` inside `<bs-list-tile-content>` to display the 
+*title*. See example below, to learn how to display avatar with title and icon correctly. 
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-default-color-dark rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-default-color-dark rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="Chats" 
-                         class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Chats" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey" 
-                   mode="icon" 
-                   icon="search" 
-                   flat></bs-button>
+        <bs-button 
+          color="light-grey" 
+          mode="icon" 
+          icon="search" 
+          flat>
+        </bs-button>
       </bs-appbar>
       <bs-list-view>
         <bs-subheader>Recent chat</bs-subheader>
-        <bs-list-tile v-for="item in chats1" 
-                      :key="item.fullname" 
-                      navigable>
-          <bs-list-tile-leading :img-src="item.avatar" circle></bs-list-tile-leading>
+        <bs-list-tile 
+          v-for="item in chats1" 
+          :key="item.fullname" 
+          navigable>
+          <bs-list-tile-leading 
+            :img-src="item.avatar" 
+            circle>
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title>{{ item.fullname }}</bs-list-tile-title>
+            <bs-list-tile-title>
+              {{ item.fullname }}
+            </bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
-            <font-awesome-icon icon="comment-alt" 
-                               size="lg" 
-                               :class="{'text-primary': item.active}"></font-awesome-icon>
+            <font-awesome-icon 
+              icon="comment-alt" 
+              size="lg" 
+              :class="{'text-primary': item.active}">
+            </font-awesome-icon>
           </bs-list-tile-action>
         </bs-list-tile>
       </bs-list-view>
       <bs-divider></bs-divider>
       <bs-list-view>
         <bs-subheader>Previous chat</bs-subheader>
-        <bs-list-tile v-for="item in chats2" 
-                      :key="item.fullname" 
-                      navigable>
-          <bs-list-tile-leading :img-src="item.avatar" circle></bs-list-tile-leading>
+        <bs-list-tile 
+          v-for="item in chats2" 
+          :key="item.fullname" 
+          navigable>
+          <bs-list-tile-leading 
+            :img-src="item.avatar" 
+            circle>
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title>{{ item.fullname }}</bs-list-tile-title>
+            <bs-list-tile-title>
+              {{ item.fullname }}
+            </bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
-            <font-awesome-icon class="text-secondary" 
-                               icon="comment-alt" 
-                               size="lg"></font-awesome-icon>
+            <font-awesome-icon 
+              class="text-secondary" 
+              icon="comment-alt" 
+              size="lg">
+            </font-awesome-icon>
           </bs-list-tile-action>
         </bs-list-tile>
       </bs-list-view>
@@ -195,41 +237,71 @@ export default {
 
 ## Image with Multiline Text
 
+Sometimes our page may contains ***data list*** with complex structures. For example,
+we want to display a list of data which contains *image*, *title*, *description* and
+*ranks*. Example below will shows you how to create this complex data list structures.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-primary-color-dark rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-primary-color-dark rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="My Recipes" 
-                         class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="My Recipes" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey" 
-                   mode="icon" 
-                   icon="search" 
-                   flat></bs-button>
+        <bs-button 
+          color="light-grey" 
+          mode="icon" 
+          icon="search" 
+          flat>
+        </bs-button>
       </bs-appbar>
       <bs-list-view>
         <bs-subheader>Summer Recipes</bs-subheader>
         <template v-for="(item, idx) in recipes">
-          <bs-list-tile :key="item.title" navigable>
-            <bs-list-tile-leading :img-src="item.url" 
-                                  :size="{height: 56, width: 85}" 
-                                  center></bs-list-tile-leading>
+          <bs-list-tile 
+            :key="item.title" 
+            navigable>
+            <bs-list-tile-leading 
+              :img-src="item.url" 
+              :size="{height: 56, width: 85}" 
+              center>
+            </bs-list-tile-leading>
             <bs-list-tile-content multi-line>
-              <bs-list-tile-title class="font-weight-bold">{{ item.title }}</bs-list-tile-title>
-              <bs-list-tile-subtitle>{{ item.desc }}</bs-list-tile-subtitle>
+              <bs-list-tile-title class="font-weight-bold">
+                {{ item.title }}
+              </bs-list-tile-title>
+              <bs-list-tile-subtitle>
+                {{ item.desc }}
+              </bs-list-tile-subtitle>
             </bs-list-tile-content>
-            <bs-list-tile-action class="rating text-grey-500" :center="false">0{{ idx + 1 }}</bs-list-tile-action>
+            <bs-list-tile-action 
+              class="rating text-grey-500" 
+              :center="false">
+              0{{ idx + 1 }}
+            </bs-list-tile-action>
           </bs-list-tile>
-          <bs-divider v-if="idx + 1 < recipes.length" 
-                      :key="item.title + idx" 
-                      left-indent="118"></bs-divider>        
+          <bs-divider 
+            v-if="idx + 1 < recipes.length" 
+            :key="item.title + idx" 
+            left-indent="118">
+          </bs-divider> 
         </template>
       </bs-list-view>
     </bs-card>
@@ -289,6 +361,10 @@ export default {
 
 ## Used inside Card
 
+The `<bs-list-tile>` can also be used inside `<bs-card>` to create page layout with
+data list and a content, or create page layout like contact details. See example below
+to learn how to create this complex page layout.
+
 ### Basic Example
 
 :::demo
@@ -302,15 +378,26 @@ export default {
             <bs-subheader>Today</bs-subheader>
             <template v-for="(item, index) in cardItems">
               <bs-list-tile :key="item.title">
-                <bs-list-tile-leading :img-src="item.avatar" size="40" circle></bs-list-tile-leading>
+                <bs-list-tile-leading 
+                  :img-src="item.avatar" 
+                  size="40" 
+                  circle>
+                </bs-list-tile-leading>
                 <bs-list-tile-content multi-line>
-                  <bs-list-tile-title class="font-weight-bold">{{ item.title }}</bs-list-tile-title>
-                  <bs-list-tile-subtitle v-html="item.subtitle" class="text-muted"></bs-list-tile-subtitle>
+                  <bs-list-tile-title class="font-weight-bold">
+                    {{ item.title }}
+                  </bs-list-tile-title>
+                  <bs-list-tile-subtitle 
+                    v-html="item.subtitle" 
+                    class="text-muted">
+                  </bs-list-tile-subtitle>
                 </bs-list-tile-content>
               </bs-list-tile>
-              <bs-divider v-if="index + 1 < cardItems.length"
-                          left-indent="70"
-                          :key="item.title + index"></bs-divider>
+              <bs-divider 
+                v-if="index + 1 < cardItems.length"
+                left-indent="70"
+                :key="item.title + index">
+              </bs-divider>
             </template>
           </bs-list-view>
           <bs-card-body>
@@ -379,40 +466,75 @@ export default {
       </bs-card-media>
       <bs-list-view>
         <bs-list-tile>
-          <bs-list-tile-leading class="text-info" icon="phone-alt"></bs-list-tile-leading>
+          <bs-list-tile-leading 
+            class="text-info" 
+            icon="phone-alt">
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title class="font-weight-bold">0821-5555-1234</bs-list-tile-title>
-            <bs-list-tile-subtitle class="text-muted">Mobile | Indonesia</bs-list-tile-subtitle>
+            <bs-list-tile-title class="font-weight-bold">
+              0821-5555-1234
+            </bs-list-tile-title>
+            <bs-list-tile-subtitle class="text-muted">
+              Mobile | Indonesia
+            </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
         <bs-list-tile>
-          <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
+          <bs-list-tile-leading 
+            class="md-has-icon" 
+            size="24">
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title class="font-weight-bold">+6221-4444-6789</bs-list-tile-title>
-            <bs-list-tile-subtitle class="text-muted">Work | Indonesia</bs-list-tile-subtitle>
+            <bs-list-tile-title class="font-weight-bold">
+              +6221-4444-6789
+            </bs-list-tile-title>
+            <bs-list-tile-subtitle class="text-muted">
+              Work | Indonesia
+            </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
         <bs-divider left-indent="70"></bs-divider>
         <bs-list-tile>
-          <bs-list-tile-leading class="text-info" icon="envelope"></bs-list-tile-leading>
+          <bs-list-tile-leading 
+            class="text-info" 
+            icon="envelope">
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title class="font-weight-bold">jonathan.smith@company.com</bs-list-tile-title>
-            <bs-list-tile-subtitle class="text-muted">Work</bs-list-tile-subtitle>
+            <bs-list-tile-title class="font-weight-bold">
+              jonathan.smith@company.com
+            </bs-list-tile-title>
+            <bs-list-tile-subtitle class="text-muted">
+              Work
+            </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
         <bs-list-tile>
-          <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
+          <bs-list-tile-leading 
+            class="md-has-icon" 
+            size="24">
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title class="font-weight-bold">jonathan.smith212@example.com</bs-list-tile-title>
-            <bs-list-tile-subtitle class="text-muted">Personal</bs-list-tile-subtitle>
+            <bs-list-tile-title class="font-weight-bold">
+              jonathan.smith212@example.com
+            </bs-list-tile-title>
+            <bs-list-tile-subtitle class="text-muted">
+              Personal
+            </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
         <bs-divider left-indent="70"></bs-divider>
         <bs-list-tile>
-          <bs-list-tile-leading class="text-info" icon="map-marker-alt"></bs-list-tile-leading>
+          <bs-list-tile-leading 
+            class="text-info" 
+            icon="map-marker-alt">
+          </bs-list-tile-leading>
           <bs-list-tile-content>
-            <bs-list-tile-title class="font-weight-bold">1400 Main Street</bs-list-tile-title>
-            <bs-list-tile-subtitle class="text-muted">Jakarta, Indonesia</bs-list-tile-subtitle>
+            <bs-list-tile-title class="font-weight-bold">
+              1400 Main Street
+            </bs-list-tile-title>
+            <bs-list-tile-subtitle class="text-muted">
+              Jakarta, Indonesia
+            </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
       </bs-list-view>
@@ -435,13 +557,19 @@ export default {
 
 ## Used inside SideDrawer
 
+The `<bs-list-tile>` can also be used inside `<bs-side-drawer>` to create navigation menus,
+like android. Example below will shows you how to create navigation menus inside a drawer.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-side-drawer width="280" class="mx-auto" color="white" shadow>
       <div class="p-3 text-center">
-          <img src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" alt="image" class="rounded-circle">      
+          <img 
+            src="https://vue-mdbootstrap.fajarconsultant.com/img/kitty-1.jpg" 
+            alt="image" 
+            class="rounded-circle">
           <div class="h5 mt-3">Kitty Doe</div>  
       </div>
       <bs-divider></bs-divider>
@@ -524,25 +652,35 @@ export default {
 
 ## Used with Input Controls
 
+Sometimes we want to create a complex page layout like android setting. `<bs-list-tile>`
+also can be used to create this page. We can place some input controls inside the component
+to enable/disable the application setting. Example below will shows you how to create application
+setting page layout.
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-card class="mobi-card mx-auto" shadow>
       <bs-appbar class="bg-purple rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
           <bs-icon icon="menu_bars" size="24"></bs-icon>
         </bs-button>
-        <bs-appbar-title title="Setting" 
-                         class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Setting" 
+          class="text-white">
+        </bs-appbar-title>
       </bs-appbar>
       <bs-list-view>
         <bs-subheader>User Controls</bs-subheader>
         <bs-list-tile>
           <bs-list-tile-content multi-line>
-            <bs-list-tile-title class="font-weight-bold">Content Filtering</bs-list-tile-title>
+            <bs-list-tile-title class="font-weight-bold">
+              Content Filtering
+            </bs-list-tile-title>
             <bs-list-tile-subtitle class="text-muted">
               Set the content filtering level to restrict appts that can be downloaded
             </bs-list-tile-subtitle>
@@ -553,7 +691,9 @@ export default {
         </bs-list-tile>
         <bs-list-tile>
           <bs-list-tile-content multi-line>
-            <bs-list-tile-title class="font-weight-bold">Password</bs-list-tile-title>
+            <bs-list-tile-title class="font-weight-bold">
+              Password
+            </bs-list-tile-title>
             <bs-list-tile-subtitle class="text-muted">
               Require password for purchase or use password to restrict purchase
             </bs-list-tile-subtitle>
@@ -648,6 +788,10 @@ export default {
 
 ## Color Style
 
+We can also make `<bs-list-tile>` to have a background color other than *white*. To achieve this, 
+we need to set the `color` property of `<bs-list-view>` component to the desired *color name*. See 
+[Reference - Color Variants](#/reference/colors) for more information.
+
 :::demo
 ```html
 <template>
@@ -658,13 +802,15 @@ export default {
           <bs-list-view color="stylish-color">
             <bs-subheader>
               Today
-              <bs-menu class="ml-auto"
-                       color="teal"
-                       placement="bottom-right">
-                <bs-button color="light-grey"
-                           class="ml-auto"
-                           mode="icon"
-                           flat>
+              <bs-menu 
+                class="ml-auto"
+                color="teal"
+                placement="bottom-right">
+                <bs-button 
+                  color="light-grey"
+                  class="ml-auto"
+                  mode="icon"
+                  flat>
                   <bs-icon icon="MoreVert" size="24"></bs-icon>
                 </bs-button>
                 <template v-slot:content>
@@ -686,16 +832,28 @@ export default {
               </bs-menu>
             </bs-subheader>
             <template v-for="(item, index) in cardItems">
-              <bs-list-tile :key="item.title" navigable>
-                <bs-list-tile-leading :img-src="item.avatar" size="40" circle></bs-list-tile-leading>
+              <bs-list-tile 
+                :key="item.title" 
+                navigable>
+                <bs-list-tile-leading 
+                  :img-src="item.avatar" 
+                  size="40" 
+                  circle>
+                </bs-list-tile-leading>
                 <bs-list-tile-content multi-line>
-                  <bs-list-tile-title class="font-weight-bold">{{ item.title }}</bs-list-tile-title>
-                  <bs-list-tile-subtitle v-html="item.subtitle"></bs-list-tile-subtitle>
+                  <bs-list-tile-title class="font-weight-bold">
+                    {{ item.title }}
+                  </bs-list-tile-title>
+                  <bs-list-tile-subtitle 
+                    v-html="item.subtitle">
+                  </bs-list-tile-subtitle>
                 </bs-list-tile-content>
               </bs-list-tile>
-              <bs-divider v-if="index + 1 < cardItems.length"
-                          left-indent="70"
-                          :key="item.title + index"></bs-divider>
+              <bs-divider 
+                v-if="index + 1 < cardItems.length"
+                left-indent="70"
+                :key="item.title + index">
+              </bs-divider>
             </template>
           </bs-list-view>
           <bs-card-body>

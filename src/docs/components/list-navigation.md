@@ -9,20 +9,34 @@ doesn't have the flexibility like **BsListTile**.
 
 ## Overview
 
-The `<bs-list-nav-item>` needs to be used inside `<bs-list-view>` to compose the list item. 
+The `<bs-list-nav>` is a component to create the navigation container and `<bs-list-nav-item>` is used 
+to create the navigation menus. The `<bs-list-nav>` needs to be placed inside `<bs-list-view>`, then
+use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus created by 
+`<bs-list-nav-item>` is consistent and meets the *Material Design specifications*.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-purple darken-3 rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-purple darken-3 rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Menus" 
+          class="text-white">
+        </bs-appbar-title>
       </bs-appbar>
       <bs-list-view>
         <bs-list-nav>
@@ -59,26 +73,41 @@ The `<bs-list-nav-item>` needs to be used inside `<bs-list-view>` to compose the
 ## Nested Navigation
 
 To create nested navigation list, the child navigation list needs to be wrapped by `<bs-list-nav>` and
-put inside current `<bs-list-nav-item>`. Additionally, define the `depth` or `indent` property to 
-customize indentation from the left side.
+placed inside current `<bs-list-nav-item>`. Optionally, we can define the `depth` or `indent` property 
+to customize the indentation from the left side.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-deep-purple rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-deep-purple rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="Topics" class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Topics" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey"
-                   mode="icon"
-                   flat>
-          <bs-icon icon="MoreVert" size="24"></bs-icon>
+        <bs-button 
+          color="light-grey"
+          mode="icon"
+          flat>
+          <bs-icon 
+            icon="MoreVert" 
+            size="24">
+          </bs-icon>
         </bs-button>
       </bs-appbar>
       <bs-list-view>
@@ -153,26 +182,41 @@ customize indentation from the left side.
 
 ### Mixed with ListTile
 
-The `<bs-list-nav-item>` can also be mixed with `<bs-list-tile-title>` to display custom and fine tune
-navigation items.
+The `<bs-list-nav>` can also be mixed with `<bs-list-tile>` to display custom and fine tune
+navigation menus.
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-card class="mobi-card mx-auto" shadow>
-      <bs-appbar class="bg-blue darken-3 rounded-top" shadow>
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+    <bs-card 
+      class="mobi-card mx-auto" 
+      shadow>
+      <bs-appbar 
+        class="bg-blue darken-3 rounded-top" 
+        shadow>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
+          <bs-icon 
+            icon="menu_bars" 
+            size="24">
+          </bs-icon>
         </bs-button>
-        <bs-appbar-title title="Mail" class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Mail" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey"
-                   mode="icon"
-                   flat>
-          <bs-icon icon="MoreVert" size="24"></bs-icon>
+        <bs-button 
+          color="light-grey"
+          mode="icon"
+          flat>
+          <bs-icon 
+            icon="MoreVert" 
+            size="24">
+          </bs-icon>
         </bs-button>
       </bs-appbar>
       <bs-list-view>
@@ -241,6 +285,10 @@ navigation items.
 ## Styling
 
 ### Color
+
+We can also make `<bs-list-nav>` to have a background color other than *white*. To achieve this, 
+we need to set the `color` property of `<bs-list-view>` component to the desired *color name*. See 
+[Reference - Color Variants](#/reference/colors) for more information.
 
 :::demo
 ```html
@@ -313,6 +361,10 @@ navigation items.
 
 ### Space around
 
+Additionally, we can also add predefined padding on the left or right side of the navigation menus. 
+To create the padding, sets the `space-around` property of the `<bs-list-view>` component with value: 
+`left`, `right` or `both`.
+
 :::demo
 ```html
 <template>
@@ -383,6 +435,10 @@ navigation items.
 
 
 ### Border for active item
+
+We can also give a border to the active navigation's menu. To achieve this, we need to set the 
+`active-item-bordered` property of `<bs-list-view>` component with value: `left`, `right`, 
+`left-right`, `top`, `bottom`, or `top-bottom`.
 
 :::demo
 ```html

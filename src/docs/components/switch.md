@@ -76,16 +76,21 @@ export default {
   <div class="my-demo-wrapper">
     <div style="max-width: 600px">
       <div class="form-group row">
-        <label for="fullname" class="col-md-4 col-form-label">Full Name</label>      
+        <label 
+          for="fullname" 
+          class="col-md-4 col-form-label">
+          Full Name
+        </label>
         <div class="col-md-8">
           <input type="text" class="form-control" id="fullname">
         </div>  
       </div>
       <div class="form-group">
-        <bs-switch v-model="switch2" 
-                   color="primary" 
-                   label-position="left" 
-                   label-class="col-md-4">
+        <bs-switch 
+          v-model="switch2" 
+          color="primary" 
+          label-position="left" 
+          label-class="col-md-4">
           Strong Password
         </bs-switch>
       </div>    

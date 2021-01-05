@@ -17,22 +17,27 @@ image placeholder.
         <bs-image-holder place-holder="Placeholder Text"></bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#1976d2" 
-                         place-holder="BgColor: #1976d2" 
-                         x-pos="26%"></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#1976d2" 
+          place-holder="BgColor: #1976d2" 
+          x-pos="26%"></bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#006064" 
-                         place-holder="BgColor: #006064" 
-                         x-pos="26%" 
-                         rounded></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#006064" 
+          place-holder="BgColor: #006064" 
+          x-pos="26%" 
+          rounded>
+        </bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#f57f17" 
-                         text-color="#ffffff"
-                         place-holder="BgColor: #f57f17" 
-                         x-pos="26%" 
-                         rounded></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#f57f17" 
+          text-color="#ffffff"
+          place-holder="BgColor: #f57f17" 
+          x-pos="26%" 
+          rounded>
+        </bs-image-holder>
       </div>
     </div>
   </div>
@@ -55,32 +60,43 @@ image placeholder.
   <div class="my-demo-wrapper">
     <div class="row">
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder size="200px" 
-                         bg-color="#8e24aa" 
-                         place-holder="BgColor: #8e24aa" 
-                         x-pos="20%" 
-                         circle center></bs-image-holder>
+        <bs-image-holder 
+          size="200px" 
+          bg-color="#8e24aa" 
+          place-holder="BgColor: #8e24aa" 
+          x-pos="20%" 
+          circle 
+          center>
+        </bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#1565c0" 
-                         place-holder="BgColor: #1565c0" 
-                         height="200px" 
-                         x-pos="26%" 
-                         circle center></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#1565c0" 
+          place-holder="BgColor: #1565c0" 
+          height="200px" 
+          x-pos="26%" 
+          circle 
+          center>
+        </bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#d32f2f" 
-                         place-holder="BgColor: #d32f2f" 
-                         width="150" 
-                         x-pos="12%" 
-                         circle center></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#d32f2f" 
+          place-holder="BgColor: #d32f2f" 
+          width="150" 
+          x-pos="12%" 
+          circle 
+          center>
+        </bs-image-holder>
       </div>
       <div class="col-6 col-lg-3 mb-3">
-        <bs-image-holder bg-color="#f57f17" 
-                         text-color="#ffffff"
-                         place-holder="BgColor: #f57f17" 
-                         x-pos="26%" 
-                         circle></bs-image-holder>
+        <bs-image-holder 
+          bg-color="#f57f17" 
+          text-color="#ffffff"
+          place-holder="BgColor: #f57f17" 
+          x-pos="26%" 
+          circle>
+        </bs-image-holder>
       </div>
     </div>
   </div>

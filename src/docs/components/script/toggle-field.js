@@ -27,9 +27,19 @@ export default {
                 icon: 'cloud-showers-heavy',
                 iconSize: 'lg'
             }],
+            occupations: [
+                { value: 1, label: 'Computer and IT' },
+                { value: 2, label: 'Scientists and Research' },
+                { value: 3, label: 'Consultant' },
+                { value: 4, label: 'Other' },
+            ],
+            occupation: null,
+            favoriteDrink: null,
+            favoriteDrink1: null,
             favoriteDrinks: [],
             selectedDrink: null,
-            selectedWeather: null
+            selectedWeather: null,
+            todayWheather: null,
         }
     }
 }

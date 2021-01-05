@@ -1112,7 +1112,7 @@ export default {
 | data-source  | `Object`  |  | Sets data source for the ListBox options. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<select>` element. |
 | empty-data-message | `String` | `'No data to display.'` | Sets the **no data message** when ListBox options is empty. |
-| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. |
+| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |

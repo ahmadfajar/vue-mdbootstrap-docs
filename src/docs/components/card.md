@@ -6,7 +6,7 @@ and content with variety background colors, and powerful display options.
 
 ## Overview
 
-**BsCard** utilize [Boostrap v4](https://getbootstrap.com/docs/4.5/components/card/) css classes and
+**BsCard** utilize [Boostrap v4 CSS](https://getbootstrap.com/docs/4.5/components/card/) classes and
 built with as little markup and styles as possible, but still manage to deliver control and customization.
 Built with flexbox, it offers easy alignment and mix well with other components. A card may contains 
 a variety of related information, such as photos, texts, and links on a single subject. Cards often 
@@ -65,6 +65,9 @@ root tag to any other HTML element by specifying via the `tag` property.
 
 ## Header and Footer
 
+Additionally, you can add header or footer inside `<bs-card>` using `<bs-card-header>` or 
+`<bs-card-footer>` component. Example below will shows you how to do it.
+
 :::demo
 ```html
 <template>
@@ -101,13 +104,25 @@ root tag to any other HTML element by specifying via the `tag` property.
 
 ## Card Images
 
+The `img-top-src` property places image at the top of the card, and `img-bottom-src` 
+property places image at the bottom of the card. Use `img-top-alt` or `img-bottom-alt` 
+property to specify a text for the image's `alt` attribute. 
+
+Additionally, if you have a *title/subtitle* and you want the image to have a description, 
+use `<bs-card-media>` component and place the component after opening the `<bs-card>`'s tag 
+to place the image at the top of the card, or place it before closing the `<bs-card>`'s tag 
+to place the image at the bottom of the card. 
+
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col mb-3 mb-md-4">
-        <bs-card img-top-src="https://picsum.photos/id/29/600/300.jpg" img-top-alt="Image Top" shadow>
+        <bs-card 
+          img-top-src="https://picsum.photos/id/29/600/300.jpg" 
+          img-top-alt="Image Top" 
+          shadow>
           <bs-card-body>
             <bs-card-content type="title">
               Content Title
@@ -120,7 +135,9 @@ root tag to any other HTML element by specifying via the `tag` property.
       </div>
       <div class="col mb-3 mb-md-4">
         <bs-card class="bg-unique text-white" shadow>
-          <bs-card-media title="Image Title" subtitle="Image SubTitle">
+          <bs-card-media 
+            title="Image Title" 
+            subtitle="Image SubTitle">
             <img src="https://picsum.photos/id/25/600/300.jpg" alt="image">        
           </bs-card-media>
           <bs-card-body>
@@ -134,7 +151,10 @@ root tag to any other HTML element by specifying via the `tag` property.
         </bs-card>
       </div>
       <div class="col mb-3 mb-md-0">
-        <bs-card img-bottom-src="https://picsum.photos/id/425/600/300.jpg" img-bottom-alt="Image Bottom" shadow>
+        <bs-card 
+          img-bottom-src="https://picsum.photos/id/425/600/300.jpg" 
+          img-bottom-alt="Image Bottom" 
+          shadow>
           <bs-card-body>
             <bs-card-content type="title">
               Content Title
@@ -317,7 +337,7 @@ The component for displaying image inside a card.
 |-------------|-----------|---------|-------------|
 | overlay-top | `Boolean` | `false` | Placed text overlay at the top. |
 | subtitle    | `String`  |         | Text for media subtitle. |
-| title       | `String`  |         | Text for media title. |
+| title <bs-badge variant="danger">required</bs-badge> | `String` |  | Text for media title. |
 
 </div>
 

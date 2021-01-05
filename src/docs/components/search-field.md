@@ -53,6 +53,10 @@ export default {
 ```
 :::
 
+:::warning
+Do not use the `value` property when using `v-model`.
+:::
+
 
 ## Adapts to container background
 
@@ -196,7 +200,6 @@ export default {
 :::
 
 
-
 ## Component Reference
 
 ### Properties
@@ -209,17 +212,17 @@ export default {
 | dark-mode    | `Boolean` | `false` | Adapts search field to the container background color. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | id           | `String`  |         | Sets `<input>` element `ID` attribute. This property value is auto generates. |
-| inner-cls    | `String`  |  | Custom css class for component inner element. |
-| minlength    | `Number`/`String` | `4` | Minimum characters to check before triggers event `search`. |
+| inner-cls    | `String`  |  | Custom CSS class for component inner element. |
+| minlength    | `Number`/`String` | `4` | Minimum characters to check before triggers the `search` event. |
 | name         | `String`  |  | Sets `<input>` element `name` attribute. |
 | open         | `Boolean` | `false`     | *Popover* container state: `show` or `hide`. |
-| placeholder  | `String`  | `Search...` | Sets the field placeholder. |
-| popover-cls  | `String`    | `bg-white md-shadow` | Custom css class for the *Popover* container. |
+| placeholder  | `String`  | `'Search...'` | Sets the field placeholder. |
+| popover-cls  | `String`    | `'bg-white md-shadow'` | Custom CSS class for the *Popover* container. |
 | popover-min-width | `String`/`Number`  | `480` | Sets minimum width for the *Popover* container. |
-| popover-position  | `String` | `bottom` | Sets the *Popover* display placement. |
+| popover-position  | `String` | `'bottom'` | Sets the *Popover* display placement. |
 | readonly       | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | search-options | `Boolean` | `false` | Enable custom search. If `true` then *Popover* container will be enabled. |
-| transition     | `String`  | `popover` | Sets animation transition when displaying the *Popover* container. |
+| transition     | `String`  | `'popover'` | Sets animation transition when displaying the *Popover* container. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `String` |  | The value monitored by `v-model` to maintain field value. |
 
 </div>

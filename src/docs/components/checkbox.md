@@ -140,7 +140,7 @@ export default {
 :::
 
 :::warning
-Multi columns are closely tied to the bootstrap class `col-lg- *`. Which means if the media query
+Multi columns are closely tied to the bootstrap class `col-lg-*`. Which means if the media query
 matches `@media (min-width: 992px)`, it will be displayed correctly. And if the media query 
 matches `@media (min-width: 768px)`, it will be served in two columns only.
 :::
@@ -257,12 +257,12 @@ export default {
 | color       | `String`  | `'default'` | Sets default color to be applied. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied to the component. |
 | columns     | `Number`  |  | Sets the maximum number of columns to display the checkbox. When the number of items exceed the number of columns, then the remaining items will be displayed on the next row. |
 | disabled    | `Boolean` | `false`   | Sets default disabled state. |
-| external-validator | `Object` |  | The external validator plugin to be used when validate the field value. |
+| external-validator | `Object` |  | The external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | help-text   | `String`  |  | The help text to display below the field component. |
 | indeterminate | `Boolean` | `false` | Sets default indeterminate state for the checkbox. |
 | items       | `Object[]` |  | The collection of `<bs-radio>` property-value. |
 | name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text | `Boolean` | `false` | Keeps the help text visible when the checkbox group is not focused. |
+| persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the checkbox group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. |
 | required    | `Boolean` | `false` | Sets default `<input>` element `required` attribute. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `Array` |  | The value monitored by `v-model` to maintain checked state. |

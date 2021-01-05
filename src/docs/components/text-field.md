@@ -361,18 +361,20 @@ Using `persistent-help-text` keeps the help text visible when the text field is 
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label>
+          <bs-text-field 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label>
             <label>Product or Service</label>
           </bs-text-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field help-text="www.example.com/page" 
-                         floating-label>
+          <bs-text-field 
+            help-text="www.example.com/page" 
+            floating-label>
             <label>Your landing page</label>
           </bs-text-field>
         </div>
@@ -381,20 +383,22 @@ Using `persistent-help-text` keeps the help text visible when the text field is 
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label 
-                         filled>
+          <bs-text-field 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label 
+            filled>
             <label>Product or Service</label>
           </bs-text-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field help-text="www.example.com/page" 
-                         floating-label 
-                         filled>
+          <bs-text-field 
+            help-text="www.example.com/page" 
+            floating-label 
+            filled>
             <label>Your landing page</label>
           </bs-text-field>
         </div>
@@ -403,20 +407,22 @@ Using `persistent-help-text` keeps the help text visible when the text field is 
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field :persistent-help-text="false"
-                         value="Grocery delivery" 
-                         help-text="For example, flowers or used cars" 
-                         floating-label 
-                         outlined>
+          <bs-text-field 
+            :persistent-help-text="false"
+            value="Grocery delivery" 
+            help-text="For example, flowers or used cars" 
+            floating-label 
+            outlined>
             <label>Product or Service</label>
           </bs-text-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field help-text="www.example.com/page" 
-                         floating-label 
-                         outlined>
+          <bs-text-field 
+            help-text="www.example.com/page" 
+            floating-label 
+            outlined>
             <label>Your landing page</label>
           </bs-text-field>
         </div>
@@ -446,44 +452,68 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field prepend-icon="user" floating-label filled>
+          <bs-text-field 
+            prepend-icon="user" 
+            floating-label 
+            filled>
             <label>Prepend</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field prepend-icon-outer="user" floating-label filled>
+          <bs-text-field 
+            prepend-icon-outer="user" 
+            floating-label 
+            filled>
             <label>Prepend Outer</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field append-icon="user" floating-label filled>
+          <bs-text-field 
+            append-icon="user" 
+            floating-label 
+            filled>
             <label>Append</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field append-icon-outer="user" floating-label filled>
+          <bs-text-field 
+            append-icon-outer="user" 
+            floating-label 
+            filled>
             <label>Append Outer</label>
           </bs-text-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-field prepend-icon="user" floating-label outlined>
+          <bs-text-field 
+            prepend-icon="user" 
+            floating-label 
+            outlined>
             <label>Prepend</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field prepend-icon-outer="user" floating-label outlined>
+          <bs-text-field 
+            prepend-icon-outer="user" 
+            floating-label 
+            outlined>
             <label>Prepend Outer</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field append-icon="user" floating-label outlined>
+          <bs-text-field 
+            append-icon="user" 
+            floating-label 
+            outlined>
             <label>Append</label>
           </bs-text-field>
         </div>
         <div class="form-group">
-          <bs-text-field append-icon-outer="user" floating-label outlined>
+          <bs-text-field 
+            append-icon-outer="user" 
+            floating-label 
+            outlined>
             <label>Append Outer</label>
           </bs-text-field>
         </div>
@@ -516,7 +546,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | datalist     | `String`  |         | Target `<datalist>` element **ID**. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
-| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. |
+| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |

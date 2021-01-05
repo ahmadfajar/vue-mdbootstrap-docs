@@ -14,15 +14,17 @@ inside almost any component or html element. **BsIconToggle** utilizes
 <template>
   <div class="my-demo-wrapper">
     <div class="input-group">
-      <input :type="inputType" 
-             class="form-control" 
-             placeholder="Enter password" 
-             aria-label="password">
+      <input 
+        :type="inputType" 
+        class="form-control" 
+        placeholder="Enter password" 
+        aria-label="password">
       <div class="input-group-append">
-        <bs-icon-toggle class="input-group-text" 
-                        icon="eye" 
-                        toggle-icon="eye-slash"
-                        v-model="passwordToggled">
+        <bs-icon-toggle 
+          class="input-group-text" 
+          icon="eye" 
+          toggle-icon="eye-slash"
+          v-model="passwordToggled">
         </bs-icon-toggle>
       </div>
     </div>

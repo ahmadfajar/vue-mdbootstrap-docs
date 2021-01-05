@@ -19,26 +19,30 @@ to define the `width` property and `max-width` property to a desire value.
 ```html
 <template>
   <div class="my-demo-wrapper text-center">
-    <bs-button color="indigo"
-               @click="autoCloseModalVisible = true">
+    <bs-button 
+      color="indigo"
+      @click="autoCloseModalVisible = true">
       Open Dialog
     </bs-button>
     
-    <bs-modal :open.sync="autoCloseModalVisible"
-              title="Dialog Title"
-              max-width="85%">
+    <bs-modal 
+      :open.sync="autoCloseModalVisible"
+      title="Dialog Title"
+      max-width="85%">
       <b>Hello, I am a modal.</b><br>
       You can click outside area or press ESC to close me.
 
       <template v-slot:footer>
-        <bs-button outlined 
-                   color="secondary" 
-                   @click="autoCloseModalVisible = false">
+        <bs-button 
+          outlined 
+          color="secondary" 
+          @click="autoCloseModalVisible = false">
           Cancel
         </bs-button>
-        <bs-button active 
-                   color="primary"
-                   @click="autoCloseModalVisible = false">
+        <bs-button 
+          active 
+          color="primary"
+          @click="autoCloseModalVisible = false">
           OK
         </bs-button>
       </template>
@@ -66,7 +70,7 @@ export default {
 
 :::warning
 `<bs-modal>` doesn't work with `v-model` to show or hide the dialog. To overcome this 
-situation, use `open.sync` property to update the dialog state.
+situation, use `open.sync` property to update the `<bs-modal>` state.
 :::
 
 
@@ -79,28 +83,32 @@ to `false`.
 ```html
 <template>
   <div class="my-demo-wrapper text-center">
-    <bs-button color="indigo"
-               @click="noOverlayVisible = true">
+    <bs-button 
+      color="indigo"
+      @click="noOverlayVisible = true">
       Open Dialog
     </bs-button>
     
-    <bs-modal :open.sync="noOverlayVisible"
-              :overlay="false"
-              title="Without Overlay"
-              width="400"
-              max-width="85%">
+    <bs-modal 
+      :open.sync="noOverlayVisible"
+      :overlay="false"
+      title="Without Overlay"
+      width="400"
+      max-width="85%">
       <b>Hello, I am a modal dialog.</b><br>
       You can press ESC to close me.
 
       <template v-slot:footer>
-        <bs-button outlined 
-                   color="secondary" 
-                   @click="noOverlayVisible = false">
+        <bs-button 
+          outlined 
+          color="secondary" 
+          @click="noOverlayVisible = false">
           Cancel
         </bs-button>
-        <bs-button active 
-                   color="primary"
-                   @click="noOverlayVisible = false">
+        <bs-button 
+          active 
+          color="primary"
+          @click="noOverlayVisible = false">
           OK
         </bs-button>
       </template>
@@ -135,27 +143,31 @@ You can show a modal dialog by setting the `overlay-close` property to `false`.
 ```html
 <template>
   <div class="my-demo-wrapper text-center">
-    <bs-button color="indigo"
-               @click="trueModalVisible = true">
+    <bs-button 
+      color="indigo"
+      @click="trueModalVisible = true">
       Open Dialog
     </bs-button>
     
-    <bs-modal :open.sync="trueModalVisible"
-              :overlay-close="false"
-              title="Modal Dialog"
-              max-width="85%">
+    <bs-modal 
+      :open.sync="trueModalVisible"
+      :overlay-close="false"
+      title="Modal Dialog"
+      max-width="85%">
       <b>Hello, I am a modal dialog.</b><br>
       You can only close me by clicking the button below or press ESC.
 
       <template v-slot:footer>
-        <bs-button outlined 
-                   color="secondary" 
-                   @click="trueModalVisible = false">
+        <bs-button 
+          outlined 
+          color="secondary" 
+          @click="trueModalVisible = false">
           Cancel
         </bs-button>
-        <bs-button active 
-                   color="primary"
-                   @click="trueModalVisible = false">
+        <bs-button 
+          active 
+          color="primary"
+          @click="trueModalVisible = false">
           OK
         </bs-button>
       </template>
@@ -190,16 +202,18 @@ When dialog content become too long, you can make the dialog content scrollable.
 ```html
 <template>
   <div class="my-demo-wrapper text-center">
-    <bs-button color="indigo"
-               @click="scrollableModalVisible = true">
+    <bs-button 
+      color="indigo"
+      @click="scrollableModalVisible = true">
       Open Dialog
     </bs-button>
     
-    <bs-modal :open.sync="scrollableModalVisible"
-              :scrollable="true"
-              title="Long Content Dialog"
-              width="600"
-              max-width="90%">
+    <bs-modal 
+      :open.sync="scrollableModalVisible"
+      :scrollable="true"
+      title="Long Content Dialog"
+      width="600"
+      max-width="90%">
       <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
       <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -220,14 +234,16 @@ When dialog content become too long, you can make the dialog content scrollable.
       <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
       <template v-slot:footer>
-        <bs-button outlined 
-                   color="secondary" 
-                   @click="scrollableModalVisible = false">
+        <bs-button 
+          outlined 
+          color="secondary" 
+          @click="scrollableModalVisible = false">
           Cancel
         </bs-button>
-        <bs-button active 
-                   color="primary"
-                   @click="scrollableModalVisible = false">
+        <bs-button 
+          active 
+          color="primary"
+          @click="scrollableModalVisible = false">
           OK
         </bs-button>
       </template>
@@ -262,11 +278,11 @@ export default {
 
 | Property     | Type     | Default  | Description |
 |--------------|----------|----------|-------------|
-| body-class   | `String`/`Array` |  | Additional css class name for dialog body container. |
+| body-class   | `String`/`Array` |  | Additional CSS class name for dialog body container. |
 | esc-close    | `Boolean` | `true`  | Close modal dialog when **ESC** key is pressed. |
-| footer-class | `String`/`Array` |  | Additional css class name for dialog footer container. |
+| footer-class | `String`/`Array` |  | Additional CSS class name for dialog footer container. |
 | full-page    | `Boolean` | `false` | Show modal dialog in full page mode. |
-| header-class | `String`/`Array` |  | Additional css class name for dialog header container. |
+| header-class | `String`/`Array` |  | Additional CSS class name for dialog header container. |
 | max-width    | `Number`/`String` | | Modal dialog maximum width. |  
 | open         | `Boolean` | `false` | Component state, show or hide. |
 | overlay      | `Boolean` | `true`  | Show backdrop or overlay or not. |

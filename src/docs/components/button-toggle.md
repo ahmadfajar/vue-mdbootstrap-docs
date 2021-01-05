@@ -6,6 +6,11 @@ choices with different approach.
 
 ## Overview
 
+**BsButtonToggle** component mimics the HTML5 `<input>` element. This means that you 
+can add attributes like `readonly`, or `disabled` and it will react to them to give the 
+best experience. You can also use `v-model` directive to create two-way data bindings 
+on the `value` property. This is useful to control or maintain the `value` property.
+
 :::demo
 ```html
 <template>
@@ -18,8 +23,9 @@ choices with different approach.
         Normal State
       </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedDrink" 
-                          :items="drinks">
+        <bs-button-toggle 
+          v-model="selectedDrink" 
+          :items="drinks">
         </bs-button-toggle>
       </div>
     </div>
@@ -28,10 +34,11 @@ choices with different approach.
         Readonly State
       </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedDrink" 
-                          color="indigo" 
-                          :items="drinks" 
-                          readonly>
+        <bs-button-toggle 
+          v-model="selectedDrink" 
+          color="indigo" 
+          :items="drinks" 
+          readonly>
         </bs-button-toggle>
       </div>
     </div>
@@ -40,9 +47,10 @@ choices with different approach.
         Disabled State
       </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedDrink" 
-                          :items="drinks" 
-                          disabled>
+        <bs-button-toggle 
+          v-model="selectedDrink" 
+          :items="drinks" 
+          disabled>
         </bs-button-toggle>
       </div>
     </div>
@@ -78,7 +86,67 @@ export default {
 :::
 
 
+## Multiple Selection
+
+**BsButtonToggle** also support multiple selection mode. Use and define the 
+`multiple` property explicitly to enable multiple selection mode.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-card-content type="subtitle" class="mb-4">
+      What is your favorites drink?
+    </bs-card-content>
+    <div class="row mb-3">
+      <label class="col-md-3 col-xl-2 col-form-label">
+        My favorites are
+      </label>
+      <div class="col-md">
+        <bs-button-toggle 
+          v-model="favoriteDrinks" 
+          :items="drinks" 
+          color="primary" 
+          multiple>
+        </bs-button-toggle>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      drinks: [{
+        value: 'tea',
+        label: 'Tea'
+      }, {
+        value: 'coffee',
+        label: 'Coffee'
+      }, {
+        value: 'beer',
+        label: 'Beer'
+      }],
+      favoriteDrinks: [],
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
 ## Toggle Styles
+
+**BsButtonToggle** comes with four predefined styles. Other than *default* style,
+example below, shows you how to enable *Raised style*, *Outlined style* or *Flat style*.
 
 :::demo
 ```html
@@ -92,10 +160,11 @@ export default {
         Raised style
       </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedWeather" 
-                          color="primary" 
-                          :items="weathers" 
-                          raised>
+        <bs-button-toggle 
+          v-model="selectedWeather" 
+          color="primary" 
+          :items="weathers" 
+          raised>
         </bs-button-toggle>
       </div>
     </div>
@@ -104,20 +173,24 @@ export default {
         Outlined style
       </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedWeather" 
-                          color="indigo" 
-                          :items="weathers" 
-                          outlined>
+        <bs-button-toggle 
+          v-model="selectedWeather" 
+          color="indigo" 
+          :items="weathers" 
+          outlined>
         </bs-button-toggle>
       </div>
     </div>
     <div class="row">
-      <label class="col-md-3 col-xl-2 col-form-label">Flat style</label>
+      <label class="col-md-3 col-xl-2 col-form-label">
+        Flat style
+      </label>
       <div class="col-md">
-        <bs-button-toggle v-model="selectedWeather" 
-                          color="red" 
-                          :items="weathers" 
-                          flat>
+        <bs-button-toggle 
+          v-model="selectedWeather" 
+          color="red" 
+          :items="weathers" 
+          flat>
         </bs-button-toggle>
       </div>
     </div>
@@ -187,14 +260,14 @@ export default {
 
 #### Items Properties
 
-**[1]** Items are collection of button objects and have properties as described below:
+**[1]** Items are collection of button configurations and have properties as described below:
 
 <div class="cmp-property">
 
 | Property  | Type      | Description |
 |-----------|-----------|-------------|
-| value <bs-badge color="danger text-white">required</bs-badge> | `String`/`Number`/`Boolean`/`Array` | The item value. |
-| label <bs-badge color="danger text-white">required</bs-badge> | `String`  | The item label.  |
+| value <bs-badge variant="danger">required</bs-badge> | `String`/`Number`/`Boolean`/`Array` | The item value. |
+| label <bs-badge variant="danger">required</bs-badge> | `String`  | The item label.  |
 | icon      | `String`  | The icon to display inside component. Use any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | iconSize  | `String`  | Render the icon with predefined size, valid values are: `xs`, `sm`, `lg`. |
 | iconFixed | `Boolean` | Render Fontawesome Icon with fixed width. |

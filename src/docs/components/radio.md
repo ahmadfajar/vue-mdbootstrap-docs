@@ -49,7 +49,7 @@ bootstrap css class `form-group` and can be integrated with external validator s
 <template>
   <div class="my-demo-wrapper">
     <bs-radio-group v-model="selectedFavoriteColors" :items="favoriteColors">
-      <label class="col-12">Standalone Checkbox Group</label>
+      <label class="col-12">Standalone Radio Group</label>
     </bs-radio-group>
     <bs-divider class="my-3"></bs-divider>
     <div class="form-group">
@@ -141,7 +141,7 @@ export default {
 :::
 
 :::warning
-Multi columns are closely tied to the bootstrap class `col-lg- *`. Which means if the media query
+Multi columns are closely tied to the bootstrap class `col-lg-*`. Which means if the media query
 matches `@media (min-width: 992px)`, it will be displayed correctly. And if the media query 
 matches `@media (min-width: 768px)`, it will be served in two columns only.
 :::
@@ -255,11 +255,11 @@ export default {
 | color       | `String`  | `'default'` | Sets default color to be applied. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied to the component. |
 | columns     | `Number`  |  | Sets the maximum number of columns to display the radio. When the number of items exceed the number of columns, then the remaining items will be displayed on the next row. |
 | disabled    | `Boolean` | `false`   | Sets default disabled state. |
-| external-validator | `Object` |  | The external validator plugin to be used when validate the field value. |
+| external-validator | `Object` |  | The external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | help-text   | `String`  |  | The help text to display below the field component. |
 | items       | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
 | name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text | `Boolean` | `false` | Keeps the help text visible when the radio group is not focused. |
+| persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the radio group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. |
 | required    | `Boolean` | `false` | Sets default `<input>` element `required` attribute. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean`/`String`/`Number` |  | The value monitored by `v-model` to maintain checked state. |

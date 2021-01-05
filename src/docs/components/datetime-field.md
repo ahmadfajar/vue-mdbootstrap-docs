@@ -90,11 +90,14 @@ to format the displayed datetime.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="fmtValue" 
-                          value-format="YYYY-MM-DD" 
-                          display-format="DD MMMM YYYY" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose a date</label>
+      <bs-date-time-field 
+        v-model="fmtValue" 
+        value-format="YYYY-MM-DD" 
+        display-format="DD MMMM YYYY" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose a date
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -126,10 +129,12 @@ Please refer to [moment](https://momentjs.com/docs/#/displaying/) documentation 
 datetime format.
 :::
 
+
 ## Picker Selection Modes
 
 You can use `view-mode` property to use different DateTime picker, but to get the correct 
-value the `value-format` property must be defined. 
+value the `value-format` property must be defined. Example below, shows you how to enable
+different picker selection mode.
 
 
 ### Date selection mode
@@ -139,11 +144,14 @@ value the `value-format` property must be defined.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickDate" 
-                          value-format="YYYY-MM-DD" 
-                          display-format="DD MMMM YYYY" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose a date</label>
+      <bs-date-time-field 
+        v-model="pickDate" 
+        value-format="YYYY-MM-DD" 
+        display-format="DD MMMM YYYY" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose a date
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -178,11 +186,14 @@ export default {
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickDateTime" 
-                          value-format="YYYY-MM-DD HH:mm:ss" 
-                          display-format="dddd, DD MMM YYYY HH:mm:ss" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose a datetime</label>
+      <bs-date-time-field 
+        v-model="pickDateTime" 
+        value-format="YYYY-MM-DD HH:mm:ss" 
+        display-format="dddd, DD MMM YYYY HH:mm:ss" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose a datetime
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -217,12 +228,15 @@ export default {
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickMonth" 
-                          view-mode="month"
-                          value-format="YYYY-MM" 
-                          display-format="MMMM YYYY" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose month</label>
+      <bs-date-time-field 
+        v-model="pickMonth" 
+        view-mode="month"
+        value-format="YYYY-MM" 
+        display-format="MMMM YYYY" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose month
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -257,11 +271,14 @@ export default {
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickYear" 
-                          view-mode="year"
-                          value-format="YYYY" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose year</label>
+      <bs-date-time-field 
+        v-model="pickYear" 
+        view-mode="year"
+        value-format="YYYY" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose year
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -296,11 +313,14 @@ export default {
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickTime" 
-                          view-mode="time"
-                          value-format="HH:mm:ss" 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose time</label>
+      <bs-date-time-field 
+        v-model="pickTime" 
+        view-mode="time"
+        value-format="HH:mm:ss" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose time
+        </label>
       </bs-date-time-field>
     </div>
     <div class="form-group">
@@ -337,11 +357,14 @@ The DateTime picker can be displayed using hover instead of clicking with the `o
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="date3"
-                          value-format="DD-MM-YYYY" 
-                          open-on-hover 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose a date</label>
+      <bs-date-time-field 
+        v-model="date3"
+        value-format="DD-MM-YYYY" 
+        open-on-hover 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose a date
+        </label>
       </bs-date-time-field>
     </div>
   </div>
@@ -375,11 +398,14 @@ Define `landscape-mode` property explicitly to display DateTime picker in landsc
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-date-time-field v-model="pickDate1" 
-                          value-format="DD-MM-YYYY" 
-                          landscape-mode 
-                          clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Choose a date</label>
+      <bs-date-time-field 
+        v-model="pickDate1" 
+        value-format="DD-MM-YYYY" 
+        landscape-mode 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Choose a date
+        </label>
       </bs-date-time-field>
     </div>
   </div>
@@ -420,19 +446,21 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="date4" 
-                              clear-button 
-                              floating-label>
+          <bs-date-time-field 
+            v-model="date4" 
+            clear-button 
+            floating-label>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="date5" 
-                              placeholder="Placeholder" 
-                              clear-button 
-                              floating-label>
+          <bs-date-time-field 
+            v-model="date5" 
+            placeholder="Placeholder" 
+            clear-button 
+            floating-label>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
@@ -473,21 +501,23 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="filled1" 
-                              clear-button 
-                              floating-label 
-                              filled>
+          <bs-date-time-field 
+            v-model="filled1" 
+            clear-button 
+            floating-label 
+            filled>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="filled2" 
-                              placeholder="Placeholder" 
-                              clear-button 
-                              floating-label 
-                              filled>
+          <bs-date-time-field 
+            v-model="filled2" 
+            placeholder="Placeholder" 
+            clear-button 
+            floating-label 
+            filled>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
@@ -528,21 +558,23 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="outlined1" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="outlined1" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="outlined2" 
-                              placeholder="Placeholder" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="outlined2" 
+            placeholder="Placeholder" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
@@ -583,19 +615,23 @@ This style will remove the borders and create flat appearance. It is useful when
     <div class="row">
       <div class="col-lg-8">
         <div class="form-group">
-          <bs-date-time-field v-model="flat1" 
-                              clear-button 
-                              flat>
-            <label class="col-md-3 col-form-label">Choose a date :</label>
+          <bs-date-time-field 
+            v-model="flat1" 
+            clear-button 
+            flat>
+            <label class="col-md-3 col-form-label">
+              Choose a date :
+            </label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="form-group">
-          <bs-date-time-field v-model="flat2" 
-                              floating-label 
-                              flat 
-                              readonly>
+          <bs-date-time-field 
+            v-model="flat2" 
+            floating-label 
+            flat 
+            readonly>
             <label>Field Label</label>
           </bs-date-time-field>
         </div>
@@ -636,46 +672,23 @@ Using `persistent-help-text` keeps the help text visible when the datetime field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field :persistent-help-text="false"
-                              v-model="expiry1" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label>
+          <bs-date-time-field 
+            v-model="expiry1" 
+            :persistent-help-text="false"
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label>
             <label>Product Expiry</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="expiry2" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label>
-            <label>Product Expiry</label>
-          </bs-date-time-field>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <bs-date-time-field :persistent-help-text="false"
-                              v-model="expiryFilled1" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label 
-                              filled>
-            <label>Product Expiry</label>
-          </bs-date-time-field>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <bs-date-time-field v-model="expiryFilled2" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label 
-                              filled>
+          <bs-date-time-field 
+            v-model="expiry2" 
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label>
             <label>Product Expiry</label>
           </bs-date-time-field>
         </div>
@@ -684,23 +697,52 @@ Using `persistent-help-text` keeps the help text visible when the datetime field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field :persistent-help-text="false"
-                              v-model="expiryOutlined1" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="expiryFilled1" 
+            :persistent-help-text="false"
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label 
+            filled>
             <label>Product Expiry</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="expiryOutlined2" 
-                              help-text="Choose product expiry date" 
-                              clear-button
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="expiryFilled2" 
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label 
+            filled>
+            <label>Product Expiry</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="expiryOutlined1" 
+            :persistent-help-text="false"
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label 
+            outlined>
+            <label>Product Expiry</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="expiryOutlined2" 
+            help-text="Choose product expiry date" 
+            clear-button
+            floating-label 
+            outlined>
             <label>Product Expiry</label>
           </bs-date-time-field>
         </div>
@@ -745,76 +787,84 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate1" 
-                              prepend-icon="user" 
-                              clear-button
-                              floating-label 
-                              filled>
+          <bs-date-time-field 
+            v-model="bornDate1" 
+            prepend-icon="user" 
+            clear-button
+            floating-label 
+            filled>
             <label>Prepend</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate2" 
-                              prepend-icon-outer="user" 
-                              clear-button 
-                              filled 
-                              floating-label>
+          <bs-date-time-field 
+            v-model="bornDate2" 
+            prepend-icon-outer="user" 
+            clear-button 
+            filled 
+            floating-label>
             <label>Prepend Outer</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate3" 
-                              append-icon="calendar" 
-                              clear-button 
-                              filled 
-                              floating-label>
+          <bs-date-time-field 
+            v-model="bornDate3" 
+            append-icon="calendar" 
+            clear-button 
+            filled 
+            floating-label>
             <label>Append</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate4" 
-                              append-icon-outer="user" 
-                              clear-button 
-                              filled 
-                              floating-label>
+          <bs-date-time-field 
+            v-model="bornDate4" 
+            append-icon-outer="user" 
+            clear-button 
+            filled 
+            floating-label>
             <label>Append Outer</label>
           </bs-date-time-field>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate1" 
-                              prepend-icon="user" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="bornDate1" 
+            prepend-icon="user" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Prepend</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate2" 
-                              prepend-icon-outer="user" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="bornDate2" 
+            prepend-icon-outer="user" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Prepend Outer</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate3" 
-                              append-icon="calendar" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="bornDate3" 
+            append-icon="calendar" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Append</label>
           </bs-date-time-field>
         </div>
         <div class="form-group">
-          <bs-date-time-field v-model="bornDate4" 
-                              append-icon-outer="user" 
-                              clear-button 
-                              floating-label 
-                              outlined>
+          <bs-date-time-field 
+            v-model="bornDate4" 
+            append-icon-outer="user" 
+            clear-button 
+            floating-label 
+            outlined>
             <label>Append Outer</label>
           </bs-date-time-field>
         </div>
@@ -860,7 +910,7 @@ export default {
 | color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | display-format     | `String`|     | The display date format. See [moment](https://momentjs.com/docs/#/displaying/) for valid format. If not defined then it will takes from `value-format` property. |
-| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. |
+| external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | first-day-of-week | `Number`/`String`  | `0` | Default first day of the week. |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |

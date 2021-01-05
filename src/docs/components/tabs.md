@@ -1,11 +1,11 @@
 :::lead
-Tab component is used for hiding content behind a selectable item. This can also be 
+Tab component is used for hiding content behind a selectable item. They can be 
 used as a pseudo-navigation for a page, where the tabs are links and the tab-items 
 are the content.
 :::
 
 
-## Basic Example
+## Basic Usage
 
 :::demo
 ```html
@@ -112,9 +112,10 @@ Bootstrap Pill style.
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-tabs v-model="activeTab" 
-               variant="pills" 
-               inner-class="card-header">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="pills" 
+        inner-class="card-header">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -163,23 +164,28 @@ to have an appropriate tabs color.
   <div class="my-demo-wrapper">
     <bs-card shadow>
       <bs-appbar class="bg-pink darken-2 rounded-top">
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
           <bs-icon icon="menu_bars" size="24"></bs-icon>
         </bs-button>
-        <bs-appbar-title title="Page Title" 
-                         class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Page Title" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey"
-                   mode="icon"
-                   flat>
+        <bs-button 
+          color="light-grey"
+          mode="icon"
+          flat>
           <bs-icon icon="MoreVert" size="24"></bs-icon>
         </bs-button>
       </bs-appbar>
-      <bs-tabs v-model="activeTab" 
-               variant="material" 
-               color="pink darken-2">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="material" 
+        color="pink darken-2">
         <bs-tab label="Home">
           {{ homeTab }}
         </bs-tab>
@@ -232,23 +238,28 @@ to have an appropriate tabs color.
   <div class="my-demo-wrapper">
     <bs-card shadow>
       <bs-appbar class="bg-indigo rounded-top">
-        <bs-button mode="icon"
-                   color="light-grey"
-                   flat>
+        <bs-button 
+          mode="icon"
+          color="light-grey"
+          flat>
           <bs-icon icon="menu_bars" size="24"></bs-icon>
         </bs-button>
-        <bs-appbar-title title="Page Title" 
-                         class="text-white"></bs-appbar-title>
+        <bs-appbar-title 
+          title="Page Title" 
+          class="text-white">
+        </bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey"
-                   mode="icon"
-                   flat>
+        <bs-button 
+          color="light-grey"
+          mode="icon"
+          flat>
           <bs-icon icon="MoreVert" size="24"></bs-icon>
         </bs-button>
       </bs-appbar>
-      <bs-tabs v-model="activeTab" 
-               variant="modern" 
-               color="indigo">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="modern" 
+        color="indigo">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -301,10 +312,11 @@ the `alignment` property value.
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-tabs v-model="activeTab" 
-               variant="pills" 
-               alignment="center"
-               tab-position="top">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="pills" 
+        alignment="center"
+        tab-position="top">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -352,9 +364,10 @@ the `alignment` property value.
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-tabs v-model="activeTab" 
-               inner-class="card-footer"
-               tab-position="bottom">
+      <bs-tabs 
+        v-model="activeTab" 
+        inner-class="card-footer"
+        tab-position="bottom">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -401,10 +414,11 @@ to `'left'`.
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-tabs v-model="activeTab" 
-               variant="modern"
-               color="indigo"
-               tab-position="left">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="modern"
+        color="indigo"
+        tab-position="left">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -451,10 +465,11 @@ to `'right'`.
 <template>
   <div class="my-demo-wrapper">
     <bs-card shadow>
-      <bs-tabs v-model="activeTab" 
-               variant="modern"
-               color="indigo"
-               tab-position="right">
+      <bs-tabs 
+        v-model="activeTab" 
+        variant="modern"
+        color="indigo"
+        tab-position="right">
         <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
@@ -500,42 +515,46 @@ the icon size. If you set this property, each tab item will have the same icon p
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-tabs v-model="activeTab"
-             variant="material"
-             alignment="center"
-             color="deep-purple"
-             icon-position="top"
-             icon-size="lg">
+    <bs-tabs 
+      v-model="activeTab"
+      variant="material"
+      alignment="center"
+      color="deep-purple"
+      icon-position="top"
+      icon-size="lg">
       <bs-tab label="Home" icon="home"></bs-tab>
       <bs-tab label="Profile" icon="user"></bs-tab>
       <bs-tab label="Contact" icon="address-card"></bs-tab>
     </bs-tabs>
-    <bs-tabs v-model="activeTab"
-             variant="material"
-             alignment="center"
-             color="indigo"
-             icon-position="bottom"
-             icon-size="lg">
+    <bs-tabs 
+      v-model="activeTab"
+      variant="material"
+      alignment="center"
+      color="indigo"
+      icon-position="bottom"
+      icon-size="lg">
       <bs-tab label="Home" icon="home"></bs-tab>
       <bs-tab label="Profile" icon="user"></bs-tab>
       <bs-tab label="Contact" icon="address-card"></bs-tab>
     </bs-tabs>
-    <bs-tabs v-model="activeTab"
-             variant="modern"
-             alignment="center"
-             color="teal"
-             icon-position="left"
-             icon-size="lg">
+    <bs-tabs 
+      v-model="activeTab"
+      variant="modern"
+      alignment="center"
+      color="teal"
+      icon-position="left"
+      icon-size="lg">
       <bs-tab label="Home" icon="home"></bs-tab>
       <bs-tab label="Profile" icon="user"></bs-tab>
       <bs-tab label="Contact" icon="address-card"></bs-tab>
     </bs-tabs>
-    <bs-tabs v-model="activeTab"
-             variant="modern"
-             color="blue-green"
-             alignment="center"
-             icon-position="right"
-             icon-size="lg">
+    <bs-tabs 
+      v-model="activeTab"
+      variant="modern"
+      color="blue-green"
+      alignment="center"
+      icon-position="right"
+      icon-size="lg">
       <bs-tab label="Home" icon="home"></bs-tab>
       <bs-tab label="Profile" icon="user"></bs-tab>
       <bs-tab label="Contact" icon="address-card"></bs-tab>
@@ -571,11 +590,12 @@ The tab items can also display icon only. To achieve this style, do not sets the
 ```html
 <template>
   <div class="my-demo-wrapper">
-    <bs-tabs v-model="activeTab"
-             variant="modern"
-             alignment="center"
-             color="deep-purple"
-             icon-size="2x">
+    <bs-tabs 
+      v-model="activeTab"
+      variant="modern"
+      alignment="center"
+      color="deep-purple"
+      icon-size="2x">
       <bs-tab icon="home"></bs-tab>
       <bs-tab icon="user"></bs-tab>
       <bs-tab icon="address-card"></bs-tab>
@@ -606,7 +626,7 @@ export default {
 
 ### BsTabs - `<bs-tabs>`
 
-The Tabs container component.
+The container for the tabs.
 
 #### Properties
 
@@ -616,13 +636,13 @@ The Tabs container component.
 |-----------|----------|---------|-------------|
 | alignment | `String` | `'left'` | Tabs alignment. Valid values: `left`, `right`, `center`, `justified`. |
 | color     | `String` |  | The tabs color style for tabs variant: `modern` and `material`. |
-| content-class | `String` |  | Css class name for tab content. |
+| content-class | `String` |  | CSS class name for tab content. |
 | content-transition | `String` | `'fade'` | Tab content display animation transition. Valid values: `fade`, `slide-fade`, `slide-fade-reverse`, `popover`. |
 | flex      | `Boolean` | `false` | Create tabs variant of `tabs` or `pills` with flex styles. |
 | icon-position | `String` | `'left'` | TabItem's icon position. Valid values: `left`, `right`, `top`, `bottom`. |
 | icon-size   | `String` |  | TabItem icon size. Valid values are: `xs`, `sm`, `lg`, `1x`, `2x`, `3x`, `4x`. |
-| inner-class | `String` |  | Css class name for tabs item's container. |
-| tab-class   | `String` |  | Css class name for tab item. |  
+| inner-class | `String` |  | CSS class name for tabs item's container. |
+| tab-class   | `String` |  | CSS class name for tab items. |  
 | tab-position | `String` | `'top'` | Tabs position. Valid values: `left`, `right`, `top`, `bottom`. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `String`/`Number`/`Object` |  | The value maintained by `v-model`. |
 | variant | `String` | `'tabs'` | Tabs style variant. Valid values: `tabs`, `pills`, `material`, `modern`. |
@@ -655,7 +675,8 @@ The Tabs container component.
 
 ### BsTab - `<bs-tab>`
 
-The Tab item component. A tab item must at least has `icon` or `label` property defined.
+The component for creating the tab items and tab contents. A tab item must at least 
+has `icon` or `label` property defined.
 
 #### Properties
 
