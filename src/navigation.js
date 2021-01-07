@@ -145,6 +145,10 @@ export const menuNavs = [{
         route: "/components/progress-control",
         view: viewResolver("components/progress"),
     }, {
+        title: "Ripple",
+        route: "/components/ripple",
+        view: viewResolver("components/ripple"),
+    }, {
         title: "Subheader",
         route: "/components/subheader",
         view: viewResolver("components/subheader"),

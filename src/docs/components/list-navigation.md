@@ -1,6 +1,6 @@
 :::lead
 **BsListNavItem** is a component used for displaying a series of item and mainly used for navigation.
-It can contain an icon, nested items, and provide a consistent styling for organizing the items. But
+It can contain an icon, nested items, and provides a consistent styling for organizing the items. But
 doesn't have the flexibility like **BsListTile**.
 :::
 
@@ -12,7 +12,7 @@ doesn't have the flexibility like **BsListTile**.
 The `<bs-list-nav>` is a component to create the navigation container and `<bs-list-nav-item>` is used 
 to create the navigation menus. The `<bs-list-nav>` needs to be placed inside `<bs-list-view>`, then
 use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus created by 
-`<bs-list-nav-item>` is consistent and meets the *Material Design specifications*.
+`<bs-list-nav-item>` has consistent styling and meets the *Material Design specifications*.
 
 :::demo
 ```html

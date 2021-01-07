@@ -3,7 +3,7 @@
 content within lists or page layouts.
 :::
 
-## Example
+## Basic Usage
 
 :::demo
 ```html

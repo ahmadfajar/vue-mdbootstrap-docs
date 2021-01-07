@@ -34,18 +34,18 @@
     can be used to create customized date picker inputs.
   </a>
   <a href="#/components/divider" class="list-group-item list-group-item-action">
-    <b>Divider</b> - A lightweight component which is primarily used to manage and separate content within 
-    lists or page layouts.
+    <b>Divider</b> - Small and lightweight component which is primarily used to manage and separate 
+    content within lists or page layouts.
   </a>
   <a href="#/components/grid" class="list-group-item list-group-item-action">
     <b>Grid</b> - A component for displaying tabular data. Features include pagination, sorting, searching, 
     filtering and row selection. <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/icon" class="list-group-item list-group-item-action">
-    <b>Icon</b> - A lightweight component which can be used inside almost any component.
+    <b>Icon</b> - Small and lightweight component which can be used inside almost any component.
   </a>
   <a href="#/components/icon-toggle" class="list-group-item list-group-item-action">
-    <b>Icon Toggle</b> - A lightweight component which is used to toggle two different icon. It can be 
+    <b>Icon Toggle</b> - Small and lightweight component which is used to toggle two different icon. It can be 
     used inside almost any component or html element. <bs-badge>v1.1.0</bs-badge>
   </a>
   <a href="#/components/image-holder" class="list-group-item list-group-item-action">
@@ -98,10 +98,20 @@
     <b>Lightbox</b> - A modal image gallery component. It works with a series of images and includes support 
     for previous/next controls, indicators and toolbar buttons.
   </a>
-  <a href="#/components/lists/tile" class="list-group-item list-group-item-action">
-    <b>List Tile</b> - A component used to display information. It can contain an avatar, content, actions, 
-    subheaders and much more. <bs-badge color="warning">updated</bs-badge>
-  </a>
+  <div class="list-group-item">
+    <div class="h5 mb-3">Lists:</div>
+    <div class="list-group">
+      <a href="#/components/lists/tile" class="list-group-item list-group-item-action">
+        <b>List Tile</b> - A component used to display information. It can contain an avatar, content, actions, 
+        subheaders and much more. <bs-badge color="warning">updated</bs-badge>
+      </a>
+      <a href="#/components/lists/navigation" class="list-group-item list-group-item-action">
+        <b>Navigation</b> - A component used for displaying a series of item and mainly used for navigation. It 
+        can contain an icon, nested items, and provides a consistent styling for organizing the items.
+        <bs-badge>v1.1.0</bs-badge>
+      </a>
+    </div>
+  </div>
   <a href="#/components/menu" class="list-group-item list-group-item-action">
     <b>Menu</b> - A popup container which are typically used for displaying lists of links and actions in 
     a dropdown menu format. <bs-badge color="warning">updated</bs-badge>
@@ -112,17 +122,16 @@
     also contain more complex UI elements that require the focus of the user. 
     <bs-badge color="warning">updated</bs-badge>
   </a>
-  <a href="#/components/lists/navigation" class="list-group-item list-group-item-action">
-    <b>Navigation</b> - A component used for displaying a series of item and mainly used for navigation. It 
-    can contain an icon, nested items, and provide a consistent styling for organizing the items.
-    <bs-badge>v1.1.0</bs-badge>
-  </a>
   <a href="#/components/progress-control" class="list-group-item list-group-item-action">
     <b>Progress Control</b> - A component which are typically used for displaying simple progress 
     bars, or to show the data loading progress. <bs-badge color="warning">updated</bs-badge>
   </a>
+  <a href="#/components/ripple" class="list-group-item list-group-item-action">
+    <b>Ripple</b> - Small and lightweight component which is used to show ripple animation when 
+    <code class="text-pink">click</code> or <code class="text-pink">touch</code> event occured.
+  </a>
   <a href="#/components/subheader" class="list-group-item list-group-item-action">
-    <b>Subheader</b> - A lightweight component which is primarily used to manage and separate content 
+    <b>Subheader</b> - Small and lightweight component which is primarily used to manage and separate content 
     within lists or page layouts.
   </a>
   <a href="#/components/tabs" class="list-group-item list-group-item-action">

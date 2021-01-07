@@ -7,7 +7,7 @@ inside almost any component or html element. **BsIconToggle** utilizes
 *Available in Vue MDBootstrap since v1.1.0*
 
 
-## Example
+## Basic Usage
 
 :::demo
 ```html

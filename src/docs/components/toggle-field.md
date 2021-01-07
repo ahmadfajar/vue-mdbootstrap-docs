@@ -309,8 +309,9 @@ export default {
 
 ## Used With Other Input Controls
 
-`<bs-button-toggle-field>` main purpose is to be used as a form element. Example below, 
-shows you how to mixed `<bs-button-toggle-field>` with other form elements.
+`<bs-button-toggle-field>` main purpose is to be used as a form element. Additionally, they can be
+integrated with external validator such as [vuelidate](https://www.npmjs.com/package/vuelidate).
+Example below, shows you how to mixed `<bs-button-toggle-field>` with other form elements.
 
 :::demo
 ```html
