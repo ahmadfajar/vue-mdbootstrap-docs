@@ -326,7 +326,7 @@ This can be useful when there are multiple interactive items within the `<bs-men
                 </bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>
-                    John Doe
+                    <b>John Doe</b>
                   </bs-list-tile-title>
                   <bs-list-tile-subtitle>
                     Going further more, etc...
@@ -390,7 +390,7 @@ This can be useful when there are multiple interactive items within the `<bs-men
                 </bs-list-tile-leading>
                 <bs-list-tile-content>
                   <bs-list-tile-title>
-                    Kitty Doe
+                    <b>Kitty Doe</b>
                   </bs-list-tile-title>
                   <bs-list-tile-subtitle>
                     Going further from an Avatar

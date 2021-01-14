@@ -20,6 +20,10 @@ export const menuNavs = [{
         route: "/components/alert",
         view: viewResolver("components/alert"),
     }, {
+        title: "Appbar",
+        route: "/components/appbar",
+        view: viewResolver("components/appbar"),
+    }, {
         title: "Avatar",
         route: "/components/avatar",
         view: viewResolver("components/avatar"),
@@ -141,6 +145,10 @@ export const menuNavs = [{
         route: "/components/modal",
         view: viewResolver("components/modal"),
     }, {
+        title: "Popover",
+        route: "/components/popover",
+        view: viewResolver("components/popover"),
+    }, {
         title: "Progress Control",
         route: "/components/progress-control",
         view: viewResolver("components/progress"),
@@ -192,6 +200,10 @@ export const menuNavs = [{
         title: "Axios Plugin",
         route: "/reference/axios-plugin",
         view: viewResolver("reference/axios-plugin"),
+    }, {
+        title: "Changelog",
+        route: "/reference/changelog",
+        view: viewResolver("reference/changelog"),
     }, {
         title: "Color Variants",
         route: "/reference/colors",

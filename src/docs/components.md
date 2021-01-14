@@ -8,9 +8,13 @@
     <b>Alert</b> - A component that provides contextual feedback messages for typical user actions with 
     the handful of available and flexible alert messages.
   </a>
+  <a href="#/components/appbar" class="list-group-item list-group-item-action">
+    <b>Appbar</b> - A lightweight component which is placed at the top of the page as a container for page 
+    title, logo, menus, and action buttons. <bs-badge color="warning">updated</bs-badge>
+  </a>
   <a href="#/components/avatar" class="list-group-item list-group-item-action">
     <b>Avatar</b> - A component which are typically used to display a user profile as a picture, icon, 
-    or short text. <bs-badge color="warning">updated</bs-badge>
+    or short text. 
   </a>
   <a href="#/components/badge" class="list-group-item list-group-item-action">
     <b>Badge</b> - A lightweight component which can be used for adaptive tagging such as adding context 
@@ -18,16 +22,15 @@
   </a>
   <a href="#/components/button" class="list-group-item list-group-item-action">
     <b>Button</b> - A component for actions in form, dialog, and more. Includes support for a handful of 
-    color variations, sizes, states, and more. <bs-badge color="warning">updated</bs-badge>
+    color variations, sizes, states, and more. 
   </a>
   <a href="#/components/button-toggle" class="list-group-item list-group-item-action">
     <b>Button Toggle</b> - A group of buttons with toggle capabilities. It is primarily used to visualize 
-    choices with different approach. <bs-badge color="warning">updated</bs-badge>
+    choices with different approach.
   </a>
   <a href="#/components/card" class="list-group-item list-group-item-action">
     <b>Card</b> - A flexible and extensible content container. It includes sub-component for headers, 
     footers, and content with variety background colors, and powerful display options. 
-    <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/datetime-picker" class="list-group-item list-group-item-action">
     <b>DateTime Picker</b> - A component that generates a calendar style date selection widget, which 
@@ -39,7 +42,7 @@
   </a>
   <a href="#/components/grid" class="list-group-item list-group-item-action">
     <b>Grid</b> - A component for displaying tabular data. Features include pagination, sorting, searching, 
-    filtering and row selection. <bs-badge color="warning">updated</bs-badge>
+    filtering and row selection.
   </a>
   <a href="#/components/icon" class="list-group-item list-group-item-action">
     <b>Icon</b> - Small and lightweight component which can be used inside almost any component.
@@ -73,15 +76,13 @@
       </a>
       <a href="#/components/input/text-field" class="list-group-item list-group-item-action">
         <b>Text Field</b> - A component which is used for collecting user provided information. 
-        <bs-badge color="warning">updated</bs-badge>
       </a>
       <a href="#/components/input/text-area" class="list-group-item list-group-item-action">
         <b>TextArea Field</b> - A component which is used for collecting large amounts of textual data. 
-        <bs-badge color="warning">updated</bs-badge>
       </a>
       <a href="#/components/input/datetime-field" class="list-group-item list-group-item-action">
         <b>DateTime Field</b> - A fully featured date selection component which lets users select a date, 
-        time, month, year, or datetime. <bs-badge color="warning">updated</bs-badge>
+        time, month, year, or datetime. 
       </a>
       <a href="#/components/input/search-field" class="list-group-item list-group-item-action">
         <b>Search Field</b> - A standalone input field component for collecting search 
@@ -103,7 +104,7 @@
     <div class="list-group">
       <a href="#/components/lists/tile" class="list-group-item list-group-item-action">
         <b>List Tile</b> - A component used to display information. It can contain an avatar, content, actions, 
-        subheaders and much more. <bs-badge color="warning">updated</bs-badge>
+        subheaders and much more. 
       </a>
       <a href="#/components/lists/navigation" class="list-group-item list-group-item-action">
         <b>Navigation</b> - A component used for displaying a series of item and mainly used for navigation. It 
@@ -114,21 +115,25 @@
   </div>
   <a href="#/components/menu" class="list-group-item list-group-item-action">
     <b>Menu</b> - A popup container which are typically used for displaying lists of links and actions in 
-    a dropdown menu format. <bs-badge color="warning">updated</bs-badge>
+    a dropdown menu format. 
   </a>
   <a href="#/components/modal" class="list-group-item list-group-item-action">
     <b>Modal</b> - A popup dialog component that brings information to the user. It also provides actions 
     through the action buttons to prompt the user for input or to ask for a decision. The component can 
     also contain more complex UI elements that require the focus of the user. 
+  </a>
+  <a href="#/components/popover" class="list-group-item list-group-item-action">
+    <b>BsPopover</b> - A lightweight component which is used as a popup container. 
     <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/progress-control" class="list-group-item list-group-item-action">
     <b>Progress Control</b> - A component which are typically used for displaying simple progress 
-    bars, or to show the data loading progress. <bs-badge color="warning">updated</bs-badge>
+    bars, or to show the data loading progress. 
   </a>
   <a href="#/components/ripple" class="list-group-item list-group-item-action">
     <b>Ripple</b> - Small and lightweight component which is used to show ripple animation when 
-    <code class="text-pink">click</code> or <code class="text-pink">touch</code> event occured.
+    <code class="text-pink">click</code> or <code class="text-pink">touch</code> event occured. 
+    <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/subheader" class="list-group-item list-group-item-action">
     <b>Subheader</b> - Small and lightweight component which is primarily used to manage and separate content 
