@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ## v1.1.4
 
-Released: January XX, 2021
+Released: January 31, 2021
 
 ### Features v1.1.4
 

@@ -4,7 +4,7 @@ inside almost any component or html element. **BsIconToggle** utilizes
 [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) component to display the icon.
 :::
 
-*Available in Vue MDBootstrap since v1.1.0*
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 
 ## Basic Usage

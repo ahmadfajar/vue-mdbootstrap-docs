@@ -268,8 +268,8 @@ export default {
 | Property     | Type      | Default  | Description |
 |--------------|-----------|----------|-------------|
 | esc-close    | `Boolean` | `true`  | Close Lightbox when **ESC** key is pressed. |  
-| image-class  | `String`/`Array` |  | Additional css class name for active image. |
-| image-styles | `Object`  |  | Additional css styles for active image. |
+| image-class  | `String`/`Array` |  | Additional css class name for active image. <bs-badge>v1.1.0</bs-badge> |
+| image-styles | `Object`  |  | Additional css styles for active image. <bs-badge>v1.1.0</bs-badge> |
 | items        | `Object[]`|  | Lightbox source dataset. |
 | open         | `Boolean` | `false` | Lightbox state, show or hide. |
 | overlay      | `Boolean` | `true`  | Show backdrop or overlay or not. |

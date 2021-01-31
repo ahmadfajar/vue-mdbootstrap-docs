@@ -257,6 +257,8 @@ Google Material Design spec.
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
 
+*Available in Vue MDBootstrap since `v1.1.0`*
+
 :::demo
 ```html
 <template>
@@ -548,14 +550,14 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | auto-grow    | `Boolean` | `false` | Enable/disable `<textarea>` element to auto grow. |
 | autocomplete | `Boolean` | `false` | Sets browsers **autocomplete** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus area when document is loaded. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<textarea>` element. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the area value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
-| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-areas) spec. |
+| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-areas) spec. <bs-badge>v1.1.0</bs-badge> |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating area label. See [Google Material Design](https://material.io/components/text-areas) spec. |
 | help-text   | `String`  |         | The help text to display below the area component. |
@@ -566,7 +568,7 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
 | persistent-help-text | `Boolean`  | `true` | Keeps help text visible when the component is not focused. |
 | placeholder  | `String`  |        | Sets the area placeholder. |
 | prepend-icon | `String`  |        | Sets icon to display on inner left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| prepend-icon-outer | `String` |   | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| prepend-icon-outer | `String` |   | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<textarea>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<textarea>` element `required` attribute. |
 | row-height | `Number`/`String` |  | Sets `<textarea>` height in pixel. |
@@ -599,10 +601,10 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
 |-------------|--------------|
 | default     | Contents for area label. |
 | appendIcon  | Contents for custom icon on inner right side. |
-| appendIconOuter  | Contents for custom icon on outer right side. |
+| appendIconOuter  | Contents for custom icon on outer right side. <bs-badge>v1.1.0</bs-badge> |
 | helpText         | Contents for custom help text. |
 | prependIcon      | Contents for custom icon on inner left side. |
-| prependIconOuter | Contents for custom icon on outer left side. |
+| prependIconOuter | Contents for custom icon on outer left side. <bs-badge>v1.1.0</bs-badge> |
 
 </div>
 

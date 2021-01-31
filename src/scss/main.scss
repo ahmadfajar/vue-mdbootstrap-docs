@@ -87,7 +87,7 @@
         padding-left: 1.5rem;
     }
 
-    > *:not(.cmp-property):not(.hljs):not(.demo-block):not(.refs-api) {
+    > *:not(.cmp-property):not(.hljs):not(.demo-block):not(.refs-api):not(h2):not(h3):not(h4) {
         code {
             @include border-radius(4px);
             color:#880e4f;

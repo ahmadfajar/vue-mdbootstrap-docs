@@ -131,7 +131,7 @@ export default {
 | label-class | `String`/`Array` |  | Additional css class for the text label. |
 | label-position | `String` | `'right'` | The switch text label position, valid values are: `left`, `right`. |
 | name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |
-| readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
+| readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | true-value  | `Boolean` | `true`  | Sets value for truthy state. |
 | value       | `Boolean`/`String`/`Number`/`Object` |  | The `<input>` element `value` attribute. |

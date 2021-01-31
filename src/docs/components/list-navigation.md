@@ -4,7 +4,7 @@ It can contain an icon, nested items, and provides a consistent styling for orga
 doesn't have the flexibility like **BsListTile**.
 :::
 
-*Available in Vue MDBootstrap since v1.1.0*
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 
 ## Overview

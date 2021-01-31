@@ -831,7 +831,7 @@ The component for registering Grid columns and to render the column header.
 | Property    | Type      | Default | Description |
 |-------------|-----------|---------|-------------|
 | aggregate   | `String`/`Function` |  | Aggregate function to pass to the column footer. When `String` is passed, valid values are: `sum`, `avg`. |
-| cell-data   | `Boolean` | `true` | Render this column in the Grid rows. |
+| cell-data   | `Boolean` | `true` | Render this column in the Grid rows. <bs-badge>v1.1.0</bs-badge> |
 | column-cls  | `String`  |  | Column css class name. |
 | data-align  | `String`  |  | Cell data alignment, valid values: `left`, `right`, `center`, and `justify`. |
 | data-style  | `Object`  |  | Cell data css styles. |
@@ -845,7 +845,7 @@ The component for registering Grid columns and to render the column header.
 | header-style | `Object` |  | Column header css styles. |
 | label     | `String` |  | Column header label. |
 | min-width | `Number`/`String` | `100` | Sets the column minimum width. |
-| order     | `Number`/`String`  |  | Grid rows column order. |
+| order     | `Number`/`String`  |  | Grid rows column order. <bs-badge>v1.1.0</bs-badge> |
 | row-numbering | `Boolean` | `false`  | Render this column as Grid row numbering. |  
 | sortable   | `Boolean` | `true` | Enable or disable column sorter. |
 | text-align | `String`  |  | Column header and cell data alignment, valid values: `left`, `right`, `center`, and `justify`. |

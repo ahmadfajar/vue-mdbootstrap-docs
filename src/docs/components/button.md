@@ -185,6 +185,8 @@ to enable another styles.
 ```
 :::
 
+*Available in Vue MDBootstrap since `v1.1.0`*
+
 ### Pill style
 
 :::demo
@@ -212,6 +214,8 @@ to enable another styles.
 </style>
 ```
 :::
+
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 ### Transparent style
 
@@ -662,10 +666,10 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/button
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | mode     | `String`  | `'default'` | Create specific button style, valid values are: `default`, `icon`, `floating` |
 | outlined | `Boolean` | `false` | Create button with outlined style or not. |
-| pill     | `Boolean` | `false` | Create button with rounded-pill style or not. |
+| pill     | `Boolean` | `false` | Create button with rounded-pill style or not. <bs-badge>v1.1.0</bs-badge> |
 | raised   | `Boolean` | `false` | Create button with raised style or not. |
 | ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. |
-| rounded  | `Boolean` | `false` | Create button with rounded style or not. |
+| rounded  | `Boolean` | `false` | Create button with rounded style or not. <bs-badge>v1.1.0</bs-badge> |
 | size     | `String`  |   | Create button with predefined size, valid values are: `xs`, `sm`, `lg`. |
 | transparent | `Boolean`  | `false` | Create button with transparent style or not. |
 | type     | `String`  | `'button'`  | The value to set to the button's `type` attribute. Valid values are: `button`, `submit`, `reset` |

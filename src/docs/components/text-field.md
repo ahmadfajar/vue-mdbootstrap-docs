@@ -103,6 +103,8 @@ an **ID** to the datalist tag, the list can be references from a text field by d
 `datalist` property. This give text field the behavior of a combobox or auto-complete, allowing 
 existing values to be chosen, or new values to be entered.
 
+*Available in Vue MDBootstrap since `v1.1.0`*
+
 :::demo
 ```html
 <template>
@@ -231,6 +233,8 @@ Google Material Design spec.
 
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
+
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 :::demo
 ```html
@@ -540,14 +544,14 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | autocomplete | `Boolean`/`String` | `false` | Sets browsers **autocomplete** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when document is loaded. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
-| datalist     | `String`  |         | Target `<datalist>` element **ID**. |
+| datalist     | `String`  |         | Target `<datalist>` element **ID**. <bs-badge>v1.1.0</bs-badge> |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
-| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
+| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. <bs-badge>v1.1.0</bs-badge> |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | help-text   | `String`  |          | The help text to display below the field component. |
@@ -560,7 +564,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | placeholder  | `String`  |       | Sets the field placeholder. |
 | prepend-icon | `String`  |       | Sets icon to display on inner left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | type        | `String`  | `'text'`| Sets `<input>` element `type` attribute. Valid values are: `text`, `password`, `email`, `url`, `tel`, `range`. |
@@ -592,10 +596,10 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 |-------------|--------------|
 | default     | Contents for field label. |
 | appendIcon  | Contents for custom icon on inner right side. |
-| appendIconOuter  | Contents for custom icon on outer right side. |
+| appendIconOuter  | Contents for custom icon on outer right side. <bs-badge>v1.1.0</bs-badge> |
 | helpText         | Contents for custom help text. |
 | prependIcon      | Contents for custom icon on inner left side. |
-| prependIconOuter | Contents for custom icon on outer left side. |
+| prependIconOuter | Contents for custom icon on outer left side. <bs-badge>v1.1.0</bs-badge> |
 
 </div>
 

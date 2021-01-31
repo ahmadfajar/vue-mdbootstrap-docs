@@ -607,6 +607,8 @@ export default {
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
 
+*Available in Vue MDBootstrap since `v1.1.0`*
+
 :::demo
 ```html
 <template>
@@ -1104,7 +1106,7 @@ export default {
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| append-icon-outer     | `String` | | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| append-icon-outer     | `String` | | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | check-option-color    | `String` | `'purple'` | Sets the checkbox color for ListBox options. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied. |
 | check-option-position | `String` | `'left'`   | Sets the checkbox position for ListBox options. Valid values are: `left`, `right`. |
 | circle-image | `Boolean` | `false` | Sets **circle** effect for the displayed image from ListBox item. |
@@ -1113,7 +1115,7 @@ export default {
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<select>` element. |
 | empty-data-message | `String` | `'No data to display.'` | Sets the **no data message** when ListBox options is empty. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
-| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
+| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. <bs-badge>v1.1.0</bs-badge> |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | help-text      | `String`  |         | The help text to display below the field component. |
@@ -1134,7 +1136,7 @@ export default {
 | popover-max-height | `Number`/`String` | `300` | Sets maximum height for the Popover or ListBox container. |
 | popover-min-width  | `Number`/`String` |  | Sets minimum width for the Popover or ListBox container. |
 | prepend-icon  | `String`  |       | Sets icon to display on inner left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | readonly      | `Boolean` | `false` | Put the component in readonly state and sets the `<select>` element `readonly` attribute. |
 | required      | `Boolean` | `false` | Sets `<select>` element `required` attribute. |
 | rounded-image | `Boolean` | `false` | Sets **rounded** effect for the displayed image from ListBox item. |
@@ -1172,13 +1174,13 @@ export default {
 | Name             | Description  |
 |------------------|--------------|
 | appendIcon       | Contents for custom icon on inner right side. |
-| appendIconOuter  | Contents for custom icon on outer right side. |
+| appendIconOuter  | Contents for custom icon on outer right side. <bs-badge>v1.1.0</bs-badge> |
 | default          | Contents for field label. |
 | emptyData        | Contents for empty data message. |
 | helpText         | Contents for custom help text. |
 | optionItem       | Contents for List options. |
 | prependIcon      | Contents for custom icon on inner left side. |
-| prependIconOuter | Contents for custom icon on outer left side. |
+| prependIconOuter | Contents for custom icon on outer left side. <bs-badge>v1.1.0</bs-badge> |
 
 </div>
 

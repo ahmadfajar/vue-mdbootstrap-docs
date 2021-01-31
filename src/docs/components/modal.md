@@ -278,11 +278,11 @@ export default {
 
 | Property     | Type     | Default  | Description |
 |--------------|----------|----------|-------------|
-| body-class   | `String`/`Array` |  | Additional CSS class name for dialog body container. |
+| body-class   | `String`/`Array` |  | Additional CSS class name for dialog body container. <bs-badge>v1.1.0</bs-badge> |
 | esc-close    | `Boolean` | `true`  | Close modal dialog when **ESC** key is pressed. |
-| footer-class | `String`/`Array` |  | Additional CSS class name for dialog footer container. |
+| footer-class | `String`/`Array` |  | Additional CSS class name for dialog footer container. <bs-badge>v1.1.0</bs-badge> |
 | full-page    | `Boolean` | `false` | Show modal dialog in full page mode. |
-| header-class | `String`/`Array` |  | Additional CSS class name for dialog header container. |
+| header-class | `String`/`Array` |  | Additional CSS class name for dialog header container. <bs-badge>v1.1.0</bs-badge> |
 | max-width    | `Number`/`String` | | Modal dialog maximum width. |  
 | open         | `Boolean` | `false` | Component state, show or hide. |
 | overlay      | `Boolean` | `true`  | Show backdrop or overlay or not. |

@@ -283,10 +283,10 @@ See [Reference - Color Variants](#/reference/colors) for more information.
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | flat     | `Boolean` | `false`  | Create rectangle card and removes rounded border on its corner. |
-| img-bottom-alt | `String` |     | Value for the image `alt` attribute. |
-| img-bottom-src | `String` |     | The image URL for image placed at the bottom of the card. |
-| img-top-alt | `String` |        | Value for the image `alt` attribute. |
-| img-top-src | `String` |        | The image URL for image placed at the top of the card. |
+| img-bottom-alt | `String` |     | Value for the image `alt` attribute. <bs-badge>v1.1.0</bs-badge> |
+| img-bottom-src | `String` |     | The image URL for image placed at the bottom of the card. <bs-badge>v1.1.0</bs-badge> |
+| img-top-alt | `String` |        | Value for the image `alt` attribute. <bs-badge>v1.1.0</bs-badge> |
+| img-top-src | `String` |        | The image URL for image placed at the top of the card. <bs-badge>v1.1.0</bs-badge> |
 | shadow    | `Boolean` | `false` | Create card with shadow on its sides. |
 | tag       | `String`  | `'div'` | The html tag used to render the card. |
 
@@ -327,7 +327,7 @@ The component for card footer.
 
 The component for displaying image inside a card. 
 
-*Available in Vue MDBootstrap since v1.1.0*
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 #### Properties
 

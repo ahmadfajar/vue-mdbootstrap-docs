@@ -226,10 +226,10 @@ use `<bs-avatar>` inside **BsListTile** component.
 | center        | `Boolean`   | `false`  | Centers the icon, image or text horizontally and vertically. |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | icon          | `String`    |          | The icon to display as avatar. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
-| icon-flip     | `String`    |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
-| icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. |
+| icon-flip     | `String`    |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <bs-badge>v1.1.0</bs-badge> |
+| icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
 | icon-rotation | `Number`    |          | Rotate the icon, valid values are: `90`, `180`, `270`. |
-| icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. |
+| icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
 | img-src       | `String`    |          | Set the image location or image url to display as avatar |
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String`/`Object` | `48` | The avatar size |

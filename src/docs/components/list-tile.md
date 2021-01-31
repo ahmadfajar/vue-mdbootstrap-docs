@@ -923,11 +923,11 @@ export default {
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
-| active-item-bordered | `String` |  | Give border around the active item. Valid values are: `left`, `right`, `left-right`, `top`, `bottom`, `top-bottom`. |
+| active-item-bordered | `String` |  | Give border around the active item. Valid values are: `left`, `right`, `left-right`, `top`, `bottom`, `top-bottom`. <bs-badge>v1.1.0</bs-badge> |
 | color           | `String`  | `'white'` | ListView color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
 | overflow-hidden | `Boolean` | `false`   | Apply css `'overflow-hidden'` or not. |
-| single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. |
-| space-around    | `String`  |   | Give some space around each item. Valid values are: `both`, `left`, `right`. |
+| single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. <bs-badge>v1.1.0</bs-badge> |
+| space-around    | `String`  |   | Give some space around each item. Valid values are: `both`, `left`, `right`. <bs-badge>v1.1.0</bs-badge> |
 
 </div>
 
@@ -946,9 +946,9 @@ The component to display and organize the item parts.
 | active-class | `String` | `'active'` | `<router-link>` prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
 | disabled   | `Boolean` | `false` | Component state. |
 | exact      | `Boolean` | `false` | `<router-link>` prop: The default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
-| navigable  | `Boolean` | `false` | Explicitly define this propperty when you want to use ListTile as navigation or menu item. |
+| navigable  | `Boolean` | `false` | Explicitly define this propperty when you want to use ListTile as navigation or menu item. <bs-badge>v1.1.0</bs-badge> |
 | path       | `String`  |  | The route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
-| ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. |
+| ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. <bs-badge>v1.1.0</bs-badge> |
 | url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use vue-router. |
 
 </div>
@@ -975,7 +975,7 @@ The component to display and organize the item parts.
 
 | Property | Type      | Default | Description |
 |----------|-----------|---------|-------------|
-| center   | `Boolean` | `true`  | Centers item inside it vertically. |
+| center   | `Boolean` | `true`  | Centers item inside it vertically. <bs-badge>v1.1.0</bs-badge> |
 | stack    | `Boolean` | `false` | Arrange item inside it vertically. |
 | tag      | `String`  | `'div'` | The html tag is used to render the container. |
 
@@ -1013,11 +1013,11 @@ defining its property.
 |----------|-----------|---------|-------------|
 | center   | `Boolean`   | `false`  | Centers the avatar or image horizontally and vertically. |
 | circle   | `Boolean`   | `false`  | Create avatar with **circle** shape. |
-| icon     | `String`    |          | The icon to display. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
-| icon-flip     | `String`    |     | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
-| icon-pulse    | `Boolean`   | `false` | Apply **pulse** animation to the icon. |
-| icon-rotation | `Number`    |         | Rotate the icon, valid values are: `90`, `180`, `270`. |
-| icon-spin     | `Boolean`   | `false` | Apply **spin** animation to the icon. |
+| icon     | `String`    |          | The icon to display. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. <bs-badge>v1.1.0</bs-badge> |
+| icon-flip     | `String`    |     | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <bs-badge>v1.1.0</bs-badge> |
+| icon-pulse    | `Boolean`   | `false` | Apply **pulse** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
+| icon-rotation | `Number`    |         | Rotate the icon, valid values are: `90`, `180`, `270`. <bs-badge>v1.1.0</bs-badge> |
+| icon-spin     | `Boolean`   | `false` | Apply **spin** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
 | img-src  | `String`    |          | Set the image location or image url to display as avatar |
 | rounded  | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size     | `Number`/`String`/`Object` | `48` | The avatar size. |

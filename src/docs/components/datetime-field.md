@@ -494,6 +494,8 @@ export default {
 When combined with `floating-label` by defining it explicitly, this style variant will follow the 
 Google Material Design spec.
 
+*Available in Vue MDBootstrap since `v1.1.0`*
+
 :::demo
 ```html
 <template>
@@ -904,14 +906,14 @@ export default {
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | autofocus    | `Boolean` | `false` | Autofocus field when document is loaded. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | color        | `String`  | `'primary'` | DateTime picker color appearance. Any of [MDBootstrap colors](#/reference/colors) variant can be used. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | display-format     | `String`|     | The display date format. See [moment](https://momentjs.com/docs/#/displaying/) for valid format. If not defined then it will takes from `value-format` property. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
-| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
+| filled       | `Boolean` | `false` | Create the component with **filled** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. <bs-badge>v1.1.0</bs-badge> |
 | first-day-of-week | `Number`/`String`  | `0` | Default first day of the week. |
 | flat         | `Boolean` | `false` | Create the component with **flat** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://material.io/components/text-fields) spec. |
@@ -929,7 +931,7 @@ export default {
 | picker-placement   | `String`  | `'bottom-left'` | DateTime picker display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | placeholder  | `String`  |       | Sets the field placeholder. |
 | prepend-icon | `String`  |       | Sets icon to display on inner left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
-| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. |
+| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | readonly     | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required     | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | transition   | `String`  | `'scale'` | Transition animation when showing the DateTime picker. This animation is effected by `picker-placement` property. |
@@ -964,10 +966,10 @@ export default {
 |-------------|--------------|
 | default     | Contents for field label. |
 | appendIcon  | Contents for custom icon on inner right side. |
-| appendIconOuter  | Contents for custom icon on outer right side. |
+| appendIconOuter  | Contents for custom icon on outer right side. <bs-badge>v1.1.0</bs-badge> |
 | helpText         | Contents for custom help text. |
 | prependIcon      | Contents for custom icon on inner left side. |
-| prependIconOuter | Contents for custom icon on outer left side. |
+| prependIconOuter | Contents for custom icon on outer left side. <bs-badge>v1.1.0</bs-badge> |
 
 </div>
 

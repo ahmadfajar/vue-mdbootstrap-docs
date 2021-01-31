@@ -218,7 +218,7 @@ export default {
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | indeterminate | `Boolean` | `false` | Sets an indeterminate state for the checkbox. |
 | name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |
-| readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
+| readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | true-value  | `Boolean` | `true`  | Sets value for truthy state. |
 | value       | `Boolean`/`String`/`Number`/`Object` |  | The `<input>` element `value` attribute. |
@@ -263,7 +263,7 @@ export default {
 | items       | `Object[]` |  | The collection of `<bs-radio>` property-value. |
 | name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the checkbox group is not focused. |
-| readonly    | `Boolean` | `false` | Sets default readonly state. |
+| readonly    | `Boolean` | `false` | Sets default readonly state. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets default `<input>` element `required` attribute. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `Array` |  | The value monitored by `v-model` to maintain checked state. |
 

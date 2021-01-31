@@ -436,6 +436,7 @@ export default {
 ```
 :::
 
+*Available in Vue MDBootstrap since `v1.1.0`*
 
 
 <style lang="scss" scoped>
