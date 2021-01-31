@@ -150,8 +150,15 @@ export const menuNavs = [{
         view: viewResolver("components/popover"),
     }, {
         title: "Progress Control",
-        route: "/components/progress-control",
-        view: viewResolver("components/progress"),
+        children: [{
+            title: "Mask Loader",
+            route: "/components/progress-control/mask-loader",
+            view: viewResolver("components/mask-loader")
+        }, {
+            title: "Progress",
+            route: "/components/progress-control/progress",
+            view: viewResolver("components/progress")
+        }]
     }, {
         title: "Ripple",
         route: "/components/ripple",
@@ -235,6 +242,10 @@ export const menuNavs = [{
         title: "Shadows",
         route: "/reference/shadows",
         view: viewResolver("reference/shadows"),
+    }, {
+        title: "Transitions",
+        route: "/reference/transitions",
+        view: viewResolver("reference/transition"),
     }]
 }];
 

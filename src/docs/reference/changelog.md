@@ -7,11 +7,18 @@ All notable changes to this project will be documented in this file.
 
 Released: January XX, 2021
 
+### Features v1.1.4
+
+- **BsMaskLoader:** add properties `overlay-color`, `overlay-opacity`, `spinner-color`,
+  `spinner-thickness`, and `spinner-type`
+
 ### Bug Fixes & Improvement v1.1.4
 
 - **BsAppbarItems:** remove `font-size` scss styles
 - **BsMenu:** improve keyboard navigation using `arrow-down` and `arrow-up`
-- **BsPopover:** fix `space` property did not apply correctly when `placement` property sets to `top`, `top-left` or `top-right`
+- **BsPopover:** fix `space` property did not apply correctly when `placement` property sets to 
+  `top`, `top-left` or `top-right`
+- Refactor `popover` transition animation to `scale`  
 
 
 ## v1.1.3
@@ -21,9 +28,10 @@ Released: January 5, 2021
 ### Bug Fixes & Improvement v1.1.3
 
 - **BsGrid:** fix side effect on methods `sort`, `setPageSize`, `_fetchData`, and update scss styles 
-- **BsSearchField:** remove property `can-close` and fix `BsPopover` show/hide procedure when `search-options` is enabled
+- **BsSearchField:** remove property `can-close` and fix `BsPopover` show/hide procedure when 
+  `search-options` is enabled
 - **BsTreegridCell:** fix warning when icon is null
-- **BsCheckboxGroup, BsRadioGroup:** fix multi-column items when `columns` property is set to `1` 
+- **BsCheckboxGroup, BsRadioGroup:** fix multi-column items when `columns` property value is `1`
 - **BsButtonToggleField:** fix non-persistent help text and update scss styles
 - **AbstractStore:** add methods `setPageSize` and `setSorters`
 - **BsStore:** fix method `append` didn't send data to remote service
@@ -39,7 +47,8 @@ Released: December 21, 2020
 - **Touch** directive did not expose correctly
 - **BsCard:** add DOM event listener
 - **BsNotification:** change default variant and update css styles
-- **BsTextField, BsTextArea, BsRadioGroup, BsDateTimeField, BsCombobox, BsCheckboxGroup:** bug fix when form reset
+- **BsTextField, BsTextArea, BsRadioGroup, BsDateTimeField, BsCombobox, BsCheckboxGroup:** bug fix 
+  when form reset
 
 
 ## v1.1.0

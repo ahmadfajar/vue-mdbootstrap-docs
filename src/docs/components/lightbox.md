@@ -283,7 +283,7 @@ export default {
 | show-toolbar     | `Boolean` | `true` | Show or hide toolbar buttons. |
 | thumbnail-height | `Number`  | `72` | Default image thumbnails height. |
 | toolbar          | `Object` | `{'download': false, 'zoom': true, 'rotate': true, 'info': true, 'delete': true, 'menubar': false, 'close': true}` | Configure the toolbar buttons. |
-| transition       | `String` | `'slide-top-bottom'` | Transition animation name when showing the active image. Valid values are: `fade`, `popover`, `slide-fade`, `slide-fade-reverse`, `slide-bottom-top`, `slide-top-bottom`, `slide-left-right`, `slide-right-left`. |
+| transition       | `String` | `'slide-top-bottom'` | Transition animation name when showing the active image. Available transitions are: `fade`, `scale`, `slide-fade`, `slide-fade-reverse`, `slide-bottom-top`, `slide-top-bottom`, `slide-left-right`, `slide-right-left`. |
 | transition-mode  | `String` |  | Controls the timing sequence of leaving/entering transitions. Available modes are `out-in` and `in-out`. |
 
 </div>

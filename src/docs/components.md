@@ -86,12 +86,11 @@
       </a>
       <a href="#/components/input/search-field" class="list-group-item list-group-item-action">
         <b>Search Field</b> - A standalone input field component for collecting search 
-        keywords. <bs-badge color="warning">updated</bs-badge>
+        keywords.
       </a>
       <a href="#/components/input/toggle-field" class="list-group-item list-group-item-action">
         <b>Toggle Field</b> - A group of buttons with toggle capabilities, validation and is treated 
         like a form field. It is primarily used to visualize choices with different approach. 
-        <bs-badge color="warning">updated</bs-badge>
       </a>
     </div>
   </div>
@@ -126,10 +125,19 @@
     <b>BsPopover</b> - A lightweight component which is used as a popup container. 
     <bs-badge color="warning">updated</bs-badge>
   </a>
-  <a href="#/components/progress-control" class="list-group-item list-group-item-action">
-    <b>Progress Control</b> - A component which are typically used for displaying simple progress 
-    bars, or to show the data loading progress. 
-  </a>
+  <div class="list-group-item">
+    <div class="h5 mb-3">Progress Controls:</div>
+    <div class="list-group">
+      <a href="#/components/progress-control/mask-loader" class="list-group-item list-group-item-action">
+        <b>Mask Loader</b> - A component which are typically used for displaying a loading progress 
+        with backdrop overlay. <bs-badge color="warning">updated</bs-badge>
+      </a>
+      <a href="#/components/progress-control/progress" class="list-group-item list-group-item-action">
+        <b>Progress</b> - A component which are typically used for displaying simple progress 
+        bars, or to show the data loading progress. 
+      </a>
+    </div>
+  </div>
   <a href="#/components/ripple" class="list-group-item list-group-item-action">
     <b>Ripple</b> - Small and lightweight component which is used to show ripple animation when 
     <code class="text-pink">click</code> or <code class="text-pink">touch</code> event occured. 

@@ -222,7 +222,7 @@ export default {
 | popover-position  | `String` | `'bottom'` | Sets the *Popover* display placement. |
 | readonly       | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | search-options | `Boolean` | `false` | Enable custom search. If `true` then *Popover* container will be enabled. |
-| transition     | `String`  | `'popover'` | Sets animation transition when displaying the *Popover* container. |
+| transition     | `String`  | `'scale'` | Sets animation transition when displaying the *Popover* container. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `String` |  | The value monitored by `v-model` to maintain field value. |
 
 </div>

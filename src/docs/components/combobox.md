@@ -1139,7 +1139,7 @@ export default {
 | required      | `Boolean` | `false` | Sets `<select>` element `required` attribute. |
 | rounded-image | `Boolean` | `false` | Sets **rounded** effect for the displayed image from ListBox item. |
 | show-image    | `Boolean` | `false` | Show or hide image if ListBox item's object contains image field. |
-| transition    | `string`  | `'popover'` | Transition animation when showing the Popover. |
+| transition    | `string`  | `'scale'` | Transition animation when showing the Popover. |
 | value <bs-badge color="unique text-white">v-model</bs-badge> | `String`/`Number`/`Object`/`Boolean` |  | The value monitored by `v-model` to maintain field value. |
 | value-as-object | `Boolean` | `false` | Sets the returns value from `v-model` as object. |
 

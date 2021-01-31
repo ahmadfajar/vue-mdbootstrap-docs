@@ -7,8 +7,8 @@ for the icon comes from [Google Material Icons](https://material.io/resources/ic
 ## Overview
 
 Each of **BsIcon**'s name has alias. If the name is `ArrowBack` then its alias are: `arrow-back` and 
-`arrow_back`. You can use its alias or its name as value for `icon` property. Following are list of 
-available internal icons that you can use.
+`arrow_back`. You can use either its alias or its name as value for `icon` property. Following are 
+list of available internal icons that you can use.
 
 :::demo
 ```html

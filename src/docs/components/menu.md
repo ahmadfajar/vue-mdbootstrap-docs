@@ -475,7 +475,7 @@ export default {
 | open <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Popup menu state: **show** or **hide**. |
 | open-on-hover | `Boolean` | `false` | Triggers the popup menu to display when `mouseenter` and hide when `mouseleave`. |
 | placement   | `String`  | `'bottom-left'` | Popup menu display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
-| transition  | `String`  | `'popover'` | Transition animation when show popup menu. This animation is effected by `placement` prop. |
+| transition  | `String`  | `'scale'` | Transition animation when show popup menu. This animation is effected by `placement` prop. |
 
 </div>
 
