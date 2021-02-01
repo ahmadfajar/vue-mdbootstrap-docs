@@ -258,8 +258,10 @@ export const navs = [{
     meta: {title: 'Components'}
 }, {
     path: '/directives',
-    component: viewResolver('directives')
+    component: viewResolver('directives'),
+    meta: {title: 'Directives'}
 }, {
     path: '/reference',
-    component: viewResolver('references')
+    component: viewResolver('references'),
+    meta: {title: 'Reference'}
 }];

@@ -59,7 +59,7 @@ export default {
 **BsMaskLoader** comes with **four** type variants, which are: **linear** (the default), 
 **progress**, **spinner**, and **glow**.
 
-*Available in Vue MDBootstrap since v1.1.4*
+*Available in Vue MDBootstrap since `v1.1.4`*
 
 :::demo
 ```html

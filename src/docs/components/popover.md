@@ -130,7 +130,7 @@ export default {
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| update:open | `Boolean` | Triggers when updating **Popover** state: show or hide. |
+| update:open | `Boolean` | Triggers when updating **Popover** state: *show* or *hide*. |
 | close       |      | Triggers when **Popover** is hiding. |
 
 </div>
