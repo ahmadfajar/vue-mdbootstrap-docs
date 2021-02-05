@@ -607,8 +607,8 @@ export default {
 
 ### Flat
 
-This style will remove the borders and create flat appearance. It is useful when combined with 
-`readonly` property to create appearance like plain text.
+This style will remove the borders and create flat appearance. When combined with 
+`readonly` property it will create appearance like plain text.
 
 :::demo
 ```html
@@ -665,7 +665,7 @@ export default {
 ## Help Text
 
 The `help-text` property on `<bs-date-time-field>` adds the provided string beneath the datetime field.
-Using `persistent-help-text` keeps the help text visible when the datetime field is not focused.
+Using `persistent-help-text` keeps the help text visible even when the datetime field is not focused.
 
 :::demo
 ```html

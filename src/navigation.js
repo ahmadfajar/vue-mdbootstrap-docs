@@ -108,10 +108,10 @@ export const menuNavs = [{
             title: "DateTime Field",
             route: "/components/input/datetime-field",
             view: viewResolver("components/datetime-field"),
-        // }, {
-        //     title: "Number Field",
-        //     route: "/components/input/number-field",
-        //     view: viewResolver("components/image-holder"),
+        }, {
+            title: "Numeric Field",
+            route: "/components/input/numeric-field",
+            view: viewResolver("components/numeric-field"),
         }, {
             title: "Search Field",
             route: "/components/input/search-field",

@@ -356,7 +356,7 @@ export default {
 ## Help Text
 
 The `help-text` property on `<bs-text-field>` adds the provided string beneath the text field.
-Using `persistent-help-text` keeps the help text visible when the text field is not focused.
+Using `persistent-help-text` keeps the help text visible even when the text field is not focused.
 
 :::demo
 ```html

@@ -10,76 +10,7 @@ Each of **BsIcon**'s name has alias. If the name is `ArrowBack` then its alias a
 `arrow_back`. You can use either its alias or its name as value for `icon` property. Following are 
 list of available internal icons that you can use.
 
-:::demo
-```html
-<template>
-  <div class="my-demo-wrapper">
-    <div class="row text-center">
-      <div v-for="name in iconLibs" 
-           class="col-4 col-sm-3 col-xl-2 mb-4" 
-           :key="name">
-        <bs-icon :icon="name" size="32"></bs-icon>
-        <div class="text-truncate">{{ name }}</div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-const iconLibs = [
-    "Add",
-    "Apps",
-    "ArrowBack",
-    "ArrowDropDown",
-    "ArrowDropUp",
-    "ArrowForward",
-    "ArrowLeft",
-    "ArrowRight",
-    "BorderAll",
-    "Calendar",
-    "ChevronLeft",
-    "ChevronRight",
-    "Clear",
-    "CreateFolder",
-    "Dashboard",
-    "Delete",
-    "DeleteOutline",
-    "ExpandLess",
-    "ExpandMore",
-    "FirstPage",
-    "Folder",
-    "FolderOpen",
-    "FolderShared",
-    "FolderSpecial",
-    "InfoOutline",
-    "LastPage",
-    "MenuBars",
-    "MoreHoriz",
-    "MoreVert",
-    "Reorder",
-    "RotateLeft",
-    "RotateRight",
-    "ViewModule",
-    "ZoomIn",
-    "ZoomOut",
-];
-
-export default {
-  data() {
-    return {
-      iconLibs
-    }
-  },
-}
-</script>
-
-<style scoped>
-.my-demo-wrapper {
-  margin: 24px;
-}
-</style>
-```
-:::
+<IconLibs></IconLibs>
 
 
 ## Icon Features
@@ -223,8 +154,6 @@ export default {
 
 </div>
 
-
-<script src="./script/icon.js"></script>
 
 <style scoped>
 .icon-box-56 {
