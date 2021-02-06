@@ -18,6 +18,7 @@ export const menuNavs = [{
     children: [{
         title: "Alert",
         route: "/components/alert",
+        tag: {label: 'Updated', color: 'warning'},
         view: viewResolver("components/alert"),
     }, {
         title: "Appbar",

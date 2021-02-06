@@ -19,6 +19,34 @@ add some emotional weight. Any of [MDBootstrap colors](#/reference/colors) varia
     <bs-alert>
       Simple alert with primary color
     </bs-alert>
+  </div>
+</template>
+
+<style scoped>
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+## Style Variants
+
+**BsAlert** comes with three style variants.
+
+
+### Default Style
+
+Alert with default style variant will have appearance like **Bootstrap** alert.
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert>
+      Simple alert with primary color
+    </bs-alert>
     <bs-alert color="info">
       Simple info alert with info color
     </bs-alert>
@@ -43,9 +71,46 @@ add some emotional weight. Any of [MDBootstrap colors](#/reference/colors) varia
 :::
 
 
-## Outline Style
+### Solid Fill Style
 
-Use the `outlined` property to enable the **outline style**.
+Use `solid-fill` property to enable the alert variant with **solid fill style**.
+
+*Available in Vue MDBootstrap since `v1.2.0`*
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert solid-fill>
+      Solid alert with primary color
+    </bs-alert>
+    <bs-alert color="info" solid-fill>
+      Solid info alert with info color
+    </bs-alert>
+    <bs-alert color="success" solid-fill>
+      Solid alert with success color
+    </bs-alert>
+    <bs-alert color="danger" solid-fill>
+      Solid alert with danger color
+    </bs-alert>
+    <bs-alert color="warning" solid-fill>
+      Solid alert with warning color
+    </bs-alert>
+  </div>
+</template>
+
+<style scoped>
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+### Outline Style
+
+Use `outlined` property to enable the alert variant with **outline style**.
 
 :::demo
 ```html
@@ -65,6 +130,138 @@ Use the `outlined` property to enable the **outline style**.
     </bs-alert>
     <bs-alert color="warning" outlined>
       Outline alert with warning color
+    </bs-alert>
+  </div>
+</template>
+
+<style scoped>
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+## Alerts with icon
+
+### Predefined icon
+
+Use `icon-type` property to create contextual alert with predefined icon. Additionally, 
+you can sets the `icon-outlined` to `false` to use solid predefined icon.
+
+*Available in Vue MDBootstrap since `v1.2.0`*
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert 
+      icon-type="success" 
+      solid-fill>
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with predefined icon.
+      </p>
+    </bs-alert>
+    <bs-alert
+      icon-type="info" 
+      solid-fill>
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with predefined icon.
+      </p>
+    </bs-alert>
+    <bs-alert
+      :icon-outlined="false" 
+      icon-type="warning" 
+      solid-fill>
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with predefined icon.
+      </p>
+    </bs-alert>
+    <bs-alert 
+      :icon-outlined="false" 
+      icon-type="danger" 
+      solid-fill>
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with predefined icon.
+      </p>
+    </bs-alert>
+    <bs-alert 
+      :icon-outlined="false" 
+      icon-type="help" 
+      solid-fill>
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with predefined icon.
+      </p>
+    </bs-alert>
+  </div>
+</template>
+
+<style scoped>
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+### Custom icon
+
+Custom icon can be enabled by using the `icon` property and prefix its value with 
+`bs-` to use *Vue MDBootstrap internal icon* or use any valid 
+[FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name.
+
+*Updated in Vue MDBootstrap `v1.2.0`*
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <bs-alert icon="bs-verified" color="primary">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with custom icon.
+      </p>
+    </bs-alert>
+    <bs-alert icon="bs-help-center" color="orange">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with custom icon.
+      </p>
+    </bs-alert>
+    <bs-alert icon="exclamation-triangle" color="danger">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with custom icon.
+      </p>
+    </bs-alert>
+    <bs-alert icon="bell" color="info">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with custom icon.
+      </p>
+    </bs-alert>
+    <bs-alert icon="bullhorn" color="success">
+      <h5>Well done!</h5>
+      <p>
+        Aww yeah, you successfully read this important alert message. This is an example how to
+        construct <b>Alerts</b> with custom icon.
+      </p>
     </bs-alert>
   </div>
 </template>
@@ -290,11 +487,18 @@ Do not use the `value` property when using `v-model`.
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `'primary'` | Applies one of the [MDBootstrap colors](#/reference/colors) variants to the component |
+| color       | `String`    |  | Any of the [MDBootstrap colors](#/reference/colors) variants can be used. When **undefined**, **primary** color will be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
-| outlined    | `Boolean`   | `false`     | Create outline alert style |
-| icon        | `String`    |             | The Icon to display, see: [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) for valid icon name |
-| transition  | `String`    | `'fade'`    | The component animation transition to display/hide |
+| icon        | `String`    |             | The icon to display as avatar. Use prefix `bs-` to use internal icon, otherwise use any valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
+| icon-flip     | `String`    |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <bs-badge>v1.2.0</bs-badge> |
+| icon-outlined | `Boolean`   | `true`  | Use predefined outline icon to create contextual alert. <bs-badge>v1.2.0</bs-badge> |
+| icon-pulse    | `Boolean`   | `false` | Apply **pulse** animation to the icon. <bs-badge>v1.2.0</bs-badge> |
+| icon-rotation | `Number`    |         | Rotate the icon, valid values are: `90`, `180`, `270`. <bs-badge>v1.2.0</bs-badge> |
+| icon-spin     | `Boolean`   | `false` | Apply **spin** animation to the icon. <bs-badge>v1.2.0</bs-badge> |
+| icon-type   | `String`  |  | Use predefined icon to create contextual alert. Valid values: `success`, `info`, `warning`, `danger`, `help`. <bs-badge>v1.2.0</bs-badge> |
+| outlined    | `Boolean` | `false`  | Create outline alert style |
+| solid-fill  | `Boolean` | `false`  | Create alert variant with solid fill style. <bs-badge>v1.2.0</bs-badge> |
+| transition  | `String`  | `'fade'` | The component animation transition to display/hide |
 | value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | The value monitored by `v-model` to display or hide the alert component |
 
 </div>
@@ -318,6 +522,7 @@ Do not use the `value` property when using `v-model`.
 | Name    | Description  |
 |---------|--------------|
 | default | Main content |
+| alertIcon | Content for custom icon. This slot can be enabled by defining the `icon` property with any values, then use this slot to customize the contents. <bs-badge>v1.2.0</bs-badge> |
 
 </div>
 
