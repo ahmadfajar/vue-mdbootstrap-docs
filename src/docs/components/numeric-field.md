@@ -573,7 +573,6 @@ This style will remove the borders and create flat appearance. When combined wit
 The `help-text` property on `<bs-numeric-field>` adds the provided string beneath the text field.
 Using `persistent-help-text` keeps the help text visible even when the text field is not focused.
 
-
 :::demo
 ```html
 <template>

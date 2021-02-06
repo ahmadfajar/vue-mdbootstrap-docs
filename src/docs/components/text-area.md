@@ -486,44 +486,126 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area prepend-icon="user" floating-label filled>
+          <bs-text-area 
+            prepend-icon="user" 
+            floating-label>
             <label>Prepend</label>
-          </bs-text-area>
-        </div>
-        <div class="form-group">
-          <bs-text-area prepend-icon-outer="user" floating-label filled>
-            <label>Prepend Outer</label>
-          </bs-text-area>
-        </div>
-        <div class="form-group">
-          <bs-text-area append-icon="user" floating-label filled>
-            <label>Append</label>
-          </bs-text-area>
-        </div>
-        <div class="form-group">
-          <bs-text-area append-icon-outer="user" floating-label filled>
-            <label>Append Outer</label>
           </bs-text-area>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area prepend-icon="user" floating-label outlined>
-            <label>Prepend</label>
-          </bs-text-area>
-        </div>
-        <div class="form-group">
-          <bs-text-area prepend-icon-outer="user" floating-label outlined>
-            <label>Prepend Outer</label>
-          </bs-text-area>
-        </div>
-        <div class="form-group">
-          <bs-text-area append-icon="user" floating-label outlined>
+          <bs-text-area 
+            append-icon="user" 
+            floating-label>
             <label>Append</label>
           </bs-text-area>
         </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
         <div class="form-group">
-          <bs-text-area append-icon-outer="user" floating-label outlined>
+          <bs-text-area 
+            prepend-icon-outer="user" 
+            floating-label>
+            <label>Prepend Outer</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            append-icon-outer="user" 
+            floating-label>
+            <label>Append Outer</label>
+          </bs-text-area>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            prepend-icon="user" 
+            floating-label 
+            filled>
+            <label>Prepend</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            append-icon="user" 
+            floating-label 
+            filled>
+            <label>Append</label>
+          </bs-text-area>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            prepend-icon-outer="user" 
+            floating-label 
+            filled>
+            <label>Prepend Outer</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            append-icon-outer="user" 
+            floating-label 
+            filled>
+            <label>Append Outer</label>
+          </bs-text-area>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            prepend-icon="user" 
+            floating-label 
+            outlined>
+            <label>Prepend</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            append-icon="user" 
+            floating-label 
+            outlined>
+            <label>Append</label>
+          </bs-text-area>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            prepend-icon-outer="user" 
+            floating-label 
+            outlined>
+            <label>Prepend Outer</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-area 
+            append-icon-outer="user" 
+            floating-label 
+            outlined>
             <label>Append Outer</label>
           </bs-text-area>
         </div>

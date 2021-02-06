@@ -69,6 +69,7 @@ export const menuNavs = [{
     }, {
         title: "Icon",
         route: "/components/icon",
+        tag: {label: 'Updated', color: 'warning'},
         view: viewResolver("components/icon"),
     }, {
         title: "Icon Toggle",
@@ -111,6 +112,7 @@ export const menuNavs = [{
         }, {
             title: "Numeric Field",
             route: "/components/input/numeric-field",
+            tag: {label: 'New', color: 'success'},
             view: viewResolver("components/numeric-field"),
         }, {
             title: "Search Field",
@@ -134,10 +136,11 @@ export const menuNavs = [{
         }, {
             title: "Navigation",
             route: "/components/lists/navigation",
+            tag: {label: 'Updated', color: 'warning'},
             view: viewResolver("components/list-navigation"),
         }]
     }, {
-        title: "Menu",
+        title: "Menus",
         route: "/components/menu",
         view: viewResolver("components/menu"),
     }, {

@@ -60,12 +60,16 @@
               <bs-list-nav-item 
                 v-for="(navchild, ix) in nav.children"
                 :key="'child-' + idx + '-' + ix"
+                :badge="badgeLabel(navchild)"
+                :badge-variant="badgeVariant(navchild)"
                 :label="navchild.title"
                 :path="navchild.route">
                 <bs-list-nav v-if="navchild.children" child>
                   <bs-list-nav-item 
                     v-for="(child, nx) in navchild.children"
                     :key="'child-' + idx + '-' + ix + '-' + nx"
+                    :badge="badgeLabel(child)"
+                    :badge-variant="badgeVariant(child)"
                     :label="child.title"
                     :path="child.route" />
                 </bs-list-nav>
@@ -100,6 +104,18 @@ export default {
         },
     },
     methods: {
+        badgeLabel(item) {
+          if (item.tag) {
+            return item.tag.label;
+          }
+          return null;
+        },
+        badgeVariant(item) {
+          if (item.tag) {
+            return item.tag.color;
+          }
+          return null;
+        },
         menuBarClick() {
             if (this.$refs.appbar.isMobile && this.sideDrawerState !== "close") {
                 this.sideDrawerState = "close";

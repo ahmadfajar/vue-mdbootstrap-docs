@@ -549,6 +549,8 @@ The component to display the navigation item.
 |------------|-----------|---------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Component state and monitored by `v-model`. |
 | active-class | `String` | `'active'` | `<router-link>` prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
+| badge      | `String`  |  | The text to render as badge label. <bs-badge>v1.2.0</bs-badge> |
+| badge-variant | `String` | `'success'` | The badge variant, valid values: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`. <bs-badge>v1.2.0</bs-badge> |
 | depth      | `Number`  |  | Item depth level in tree hierarchy (zero based level). |
 | disabled   | `Boolean` | `false` | Component state. |
 | exact      | `Boolean` | `false` | `<router-link>` prop: The default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |

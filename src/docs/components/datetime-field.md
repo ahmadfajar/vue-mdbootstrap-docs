@@ -793,21 +793,61 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
             v-model="bornDate1" 
             prepend-icon="user" 
             clear-button
-            floating-label 
-            filled>
+            floating-label>
             <label>Prepend</label>
           </bs-date-time-field>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="bornDate3" 
+            append-icon="calendar" 
+            clear-button 
+            floating-label>
+            <label>Append</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
             v-model="bornDate2" 
             prepend-icon-outer="user" 
             clear-button 
-            filled 
             floating-label>
             <label>Prepend Outer</label>
           </bs-date-time-field>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="bornDate4" 
+            append-icon-outer="user" 
+            clear-button 
+            floating-label>
+            <label>Append Outer</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="bornDate1" 
+            prepend-icon="user" 
+            clear-button
+            floating-label 
+            filled>
+            <label>Prepend</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
             v-model="bornDate3" 
@@ -818,6 +858,22 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
             <label>Append</label>
           </bs-date-time-field>
         </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="bornDate2" 
+            prepend-icon-outer="user" 
+            clear-button 
+            filled 
+            floating-label>
+            <label>Prepend Outer</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
             v-model="bornDate4" 
@@ -829,6 +885,8 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
           </bs-date-time-field>
         </div>
       </div>
+    </div>  
+    <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
@@ -840,16 +898,8 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
             <label>Prepend</label>
           </bs-date-time-field>
         </div>
-        <div class="form-group">
-          <bs-date-time-field 
-            v-model="bornDate2" 
-            prepend-icon-outer="user" 
-            clear-button 
-            floating-label 
-            outlined>
-            <label>Prepend Outer</label>
-          </bs-date-time-field>
-        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
             v-model="bornDate3" 
@@ -860,6 +910,22 @@ You can add icons to the `<bs-date-time-field>` with `prepend-icon`, `prepend-ic
             <label>Append</label>
           </bs-date-time-field>
         </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-date-time-field 
+            v-model="bornDate2" 
+            prepend-icon-outer="user" 
+            clear-button 
+            floating-label 
+            outlined>
+            <label>Prepend Outer</label>
+          </bs-date-time-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-date-time-field 
             v-model="bornDate4" 

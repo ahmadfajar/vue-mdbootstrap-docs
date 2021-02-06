@@ -458,19 +458,53 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
         <div class="form-group">
           <bs-text-field 
             prepend-icon="user" 
+            floating-label>
+            <label>Prepend</label>
+          </bs-text-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            append-icon="user" 
+            floating-label>
+            <label>Append</label>
+          </bs-text-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            prepend-icon-outer="user" 
+            floating-label>
+            <label>Prepend Outer</label>
+          </bs-text-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            append-icon-outer="user" 
+            floating-label>
+            <label>Append Outer</label>
+          </bs-text-field>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            prepend-icon="user" 
             floating-label 
             filled>
             <label>Prepend</label>
           </bs-text-field>
         </div>
-        <div class="form-group">
-          <bs-text-field 
-            prepend-icon-outer="user" 
-            floating-label 
-            filled>
-            <label>Prepend Outer</label>
-          </bs-text-field>
-        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-text-field 
             append-icon="user" 
@@ -479,6 +513,20 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             <label>Append</label>
           </bs-text-field>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            prepend-icon-outer="user" 
+            floating-label 
+            filled>
+            <label>Prepend Outer</label>
+          </bs-text-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-text-field 
             append-icon-outer="user" 
@@ -488,6 +536,8 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
           </bs-text-field>
         </div>
       </div>
+    </div>
+    <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
           <bs-text-field 
@@ -497,14 +547,8 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             <label>Prepend</label>
           </bs-text-field>
         </div>
-        <div class="form-group">
-          <bs-text-field 
-            prepend-icon-outer="user" 
-            floating-label 
-            outlined>
-            <label>Prepend Outer</label>
-          </bs-text-field>
-        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-text-field 
             append-icon="user" 
@@ -513,6 +557,20 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             <label>Append</label>
           </bs-text-field>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-text-field 
+            prepend-icon-outer="user" 
+            floating-label 
+            outlined>
+            <label>Prepend Outer</label>
+          </bs-text-field>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
           <bs-text-field 
             append-icon-outer="user" 
