@@ -6,11 +6,11 @@
 <div class="list-group">
   <a href="#/components/alert" class="list-group-item list-group-item-action">
     <b>Alert</b> - A component that provides contextual feedback messages for typical user actions with 
-    the handful of available and flexible alert messages.
+    the handful of available and flexible alert messages. <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/appbar" class="list-group-item list-group-item-action">
     <b>Appbar</b> - A lightweight component which is placed at the top of the page as a container for page 
-    title, logo, menus, and action buttons. <bs-badge color="warning">updated</bs-badge>
+    title, logo, menus, and action buttons.
   </a>
   <a href="#/components/avatar" class="list-group-item list-group-item-action">
     <b>Avatar</b> - A component which are typically used to display a user profile as a picture, icon, 
@@ -46,6 +46,7 @@
   </a>
   <a href="#/components/icon" class="list-group-item list-group-item-action">
     <b>Icon</b> - Small and lightweight component which can be used inside almost any component.
+    <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/icon-toggle" class="list-group-item list-group-item-action">
     <b>Icon Toggle</b> - Small and lightweight component which is used to toggle two different icon. It can be 
@@ -84,6 +85,10 @@
         <b>DateTime Field</b> - A fully featured date selection component which lets users select a date, 
         time, month, year, or datetime. 
       </a>
+      <a href="#/components/input/numeric-field" class="list-group-item list-group-item-action">
+        <b>Numeric Field</b> - A component which is used for collecting user provided numeric text. 
+        <bs-badge>v1.2.0</bs-badge>
+      </a>
       <a href="#/components/input/search-field" class="list-group-item list-group-item-action">
         <b>Search Field</b> - A standalone input field component for collecting search 
         keywords.
@@ -108,7 +113,7 @@
       <a href="#/components/lists/navigation" class="list-group-item list-group-item-action">
         <b>Navigation</b> - A component used for displaying a series of item and mainly used for navigation. It 
         can contain an icon, nested items, and provides a consistent styling for organizing the items.
-        <bs-badge>v1.1.0</bs-badge>
+        <bs-badge>v1.1.0</bs-badge> <bs-badge color="warning">updated</bs-badge>
       </a>
     </div>
   </div>
@@ -123,14 +128,13 @@
   </a>
   <a href="#/components/popover" class="list-group-item list-group-item-action">
     <b>BsPopover</b> - A lightweight component which is used as a popup container. 
-    <bs-badge color="warning">updated</bs-badge>
   </a>
   <div class="list-group-item">
     <div class="h5 mb-3">Progress Controls:</div>
     <div class="list-group">
       <a href="#/components/progress-control/mask-loader" class="list-group-item list-group-item-action">
         <b>Mask Loader</b> - A component which are typically used for displaying a loading progress 
-        with backdrop overlay. <bs-badge color="warning">updated</bs-badge>
+        with backdrop overlay.
       </a>
       <a href="#/components/progress-control/progress" class="list-group-item list-group-item-action">
         <b>Progress</b> - A component which are typically used for displaying simple progress 
@@ -141,7 +145,6 @@
   <a href="#/components/ripple" class="list-group-item list-group-item-action">
     <b>Ripple</b> - Small and lightweight component which is used to show ripple animation when 
     <code class="text-pink">click</code> or <code class="text-pink">touch</code> event occured. 
-    <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/subheader" class="list-group-item list-group-item-action">
     <b>Subheader</b> - Small and lightweight component which is primarily used to manage and separate content 
