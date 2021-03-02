@@ -13,20 +13,14 @@ export default {
         employee8: null,
         states0: [],
         states1: [],
+        
         caState0: null,
         caState1: null,
         caState2: null,
         caState3: null,
         caState4: null,
         caState5: null,
-        caState6: null,
-        caState7: null,
-        caState8: null,
-        caState9: null,
-        caState10: null,
-        caState11: null,
-        caState12: null,
-        caState13: null,
+
         selectedProduct: null,
         product0: null,
         product1: null,
@@ -36,6 +30,20 @@ export default {
         product5: null,
         product6: 3,
         product7: 43,
+
+        product8: null,
+        product9: null,
+        product10: null,
+        product11: null,
+        product12: null,
+        product13: null,
+        product14: null,
+        product15: null,
+        product16: null,
+        product17: null,
+        product18: null,
+        product19: null,
+
         peopleSrc: {
             proxy: new BsArrayStore([
                 { id: 1, name: 'Sandra Adams', avatar: 'img/1.jpg' },
@@ -76,7 +84,87 @@ export default {
                 }
             })
         },
+
+
         statesCA: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA0: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA1: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA2: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA3: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA4: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesCA5: {
             proxy: new BsStore({
                 idProperty: 'value',
                 dataProperty: 'data',
@@ -92,12 +180,27 @@ export default {
     }),
     beforeDestroy() {
         this.peopleSrc.proxy.destroy();
-        this.products.proxy.destroy();
-        this.statesUS.proxy.destroy();
-        this.statesCA.proxy.destroy();
         this.peopleSrc = null;
+        
+        this.products.proxy.destroy();
         this.products = null;
+        
+        this.statesUS.proxy.destroy();
         this.statesUS = null;
+
+        this.statesCA.proxy.destroy();
         this.statesCA = null;
+        this.statesCA0.proxy.destroy();
+        this.statesCA0 = null;
+        this.statesCA1.proxy.destroy();
+        this.statesCA1 = null;
+        this.statesCA2.proxy.destroy();
+        this.statesCA2 = null;
+        this.statesCA3.proxy.destroy();
+        this.statesCA3 = null;
+        this.statesCA4.proxy.destroy();
+        this.statesCA4 = null;
+        this.statesCA5.proxy.destroy();
+        this.statesCA5 = null;
     }
 }

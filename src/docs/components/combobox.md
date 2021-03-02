@@ -91,8 +91,13 @@ Define the `clear-button` property explicitly, so that the field value can be cl
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="employee3" :data-source="peopleSrc" clear-button>
-        <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
+      <bs-combobox 
+        v-model="employee3" 
+        :data-source="peopleSrc" 
+        clear-button>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Employee
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -148,12 +153,15 @@ Define the `multiple` property explicitly to enable multiple selection mode.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="states0" 
-                   :data-source="statesUS" 
-                   placeholder="Select some States" 
-                   clear-button
-                   multiple>
-        <label class="col-md-3 col-xl-2 col-form-label">US States</label>
+      <bs-combobox 
+        v-model="states0" 
+        :data-source="statesUS" 
+        placeholder="Select some States" 
+        clear-button
+        multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          US States
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -212,14 +220,17 @@ defined, then default value will be used.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="states1" 
-                   :data-source="statesCA" 
-                   check-option-color="primary" 
-                   check-option-position="right" 
-                   placeholder="Select some States"
-                   clear-button
-                   multiple>
-        <label class="col-md-3 col-xl-2 col-form-label">Canada States</label>
+      <bs-combobox 
+        v-model="states1" 
+        :data-source="statesCA" 
+        check-option-color="primary" 
+        check-option-position="right" 
+        placeholder="Select some States"
+        clear-button
+        multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Canada States
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -276,19 +287,25 @@ value of property `imageField` is set to `image`.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="employee4" 
-                   :data-source="peopleSrc" 
-                   circle-image
-                   show-image>
-        <label class="col-md-3 col-xl-2 col-form-label">First Employee</label>
+      <bs-combobox 
+        v-model="employee4" 
+        :data-source="peopleSrc" 
+        circle-image
+        show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          First Employee
+        </label>
       </bs-combobox>
     </div>
     <div class="form-group">
-      <bs-combobox v-model="employee5" 
-                   :data-source="peopleSrc" 
-                   rounded-image 
-                   show-image>
-        <label class="col-md-3 col-xl-2 col-form-label">Second Employee</label>
+      <bs-combobox 
+        v-model="employee5" 
+        :data-source="peopleSrc" 
+        rounded-image 
+        show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Second Employee
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -304,14 +321,14 @@ export default {
       employee5: null,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
+              {id: 1, name: 'Sandra Adams', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
             ], {
               idProperty: 'id'
             }
@@ -346,12 +363,15 @@ to the desired numbers of pixels and the image will displayed according to the v
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="employee6" 
-                   :data-source="peopleSrc" 
-                   image-size="32"
-                   rounded-image
-                   show-image>
-        <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
+      <bs-combobox 
+        v-model="employee6" 
+        :data-source="peopleSrc" 
+        image-size="32"
+        rounded-image
+        show-image>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Employee
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -366,14 +386,14 @@ export default {
       employee6: null,
       peopleSrc: {
         proxy: new BsArrayStore([
-              {id: 1, name: 'Sandra Adams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
-              {id: 2, name: 'Ali Connors', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
-              {id: 3, name: 'Trevor Hansen', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
-              {id: 4, name: 'Tucker Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
-              {id: 5, name: 'Britta Holt', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
-              {id: 6, name: 'Jane Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
-              {id: 7, name: 'John Smith', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
-              {id: 8, name: 'Sandra Williams', avatar: 'http://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
+              {id: 1, name: 'Sandra Adams', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/1.jpg'},
+              {id: 2, name: 'Ali Connors', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 3, name: 'Trevor Hansen', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 4, name: 'Tucker Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'},
+              {id: 5, name: 'Britta Holt', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/5.jpg'},
+              {id: 6, name: 'Jane Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/3.jpg'},
+              {id: 7, name: 'John Smith', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/2.jpg'},
+              {id: 8, name: 'Sandra Williams', avatar: 'https://vue-mdbootstrap.fajarconsultant.com/img/4.jpg'}
             ], {
               idProperty: 'id'
             }
@@ -408,10 +428,13 @@ with the `open-on-hover` property.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="employee8" 
-                   :data-source="peopleSrc" 
-                   open-on-hover>
-        <label class="col-md-3 col-xl-2 col-form-label">Employee</label>
+      <bs-combobox 
+        v-model="employee8" 
+        :data-source="peopleSrc" 
+        open-on-hover>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Employee
+        </label>
       </bs-combobox>
     </div>
   </div>
@@ -468,11 +491,12 @@ slot. You can also change the ListBox background color.
 <template>
   <div class="my-demo-wrapper">
     <div class="form-group">
-      <bs-combobox v-model="selectedProduct" 
-                   :data-source="products" 
-                   placeholder="Select product"
-                   listbox-color="blue-green" 
-                   item-separator>
+      <bs-combobox 
+        v-model="selectedProduct" 
+        :data-source="products" 
+        listbox-color="blue-green" 
+        placeholder="Select product"
+        item-separator>
         <label class="col-md-3 col-xl-2 col-form-label">Product</label>
         <template slot="optionItem" slot-scope="{ item }">
           <bs-list-tile-title>
@@ -541,19 +565,21 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product0" 
-                       :data-source="products" 
-                       floating-label>
+          <bs-combobox 
+            v-model="product0" 
+            :data-source="products" 
+            floating-label>
             <label>Select Product</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product1" 
-                       :data-source="products" 
-                       placeholder="Select Product"
-                       floating-label>
+          <bs-combobox 
+            v-model="product1" 
+            :data-source="products" 
+            placeholder="Select Product"
+            floating-label>
             <label>Product</label>
           </bs-combobox>
         </div>
@@ -616,21 +642,23 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product2" 
-                       :data-source="products" 
-                       floating-label 
-                       filled>
+          <bs-combobox 
+            v-model="product2" 
+            :data-source="products" 
+            floating-label 
+            filled>
             <label>Select Product</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product3" 
-                       :data-source="products" 
-                       placeholder="Select Product"
-                       floating-label 
-                       filled>
+          <bs-combobox 
+            v-model="product3" 
+            :data-source="products" 
+            placeholder="Select Product"
+            floating-label 
+            filled>
             <label>Product</label>
           </bs-combobox>
         </div>
@@ -691,21 +719,23 @@ Google Material Design spec.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product4" 
-                       :data-source="products" 
-                       floating-label 
-                       outlined>
+          <bs-combobox 
+            v-model="product4" 
+            :data-source="products" 
+            floating-label 
+            outlined>
             <label>Select Product</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="product5" 
-                       :data-source="products" 
-                       placeholder="Select Product"
-                       floating-label 
-                       outlined>
+          <bs-combobox 
+            v-model="product5" 
+            :data-source="products" 
+            placeholder="Select Product"
+            floating-label 
+            outlined>
             <label>Product</label>
           </bs-combobox>
         </div>
@@ -766,21 +796,25 @@ This style will remove the borders and create flat appearance and can be combine
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox :data-source="products" 
-                       :value="product6" 
-                       flat 
-                       readonly>
-            <label class="col-md-3 col-xl-2 col-form-label">Product</label>
+          <bs-combobox 
+            :data-source="products" 
+            :value="product6" 
+            flat 
+            readonly>
+            <label class="col-md-3 col-xl-2 col-form-label">
+              Product
+            </label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox :data-source="products" 
-                       :value="product7"
-                       floating-label 
-                       flat 
-                       readonly>
+          <bs-combobox 
+            :data-source="products" 
+            :value="product7"
+            floating-label 
+            flat 
+            readonly>
             <label>Product</label>
           </bs-combobox>
         </div>
@@ -841,46 +875,23 @@ Using `persistent-help-text` keeps the help text visible when the combobox field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState0" 
-                       :data-source="statesCA" 
-                       :persistent-help-text="false"
-                       help-text="Select Canada State from the list" 
-                       floating-label>
+          <bs-combobox 
+            v-model="caState0" 
+            :data-source="statesCA0" 
+            :persistent-help-text="false"
+            help-text="Select Canada State from the list" 
+            floating-label>
             <label>Canada State</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState1"
-                       :data-source="statesCA" 
-                       help-text="Select Canada State from the list" 
-                       floating-label>
-            <label>Canada State</label>
-          </bs-combobox>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <bs-combobox v-model="caState2" 
-                       :data-source="statesCA" 
-                       :persistent-help-text="false"
-                       help-text="Select Canada State from the list" 
-                       filled
-                       floating-label>
-            <label>Canada State</label>
-          </bs-combobox>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <bs-combobox v-model="caState3"
-                       :data-source="statesCA" 
-                       help-text="Select Canada State from the list" 
-                       filled
-                       floating-label>
+          <bs-combobox 
+            v-model="caState1"
+            :data-source="statesCA1" 
+            help-text="Select Canada State from the list" 
+            floating-label>
             <label>Canada State</label>
           </bs-combobox>
         </div>
@@ -889,23 +900,52 @@ Using `persistent-help-text` keeps the help text visible when the combobox field
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState4" 
-                       :data-source="statesCA" 
-                       :persistent-help-text="false"
-                       help-text="Select Canada State from the list" 
-                       outlined
-                       floating-label>
+          <bs-combobox 
+            v-model="caState2" 
+            :data-source="statesCA2" 
+            :persistent-help-text="false"
+            help-text="Select Canada State from the list" 
+            filled
+            floating-label>
             <label>Canada State</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState5"
-                       :data-source="statesCA" 
-                       help-text="Select Canada State from the list" 
-                       outlined
-                       floating-label>
+          <bs-combobox 
+            v-model="caState3"
+            :data-source="statesCA3" 
+            help-text="Select Canada State from the list" 
+            filled
+            floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="caState4" 
+            :data-source="statesCA4" 
+            :persistent-help-text="false"
+            help-text="Select Canada State from the list" 
+            outlined
+            floating-label>
+            <label>Canada State</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="caState5"
+            :data-source="statesCA5" 
+            help-text="Select Canada State from the list" 
+            outlined
+            floating-label>
             <label>Canada State</label>
           </bs-combobox>
         </div>
@@ -928,7 +968,7 @@ export default {
       caState3: null,
       caState4: null,
       caState5: null,
-      statesCA: {
+      statesCA0: {
         proxy: new BsStore({
             idProperty: 'value',
             dataProperty: 'data',
@@ -940,12 +980,87 @@ export default {
                 browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
             }
         })
-      }
+      },
+      statesCA1: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
+      statesCA2: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
+      statesCA3: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
+      statesCA4: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
+      statesCA5: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
     }
   },
   beforeDestroy() {
-    this.statesCA.proxy.destroy();
-    this.statesCA = null;
+    this.statesCA0.proxy.destroy();
+    this.statesCA0 = null;
+    this.statesCA1.proxy.destroy();
+    this.statesCA1 = null;
+    this.statesCA2.proxy.destroy();
+    this.statesCA2 = null;
+    this.statesCA3.proxy.destroy();
+    this.statesCA3 = null;
+    this.statesCA4.proxy.destroy();
+    this.statesCA4 = null;
+    this.statesCA5.proxy.destroy();
+    this.statesCA5 = null;
   }
 }
 </script>
@@ -971,76 +1086,150 @@ or `append-icon-outer` property.
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState6" 
-                       :data-source="statesCA" 
-                       prepend-icon="building" 
-                       floating-label 
-                       filled>
+          <bs-combobox 
+            v-model="product8" 
+            :data-source="products" 
+            prepend-icon="building" 
+            floating-label>
             <label>Prepend</label>
-          </bs-combobox>
-        </div>
-        <div class="form-group">
-          <bs-combobox v-model="caState7" 
-                       :data-source="statesCA" 
-                       prepend-icon-outer="building" 
-                       floating-label 
-                       filled>
-            <label>Prepend Outer</label>
-          </bs-combobox>
-        </div>
-        <div class="form-group">
-          <bs-combobox v-model="caState8" 
-                       :data-source="statesCA" 
-                       append-icon="building" 
-                       floating-label 
-                       filled>
-            <label>Append</label>
-          </bs-combobox>
-        </div>
-        <div class="form-group">
-          <bs-combobox v-model="caState9" 
-                       :data-source="statesCA" 
-                       append-icon-outer="building" 
-                       floating-label 
-                       filled>
-            <label>Append Outer</label>
           </bs-combobox>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState10"
-                       :data-source="statesCA" 
-                       prepend-icon="building" 
-                       floating-label 
-                       outlined>
-            <label>Prepend</label>
-          </bs-combobox>
-        </div>
-        <div class="form-group">
-          <bs-combobox v-model="caState11"
-                       :data-source="statesCA" 
-                       prepend-icon-outer="building" 
-                       floating-label 
-                       outlined>
-            <label>Prepend Outer</label>
-          </bs-combobox>
-        </div>
-        <div class="form-group">
-          <bs-combobox v-model="caState12"
-                       :data-source="statesCA" 
-                       append-icon="building" 
-                       floating-label 
-                       outlined>
+          <bs-combobox 
+            v-model="product9" 
+            :data-source="products" 
+            append-icon="building" 
+            floating-label>
             <label>Append</label>
           </bs-combobox>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
         <div class="form-group">
-          <bs-combobox v-model="caState13"
-                       :data-source="statesCA" 
-                       append-icon-outer="building" 
-                       floating-label 
-                       outlined>
+          <bs-combobox 
+            v-model="product10" 
+            :data-source="products" 
+            prepend-icon-outer="building" 
+            floating-label>
+            <label>Prepend Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product11" 
+            :data-source="products" 
+            append-icon-outer="building" 
+            floating-label>
+            <label>Append Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product12" 
+            :data-source="products" 
+            prepend-icon="building" 
+            floating-label 
+            filled>
+            <label>Prepend</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product13" 
+            :data-source="products" 
+            append-icon="building" 
+            floating-label 
+            filled>
+            <label>Append</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product14" 
+            :data-source="products" 
+            prepend-icon-outer="building" 
+            floating-label 
+            filled>
+            <label>Prepend Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product15" 
+            :data-source="products" 
+            append-icon-outer="building" 
+            floating-label 
+            filled>
+            <label>Append Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product16"
+            :data-source="products" 
+            prepend-icon="building" 
+            floating-label 
+            outlined>
+            <label>Prepend</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product17"
+            :data-source="products" 
+            append-icon="building" 
+            floating-label 
+            outlined>
+            <label>Append</label>
+          </bs-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product18"
+            :data-source="products" 
+            prepend-icon-outer="building" 
+            floating-label 
+            outlined>
+            <label>Prepend Outer</label>
+          </bs-combobox>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <bs-combobox 
+            v-model="product19"
+            :data-source="products" 
+            append-icon-outer="building" 
+            floating-label 
+            outlined>
             <label>Append Outer</label>
           </bs-combobox>
         </div>
@@ -1050,39 +1239,42 @@ or `append-icon-outer` property.
 </template>
 
 <script>
-import {BsStore} from "vue-mdbootstrap";
+import { BsStore } from "vue-mdbootstrap";
 
 Vue.use(AxiosPlugin);
 
 export default {
   data() {
     return {
-      caState6: null,
-      caState7: null,
-      caState8: null,
-      caState9: null,
-      caState10: null,
-      caState11: null,
-      caState12: null,
-      caState13: null,
-      statesCA: {
+      product8: null,
+      product9: null,
+      product10: null,
+      product11: null,
+      product12: null,
+      product13: null,
+      product14: null,
+      product15: null,
+      product16: null,
+      product17: null,
+      product18: null,
+      product19: null,
+      products: {
         proxy: new BsStore({
-            idProperty: 'value',
-            dataProperty: 'data',
-            totalProperty: 'total',
-            remoteSort: false,
-            remoteFilter: false,
-            filters: [{property: 'country', value: 'CA', operator: 'eq'}],
-            restProxy: {
-                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
-            }
-        })
-      }
+          idProperty: 'ProductID',
+          dataProperty: 'data',
+          totalProperty: 'total',
+          remoteSort: false,
+          restProxy: {
+            browse: './data/product.json'
+          }
+        }),
+        schema: { displayField: 'ProductName', valueField: 'ProductID' }
+      },
     }
   },
   beforeDestroy() {
-    this.statesCA.proxy.destroy();
-    this.statesCA = null;
+    this.products.proxy.destroy();
+    this.products = null;
   }
 }
 </script>
