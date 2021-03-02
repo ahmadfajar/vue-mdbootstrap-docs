@@ -673,7 +673,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
           <bs-numeric-field 
             prepend-icon="heart"
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -682,7 +682,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
           <bs-numeric-field 
             append-icon="heart" 
             floating-label>
-            <label>Field Label</label>
+            <label>Append</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -693,7 +693,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
           <bs-numeric-field 
             prepend-icon-outer="heart"
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend Outer</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -702,7 +702,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
           <bs-numeric-field 
             append-icon-outer="heart" 
             floating-label>
-            <label>Field Label</label>
+            <label>Append Outer</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -714,7 +714,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             prepend-icon="heart"
             filled
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -724,7 +724,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             append-icon="heart"
             filled
             floating-label>
-            <label>Field Label</label>
+            <label>Append</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -736,7 +736,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             prepend-icon-outer="heart"
             filled
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend Outer</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -746,7 +746,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             append-icon-outer="heart"
             filled
             floating-label>
-            <label>Field Label</label>
+            <label>Append Outer</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -758,7 +758,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             prepend-icon="heart"
             outlined
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -768,7 +768,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             append-icon="heart"
             outlined
             floating-label>
-            <label>Field Label</label>
+            <label>Append</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -780,7 +780,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             prepend-icon-outer="heart"
             outlined
             floating-label>
-            <label>Field Label</label>
+            <label>Prepend Outer</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -790,7 +790,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
             append-icon-outer="heart"
             outlined
             floating-label>
-            <label>Field Label</label>
+            <label>Append Outer</label>
           </bs-numeric-field>
         </div>
       </div>

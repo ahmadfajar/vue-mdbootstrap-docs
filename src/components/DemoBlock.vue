@@ -1,6 +1,15 @@
 <template>
   <div class="demo-block">
     <div class="demo-block-tools">
+      <bs-tooltip content="Invert example background color" placement="top">
+        <bs-button
+          color="mdb-color"
+          flat
+          mode="icon"
+          @click="invertBgColor">
+          <bs-icon icon="invert-colors" size="24" />
+        </bs-button>
+      </bs-tooltip>
       <bs-tooltip content="Run this demo on jsfiddle.net" placement="top">
         <bs-button
           color="mdb-color"
@@ -25,7 +34,7 @@
         <slot name="highlight"></slot>
       </div>
     </bs-expand-transition>
-    <div class="demo-block-content bg-grey-200">
+    <div :class="demoBgCls" class="demo-block-content">
       <slot name="source"></slot>
     </div>
   </div>
@@ -41,14 +50,28 @@ export default {
     },
   },
   data: () => ({
+    invertCounter: 2,
     visible: false,
   }),
   computed: {
+    demoBgCls() {
+      return {
+        'bg-white': this.invertCounter === 1,
+        ['bg-grey-' + (this.invertCounter * 100)]: this.invertCounter > 1,
+      }
+    },
     tooltipText() {
       return this.visible ? "Hide the source" : "Show the source";
     },
   },
   methods: {
+    invertBgColor() {
+      if (this.invertCounter > 0 && this.invertCounter < 9) {
+        this.invertCounter++;
+      } else {
+        this.invertCounter = 1;
+      }
+    },
     toggle() {
       this.visible = !this.visible;
     },

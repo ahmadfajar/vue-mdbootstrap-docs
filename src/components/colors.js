@@ -4,7 +4,7 @@ export const materialColors = {
         "default-color-dark":    "#00695c",
     },
     "primary-color": {
-        "primary-color":         "#4285f4",
+        "primary-color":         "#007bff",
         "primary-color-dark":    "#0d47a1",
     },
     "secondary-color": {
@@ -51,7 +51,7 @@ export const materialColors = {
 
 export const themeColors = {
     "default":     "#2bbbad",
-    "primary":     "#4285f4",
+    "primary":     "#007bff",
     "info":        "#33b5e5",
     "secondary":   "#6c757d",
     "success":     "#28a745",

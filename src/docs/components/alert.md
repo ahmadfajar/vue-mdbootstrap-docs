@@ -159,50 +159,35 @@ you can sets the `icon-outlined` to `false` to use solid predefined icon.
     <bs-alert 
       icon-type="success" 
       solid-fill>
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with predefined icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with predefined icon.
     </bs-alert>
     <bs-alert
       icon-type="info" 
       solid-fill>
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with predefined icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with predefined icon.
     </bs-alert>
     <bs-alert
       :icon-outlined="false" 
       icon-type="warning" 
       solid-fill>
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with predefined icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with predefined icon.
     </bs-alert>
     <bs-alert 
       :icon-outlined="false" 
       icon-type="danger" 
       solid-fill>
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with predefined icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with predefined icon.
     </bs-alert>
     <bs-alert 
       :icon-outlined="false" 
       icon-type="help" 
       solid-fill>
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with predefined icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with predefined icon.
     </bs-alert>
   </div>
 </template>
@@ -222,46 +207,31 @@ Custom icon can be enabled by using the `icon` property and prefix its value wit
 `bs-` to use *Vue MDBootstrap internal icon* or use any valid 
 [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name.
 
-*Updated in Vue MDBootstrap `v1.2.0`*
+*Updated since Vue MDBootstrap `v1.2.0`*
 
 :::demo
 ```html
 <template>
   <div class="my-demo-wrapper">
     <bs-alert icon="bs-verified" color="primary">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with custom icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with custom icon.
     </bs-alert>
     <bs-alert icon="bs-help-center" color="orange">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with custom icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with custom icon.
     </bs-alert>
     <bs-alert icon="exclamation-triangle" color="danger">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with custom icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with custom icon.
     </bs-alert>
     <bs-alert icon="bell" color="info">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with custom icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with custom icon.
     </bs-alert>
     <bs-alert icon="bullhorn" color="success">
-      <h5>Well done!</h5>
-      <p>
-        Aww yeah, you successfully read this important alert message. This is an example how to
-        construct <b>Alerts</b> with custom icon.
-      </p>
+      Aww yeah, you successfully read this important alert message. This is an example how to
+      construct <b>Alerts</b> with custom icon.
     </bs-alert>
   </div>
 </template>
@@ -383,7 +353,7 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will add
 :::
 
 
-## Controlling dismissible alert
+### Controlling dismissible alert
 
 Use the `v-model` directive to create two-way data bindings on the `value` property as in `v-model="showAlert"`. 
 This is useful to control the dismissible, because when user closes the alert, your variable will be updated. 
@@ -499,7 +469,7 @@ Do not use the `value` property when using `v-model`.
 | outlined    | `Boolean` | `false`  | Create outline alert style |
 | solid-fill  | `Boolean` | `false`  | Create alert variant with solid fill style. <bs-badge>v1.2.0</bs-badge> |
 | transition  | `String`  | `'fade'` | The component animation transition to display/hide |
-| value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | The value monitored by `v-model` to display or hide the alert component |
+| value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | The value monitored by `v-model` to show or hide the alert component |
 
 </div>
 

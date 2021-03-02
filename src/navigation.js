@@ -56,6 +56,11 @@ export const menuNavs = [{
     //         view: viewResolver("components/treegrid"),
     //     }]
     }, {
+        title: "Chip",
+        route: "/components/chip",
+        tag: {label: 'New', color: 'success'},
+        view: viewResolver("components/chip"),
+    }, {
         title: "DateTime Picker",
         route: "/components/datetime-picker",
         view: viewResolver("components/datetime-picker"),
