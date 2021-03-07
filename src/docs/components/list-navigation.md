@@ -548,12 +548,12 @@ The component to display the navigation item.
 | Property   | Type      | Default | Description |
 |------------|-----------|---------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Component state and monitored by `v-model`. |
-| active-class | `String` | `'active'` | `<router-link>` prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
+| active-class | `String` | `'active'` | `<router-link>` property, configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
 | badge      | `String`  |  | The text to render as badge label. <bs-badge>v1.2.0</bs-badge> |
 | badge-variant | `String` | `'success'` | The badge variant, valid values: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`. <bs-badge>v1.2.0</bs-badge> |
 | depth      | `Number`  |  | Item depth level in tree hierarchy (zero based level). |
 | disabled   | `Boolean` | `false` | Component state. |
-| exact      | `Boolean` | `false` | `<router-link>` prop: The default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
+| exact      | `Boolean` | `false` | `<router-link>` property, the default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
 | icon       | `String`  |         | The icon to display. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
 | icon-flip  | `String`  |         | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse | `Boolean` | `false` | Apply **pulse** animation to the icon. |
@@ -562,9 +562,9 @@ The component to display the navigation item.
 | icon-spin  | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | indent     | `Number`  |  | Text indentation from left side. |
 | label <bs-badge color="danger text-white">required</bs-badge> | `String` |  | The text label to display. |
-| path       | `String`  |  | The route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
+| path       | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
 | ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. |
-| url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use vue-router. |
+| url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
 
 </div>
 

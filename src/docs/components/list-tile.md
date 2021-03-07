@@ -943,13 +943,13 @@ The component to display and organize the item parts.
 | Property   | Type      | Default | Description |
 |------------|-----------|---------|-------------|
 | active <bs-badge color="unique text-white">v-model</bs-badge> | `Boolean` | `false` | Component state and monitored by `v-model`. |
-| active-class | `String` | `'active'` | `<router-link>` prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
+| active-class | `String` | `'active'` | `<router-link>` property, configure the active CSS class applied when the link is active. Typically you will want to set this to class name `active`. |
 | disabled   | `Boolean` | `false` | Component state. |
-| exact      | `Boolean` | `false` | `<router-link>` prop: The default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
+| exact      | `Boolean` | `false` | `<router-link>` property, the default active class matching behavior is inclusive match. Setting this property forces the mode to exactly match the route. |
 | navigable  | `Boolean` | `false` | Explicitly define this propperty when you want to use ListTile as navigation or menu item. <bs-badge>v1.1.0</bs-badge> |
-| path       | `String`  |  | The route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
+| path       | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
 | ripple-off | `Boolean` | `false` | Enabled or disabled ripple effect. <bs-badge>v1.1.0</bs-badge> |
-| url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use vue-router. |
+| url        | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
 
 </div>
 

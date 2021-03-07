@@ -179,6 +179,7 @@ export const menuNavs = [{
     }, {
         title: "Tabs",
         route: "/components/tabs",
+        tag: {label: 'Updated', color: 'warning'},
         view: viewResolver("components/tabs"),
     }, {
         title: "Tooltip",
