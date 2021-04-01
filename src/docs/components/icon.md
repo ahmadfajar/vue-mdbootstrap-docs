@@ -144,13 +144,13 @@ list of available internal icons that you can use.
 | Property | Type     | Default  | Description |
 |----------|----------|----------|-------------|
 | flip     | `string` |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <bs-badge>v1.1.0</bs-badge> |
-| height   | `Number` | `20` | The icon's height in pixel. |
+| height   | `Number` | `24` | The icon's height in pixel. |
 | icon <bs-badge variant="danger">required</bs-badge> | `String` |  | The icon's name or alias. |
 | pulse    | `Boolean`| `false` | Apply **pulse** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
 | rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. <bs-badge>v1.1.0</bs-badge> |
 | size     | `Number` |  | Shortcut to create equal height and width. |
 | spin     | `Boolean`| `false` | Apply **spin** animation to the icon. <bs-badge>v1.1.0</bs-badge> |
-| width    | `Number` | `20` | The icon's width in pixel. |
+| width    | `Number` | `24` | The icon's width in pixel. |
 
 </div>
 

@@ -30,7 +30,7 @@ container for page title, logo, menus, and action buttons.
         color="light-grey"
         mode="icon"
         flat>
-        <bs-icon icon="menu_bars" size="24"></bs-icon>
+        <bs-icon icon="menu_bars"></bs-icon>
       </bs-button>
       <bs-appbar-title 
         class="text-white" 
@@ -54,7 +54,7 @@ container for page title, logo, menus, and action buttons.
         color="light-grey"
         mode="icon"
         flat>
-        <bs-icon icon="MenuBars" size="24"></bs-icon>
+        <bs-icon icon="MenuBars"></bs-icon>
       </bs-button>
       <bs-appbar-title 
         class="text-white" 
@@ -81,7 +81,7 @@ container for page title, logo, menus, and action buttons.
             mode="icon" 
             color="light-grey" 
             flat>
-            <bs-icon icon="MoreVert" size="24"></bs-icon>
+            <bs-icon icon="MoreVert"></bs-icon>
           </bs-button>
           <template v-slot:content>
             <bs-list-view slot="content">

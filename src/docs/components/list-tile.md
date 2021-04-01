@@ -24,10 +24,7 @@ by different components.
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Menus" 
@@ -130,10 +127,7 @@ The `<bs-list-tile-leading>` has built-in support for displaying *avatar*, and w
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Chats" 
@@ -255,10 +249,7 @@ we want to display a list of data which contains *image*, *title*, *description*
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="My Recipes" 
@@ -667,7 +658,7 @@ setting page layout.
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon icon="menu_bars" size="24"></bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Setting" 
@@ -811,7 +802,7 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
                   class="ml-auto"
                   mode="icon"
                   flat>
-                  <bs-icon icon="MoreVert" size="24"></bs-icon>
+                  <bs-icon icon="MoreVert"></bs-icon>
                 </bs-button>
                 <template v-slot:content>
                   <bs-list-view color="teal">

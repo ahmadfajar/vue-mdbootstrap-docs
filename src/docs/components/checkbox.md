@@ -50,12 +50,14 @@ bootstrap css class `form-group` and can be integrated with external validator s
     <bs-checkbox-group v-model="selectedFavoriteColors" :items="favoriteColors">
       <label class="col-12">Standalone Checkbox Group</label>
     </bs-checkbox-group>
+    <p class="mt-3">Values: <b>{{ selectedFavoriteColors }}</b></p>
     <bs-divider class="my-3"></bs-divider>
     <div class="form-group">
       <bs-checkbox-group v-model="selectedFavoriteFruits" :items="favoriteFruits">
         <label class="col-md-3 col-lg-2 col-form-label">With form-group</label>
       </bs-checkbox-group>
     </div>
+    <div>Values: <b>{{ selectedFavoriteFruits }}</b></p>
   </div>
 </template>
 
@@ -221,7 +223,7 @@ export default {
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | true-value  | `Boolean` | `true`  | Sets value for truthy state. |
-| value       | `Boolean`/`String`/`Number`/`Object` |  | The `<input>` element `value` attribute. |
+| value <bs-badge variant="danger">required</bs-badge> | `Boolean`/`String`/`Number`/`Object` |  | The `<input>` element `value` attribute. |
 
 </div>
 
@@ -260,7 +262,7 @@ export default {
 | external-validator | `Object` |  | The external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | help-text   | `String`  |  | The help text to display below the field component. |
 | indeterminate | `Boolean` | `false` | Sets default indeterminate state for the checkbox. |
-| items       | `Object[]` |  | The collection of `<bs-radio>` property-value. |
+| items <bs-badge variant="danger">required</bs-badge> | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
 | name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the checkbox group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. <bs-badge>v1.1.0</bs-badge> |

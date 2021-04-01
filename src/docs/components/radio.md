@@ -219,7 +219,7 @@ export default {
 | name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| value       | `Boolean`/`String`/`Number` | `'on'` | The `<input>` element `value` attribute. |
+| value <bs-badge variant="danger">required</bs-badge> | `Boolean`/`String`/`Number` | `'on'` | The `<input>` element `value` attribute. |
 
 </div>
 
@@ -257,7 +257,7 @@ export default {
 | disabled    | `Boolean` | `false`   | Sets default disabled state. |
 | external-validator | `Object` |  | The external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | help-text   | `String`  |  | The help text to display below the field component. |
-| items       | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
+| items <bs-badge variant="danger">required</bs-badge> | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
 | name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the radio group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. |

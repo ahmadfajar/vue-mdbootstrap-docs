@@ -28,10 +28,7 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Menus" 
@@ -90,10 +87,7 @@ to customize the indentation from the left side.
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Topics" 
@@ -104,10 +98,7 @@ to customize the indentation from the left side.
           color="light-grey"
           mode="icon"
           flat>
-          <bs-icon 
-            icon="MoreVert" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="MoreVert"></bs-icon>
         </bs-button>
       </bs-appbar>
       <bs-list-view>
@@ -199,10 +190,7 @@ navigation menus.
           mode="icon"
           color="light-grey"
           flat>
-          <bs-icon 
-            icon="menu_bars" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="menu_bars"></bs-icon>
         </bs-button>
         <bs-appbar-title 
           title="Mail" 
@@ -213,10 +201,7 @@ navigation menus.
           color="light-grey"
           mode="icon"
           flat>
-          <bs-icon 
-            icon="MoreVert" 
-            size="24">
-          </bs-icon>
+          <bs-icon icon="MoreVert"></bs-icon>
         </bs-button>
       </bs-appbar>
       <bs-list-view>

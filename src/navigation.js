@@ -61,6 +61,11 @@ export const menuNavs = [{
         tag: {label: 'New', color: 'success'},
         view: viewResolver("components/chip"),
     }, {
+        title: "Chip Group",
+        route: "/components/chip-group",
+        tag: {label: 'New', color: 'success'},
+        view: viewResolver("components/chip-group"),
+    }, {
         title: "DateTime Picker",
         route: "/components/datetime-picker",
         view: viewResolver("components/datetime-picker"),

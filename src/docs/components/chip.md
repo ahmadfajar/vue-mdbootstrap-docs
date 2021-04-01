@@ -872,9 +872,10 @@ Do not use the `value` property when using `v-model`.
 |----------|-----------|----------|-------------|
 | active   | `Boolean` | `false`  | The Chip component state. |
 | active-class | `String` |  | Custom css class to apply when the Chip is in active state. See [Reference - Color Variants](#/reference/colors) for more information. |
-| color    | `String`  | `'light-grey'` | Change the Chip color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
+| active-color | `String` |  | Predefine color appearance when the Chip is in active state. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
+| color    | `String`  | `'light-grey'` | Chip color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
 | disabled | `Boolean` | `false`  | The Chip component state. |
-| dismissible | `Boolean` | `false` | When set, display the close (`x`) button to dismiss/hide the component |
+| dismissible | `Boolean` | `false` | When set, display the close (`x`) button to dismiss/hide the component. |
 | fa-styles   | `Object`  |   | Adjust FontAwesome Icon size with css rules like `font-size` or `height` and `width`. |
 | href        | `String`  |  | Render the chip as `<a>` element and define its `href` property and apply styles to the `<a>` element. |
 | icon        | `String`  |  | The icon to display within the Chip. Use prefix `bs-` to use internal icon, otherwise use valid [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) name. |
@@ -900,7 +901,8 @@ Do not use the `value` property when using `v-model`.
 
 | Name   | Argument Type | Description |
 |--------|---------------|-------------|
-| close  |  | Triggers when close button is clicked or chip has been dismissed. |
+| click  |  | Event listener when chip is clicked. |
+| close  |  | Triggers when close (`x`) button is clicked or chip has been dismissed. |
 | input  | `Boolean` | Used to update component state of `value` property. |
 | update:active | `MouseEvent` | Used to update the chip state of `active` property and triggers when a non-disabled Chip is clicked. |
 
