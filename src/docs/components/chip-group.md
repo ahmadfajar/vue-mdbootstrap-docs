@@ -8,13 +8,37 @@ It is used for creating groups of selections using chips.
 
 ## Overview
 
+**BsChipGroup** is a collection of **BsChip**. Rather than create multiple `<bs-chip>`, 
+it’s better to create single `<bs-chip-group>`. **BsChipGroup** provides **select**
+functionality, which will come in handy when working with more chips. The `items` property 
+is used as data source to create the chips.
+
 :::demo
 ```html
 <template>
-  <div class="my-demo-wrapper">
+  <div class="my-demo-wrapper chip-demo1 mx-auto">
     <bs-chip-group v-model="selectedChips1" :items="chipItems1"></bs-chip-group>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      selectedChips1: null,
+      chipItems1: [
+        {text: 'Arts'},
+        {text: 'Creative Writers'},
+        {text: 'Drawers'},
+        {text: 'Foods'},
+        {text: 'Shopping'},
+        {text: 'Tech'},
+        {text: 'Vacation'},
+      ],
+    }
+  }
+}
+</script>
 
 <style scoped>
 .my-demo-wrapper {
@@ -26,6 +50,9 @@ It is used for creating groups of selections using chips.
 
 
 ## Multi Rows 
+
+Use `column` property to wrap chip items if the total width of chip items exceeds the
+container's width.
 
 :::demo
 ```html
@@ -47,6 +74,27 @@ It is used for creating groups of selections using chips.
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      selectedChips2: null,
+      chipItems2: [
+        {text: 'Arts'},
+        {text: 'Creative Writers'},
+        {text: 'Drawers'},
+        {text: 'Foods'},
+        {text: 'Home'},
+        {text: 'Shopping'},
+        {text: 'Tech'},
+        {text: 'Vacation'},
+        {text: 'Work'},
+      ],
+    }
+  }
+}
+</script>
+
 <style scoped>
 .my-demo-wrapper {
   padding: 24px;
@@ -57,6 +105,9 @@ It is used for creating groups of selections using chips.
 
 
 ## Multiple Selection
+
+By default **BsChipGroup** works in single selection mode. Use `multiple` property to
+enable multiple selection mode.
 
 :::demo
 ```html
@@ -79,6 +130,27 @@ It is used for creating groups of selections using chips.
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      selectedMultiple: [],
+      chipItems2: [
+        {text: 'Arts'},
+        {text: 'Creative Writers'},
+        {text: 'Drawers'},
+        {text: 'Foods'},
+        {text: 'Home'},
+        {text: 'Shopping'},
+        {text: 'Tech'},
+        {text: 'Vacation'},
+        {text: 'Work'},
+      ],
+    }
+  }
+}
+</script>
+
 <style scoped>
 .my-demo-wrapper {
   padding: 24px;
@@ -89,6 +161,12 @@ It is used for creating groups of selections using chips.
 
 
 ## Filter Chips
+
+Filter chips use tags or descriptive words to filter content. It creates an alternative 
+visual style that communicates to the user that the chip is selected. They are a good 
+alternative to toggle buttons or checkboxes. Use `checked-icon` property to enable this
+feature. Additionally, you can use `active-color` or `active-class` property to change
+the appearance of the selected chips.
 
 :::demo
 ```html
@@ -123,6 +201,33 @@ It is used for creating groups of selections using chips.
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      selectedAmenities: null,
+      selectedNeighborhoods: null,
+      amenities: [
+        {text: 'Elevator'},
+        {text: 'Washer / Dryer'},
+        {text: 'Fireplace'},
+        {text: 'Wheelchair access'},
+        {text: 'Dogs ok'},
+        {text: 'Cats ok'},
+      ],
+      neighborhoods: [
+        {text: 'Snowy Rock Place'},
+        {text: 'Honeylane Circle'},
+        {text: 'Donna Drive'},
+        {text: 'Elaine Street'},
+        {text: 'Court Street'},
+        {text: 'Kennedy Park'},
+      ],
+    }
+  }
+}
+</script>
+
 <style scoped>
 .my-demo-wrapper {
   padding: 24px;
@@ -132,7 +237,13 @@ It is used for creating groups of selections using chips.
 :::
 
 
-## Sliding Chips
+## Sliding Pages
+
+Sliding Pages is used when the total width of chip items exceed the container's width, 
+but still wants to keep it within a single row. When enabled, it creates a visual style
+like slide carousel. *Left and right arrows button* is provided as a navigation functionality.
+They can be used to navigate to the previous/next page. This feature can be enabled
+using the `slider-arrows` property explicitly.
 
 :::demo
 ```html
@@ -152,6 +263,27 @@ It is used for creating groups of selections using chips.
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      selectedChips3: null,
+      chipItems2: [
+        {text: 'Arts'},
+        {text: 'Creative Writers'},
+        {text: 'Drawers'},
+        {text: 'Foods'},
+        {text: 'Home'},
+        {text: 'Shopping'},
+        {text: 'Tech'},
+        {text: 'Vacation'},
+        {text: 'Work'},
+      ],
+    }
+  }
+}
+</script>
 
 <style scoped>
 .my-demo-wrapper {
@@ -175,7 +307,7 @@ It is used for creating groups of selections using chips.
 | arrows-color | `String`  | `'secondary'` | Slider button color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
 | checked-icon | `Boolean` | `false`  | Show checked icon when the Chip is selected. |
 | color        | `String`  | `'light-grey'` | Chip color appearance. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variant can be used. |
-| column       | `Boolean` | `false`  | Enable multi rows if total width of items beyond the container width. |
+| column       | `Boolean` | `false`  | Enable multi rows if total width of items exceeds the container's width. |
 | img-circle   | `Boolean` | `true` | Create Chip's avatar with **circle** shape. |
 | img-padding  | `Boolean` | `true` | Adjust Chip's avatar size to match the Chip height by eliminating the margin around the avatar. |
 | items <bs-badge variant="danger">required</bs-badge> | `Object[]` |  | Collection of chip items. **[1]** |
@@ -223,3 +355,13 @@ It is used for creating groups of selections using chips.
 
 
 <script src="./script/chip-group.js"></script>
+
+<style lang="scss">
+  .chip-demo1 {
+    max-width: 100% !important;
+    
+    @media (min-width: 800px) {
+      width: 620px !important;
+    }
+  }
+</style>
