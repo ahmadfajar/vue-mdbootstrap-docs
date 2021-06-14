@@ -530,7 +530,7 @@ Google Material Design spec.
 ### Flat
 
 This style will remove the borders and create flat appearance. When combined with 
-`readonly` property it will create appearance like plain text.
+`readonly` property, it will create appearance like plain text.
 
 :::demo
 ```html
@@ -540,7 +540,7 @@ This style will remove the borders and create flat appearance. When combined wit
       <div class="col-lg-7">
         <div class="form-group">
           <bs-numeric-field value="123456.789" flat>
-            <label class="col-md-3 col-xl-2 col-form-label">Field Label</label>
+            <label class="col-md-3 col-form-label">Field Label</label>
           </bs-numeric-field>
         </div>
       </div>
@@ -570,8 +570,8 @@ This style will remove the borders and create flat appearance. When combined wit
 
 ## Help Text
 
-The `help-text` property on `<bs-numeric-field>` adds the provided string beneath the text field.
-Using `persistent-help-text` keeps the help text visible even when the text field is not focused.
+The `help-text` property on `<bs-numeric-field>` adds the provided string beneath the field.
+Using `persistent-help-text` keeps the help text visible even when the field is not focused.
 
 :::demo
 ```html
@@ -660,7 +660,7 @@ Using `persistent-help-text` keeps the help text visible even when the text fiel
 
 ## Icons
 
-You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `append-icon` or 
+You can add icon to the text field with `prepend-icon`, `prepend-icon-outer`, `append-icon` or 
 `append-icon-outer` property.
 
 :::demo
@@ -834,7 +834,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 | max-fraction | `Number` | `3` | Sets the maximum allowed fraction or decimal digits for the displayed value. |
 | max-value   | `Number` |  | Sets the maximum allowed value. |
 | min-value   | `Number` |  | Sets the minimum allowed value. |
-| name        | `String`/`Number` |  | Sets `<input>` element `name` attribute. |
+| name        | `String` |  | Sets `<input>` element `name` attribute. |
 | outlined    | `Boolean` | `false`  | Create the component with **outlined** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | placeholder  | `String`  |       | Sets the field placeholder. |

@@ -644,7 +644,7 @@ You can add icons to the TextArea field with `prepend-icon`, `prepend-icon-outer
 | floating-label | `Boolean` | `false` | Create the component with floating area label. See [Google Material Design](https://material.io/components/text-areas) spec. |
 | help-text   | `String`  |         | The help text to display below the area component. |
 | id          | `String`  |         | Sets `<textarea>` element `ID` attribute. This property value is auto generates. |
-| name        | `String`/`Number` | | Sets `<textarea>` element `name` attribute. |
+| name        | `String`  |         | Sets `<textarea>` element `name` attribute. |
 | no-resize   | `Boolean` | `false` | Disable resizing the `<textarea>` element. When set, the browser's resize handle will be disabled which prevents the user from changing the height of the `<textarea>` element. |
 | outlined    | `Boolean` | `false` | Create the component with **outlined** appearance. See [Google Material Design](https://material.io/components/text-areas) spec. |
 | persistent-help-text | `Boolean`  | `true` | Keeps help text visible when the component is not focused. |

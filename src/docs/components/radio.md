@@ -216,7 +216,7 @@ export default {
 | color       | `String`  | `'default'` | Applies one of the [MDBootstrap colors](#/reference/colors) variants to the component. |
 | disabled    | `Boolean` | `false`   | Enable/disable the radio component and the `<input>` element. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
-| name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |
+| name        | `String`  |  | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | value <bs-badge variant="danger">required</bs-badge> | `Boolean`/`String`/`Number` | `'on'` | The `<input>` element `value` attribute. |
@@ -258,7 +258,7 @@ export default {
 | external-validator | `Object` |  | The external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |
 | help-text   | `String`  |  | The help text to display below the field component. |
 | items <bs-badge variant="danger">required</bs-badge> | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
-| name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
+| name        | `String` |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the radio group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. |
 | required    | `Boolean` | `false` | Sets default `<input>` element `required` attribute. |

@@ -608,7 +608,7 @@ export default {
 ### Flat
 
 This style will remove the borders and create flat appearance. When combined with 
-`readonly` property it will create appearance like plain text.
+`readonly` property, it will create appearance like plain text.
 
 :::demo
 ```html
@@ -988,8 +988,8 @@ export default {
 | help-text    | `String`  |     | The help text to display below the field component. |
 | id           | `String`  |     | Sets `<input>` element `ID` attribute. This property value is auto generates. |
 | landscape-mode | `Boolean` | `false` | Whether to display DateTime picker in landscape or portrait orientation. |
-| locale  | `String` | `'en-us'` | Default locale to be used. |
-| name    | `String`/`Number` |  | Sets `<input>` element `name` attribute. |
+| locale  | `String`  | `'en-us'` | Default locale to be used. |
+| name    | `String`  |  | Sets `<input>` element `name` attribute. |
 | open    | `Boolean` | `false`  | DateTime picker state: **show** or **hide**. |
 | open-on-hover | `Boolean` | `false` | Triggers the DateTime picker to display when `mouseenter`. |
 | outlined    | `Boolean` | `false`  | Create the component with **outlined** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |

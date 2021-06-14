@@ -121,6 +121,11 @@ export const menuNavs = [{
             route: "/components/input/datetime-field",
             view: viewResolver("components/datetime-field"),
         }, {
+            title: "Chip Field",
+            route: "/components/input/chip-field",
+            tag: {label: 'New', color: 'success'},
+            view: viewResolver("components/chip-field"),
+        }, {
             title: "Numeric Field",
             route: "/components/input/numeric-field",
             tag: {label: 'New', color: 'success'},

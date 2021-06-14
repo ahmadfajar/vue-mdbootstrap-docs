@@ -219,7 +219,7 @@ export default {
 | false-value | `Boolean` | `false`   | Sets value for falsy state. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | indeterminate | `Boolean` | `false` | Sets an indeterminate state for the checkbox. |
-| name        | `String`/`Number`   |  | Sets the `<input>` element `name` attribute. |
+| name        | `String`  |  | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | true-value  | `Boolean` | `true`  | Sets value for truthy state. |
@@ -263,7 +263,7 @@ export default {
 | help-text   | `String`  |  | The help text to display below the field component. |
 | indeterminate | `Boolean` | `false` | Sets default indeterminate state for the checkbox. |
 | items <bs-badge variant="danger">required</bs-badge> | `Object[]` |  | The collection of `<bs-checkbox>` property-value. |
-| name        | `String`/`Number` |  | Sets default `<input>` element `name` attribute. |
+| name        | `String` |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps the help text visible when the checkbox group is not focused. |
 | readonly    | `Boolean` | `false` | Sets default readonly state. <bs-badge>v1.1.0</bs-badge> |
 | required    | `Boolean` | `false` | Sets default `<input>` element `required` attribute. |

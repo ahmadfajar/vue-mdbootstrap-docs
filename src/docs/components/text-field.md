@@ -446,7 +446,7 @@ Using `persistent-help-text` keeps the help text visible even when the text fiel
 
 ## Icons
 
-You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `append-icon` or 
+You can add icon to the text field with `prepend-icon`, `prepend-icon-outer`, `append-icon` or 
 `append-icon-outer` property.
 
 :::demo
@@ -616,7 +616,7 @@ You can add icons to the text field with `prepend-icon`, `prepend-icon-outer`, `
 | id          | `String`  |          | Sets `<input>` element `ID` attribute. This property value is auto generates. |
 | maxlength   | `Number`/`String` |  | Sets `<input>` element maximum characters allowed. |
 | minlength   | `Number`/`String` |  | Sets `<input>` element minimum characters allowed. |
-| name        | `String`/`Number` |  | Sets `<input>` element `name` attribute. |
+| name        | `String`  |  | Sets `<input>` element `name` attribute. |
 | outlined    | `Boolean` | `false`  | Create the component with **outlined** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | password-toggle | `Boolean` | `true` | Enable toggle password field. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |

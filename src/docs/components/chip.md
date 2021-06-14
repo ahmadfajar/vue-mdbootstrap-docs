@@ -40,7 +40,7 @@ and it will react to them to give the best experience.
 
 ## Color Style
 
-**BsChip** colors can be set using the `color` property. Any color variant from 
+**BsChip** color can be set using the `color` property. Any color variant from 
 [MDBootstrap colors](#/reference/colors) and [Material colors](#/reference/colors)
  can be applied to the `<bs-chip>`.
 
@@ -357,7 +357,7 @@ export default {
 ### Outlined Label style
 
 Use `label` and `outlined` property explicitly to create chip with outline style
-without the rounded pill.
+without circle edge shape.
 
 :::demo
 ```html

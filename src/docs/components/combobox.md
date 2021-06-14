@@ -1317,7 +1317,7 @@ export default {
 | listbox-color  | `String`  |         | Sets the ListBox background color. Any of [MDBootstrap colors](#/reference/colors) or [Material colors](#/reference/colors) variants can be applied. |
 | minimum-items-for-search | `Number`/`String` | `15` | Sets minimum character to start searching an item inside the ListBox options. |
 | multiple | `Boolean` | `false`  | Enable or disable multiple selection. |
-| name     | `String`/`Number` |  | Sets `<select>` element `name` attribute. |
+| name     | `String`  |  | Sets `<select>` element `name` attribute. |
 | not-found-message | `String` | `'Data not found.'` | Sets the **not found message** when searching returns no result. |
 | open     | `Boolean` | `false`  | Popover state: **show** or **hide**. |
 | open-on-hover | `Boolean` | `false` | Triggers the Popover to display when `mouseenter`. |
