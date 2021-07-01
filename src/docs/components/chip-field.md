@@ -1,6 +1,6 @@
 :::lead
-**BsChipField** extends the **BsChip** component by providing groupable functionality. 
-It is used for creating groups of selections using chips.
+**BsChipField** extends the **BsTextField** functionality by providing the tagging
+functionality. It is used to create a set of keywords using chips.
 :::
 
 *Available since Vue MDBootstrap `v1.2.0`*
@@ -891,7 +891,7 @@ You can add icon to the field with `prepend-icon`, `prepend-icon-outer`, `append
 | chip-color   | `String` | `'light-grey'` | The default chips color to apply. |
 | chip-deletable | `Boolean` | `false` | Display the close button on every chip to delete a chip. |
 | chip-labeled   | `Boolean` | `false` | Remove Chip's circle edges. |
-| chip-outlined  | `Boolean` | `false` | Render Chips with outline style or not. |
+| chip-outlined  | `Boolean` | `false` | Create Chips with outline style. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | disabled     | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
 | external-validator | `Object` |    | Sets external validator plugin to be used when validate the field value. See [Reference - Form Validation](#/reference/form-validation), to learn how to implement the validation. |

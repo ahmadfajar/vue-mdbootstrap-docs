@@ -31,7 +31,7 @@ module.exports = {
         if (lang && hljs.getLanguage(lang)) {
             try {
                 return '<pre class="hljs lang-' + lang + '"><code>' +
-                    hljs.highlight(lang, str, true).value + "</code></pre>";
+                    hljs.highlight(str, {language: lang, ignoreIllegals: true}).value + "</code></pre>";
             } catch (__) {
             }
         }

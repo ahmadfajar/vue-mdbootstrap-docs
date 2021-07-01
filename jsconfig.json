@@ -1,0 +1,11 @@
+{
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        "module": "es6",
+        "moduleResolution": "node",
+        "target": "es2018",
+        "sourceMap": false,
+    }
+}

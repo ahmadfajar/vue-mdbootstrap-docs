@@ -15,6 +15,7 @@ with the `v-model` to maintain the component state.
           Radio {{ idx }}
         </bs-radio>
     </div>
+    <p class="mt-3">Value: <b>{{ radio1 }}</b></p>
   </div>
 </template>
 

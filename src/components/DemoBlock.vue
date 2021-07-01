@@ -79,15 +79,21 @@ export default {
       const { html, script, style } = this.jsfiddle;
 
       const resourcesTpl =
-        '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">\n' +
-        '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css">\n' +
-        "<scr" + 'ipt src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js"></scr' + "ipt>";
+        '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous">\n' +
+        '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.min.css" crossorigin="anonymous">\n' +
+        "<scr" + 'ipt src="https://unpkg.com/vue@2.6.14/dist/vue.min.js" crossorigin="anonymous"></scr' + "ipt>" +
+        "<scr" + 'ipt src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.min.js" crossorigin="anonymous"></scr' + "ipt>";
 
       const cssTpl = `${(style || "").trim()}\n`;
       const htmlTpl = `${resourcesTpl}\n<div id="app">${html}</div>`;
       let jsTpl = (script || "")
         .replace(/import.*";\n/g, "")
         .replace(/export default/, "var Main =")
+        .replace("use(AxiosPlugin)", "use(VueMdb.AxiosPlugin)")
+        .replaceAll("new BsStore(", "new VueMdb.BsStore(")
+        .replaceAll("new BsArrayStore(", "new VueMdb.BsArrayStore(")
+        .replaceAll("new BsTreeStore(", "new VueMdb.BsTreeStore(")
+        .replaceAll("new BsModel(", "new VueMdb.BsModel(")
         .trim();
 
       jsTpl = jsTpl

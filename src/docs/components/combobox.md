@@ -155,7 +155,7 @@ Define the `multiple` property explicitly to enable multiple selection mode.
     <div class="form-group">
       <bs-combobox 
         v-model="states0" 
-        :data-source="statesUS" 
+        :data-source="statesUS0" 
         placeholder="Select some States" 
         clear-button
         multiple>
@@ -176,7 +176,7 @@ export default {
   data() {
     return {
       states0: [],
-      statesUS: {
+      statesUS0: {
         proxy: new BsStore({
             idProperty: 'value',
             dataProperty: 'data',
@@ -194,6 +194,105 @@ export default {
   beforeDestroy() {
     this.statesUS.proxy.destroy();
     this.statesUS = null;
+  }
+}
+</script>
+
+<style lang="scss">
+.my-demo-wrapper {
+  padding: 24px;
+}
+</style>
+```
+:::
+
+
+### Chips Style Support
+
+In multiple selection mode, the selected items can be display as chips. Use property
+`chip-enabled` explicitly to display the selected items as chips. Additionally you
+can use `chip-color` property to set the chips color and `chip-labeled` or `chip-outlined`
+to style the chips appearance.
+
+*Available in Vue MDBootstrap since `v1.2.0`*
+
+:::demo
+```html
+<template>
+  <div class="my-demo-wrapper">
+    <div class="form-group">
+      <bs-combobox 
+        v-model="states2" 
+        :data-source="statesUS2" 
+        placeholder="Select some States" 
+        chip-enabled
+        clear-button
+        multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Select States
+        </label>
+      </bs-combobox>
+    </div>
+    <div class="form-group">
+      <bs-combobox 
+        v-model="states3" 
+        :data-source="statesUS3" 
+        placeholder="Select some States" 
+        chip-color="secondary"
+        chip-enabled
+        clear-button
+        multiple>
+        <label class="col-md-3 col-xl-2 col-form-label">
+          Your Favorite States
+        </label>
+      </bs-combobox>
+    </div>
+  </div>
+</template>
+
+<script>
+import {BsStore} from "vue-mdbootstrap";
+
+Vue.use(AxiosPlugin);
+
+export default {
+  data() {
+    return {
+      states2: [],
+      states3: [],
+      statesUS2: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'US', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      },
+      statesUS3: {
+        proxy: new BsStore({
+            idProperty: 'value',
+            dataProperty: 'data',
+            totalProperty: 'total',
+            remoteSort: false,
+            remoteFilter: false,
+            filters: [{property: 'country', value: 'US', operator: 'eq'}],
+            restProxy: {
+                browse: 'https://vue-mdbootstrap.fajarconsultant.com/data/states.json'
+            }
+        })
+      }
+    }
+  },
+  beforeDestroy() {
+    this.statesUS2.proxy.destroy();
+    this.statesUS2 = null;
+    this.statesUS3.proxy.destroy();
+    this.statesUS3 = null;
   }
 }
 </script>
@@ -1301,6 +1400,9 @@ export default {
 | append-icon-outer     | `String` | | Sets icon to display on outer right side. Use any valid [FontAwesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon name. <bs-badge>v1.1.0</bs-badge> |
 | check-option-color    | `String` | `'purple'` | Sets the checkbox color for ListBox options. Any of the [MDBootstrap colors](#/reference/colors) variants can be applied. |
 | check-option-position | `String` | `'left'`   | Sets the checkbox position for ListBox options. Valid values are: `left`, `right`. |
+| chip-color   | `String` | `'light-grey'` | The default chips color to apply. <bs-badge>v1.2.0</bs-badge> |
+| chip-labeled   | `Boolean` | `false` | Remove Chip's circle edges. <bs-badge>v1.2.0</bs-badge> |
+| chip-outlined  | `Boolean` | `false` | Create Chips with outline style. <bs-badge>v1.2.0</bs-badge> |
 | circle-image | `Boolean` | `false` | Sets **circle** effect for the displayed image from ListBox item. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | data-source  | `Object`  |  | Sets data source for the ListBox options. |

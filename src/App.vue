@@ -16,7 +16,7 @@
       <bs-appbar-title :title="pageTitle" class="text-white" />
       <bs-spacer />
       <bs-appbar-items>
-        <span class="mr-3 text-white align-self-center">v1.2.0</span>
+        <span class="mr-3 text-white align-self-center">{{ appVersion }}</span>
         <bs-button 
           color="light-grey"
           flat
@@ -96,6 +96,7 @@ export default {
     name: "App",
     data: () => ({
         sideDrawerState: "open",
+        appVersion: "v1.2.1",
         navs: menuNavs
     }),
     computed: {

@@ -3,6 +3,50 @@ All notable changes to this project will be documented in this file.
 :::
 
 
+## v1.2.1
+
+Released: July 01, 2021
+
+### Bug Fixes & Improvement v1.2.1
+
+- Upgrade package builder to **webpack v5.x**
+- Improve build scripts
+- **BsNotification**: fix component registration
+- **BsChip**, **BsChipField**, **BsCombobox**, **BsNumericField**: fix missing component import 
+- **BsRadio**: fix property mutation
+
+
+## v1.2.0
+
+Released: June 29, 2021
+
+### Features v1.2.0
+
+- New components: **BsNumericField**, **BsChip**, **BsChipGroup**, **BsChipField**
+- New icons: `AddCircle`, `AddCircleOutline`, `CheckCircle`, `CheckCircleOutline`, `Checked`, `Error`, 
+  `ErrorOutline`, `Help`, `HelpCenter`, `HelpOutline`, `Info`, `Remove`, `RemoveCircle`, 
+  `RemoveCircleOutline`, `Report`, `ReportOutline`, `Shield`, `Verified`, `VerifiedUser`, 
+  `Warning`, `WarningOutline`, `InvertColors`
+- **BsCombobox:** add properties `chip-enabled`, `chip-color`, `chip-labeled` and `chip-outlined`
+- **BsListNavItem:** add properties `badge`, and `badge-variant`
+- **BsAlert:** add properties `icon-flip`, `icon-outlined`, `icon-pulse`, `icon-rotation`, 
+  `icon-spin`, `icon-type`, and `solid-fill`
+- **BsTabs:** add properties `active-class`  
+
+### Bug Fixes & Improvement v1.2.0
+
+- Improve Helper class: add method `roundNumber`
+- Improve Tabs component: customize inactive TabItem via `tab-class` property and active TabItem
+  via `active-class` property for tabs variant: `pills`, `modern`, and `material`.
+- Improve **BsIcon** template rendering
+- Improve **BsAlert**: enable using internal icon via `icon` property
+- **BsNumericField**: prevent value changing with UP/DOWN arrows when field state is `readonly` 
+  or `disabled` and fix `tab` key  
+- **BsNumericField, BsTextField, BsTextArea**: fix css when field state is `readonly` or `disabled` 
+- **BsDateTimeField**: disabling focus when field state is `disabled`  
+- Expose `FontAwesomeLayers` and `FontAwesomeLayersText` components
+
+
 ## v1.1.4
 
 Released: January 31, 2021

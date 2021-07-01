@@ -52,8 +52,9 @@ Code below is an example how to load and initialize the components.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css" crossorigin="anonymous">
-<script src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.bundle.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.min.css" crossorigin="anonymous">
+<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.min.js" crossorigin="anonymous"></script>
 ```
 
 If you are using `BsGrid`, `BsTreeGrid`, `BsModel`, `BsStore`, `BsTreeStore` and/or 
@@ -61,13 +62,20 @@ need to perform HTTP Request, you can use example code below in your javascript 
 initialize MDBootstrap Axios plugin.
 
 ```js
-Vue.use(AxiosPlugin, {baseURL: "http://localhost/<api-url>"});
+Vue.use(VueMdb.AxiosPlugin, {baseURL: "http://localhost/<api-url>"});
 ```
 
 Now, you can use any of **Vue MDBootstrap** components in your html page.
+
+**Notes**: 
+
+- [FontAwesomeIcon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) and 
+  [Moment.js](https://momentjs.com/) already bundled except **Moment.js localization**.
+- All plugins and classes placed under **VueMdb** namespace. Please refer to 
+  [documentation](/#/reference). 
 
 
 ## Start coding
 
 Now you have implemented **Vue MDBootstrap** to your project, and it’s time to write your 
-code. Please refer to each component’s documentation to learn how to use them.
+code. Please refer to each component’s [documentation](/#/components) to learn how to use them.

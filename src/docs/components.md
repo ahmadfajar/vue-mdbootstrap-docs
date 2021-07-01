@@ -32,6 +32,14 @@
     <b>Card</b> - A flexible and extensible content container. It includes sub-component for headers, 
     footers, and content with variety background colors, and powerful display options. 
   </a>
+  <a href="#/components/chip" class="list-group-item list-group-item-action">
+    <b>Chip</b> - A component which is used to convey small pieces of information to create arbitrary items, 
+    like categories or tags. <bs-badge>v1.2.0</bs-badge>
+  </a>
+  <a href="#/components/chip-group" class="list-group-item list-group-item-action">
+    <b>Chip Group</b> - A component which extends the <b>BsChip</b>'s component by providing groupable functionality. 
+    It is used for creating groups of selections using chips. <bs-badge>v1.2.0</bs-badge>
+  </a>  
   <a href="#/components/datetime-picker" class="list-group-item list-group-item-action">
     <b>DateTime Picker</b> - A component that generates a calendar style date selection widget, which 
     can be used to create customized date picker inputs.
@@ -65,7 +73,7 @@
       </a>
       <a href="#/components/input/combobox" class="list-group-item list-group-item-action">
         <b>Combobox</b> - A select field component which is used for collecting user provided information 
-        from a list of options.
+        from a list of options. <bs-badge color="warning">updated</bs-badge>
       </a>
       <a href="#/components/input/radio" class="list-group-item list-group-item-action">
         <b>Radio</b> - A component that allows user to select an option. These components must be used 
@@ -84,6 +92,11 @@
       <a href="#/components/input/datetime-field" class="list-group-item list-group-item-action">
         <b>DateTime Field</b> - A fully featured date selection component which lets users select a date, 
         time, month, year, or datetime. 
+      </a>
+      <a href="#/components/input/chip-field" class="list-group-item list-group-item-action">
+        <b>Chip Field</b> - A component which extends the <b>BsTextField</b> functionality by providing 
+        the tagging functionality. It is used to create a set of keywords using chips. 
+        <bs-badge>v1.2.0</bs-badge>
       </a>
       <a href="#/components/input/numeric-field" class="list-group-item list-group-item-action">
         <b>Numeric Field</b> - A component which is used for collecting user provided numeric text. 
@@ -153,6 +166,7 @@
   <a href="#/components/tabs" class="list-group-item list-group-item-action">
     <b>Tabs</b> - A component which is used for hiding content behind a selectable item. They can 
     be used as a pseudo-navigation for a page, where the tabs are links and the tab-items are the content.
+    <bs-badge color="warning">updated</bs-badge>
   </a>
   <a href="#/components/tooltip" class="list-group-item list-group-item-action">
     <b>Tooltip</b> - A component which is useful for conveying information when a user hovers over 

@@ -8,8 +8,8 @@ is based on the world's most popular framework - *Vue.js* and utilize
 
 ## Requirements
 
-- [Vue.js](https://vuejs.org) `v2.6` is required, `v2.6.12` is recommended
-- [Bootstrap](https://getbootstrap.com) `v4.5` is required, `v4.5.2` is recommended
+- [Vue.js](https://vuejs.org) `v2.6` is required, `v2.6.14` is recommended
+- [Bootstrap](https://getbootstrap.com) `v4.5` is required, `v4.6.0` is recommended
 - [vue-router](https://www.npmjs.com/package/vue-router) `v3.x` is optional, and is required for building 
   Single Page Application (SPA) using NPM 
 - [vuex](https://www.npmjs.com/package/vuex) `v3.x` is optional, and is required for building 

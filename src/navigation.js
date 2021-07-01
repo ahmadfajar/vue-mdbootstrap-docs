@@ -44,17 +44,6 @@ export const menuNavs = [{
         title: "Card",
         route: "/components/card",
         view: viewResolver("components/card"),
-    // }, {
-    //     title: "Data Grid",
-    //     children: [{
-    //         title: "Grid",
-    //         route: "/components/grid",
-    //         view: viewResolver("components/grid"),
-    //     }, {
-    //         title: "TreeGrid",
-    //         route: "/components/treegrid",
-    //         view: viewResolver("components/treegrid"),
-    //     }]
     }, {
         title: "Chip",
         route: "/components/chip",
@@ -74,7 +63,17 @@ export const menuNavs = [{
         route: "/components/divider",
         view: viewResolver("components/divider"),
     }, {
-        title: "Grid",
+    //     title: "Data Grid",
+    //     children: [{
+    //         title: "Grid",
+    //         route: "/components/grid",
+    //         view: viewResolver("components/grid"),
+    //     }, {
+    //         title: "TreeGrid",
+    //         route: "/components/treegrid",
+    //         view: viewResolver("components/treegrid"),
+    //     }]
+    title: "Grid",
         route: "/components/grid",
         view: viewResolver("components/grid"),
     }, {
@@ -99,6 +98,7 @@ export const menuNavs = [{
         }, {
             title: "Combobox",
             route: "/components/input/combobox",
+            tag: {label: 'Updated', color: 'warning'},
             view: viewResolver("components/combobox"),
         }, {
             title: "Radio",

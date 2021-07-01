@@ -13,6 +13,9 @@ export default {
         employee8: null,
         states0: [],
         states1: [],
+        states2: [],
+        states3: [],
+        states4: [],
         
         caState0: null,
         caState1: null,
@@ -71,7 +74,7 @@ export default {
             }),
             schema: { displayField: 'ProductName', valueField: 'ProductID' }
         },
-        statesUS: {
+        statesUS0: {
             proxy: new BsStore({
                 idProperty: 'value',
                 dataProperty: 'data',
@@ -84,8 +87,32 @@ export default {
                 }
             })
         },
-
-
+        statesUS2: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'US', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
+        statesUS3: {
+            proxy: new BsStore({
+                idProperty: 'value',
+                dataProperty: 'data',
+                totalProperty: 'total',
+                remoteSort: false,
+                remoteFilter: false,
+                filters: [{ property: 'country', value: 'US', operator: 'eq' }],
+                restProxy: {
+                    browse: './data/states.json'
+                }
+            })
+        },
         statesCA: {
             proxy: new BsStore({
                 idProperty: 'value',
@@ -185,8 +212,12 @@ export default {
         this.products.proxy.destroy();
         this.products = null;
         
-        this.statesUS.proxy.destroy();
-        this.statesUS = null;
+        this.statesUS0.proxy.destroy();
+        this.statesUS0 = null;
+        this.statesUS2.proxy.destroy();
+        this.statesUS2 = null;
+        this.statesUS3.proxy.destroy();
+        this.statesUS3 = null;
 
         this.statesCA.proxy.destroy();
         this.statesCA = null;

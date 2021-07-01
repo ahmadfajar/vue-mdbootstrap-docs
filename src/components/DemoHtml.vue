@@ -9,8 +9,8 @@ export default {
       const { html, script, style } = this.jsfiddle;
 
       const resourcesTpl =
-        '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">\n' +
-        '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.css">';
+        '<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">\n' +
+        '<link rel="stylesheet" href="https://unpkg.com/vue-mdbootstrap/dist/vue-mdb.min.css">';
 
       const cssTpl = `${(style || "").trim()}\n`;
       const jsTpl = script || "";
